@@ -7,6 +7,10 @@ per poterla utilizzare in futuro per deep-learning.
 
 http://www.banterle.com/francesco/courses/2015/hdri/
 
+# opencv binding
+
+https://github.com/opencv/opencv-python
+
 # core
 
 histogram
