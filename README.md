@@ -8,16 +8,27 @@ http://www.banterle.com/francesco/courses/2015/hdri/
 
 #filtri
 filter_luminance.hpp
+
 filter_bilateral_2df.hpp
+
 filter_bilateral_2ds.hpp
+
 filter_gaussian_2d.hpp
+
 filter_conv_2d.hpp
+
 filter_max.hpp
+
 filter_mean.hpp 
+
 filter_med.hpp
+
 filter_med_vec.hpp
+
 filter_mosaic.hpp
+
 filter_assemble_hdr.hpp
+
 filter_rotation.hpp
 
 #algorithms
