@@ -11,6 +11,10 @@ http://www.banterle.com/francesco/courses/2015/hdri/
 
 https://github.com/opencv/opencv-python
 
+https://github.com/wjakob/nanobind
+
+https://github.com/pybind/pybind11
+
 # core
 
 histogram
