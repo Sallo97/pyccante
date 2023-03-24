@@ -7,6 +7,13 @@ per poterla utilizzare in futuro per deep-learning.
 
 http://www.banterle.com/francesco/courses/2015/hdri/
 
+# core
+
+histogram
+
+image
+
+
 # filtri
 
 filter_luminance.hpp
