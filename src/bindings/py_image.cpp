@@ -184,7 +184,7 @@ void pyccante::bind_Image(pybind11::module& m)
     // endregion
 
     //region Args
-    //⚠⚠⚠ per ora tutti gli argomenti sono in readonly, cambiarli asseconda del caso ⚠⚠⚠
+    //⚠⚠⚠ For now all the variables are readonly, change them as the project goes on. ⚠⚠⚠
 
         .def_readonly("width", &pic::Image::width)
         .def_readonly("height", &pic::Image::height)

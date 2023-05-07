@@ -19,6 +19,7 @@ set(HEADERS
 set(SOURCES
     main.cpp 
     bindings/py_image.cpp
+    bindings/py_histogram.cpp
     # add here the binding .cpp
     )
 
