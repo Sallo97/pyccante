@@ -9,6 +9,7 @@ set(PYCCANTE_MODULE_NAME = "pyccante")
 set(HEADERS
     bindings/py_image.h
     bindings/py_histogram.h
+    bindings/py_bbox.h
     # add here the binding headers
     )
 

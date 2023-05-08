@@ -1,5 +1,5 @@
-#ifndef PYCCANTE_PY_IMAGE_CPP
-#define PYCCANTE_PY_IMAGE_CPP
+#ifndef PYCCANTE_PY_IMAGE_H
+#define PYCCANTE_PY_IMAGE_H
 
 #include <GL/glew.h>
 #include <piccante.hpp>
@@ -214,4 +214,4 @@ void init_Image(pybind11::module_& m)
 }
 
 
-#endif /* PYCCANTE_PY_IMAGE_CPP */
+#endif /* PYCCANTE_PY_IMAGE_H */

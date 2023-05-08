@@ -3,7 +3,7 @@
 
 src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  ../src/bindings/py_image.h \
+  ../src/bindings/py_bbox.h \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1685,6 +1685,7 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/options.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/init.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h \
+  ../src/bindings/py_image.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/operators.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h \
@@ -1694,6 +1695,8 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h:
+
+../src/bindings/py_image.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:
 
@@ -1748,8 +1751,6 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/python3.10/cpython/pyerrors.h:
 
 /usr/include/python3.10/pyerrors.h:
-
-/usr/include/python3.10/namespaceobject.h:
 
 /usr/include/python3.10/genericaliasobject.h:
 
@@ -2309,6 +2310,18 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/time.h:
 
+../include/piccante/metrics/relative_error.hpp:
+
+/usr/include/c++/11/bits/exception_defines.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pytypes.h:
+
+/usr/include/python3.10/cpython/traceback.h:
+
+../include/piccante/util/buffer.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
 /usr/include/c++/11/bits/fstream.tcc:
 
 ../include/piccante/util/string.hpp:
@@ -2326,6 +2339,10 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
 
 ../include/piccante/util.hpp:
 
@@ -2693,22 +2710,6 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-../include/piccante/metrics/relative_error.hpp:
-
-/usr/include/c++/11/bits/exception_defines.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pytypes.h:
-
-/usr/include/python3.10/cpython/traceback.h:
-
-../include/piccante/util/buffer.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
 ../include/piccante/gl/filtering/filter_min.hpp:
 
 ../include/piccante/filtering.hpp:
@@ -2901,8 +2902,6 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/complex:
 
-../src/bindings/py_image.h:
-
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
@@ -2990,6 +2989,10 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/11/cctype:
+
+/usr/include/python3.10/namespaceobject.h:
+
+../src/bindings/py_bbox.h:
 
 ../include/piccante/piccante.hpp:
 

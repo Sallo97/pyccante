@@ -1,5 +1,5 @@
-#ifndef PYCCANTE_PY_HISTOGRAM_CPP
-#define PYCCANTE_PY_HISTOGRAM_CPP
+#ifndef PYCCANTE_PY_HISTOGRAM_H
+#define PYCCANTE_PY_HISTOGRAM_H
 
 #include <GL/glew.h>
 #include <piccante.hpp>
@@ -36,14 +36,25 @@ void init_Histogram(pybind11::module_& m)
         {
             return new pic::Histogram(imgIn, type, nBin, channel);
         }
-        ), py::arg("imgIn"), py::arg("type"), py::arg("nBin"), py::arg("channel")=0);
-
-    // Remember to add the destructor ~Histogram
+        ), py::arg("imgIn"), py::arg("type"), py::arg("nBin"), py::arg("channel")=0)
 
 
     // endregion
+
+    // region Destructors
+
+    // remember to add the Destructor
+    
+    // endregion
+
+    // region Functions
+
+        .def("release", &pic::Histogram::release);
+    // endregion
+
+
 }
 
 
 
-#endif /* PYCCANTE_PY_HISTOGRAM_CPP */
+#endif /* PYCCANTE_PY_HISTOGRAM_H */
