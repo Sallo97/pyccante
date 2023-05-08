@@ -130,30 +130,6 @@ pyccante/fast:
 	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/build
 .PHONY : pyccante/fast
 
-bindings/py_image.o: bindings/py_image.cpp.o
-.PHONY : bindings/py_image.o
-
-# target to build an object file
-bindings/py_image.cpp.o:
-	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o
-.PHONY : bindings/py_image.cpp.o
-
-bindings/py_image.i: bindings/py_image.cpp.i
-.PHONY : bindings/py_image.i
-
-# target to preprocess a source file
-bindings/py_image.cpp.i:
-	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.i
-.PHONY : bindings/py_image.cpp.i
-
-bindings/py_image.s: bindings/py_image.cpp.s
-.PHONY : bindings/py_image.s
-
-# target to generate assembly for a file
-bindings/py_image.cpp.s:
-	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.s
-.PHONY : bindings/py_image.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -187,9 +163,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pyccante"
-	@echo "... bindings/py_image.o"
-	@echo "... bindings/py_image.i"
-	@echo "... bindings/py_image.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

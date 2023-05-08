@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp" "src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o" "gcc" "src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o.d"
   "/home/deck/Documents/Tesi/pyccante/src/main.cpp" "src/CMakeFiles/pyccante.dir/main.cpp.o" "gcc" "src/CMakeFiles/pyccante.dir/main.cpp.o.d"
   )
 
