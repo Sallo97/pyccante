@@ -11,5 +11,28 @@ using namespace py::literals;
 
 void pyccante::bind_Histogram(pybind11::module& m)
 {
-    
+    // region VALUE_SPACE
+
+    py::enum_<pic::VALUE_SPACE>(m, "VALUE_SPACE")
+        .value("VS_LDR", pic::VALUE_SPACE::VS_LDR)
+        .value("VS_LIN", pic::VALUE_SPACE::VS_LIN)
+        .value("VS_LOG_2", pic::VALUE_SPACE::VS_LOG_2)
+        .value("VS_LOG_E", pic::VALUE_SPACE::VS_LOG_E)
+        .value("VS_LOG_10", pic::VALUE_SPACE::VS_LOG_10);
+
+    // endregion
+
+    // region Constructors
+
+    py::class_<pic::Histogram>(m, "Histogram")
+        .def(py::init<>())
+
+        .def(py::init( [](pic::Image *imgIn, pic::VALUE_SPACE type,
+                                         int nBin, int channel = 0)
+        {
+            return new pic::Histogram(imgIn, type, nBin, channel);
+        }
+        ), py::arg("imgIn"), py::arg("type"), py::arg("nBin"), py::arg("channel")=0);
+
+    // endregion
 }
