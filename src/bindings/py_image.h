@@ -11,8 +11,6 @@
 namespace py = pybind11;
 using namespace py::literals;
 
-
-
 void init_Image(pybind11::module_& m)
 {
 
@@ -55,6 +53,7 @@ void init_Image(pybind11::module_& m)
             //⚠⚠⚠ Chiedere se va bene come condizione ⚠⚠⚠
             if(! info.ndim == channels )
                 throw std::runtime_error("the number of channels must be the same as the dimension of color.");
+            
             // Return a new instance of Image
             return new pic::Image(color, channels);
             }), py::arg("color"), py::arg("channels"))

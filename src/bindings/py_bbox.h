@@ -57,6 +57,8 @@ void init_BBox(pybind11::module_& m)
     // endregion
 
     // region Args
+    //⚠⚠⚠ For now all the variables are readonly, change them as the project goes on. ⚠⚠⚠
+
         .def_readonly("x0", &pic::BBox::x0)
         .def_readonly("y0", &pic::BBox::y0)
         .def_readonly("z0", &pic::BBox::z0)
