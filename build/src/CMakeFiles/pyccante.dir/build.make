@@ -73,29 +73,29 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: src/CMakeFiles/pyccante.dir/flags.make
 src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp
 src/CMakeFiles/pyccante.dir/main.cpp.o: src/CMakeFiles/pyccante.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deck/Documents/Tesi/pyccante/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/pyccante.dir/main.cpp.o"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pyccante.dir/main.cpp.o -MF CMakeFiles/pyccante.dir/main.cpp.o.d -o CMakeFiles/pyccante.dir/main.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/main.cpp
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pyccante.dir/main.cpp.o -MF CMakeFiles/pyccante.dir/main.cpp.o.d -o CMakeFiles/pyccante.dir/main.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/main.cpp
 
 src/CMakeFiles/pyccante.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pyccante.dir/main.cpp.i"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deck/Documents/Tesi/pyccante/src/main.cpp > CMakeFiles/pyccante.dir/main.cpp.i
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deck/Documents/Tesi/pyccante/src/main.cpp > CMakeFiles/pyccante.dir/main.cpp.i
 
 src/CMakeFiles/pyccante.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pyccante.dir/main.cpp.s"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deck/Documents/Tesi/pyccante/src/main.cpp -o CMakeFiles/pyccante.dir/main.cpp.s
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deck/Documents/Tesi/pyccante/src/main.cpp -o CMakeFiles/pyccante.dir/main.cpp.s
 
 src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: src/CMakeFiles/pyccante.dir/flags.make
 src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cpp
 src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: src/CMakeFiles/pyccante.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deck/Documents/Tesi/pyccante/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o -MF CMakeFiles/pyccante.dir/bindings/py_image.cpp.o.d -o CMakeFiles/pyccante.dir/bindings/py_image.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o -MF CMakeFiles/pyccante.dir/bindings/py_image.cpp.o.d -o CMakeFiles/pyccante.dir/bindings/py_image.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp
 
 src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pyccante.dir/bindings/py_image.cpp.i"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp > CMakeFiles/pyccante.dir/bindings/py_image.cpp.i
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp > CMakeFiles/pyccante.dir/bindings/py_image.cpp.i
 
 src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pyccante.dir/bindings/py_image.cpp.s"
-	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp -o CMakeFiles/pyccante.dir/bindings/py_image.cpp.s
+	cd /home/deck/Documents/Tesi/pyccante/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp -o CMakeFiles/pyccante.dir/bindings/py_image.cpp.s
 
 # Object files for target pyccante
 pyccante_OBJECTS = \

@@ -30,7 +30,7 @@ find_package(pybind11 CONFIG REQUIRED)
 
 # Setting the required library
 include_directories(
-    ../include/piccante
+    ../include/piccante/include
     ../include/stb
     ${GLEW_INCLUDE_DIRS} 
     ${OPENGL_INCLUDE_DIRS}
