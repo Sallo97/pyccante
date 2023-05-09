@@ -14,9 +14,9 @@ namespace py = pybind11;
 PYBIND11_MODULE(pyccante, m)
 {
     init_LDR_type(m);     // LDR_type Enum
-    init_BBox(m);         // BBox Class
+    //init_BBox(m);         // BBox Class
     init_Image(m);        // Image Class 
-    init_Histogram(m);    // Histogram Class
+    //init_Histogram(m);    // Histogram Class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */

@@ -7,14 +7,17 @@ set(PYCCANTE_MODULE_NAME = "pyccante")
 
 # Setting general values
 set(HEADERS
+    bindings/py_dynamics_range.h
     bindings/py_image.h
-    bindings/py_histogram.h
-    bindings/py_bbox.h
+    #bindings/py_histogram.h
+    #bindings/py_bbox.h
     # add here the binding headers
     )
 
 set(SOURCES
-    main.cpp 
+    main.cpp
+    bindings/py_image.cpp
+    #bindings/py_histogram.cpp 
     # add here the binding .cpp
     )
 
