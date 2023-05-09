@@ -130,6 +130,78 @@ pyccante/fast:
 	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/build
 .PHONY : pyccante/fast
 
+bindings/py_bbox.o: bindings/py_bbox.cpp.o
+.PHONY : bindings/py_bbox.o
+
+# target to build an object file
+bindings/py_bbox.cpp.o:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_bbox.cpp.o
+.PHONY : bindings/py_bbox.cpp.o
+
+bindings/py_bbox.i: bindings/py_bbox.cpp.i
+.PHONY : bindings/py_bbox.i
+
+# target to preprocess a source file
+bindings/py_bbox.cpp.i:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_bbox.cpp.i
+.PHONY : bindings/py_bbox.cpp.i
+
+bindings/py_bbox.s: bindings/py_bbox.cpp.s
+.PHONY : bindings/py_bbox.s
+
+# target to generate assembly for a file
+bindings/py_bbox.cpp.s:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_bbox.cpp.s
+.PHONY : bindings/py_bbox.cpp.s
+
+bindings/py_dynamics_range.o: bindings/py_dynamics_range.cpp.o
+.PHONY : bindings/py_dynamics_range.o
+
+# target to build an object file
+bindings/py_dynamics_range.cpp.o:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_dynamics_range.cpp.o
+.PHONY : bindings/py_dynamics_range.cpp.o
+
+bindings/py_dynamics_range.i: bindings/py_dynamics_range.cpp.i
+.PHONY : bindings/py_dynamics_range.i
+
+# target to preprocess a source file
+bindings/py_dynamics_range.cpp.i:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_dynamics_range.cpp.i
+.PHONY : bindings/py_dynamics_range.cpp.i
+
+bindings/py_dynamics_range.s: bindings/py_dynamics_range.cpp.s
+.PHONY : bindings/py_dynamics_range.s
+
+# target to generate assembly for a file
+bindings/py_dynamics_range.cpp.s:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_dynamics_range.cpp.s
+.PHONY : bindings/py_dynamics_range.cpp.s
+
+bindings/py_histogram.o: bindings/py_histogram.cpp.o
+.PHONY : bindings/py_histogram.o
+
+# target to build an object file
+bindings/py_histogram.cpp.o:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_histogram.cpp.o
+.PHONY : bindings/py_histogram.cpp.o
+
+bindings/py_histogram.i: bindings/py_histogram.cpp.i
+.PHONY : bindings/py_histogram.i
+
+# target to preprocess a source file
+bindings/py_histogram.cpp.i:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_histogram.cpp.i
+.PHONY : bindings/py_histogram.cpp.i
+
+bindings/py_histogram.s: bindings/py_histogram.cpp.s
+.PHONY : bindings/py_histogram.s
+
+# target to generate assembly for a file
+bindings/py_histogram.cpp.s:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_histogram.cpp.s
+.PHONY : bindings/py_histogram.cpp.s
+
 bindings/py_image.o: bindings/py_image.cpp.o
 .PHONY : bindings/py_image.o
 
@@ -153,6 +225,30 @@ bindings/py_image.s: bindings/py_image.cpp.s
 bindings/py_image.cpp.s:
 	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.s
 .PHONY : bindings/py_image.cpp.s
+
+bindings/support.o: bindings/support.cpp.o
+.PHONY : bindings/support.o
+
+# target to build an object file
+bindings/support.cpp.o:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/support.cpp.o
+.PHONY : bindings/support.cpp.o
+
+bindings/support.i: bindings/support.cpp.i
+.PHONY : bindings/support.i
+
+# target to preprocess a source file
+bindings/support.cpp.i:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/support.cpp.i
+.PHONY : bindings/support.cpp.i
+
+bindings/support.s: bindings/support.cpp.s
+.PHONY : bindings/support.s
+
+# target to generate assembly for a file
+bindings/support.cpp.s:
+	cd /home/deck/Documents/Tesi/pyccante/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pyccante.dir/build.make src/CMakeFiles/pyccante.dir/bindings/support.cpp.s
+.PHONY : bindings/support.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -187,9 +283,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pyccante"
+	@echo "... bindings/py_bbox.o"
+	@echo "... bindings/py_bbox.i"
+	@echo "... bindings/py_bbox.s"
+	@echo "... bindings/py_dynamics_range.o"
+	@echo "... bindings/py_dynamics_range.i"
+	@echo "... bindings/py_dynamics_range.s"
+	@echo "... bindings/py_histogram.o"
+	@echo "... bindings/py_histogram.i"
+	@echo "... bindings/py_histogram.s"
 	@echo "... bindings/py_image.o"
 	@echo "... bindings/py_image.i"
 	@echo "... bindings/py_image.s"
+	@echo "... bindings/support.o"
+	@echo "... bindings/support.i"
+	@echo "... bindings/support.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

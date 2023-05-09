@@ -28,20 +28,7 @@ void init_Histogram(pybind11::module_& m)
 
     py::class_<pic::Histogram>(m, "Histogram")
         .def(py::init<>())
-
-        .def(py::init( [](pic::Image *imgIn, pic::VALUE_SPACE type,
-                                         int nBin, int channel = 0)
-        {
-            return new pic::Histogram(imgIn, type, nBin, channel);
-        }
-        ), py::arg("imgIn"), py::arg("type"), py::arg("nBin"), py::arg("channel")=0)
         
-    // endregion
-
-    // region Destructors
-
-    // remember to add the Destructor
-    
     // endregion
 
     // region Functions
@@ -58,9 +45,7 @@ void init_Histogram(pybind11::module_& m)
         .def("uniform", &pic::Histogram::uniform,
             py::arg("fMin"), py::arg("fMax"), py::arg("value"),
             py::arg("type"), py::arg("nBin"))
-        
-        /* add the pubulic update here*/
-        
+                
         .def("project", &pic::Histogram::project,
             "project converts an input value in the histogram domain.",
             py::arg("x"))
@@ -106,12 +91,10 @@ void init_Histogram(pybind11::module_& m)
     // endregion
 
     // region Arguments
-    //⚠⚠⚠ For now all the variables are readonly, change them as the project goes on. ⚠⚠⚠
+    // For now all the variables are readonly, change them as the project goes on.
 
     .def_readonly("bin", &pic::Histogram::bin)
     .def_readonly("bin_work", &pic::Histogram::bin_work);
 
     // endregion
-
-
 }

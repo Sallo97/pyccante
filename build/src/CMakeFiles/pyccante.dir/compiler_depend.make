@@ -30,9 +30,9 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/GL/glu.h \
   /usr/include/GL/gl.h \
-  ../include/piccante/piccante.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
+  ../include/piccante/include/piccante.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
@@ -190,10 +190,10 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/c++/11/bits/stl_numeric.h \
   /usr/include/c++/11/math.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  ../include/piccante/util/compability.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/bbox.hpp \
-  ../include/piccante/util/string.hpp \
+  ../include/piccante/include/util/compability.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/bbox.hpp \
+  ../include/piccante/include/util/string.hpp \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -233,7 +233,7 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../include/piccante/base.hpp \
+  ../include/piccante/include/base.hpp \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -242,8 +242,8 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/util/math.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/util/math.hpp \
   /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -251,21 +251,21 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
   /usr/include/c++/11/bits/erase_if.h \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/dynamic_range.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/io/bmp.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/io/exr.hpp \
-  ../include/piccante/io/exr_tiny.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/externals/tinyexr/tinyexr.h \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/dynamic_range.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/io/bmp.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/io/exr.hpp \
+  ../include/piccante/include/io/exr_tiny.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/externals/tinyexr/tinyexr.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
-  ../include/piccante/externals/tinyexr/tinyexr.h \
+  ../include/piccante/include/externals/tinyexr/tinyexr.h \
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -286,18 +286,18 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   /usr/include/utime.h \
-  ../include/piccante/io/hdr.hpp \
-  ../include/piccante/colors/rgbe.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/io/pfm.hpp \
-  ../include/piccante/io/ppm.hpp \
-  ../include/piccante/io/pgm.hpp \
-  ../include/piccante/io/tmp.hpp \
-  ../include/piccante/io/tga.hpp \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/io/vol.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/io/stb.hpp \
+  ../include/piccante/include/io/hdr.hpp \
+  ../include/piccante/include/colors/rgbe.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/io/pfm.hpp \
+  ../include/piccante/include/io/ppm.hpp \
+  ../include/piccante/include/io/pgm.hpp \
+  ../include/piccante/include/io/tmp.hpp \
+  ../include/piccante/include/io/tga.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/io/vol.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/io/stb.hpp \
   ../include/stb/stb_image_write.h \
   ../include/stb/stb_image.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -313,19 +313,19 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  ../include/piccante/io/exif.hpp \
-  ../include/piccante/util/io.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/algorithms.hpp \
-  ../include/piccante/algorithms/compute_divergence.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter.hpp \
+  ../include/piccante/include/io/exif.hpp \
+  ../include/piccante/include/util/io.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/algorithms.hpp \
+  ../include/piccante/include/algorithms/compute_divergence.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/tuple \
@@ -341,1205 +341,1205 @@ src/CMakeFiles/pyccante.dir/bindings/py_image.cpp.o: ../src/bindings/py_image.cp
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
-  ../include/piccante/image.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/tile_list.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
   /usr/include/c++/11/mutex \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/tile.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/bbox.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/nelder_mead_opt_gray_match.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/point_samplers.hpp \
-  ../include/piccante/point_samplers/sampler_monte_carlo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/point_samplers/sampler_dart_throwing.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/point_samplers/sampler_bridson.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_mean.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Macros.h \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/tile.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/bbox.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/nelder_mead_opt_gray_match.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/point_samplers.hpp \
+  ../include/piccante/include/point_samplers/sampler_monte_carlo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/point_samplers/sampler_dart_throwing.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/point_samplers/sampler_bridson.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_mean.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Macros.h \
   /usr/include/c++/11/complex \
-  ../include/piccante/externals/Eigen/src/Core/util/MKL_support.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/MKL_support.h \
   /usr/include/c++/11/climits \
-  ../include/piccante/externals/Eigen/src/Core/util/Constants.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Meta.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ForwardDeclarations.h \
-  ../include/piccante/externals/Eigen/src/Core/util/StaticAssert.h \
-  ../include/piccante/externals/Eigen/src/Core/util/XprHelper.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Memory.h \
-  ../include/piccante/externals/Eigen/src/Core/NumTraits.h \
-  ../include/piccante/externals/Eigen/src/Core/MathFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/GenericPacketMath.h \
-  ../include/piccante/externals/Eigen/src/Core/MathFunctionsImpl.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/PacketMath.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/Complex.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/Half.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/Default/Settings.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/TernaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/BinaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/UnaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/NullaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/StlFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/AssignmentFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/Complex.h \
-  ../include/piccante/externals/Eigen/src/Core/IO.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseCoeffsBase.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/BlockMethods.h \
-  ../include/piccante/externals/Eigen/src/Core/MatrixBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/Core/EigenBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Product.h \
-  ../include/piccante/externals/Eigen/src/Core/CoreEvaluators.h \
-  ../include/piccante/externals/Eigen/src/Core/AssignEvaluator.h \
-  ../include/piccante/externals/Eigen/src/Core/Assign.h \
-  ../include/piccante/externals/Eigen/src/Core/ArrayBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/Core/util/BlasUtil.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseStorage.h \
-  ../include/piccante/externals/Eigen/src/Core/NestByValue.h \
-  ../include/piccante/externals/Eigen/src/Core/ReturnByValue.h \
-  ../include/piccante/externals/Eigen/src/Core/NoAlias.h \
-  ../include/piccante/externals/Eigen/src/Core/PlainObjectBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Matrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Array.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseTernaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseUnaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseNullaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseUnaryView.h \
-  ../include/piccante/externals/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/Dot.h \
-  ../include/piccante/externals/Eigen/src/Core/StableNorm.h \
-  ../include/piccante/externals/Eigen/src/Core/Stride.h \
-  ../include/piccante/externals/Eigen/src/Core/MapBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Map.h \
-  ../include/piccante/externals/Eigen/src/Core/Ref.h \
-  ../include/piccante/externals/Eigen/src/Core/Block.h \
-  ../include/piccante/externals/Eigen/src/Core/VectorBlock.h \
-  ../include/piccante/externals/Eigen/src/Core/Transpose.h \
-  ../include/piccante/externals/Eigen/src/Core/DiagonalMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Diagonal.h \
-  ../include/piccante/externals/Eigen/src/Core/DiagonalProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/Redux.h \
-  ../include/piccante/externals/Eigen/src/Core/Visitor.h \
-  ../include/piccante/externals/Eigen/src/Core/Fuzzy.h \
-  ../include/piccante/externals/Eigen/src/Core/Swap.h \
-  ../include/piccante/externals/Eigen/src/Core/CommaInitializer.h \
-  ../include/piccante/externals/Eigen/src/Core/GeneralProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/Solve.h \
-  ../include/piccante/externals/Eigen/src/Core/Inverse.h \
-  ../include/piccante/externals/Eigen/src/Core/SolverBase.h \
-  ../include/piccante/externals/Eigen/src/Core/PermutationMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Transpositions.h \
-  ../include/piccante/externals/Eigen/src/Core/TriangularMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/SelfAdjointView.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  ../include/piccante/externals/Eigen/src/Core/products/Parallelizer.h \
-  ../include/piccante/externals/Eigen/src/Core/ProductEvaluators.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/SolveTriangular.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularSolverVector.h \
-  ../include/piccante/externals/Eigen/src/Core/BandMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/CoreIterators.h \
-  ../include/piccante/externals/Eigen/src/Core/ConditionEstimator.h \
-  ../include/piccante/externals/Eigen/src/Core/BooleanRedux.h \
-  ../include/piccante/externals/Eigen/src/Core/Select.h \
-  ../include/piccante/externals/Eigen/src/Core/VectorwiseOp.h \
-  ../include/piccante/externals/Eigen/src/Core/Random.h \
-  ../include/piccante/externals/Eigen/src/Core/Replicate.h \
-  ../include/piccante/externals/Eigen/src/Core/Reverse.h \
-  ../include/piccante/externals/Eigen/src/Core/ArrayWrapper.h \
-  ../include/piccante/externals/Eigen/src/Core/GlobalFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/src/Cholesky/LLT.h \
-  ../include/piccante/externals/Eigen/src/Cholesky/LDLT.h \
-  ../include/piccante/externals/Eigen/Jacobi \
-  ../include/piccante/externals/Eigen/src/Jacobi/Jacobi.h \
-  ../include/piccante/externals/Eigen/Householder \
-  ../include/piccante/externals/Eigen/src/Householder/Householder.h \
-  ../include/piccante/externals/Eigen/src/Householder/HouseholderSequence.h \
-  ../include/piccante/externals/Eigen/src/Householder/BlockHouseholder.h \
-  ../include/piccante/externals/Eigen/src/QR/HouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/FullPivHouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/ColPivHouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/src/misc/Kernel.h \
-  ../include/piccante/externals/Eigen/src/misc/Image.h \
-  ../include/piccante/externals/Eigen/src/LU/FullPivLU.h \
-  ../include/piccante/externals/Eigen/src/LU/PartialPivLU.h \
-  ../include/piccante/externals/Eigen/src/LU/Determinant.h \
-  ../include/piccante/externals/Eigen/src/LU/InverseImpl.h \
-  ../include/piccante/externals/Eigen/src/LU/arch/Inverse_SSE.h \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/src/misc/RealSvd2x2.h \
-  ../include/piccante/externals/Eigen/src/SVD/UpperBidiagonalization.h \
-  ../include/piccante/externals/Eigen/src/SVD/SVDBase.h \
-  ../include/piccante/externals/Eigen/src/SVD/JacobiSVD.h \
-  ../include/piccante/externals/Eigen/src/SVD/BDCSVD.h \
-  ../include/piccante/externals/Eigen/src/Geometry/OrthoMethods.h \
-  ../include/piccante/externals/Eigen/src/Geometry/EulerAngles.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Homogeneous.h \
-  ../include/piccante/externals/Eigen/src/Geometry/RotationBase.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Rotation2D.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Quaternion.h \
-  ../include/piccante/externals/Eigen/src/Geometry/AngleAxis.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Transform.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Translation.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Scaling.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Hyperplane.h \
-  ../include/piccante/externals/Eigen/src/Geometry/ParametrizedLine.h \
-  ../include/piccante/externals/Eigen/src/Geometry/AlignedBox.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Umeyama.h \
-  ../include/piccante/externals/Eigen/src/Geometry/arch/Geometry_SSE.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/EigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealQZ.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealQZ.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  ../include/piccante/algorithms/sub_sample_stack.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/algorithms/weight_function.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/algorithms/mitsunaga_nayar_crf.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/algorithms/hdr_merger.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/algorithms.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/features_matching/ward_alignment.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/image_sampler.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_sampler_1d.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_assemble_hdr.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/algorithms/connected_components.hpp \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Constants.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Meta.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ForwardDeclarations.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/StaticAssert.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/XprHelper.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Memory.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NumTraits.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MathFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GenericPacketMath.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MathFunctionsImpl.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/PacketMath.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/MathFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/Complex.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/TypeCasting.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Half.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/Default/Settings.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/TernaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/BinaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/UnaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/NullaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/StlFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/AssignmentFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Complex.h \
+  ../include/piccante/include/externals/Eigen/src/Core/IO.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseCoeffsBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/BlockMethods.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MatrixBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/Core/EigenBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Product.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CoreEvaluators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/AssignEvaluator.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Assign.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ArrayBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/BlasUtil.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseStorage.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NestByValue.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ReturnByValue.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NoAlias.h \
+  ../include/piccante/include/externals/Eigen/src/Core/PlainObjectBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Matrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Array.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseTernaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseNullaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryView.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Dot.h \
+  ../include/piccante/include/externals/Eigen/src/Core/StableNorm.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Stride.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MapBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Map.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Ref.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Block.h \
+  ../include/piccante/include/externals/Eigen/src/Core/VectorBlock.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Transpose.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DiagonalMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Diagonal.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DiagonalProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Redux.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Visitor.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Fuzzy.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Swap.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CommaInitializer.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GeneralProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Solve.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Inverse.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/PermutationMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Transpositions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/TriangularMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SelfAdjointView.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/Parallelizer.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ProductEvaluators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SolveTriangular.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/BandMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CoreIterators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ConditionEstimator.h \
+  ../include/piccante/include/externals/Eigen/src/Core/BooleanRedux.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Select.h \
+  ../include/piccante/include/externals/Eigen/src/Core/VectorwiseOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Random.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Replicate.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Reverse.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ArrayWrapper.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GlobalFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/src/Cholesky/LLT.h \
+  ../include/piccante/include/externals/Eigen/src/Cholesky/LDLT.h \
+  ../include/piccante/include/externals/Eigen/Jacobi \
+  ../include/piccante/include/externals/Eigen/src/Jacobi/Jacobi.h \
+  ../include/piccante/include/externals/Eigen/Householder \
+  ../include/piccante/include/externals/Eigen/src/Householder/Householder.h \
+  ../include/piccante/include/externals/Eigen/src/Householder/HouseholderSequence.h \
+  ../include/piccante/include/externals/Eigen/src/Householder/BlockHouseholder.h \
+  ../include/piccante/include/externals/Eigen/src/QR/HouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/FullPivHouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/ColPivHouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/src/misc/Kernel.h \
+  ../include/piccante/include/externals/Eigen/src/misc/Image.h \
+  ../include/piccante/include/externals/Eigen/src/LU/FullPivLU.h \
+  ../include/piccante/include/externals/Eigen/src/LU/PartialPivLU.h \
+  ../include/piccante/include/externals/Eigen/src/LU/Determinant.h \
+  ../include/piccante/include/externals/Eigen/src/LU/InverseImpl.h \
+  ../include/piccante/include/externals/Eigen/src/LU/arch/Inverse_SSE.h \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/src/misc/RealSvd2x2.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/UpperBidiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/SVDBase.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/JacobiSVD.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/BDCSVD.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/OrthoMethods.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/EulerAngles.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Homogeneous.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/RotationBase.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Rotation2D.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Quaternion.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/AngleAxis.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Transform.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Translation.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Scaling.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Hyperplane.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/ParametrizedLine.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/AlignedBox.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Umeyama.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/arch/Geometry_SSE.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/EigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealQZ.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealQZ.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  ../include/piccante/include/algorithms/sub_sample_stack.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/algorithms/weight_function.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/algorithms/mitsunaga_nayar_crf.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/algorithms/hdr_merger.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/algorithms.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/features_matching/ward_alignment.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/image_sampler.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_sampler_1d.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_assemble_hdr.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/algorithms/connected_components.hpp \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/algorithms/discrete_cosine_transform.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/algorithms/poisson_filling.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/algorithms/poisson_solver.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/SparseCore \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseUtil.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrixBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/BlockMethods.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseAssign.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/CompressedStorage.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/AmbiVector.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCompressedBase.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMap.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/MappedSparseMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseVector.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseRef.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseTranspose.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseBlock.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDot.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseRedux.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDenseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseTriangularView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/TriangularSolver.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparsePermutation.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseFuzzy.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSolverBase.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/OrderingMethods \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Amd.h \
-  ../include/piccante/externals/Eigen/src/Core/util/NonMPL2.h \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Ordering.h \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h \
-  ../include/piccante/externals/Eigen/SparseCholesky \
-  ../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h \
-  ../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
-  ../include/piccante/externals/Eigen/src/Core/util/NonMPL2.h \
-  ../include/piccante/externals/Eigen/SparseLU \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Structs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLUImpl.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseColEtree.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Memory.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pivotL.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pruneL.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Utils.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU.h \
-  ../include/piccante/externals/Eigen/SparseQR \
-  ../include/piccante/externals/Eigen/src/SparseQR/SparseQR.h \
-  ../include/piccante/externals/Eigen/IterativeLinearSolvers \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/algorithms/discrete_cosine_transform.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/algorithms/poisson_filling.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/algorithms/poisson_solver.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/SparseCore \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseUtil.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrixBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/BlockMethods.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseAssign.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/CompressedStorage.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/AmbiVector.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCompressedBase.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMap.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseVector.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseRef.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseTranspose.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseBlock.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDot.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseRedux.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDenseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseTriangularView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/TriangularSolver.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparsePermutation.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseFuzzy.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/OrderingMethods \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Amd.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/NonMPL2.h \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Ordering.h \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  ../include/piccante/include/externals/Eigen/SparseCholesky \
+  ../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/NonMPL2.h \
+  ../include/piccante/include/externals/Eigen/SparseLU \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Structs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLUImpl.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseColEtree.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Memory.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Utils.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU.h \
+  ../include/piccante/include/externals/Eigen/SparseQR \
+  ../include/piccante/include/externals/Eigen/src/SparseQR/SparseQR.h \
+  ../include/piccante/include/externals/Eigen/IterativeLinearSolvers \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
   /usr/include/c++/11/list \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/algorithms/poisson_image_editing.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/algorithms/pushpull.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_up_pp.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/filtering/filter_sampler_2dsub.hpp \
-  ../include/piccante/filtering/filter_sampler_2dadd.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/algorithms/multi_resolution_operator.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/algorithms/quadtree.hpp \
-  ../include/piccante/algorithms/region_border.hpp \
-  ../include/piccante/algorithms/superpixels_oracle.hpp \
-  ../include/piccante/algorithms/quadtree.hpp \
-  ../include/piccante/algorithms/superpixels_slic.hpp \
-  ../include/piccante/algorithms/color_to_gray.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/filtering/filter_exposure_fusion_weights.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/histogram_matching.hpp \
-  ../include/piccante/algorithms/bilateral_separation.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/algorithms/grow_cut.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/filtering/filter_grow_cut.hpp \
-  ../include/piccante/algorithms/live_wire.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d_opt.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_1d.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/precomputed_diff_of_gaussians.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/algorithms/radial_basis_function.hpp \
-  ../include/piccante/algorithms/color_classification.hpp \
-  ../include/piccante/filtering/filter_radial_basis_function.hpp \
-  ../include/piccante/algorithms/radial_basis_function.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/algorithms/binarization.hpp \
-  ../include/piccante/filtering/filter_threshold.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/algorithms/segmentation_tmo_approx.hpp \
-  ../include/piccante/algorithms/superpixels_slic.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/colors.hpp \
-  ../include/piccante/colors/color.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/colors/color_3.hpp \
-  ../include/piccante/colors/color.hpp \
-  ../include/piccante/colors/matrix_from_primaries.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cieluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_logluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_xyY.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_lalphabeta.hpp \
-  ../include/piccante/colors/color_conv_ipt_to_ich.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_hdrlab.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/colors/rgbe.hpp \
-  ../include/piccante/features_matching.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/features_matching/general_corner_detector.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/features_matching/harris_corner_detector.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gradient_harris_opt.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/features_matching/general_corner_detector.hpp \
-  ../include/piccante/features_matching/susan_corner_detector.hpp \
-  ../include/piccante/features_matching/fast_corner_detector.hpp \
-  ../include/piccante/features_matching/canny_edge_detector.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/features_matching/lucid_descriptor.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/features_matching/sift_descriptor.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/features_matching/transform_data.hpp \
-  ../include/piccante/features_matching/transform_data.hpp \
-  ../include/piccante/features_matching/ward_alignment.hpp \
-  ../include/piccante/features_matching/motion_estimation.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_brute_force_matcher.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_lsh_matcher.hpp \
-  ../include/piccante/features_matching/hash_table_lsh.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/filtering.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_up_pp.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/filtering/filter_integral_image.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_reconstruct.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_local_extrema.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/filtering/filter_absolute_difference.hpp \
-  ../include/piccante/filtering/filter_anisotropic_diffusion.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/filtering/filter_assemble_hdr.hpp \
-  ../include/piccante/filtering/filter_backward_difference.hpp \
-  ../include/piccante/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_bilateral_2das.hpp \
-  ../include/piccante/filtering/filter_sampling_map.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/filtering/filter_bilateral_2df.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dsp.hpp \
-  ../include/piccante/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_color_conv.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_logluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/filtering/filter_color_distance.hpp \
-  ../include/piccante/filtering/filter_combine.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/filtering/filter_conv_2d.hpp \
-  ../include/piccante/filtering/filter_conv_2dsp.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/filtering/filter_crop.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/filtering/filter_dct_1d.hpp \
-  ../include/piccante/filtering/filter_dct_2d.hpp \
-  ../include/piccante/filtering/filter_dct_1d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d_opt.hpp \
-  ../include/piccante/filtering/filter_log_2d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_divergence.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_gradient_harris_opt.hpp \
-  ../include/piccante/filtering/filter_guided_a_b.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter_guided.hpp \
-  ../include/piccante/filtering/filter_guided_a_b.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/filtering/filter_kuwahara.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/filtering/filter_linear_color_space.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/filtering/filter_mean.hpp \
-  ../include/piccante/filtering/filter_med.hpp \
-  ../include/piccante/filtering/filter_med_vec.hpp \
-  ../include/piccante/filtering/filter_min.hpp \
-  ../include/piccante/filtering/filter_mosaic.hpp \
-  ../include/piccante/filtering/filter_demosaic.hpp \
-  ../include/piccante/filtering/filter_normal.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_nswe.hpp \
-  ../include/piccante/filtering/filter_zero_crossing.hpp \
-  ../include/piccante/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/filtering/filter_remove_inf_nan.hpp \
-  ../include/piccante/filtering/filter_sampler_1d.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/filtering/filter_sampler_2dadd.hpp \
-  ../include/piccante/filtering/filter_sampler_2dsub.hpp \
-  ../include/piccante/filtering/filter_sampler_3d.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/filtering/filter_sampling_map.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/filtering/filter_wls.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/filtering/filter_grow_cut.hpp \
-  ../include/piccante/filtering/filter_deform_grid.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/filtering/filter_radial_basis_function.hpp \
-  ../include/piccante/filtering/filter_disparity.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/filtering/filter_deconvolution.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_conv_2d.hpp \
-  ../include/piccante/filtering/filter_noise_estimation.hpp \
-  ../include/piccante/filtering/filter_tmqi.hpp \
-  ../include/piccante/filtering/filter_nearest_neighbors.hpp \
-  ../include/piccante/filtering/filter_luminance_adaptation.hpp \
-  ../include/piccante/algorithms/connected_components.hpp \
-  ../include/piccante/filtering/filter_clahe.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/colors/color_conv_ipt_to_ich.hpp \
-  ../include/piccante/filtering/filter_rotation.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/program.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/gl/program.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/formats.hpp \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/timings.hpp \
-  ../include/piccante/util/gl/buffer_ops.hpp \
-  ../include/piccante/util/gl/buffer_op.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/buffer_allocation.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/mask.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/redux_ops.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_blend.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/gl/algorithms/pushpull.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/gl/filtering/filter_down_pp.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/gl/filtering/filter_up_pp.hpp \
-  ../include/piccante/gl/algorithms/color_to_gray.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_channel.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/gl/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/gl/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_exposure_fusion_weights.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/algorithms/richardson_lucy_deconvolution.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_conv_2d.hpp \
-  ../include/piccante/gl/algorithms/grow_cut.hpp \
-  ../include/piccante/gl/filtering/filter_max.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_grow_cut.hpp \
-  ../include/piccante/util/gl/buffer_op.hpp \
-  ../include/piccante/util/gl/buffer_ops.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_channel.hpp \
-  ../include/piccante/gl/colors/color_conv.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/gl/colors/color_conv_linear.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/gl/colors/color_conv.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/gl/colors/color_conv_linear.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_hsl.hpp \
-  ../include/piccante/gl/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/gl/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/gl/filtering/filter_color_conv.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_warp_2d.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/gl/filtering/filter_anisotropic_diffusion.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2das.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/gl/filtering/filter_sampling_map.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_gradient.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2df.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/gl/filtering/filter_slicer.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_scatter.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds_e.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2dsp.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_3ds.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_3dsp.hpp \
-  ../include/piccante/gl/filtering/filter_disp.hpp \
-  ../include/piccante/gl/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_conv_2d.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_mean.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_min.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_max.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/gl/filtering/filter_gradient.hpp \
-  ../include/piccante/gl/filtering/filter_laplacian.hpp \
-  ../include/piccante/gl/filtering/filter_hsl_replace.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_hsl.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/filtering/filter_remapping.hpp \
-  ../include/piccante/gl/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter_sampling_map.hpp \
-  ../include/piccante/gl/filtering/filter_scatter.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_slicer.hpp \
-  ../include/piccante/gl/filtering/filter_durand_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_deform_grid.hpp \
-  ../include/piccante/util/gl/bicubic.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/filtering/filter_deform_grid.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/tone_mapping/segmentation_tmo_approx.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/gl/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_reinhard_single_pass.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/tone_mapping/durand_tmo.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_durand_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/hybrid_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/segmentation_tmo_approx.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/gl/filtering/filter_remapping.hpp \
-  ../include/piccante/gl/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/gl/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/gl/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/util/gl/display.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/gl/filtering/filter_color_conv.hpp \
-  ../include/piccante/image_samplers.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/image_samplers/image_sampler_catmull_rom.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_lanczos.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/io.hpp \
-  ../include/piccante/metrics.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/metrics/pu_encode.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/metrics/pu_encode_data.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/metrics/log_rmse.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/metrics/m_psnr.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/metrics/mse.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/metrics/mae.hpp \
-  ../include/piccante/metrics/maximum_error.hpp \
-  ../include/piccante/metrics/mse.hpp \
-  ../include/piccante/metrics/psnr.hpp \
-  ../include/piccante/metrics/relative_error.hpp \
-  ../include/piccante/metrics/ssim_index.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/filtering/filter_ssim.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/metrics/tmqi.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_tmqi.hpp \
-  ../include/piccante/point_samplers.hpp \
-  ../include/piccante/point_samplers/sampler_bridson.hpp \
-  ../include/piccante/point_samplers/sampler_dart_throwing.hpp \
-  ../include/piccante/point_samplers/sampler_monte_carlo.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/tone_mapping.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/tone_mapping/find_best_exposure.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/tone_mapping/hybrid_tmo.hpp \
-  ../include/piccante/algorithms/segmentation_tmo_approx.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/tone_mapping/lischinski_tmo.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/tone_mapping/ward_histogram_tmo.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/tone_mapping/durand_tmo.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/algorithms/bilateral_separation.hpp \
-  ../include/piccante/tone_mapping/ferwerda_tmo.hpp \
-  ../include/piccante/tone_mapping/schlick_tmo.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/tone_mapping/raman_tmo.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/tone_mapping/tumblin_tmo.hpp \
-  ../include/piccante/tone_mapping/ward_global_tmo.hpp \
-  ../include/piccante/util.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/util/cached_table.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/gl/ssbo.hpp \
-  ../include/piccante/util/gl/stroke.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/formats.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/timings.hpp \
-  ../include/piccante/util/gl/tone.hpp \
-  ../include/piccante/util/gl/buffer_allocation.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/util/gl/redux_ops.hpp \
-  ../include/piccante/util/gl/mask.hpp \
-  ../include/piccante/util/image_sampler.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/point_samplers.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/precomputed_diff_of_gaussians.hpp \
-  ../include/piccante/util/raw.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/tile.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/warp_samples.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/util/polyline.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/util/k_means.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/k_means_rand.hpp \
-  ../include/piccante/util/k_means.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/nelder_mead_opt_positive_polynomial.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/computer_vision.hpp \
-  ../include/piccante/computer_vision/homography_matrix.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/computer_vision/nelder_mead_opt_homography.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/computer_vision/fundamental_matrix.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_lsh_matcher.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_fundamental.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/computer_vision/triangulation.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_triangulation.hpp \
-  ../include/piccante/computer_vision/essential_matrix.hpp \
-  ../include/piccante/computer_vision/triangulation.hpp \
-  ../include/piccante/computer_vision/camera_matrix.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/computer_vision/intrisics_matrix.hpp \
-  ../include/piccante/computer_vision/camera_matrix.hpp \
-  ../include/piccante/computer_vision/rectification.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/filtering/filter_rotation.hpp \
-  ../include/piccante/computer_vision/stereo.hpp \
-  ../include/piccante/filtering/filter_disparity.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_homography.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_fundamental.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_triangulation.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_gordon_lowe.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_radial_distortion.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/computer_vision/find_checker_board.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/features_matching/harris_corner_detector.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/computer_vision/image_alignment.hpp \
-  ../include/piccante/features_matching/binary_feature_brute_force_matcher.hpp \
-  ../include/piccante/computer_vision/homography_matrix.hpp \
-  ../include/piccante/computer_vision/simple_ply.hpp \
-  ../include/piccante/JNI.hpp \
-  ../include/piccante/JNI/white_balance.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/JNI/live_wire.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/polyline.hpp \
-  ../include/piccante/algorithms/live_wire.hpp \
-  ../include/piccante/JNI/find_checker_board.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/computer_vision/find_checker_board.hpp \
-  ../include/piccante/algorithms/binarization.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/features_matching/canny_edge_detector.hpp \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/algorithms/poisson_image_editing.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/algorithms/pushpull.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dsub.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dadd.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/algorithms/multi_resolution_operator.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/algorithms/quadtree.hpp \
+  ../include/piccante/include/algorithms/region_border.hpp \
+  ../include/piccante/include/algorithms/superpixels_oracle.hpp \
+  ../include/piccante/include/algorithms/quadtree.hpp \
+  ../include/piccante/include/algorithms/superpixels_slic.hpp \
+  ../include/piccante/include/algorithms/color_to_gray.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/filtering/filter_exposure_fusion_weights.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/histogram_matching.hpp \
+  ../include/piccante/include/algorithms/bilateral_separation.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/algorithms/grow_cut.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/algorithms/live_wire.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/precomputed_diff_of_gaussians.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/algorithms/radial_basis_function.hpp \
+  ../include/piccante/include/algorithms/color_classification.hpp \
+  ../include/piccante/include/filtering/filter_radial_basis_function.hpp \
+  ../include/piccante/include/algorithms/radial_basis_function.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/algorithms/binarization.hpp \
+  ../include/piccante/include/filtering/filter_threshold.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/algorithms/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/algorithms/superpixels_slic.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/colors.hpp \
+  ../include/piccante/include/colors/color.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/colors/color_3.hpp \
+  ../include/piccante/include/colors/color.hpp \
+  ../include/piccante/include/colors/matrix_from_primaries.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cieluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_logluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_xyY.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_lalphabeta.hpp \
+  ../include/piccante/include/colors/color_conv_ipt_to_ich.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_hdrlab.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/colors/rgbe.hpp \
+  ../include/piccante/include/features_matching.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/features_matching/general_corner_detector.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/features_matching/harris_corner_detector.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gradient_harris_opt.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/features_matching/general_corner_detector.hpp \
+  ../include/piccante/include/features_matching/susan_corner_detector.hpp \
+  ../include/piccante/include/features_matching/fast_corner_detector.hpp \
+  ../include/piccante/include/features_matching/canny_edge_detector.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/features_matching/lucid_descriptor.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/features_matching/sift_descriptor.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/features_matching/transform_data.hpp \
+  ../include/piccante/include/features_matching/transform_data.hpp \
+  ../include/piccante/include/features_matching/ward_alignment.hpp \
+  ../include/piccante/include/features_matching/motion_estimation.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_brute_force_matcher.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_lsh_matcher.hpp \
+  ../include/piccante/include/features_matching/hash_table_lsh.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/filtering.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/filtering/filter_integral_image.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_reconstruct.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_local_extrema.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/filtering/filter_absolute_difference.hpp \
+  ../include/piccante/include/filtering/filter_anisotropic_diffusion.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/filtering/filter_assemble_hdr.hpp \
+  ../include/piccante/include/filtering/filter_backward_difference.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2das.hpp \
+  ../include/piccante/include/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2df.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dsp.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_logluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/filtering/filter_color_distance.hpp \
+  ../include/piccante/include/filtering/filter_combine.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/filtering/filter_conv_2dsp.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/filtering/filter_crop.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/filtering/filter_dct_1d.hpp \
+  ../include/piccante/include/filtering/filter_dct_2d.hpp \
+  ../include/piccante/include/filtering/filter_dct_1d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_log_2d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_divergence.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_gradient_harris_opt.hpp \
+  ../include/piccante/include/filtering/filter_guided_a_b.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter_guided.hpp \
+  ../include/piccante/include/filtering/filter_guided_a_b.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/filtering/filter_kuwahara.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/filtering/filter_linear_color_space.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/filtering/filter_mean.hpp \
+  ../include/piccante/include/filtering/filter_med.hpp \
+  ../include/piccante/include/filtering/filter_med_vec.hpp \
+  ../include/piccante/include/filtering/filter_min.hpp \
+  ../include/piccante/include/filtering/filter_mosaic.hpp \
+  ../include/piccante/include/filtering/filter_demosaic.hpp \
+  ../include/piccante/include/filtering/filter_normal.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_nswe.hpp \
+  ../include/piccante/include/filtering/filter_zero_crossing.hpp \
+  ../include/piccante/include/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/filtering/filter_remove_inf_nan.hpp \
+  ../include/piccante/include/filtering/filter_sampler_1d.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dadd.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dsub.hpp \
+  ../include/piccante/include/filtering/filter_sampler_3d.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/filtering/filter_wls.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/filtering/filter_radial_basis_function.hpp \
+  ../include/piccante/include/filtering/filter_disparity.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/filtering/filter_deconvolution.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/filtering/filter_noise_estimation.hpp \
+  ../include/piccante/include/filtering/filter_tmqi.hpp \
+  ../include/piccante/include/filtering/filter_nearest_neighbors.hpp \
+  ../include/piccante/include/filtering/filter_luminance_adaptation.hpp \
+  ../include/piccante/include/algorithms/connected_components.hpp \
+  ../include/piccante/include/filtering/filter_clahe.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/colors/color_conv_ipt_to_ich.hpp \
+  ../include/piccante/include/filtering/filter_rotation.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/program.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/gl/program.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/formats.hpp \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/timings.hpp \
+  ../include/piccante/include/util/gl/buffer_ops.hpp \
+  ../include/piccante/include/util/gl/buffer_op.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/buffer_allocation.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/mask.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/redux_ops.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_blend.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/gl/algorithms/pushpull.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/gl/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/gl/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/gl/algorithms/color_to_gray.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_channel.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/gl/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/gl/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_exposure_fusion_weights.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/algorithms/richardson_lucy_deconvolution.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/gl/algorithms/grow_cut.hpp \
+  ../include/piccante/include/gl/filtering/filter_max.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/util/gl/buffer_op.hpp \
+  ../include/piccante/include/util/gl/buffer_ops.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_channel.hpp \
+  ../include/piccante/include/gl/colors/color_conv.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/gl/colors/color_conv_linear.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/gl/colors/color_conv.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/gl/colors/color_conv_linear.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_hsl.hpp \
+  ../include/piccante/include/gl/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/gl/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_anisotropic_diffusion.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2das.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_gradient.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2df.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/gl/filtering/filter_slicer.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_scatter.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds_e.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2dsp.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_3ds.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_3dsp.hpp \
+  ../include/piccante/include/gl/filtering/filter_disp.hpp \
+  ../include/piccante/include/gl/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_mean.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_min.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_max.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gradient.hpp \
+  ../include/piccante/include/gl/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/gl/filtering/filter_hsl_replace.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_hsl.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/filtering/filter_remapping.hpp \
+  ../include/piccante/include/gl/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/gl/filtering/filter_scatter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_slicer.hpp \
+  ../include/piccante/include/gl/filtering/filter_durand_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/util/gl/bicubic.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/tone_mapping/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/gl/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_reinhard_single_pass.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/tone_mapping/durand_tmo.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_durand_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/hybrid_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/gl/filtering/filter_remapping.hpp \
+  ../include/piccante/include/gl/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/gl/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/util/gl/display.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/image_samplers.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_catmull_rom.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_lanczos.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/io.hpp \
+  ../include/piccante/include/metrics.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/metrics/pu_encode.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/metrics/pu_encode_data.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/metrics/log_rmse.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/metrics/m_psnr.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/metrics/mse.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/metrics/mae.hpp \
+  ../include/piccante/include/metrics/maximum_error.hpp \
+  ../include/piccante/include/metrics/mse.hpp \
+  ../include/piccante/include/metrics/psnr.hpp \
+  ../include/piccante/include/metrics/relative_error.hpp \
+  ../include/piccante/include/metrics/ssim_index.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_ssim.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/metrics/tmqi.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_tmqi.hpp \
+  ../include/piccante/include/point_samplers.hpp \
+  ../include/piccante/include/point_samplers/sampler_bridson.hpp \
+  ../include/piccante/include/point_samplers/sampler_dart_throwing.hpp \
+  ../include/piccante/include/point_samplers/sampler_monte_carlo.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/tone_mapping.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/tone_mapping/find_best_exposure.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/tone_mapping/hybrid_tmo.hpp \
+  ../include/piccante/include/algorithms/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/tone_mapping/lischinski_tmo.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/tone_mapping/ward_histogram_tmo.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/tone_mapping/durand_tmo.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/algorithms/bilateral_separation.hpp \
+  ../include/piccante/include/tone_mapping/ferwerda_tmo.hpp \
+  ../include/piccante/include/tone_mapping/schlick_tmo.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/tone_mapping/raman_tmo.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/tone_mapping/tumblin_tmo.hpp \
+  ../include/piccante/include/tone_mapping/ward_global_tmo.hpp \
+  ../include/piccante/include/util.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/util/cached_table.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/gl/ssbo.hpp \
+  ../include/piccante/include/util/gl/stroke.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/formats.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/timings.hpp \
+  ../include/piccante/include/util/gl/tone.hpp \
+  ../include/piccante/include/util/gl/buffer_allocation.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/util/gl/redux_ops.hpp \
+  ../include/piccante/include/util/gl/mask.hpp \
+  ../include/piccante/include/util/image_sampler.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/point_samplers.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/precomputed_diff_of_gaussians.hpp \
+  ../include/piccante/include/util/raw.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/tile.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/warp_samples.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/util/polyline.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/util/k_means.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/k_means_rand.hpp \
+  ../include/piccante/include/util/k_means.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_positive_polynomial.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/computer_vision.hpp \
+  ../include/piccante/include/computer_vision/homography_matrix.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_homography.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/computer_vision/fundamental_matrix.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_lsh_matcher.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_fundamental.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/computer_vision/triangulation.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_triangulation.hpp \
+  ../include/piccante/include/computer_vision/essential_matrix.hpp \
+  ../include/piccante/include/computer_vision/triangulation.hpp \
+  ../include/piccante/include/computer_vision/camera_matrix.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/computer_vision/intrisics_matrix.hpp \
+  ../include/piccante/include/computer_vision/camera_matrix.hpp \
+  ../include/piccante/include/computer_vision/rectification.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/filtering/filter_rotation.hpp \
+  ../include/piccante/include/computer_vision/stereo.hpp \
+  ../include/piccante/include/filtering/filter_disparity.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_homography.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_fundamental.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_triangulation.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_gordon_lowe.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_radial_distortion.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/computer_vision/find_checker_board.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/features_matching/harris_corner_detector.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/computer_vision/image_alignment.hpp \
+  ../include/piccante/include/features_matching/binary_feature_brute_force_matcher.hpp \
+  ../include/piccante/include/computer_vision/homography_matrix.hpp \
+  ../include/piccante/include/computer_vision/simple_ply.hpp \
+  ../include/piccante/include/JNI.hpp \
+  ../include/piccante/include/JNI/white_balance.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/JNI/live_wire.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/polyline.hpp \
+  ../include/piccante/include/algorithms/live_wire.hpp \
+  ../include/piccante/include/JNI/find_checker_board.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/computer_vision/find_checker_board.hpp \
+  ../include/piccante/include/algorithms/binarization.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/features_matching/canny_edge_detector.hpp \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/attr.h \
@@ -1719,9 +1719,9 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/GL/glu.h \
   /usr/include/GL/gl.h \
-  ../include/piccante/piccante.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
+  ../include/piccante/include/piccante.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
@@ -1879,10 +1879,10 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_numeric.h \
   /usr/include/c++/11/math.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  ../include/piccante/util/compability.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/bbox.hpp \
-  ../include/piccante/util/string.hpp \
+  ../include/piccante/include/util/compability.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/bbox.hpp \
+  ../include/piccante/include/util/string.hpp \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -1922,7 +1922,7 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../include/piccante/base.hpp \
+  ../include/piccante/include/base.hpp \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -1931,8 +1931,8 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/util/math.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/util/math.hpp \
   /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -1940,21 +1940,21 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
   /usr/include/c++/11/bits/erase_if.h \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/dynamic_range.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/io/bmp.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/io/exr.hpp \
-  ../include/piccante/io/exr_tiny.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/externals/tinyexr/tinyexr.h \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/dynamic_range.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/io/bmp.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/io/exr.hpp \
+  ../include/piccante/include/io/exr_tiny.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/externals/tinyexr/tinyexr.h \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
-  ../include/piccante/externals/tinyexr/tinyexr.h \
+  ../include/piccante/include/externals/tinyexr/tinyexr.h \
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -1975,18 +1975,18 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
   /usr/include/utime.h \
-  ../include/piccante/io/hdr.hpp \
-  ../include/piccante/colors/rgbe.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/io/pfm.hpp \
-  ../include/piccante/io/ppm.hpp \
-  ../include/piccante/io/pgm.hpp \
-  ../include/piccante/io/tmp.hpp \
-  ../include/piccante/io/tga.hpp \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/io/vol.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/io/stb.hpp \
+  ../include/piccante/include/io/hdr.hpp \
+  ../include/piccante/include/colors/rgbe.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/io/pfm.hpp \
+  ../include/piccante/include/io/ppm.hpp \
+  ../include/piccante/include/io/pgm.hpp \
+  ../include/piccante/include/io/tmp.hpp \
+  ../include/piccante/include/io/tga.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/io/vol.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/io/stb.hpp \
   ../include/stb/stb_image_write.h \
   ../include/stb/stb_image.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -2002,19 +2002,19 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  ../include/piccante/io/exif.hpp \
-  ../include/piccante/util/io.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/algorithms.hpp \
-  ../include/piccante/algorithms/compute_divergence.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter.hpp \
+  ../include/piccante/include/io/exif.hpp \
+  ../include/piccante/include/util/io.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/algorithms.hpp \
+  ../include/piccante/include/algorithms/compute_divergence.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/tuple \
@@ -2030,1205 +2030,1205 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/bits/std_function.h \
-  ../include/piccante/image.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/tile_list.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
   /usr/include/c++/11/mutex \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/tile.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/bbox.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/nelder_mead_opt_gray_match.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/point_samplers.hpp \
-  ../include/piccante/point_samplers/sampler_monte_carlo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/point_samplers/sampler_dart_throwing.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/point_samplers/sampler_bridson.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_mean.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Macros.h \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/tile.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/bbox.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/nelder_mead_opt_gray_match.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/point_samplers.hpp \
+  ../include/piccante/include/point_samplers/sampler_monte_carlo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/point_samplers/sampler_dart_throwing.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/point_samplers/sampler_bridson.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_mean.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Macros.h \
   /usr/include/c++/11/complex \
-  ../include/piccante/externals/Eigen/src/Core/util/MKL_support.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/MKL_support.h \
   /usr/include/c++/11/climits \
-  ../include/piccante/externals/Eigen/src/Core/util/Constants.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Meta.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ForwardDeclarations.h \
-  ../include/piccante/externals/Eigen/src/Core/util/StaticAssert.h \
-  ../include/piccante/externals/Eigen/src/Core/util/XprHelper.h \
-  ../include/piccante/externals/Eigen/src/Core/util/Memory.h \
-  ../include/piccante/externals/Eigen/src/Core/NumTraits.h \
-  ../include/piccante/externals/Eigen/src/Core/MathFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/GenericPacketMath.h \
-  ../include/piccante/externals/Eigen/src/Core/MathFunctionsImpl.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/PacketMath.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/Complex.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/Half.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/Default/Settings.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/TernaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/BinaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/UnaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/NullaryFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/StlFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/functors/AssignmentFunctors.h \
-  ../include/piccante/externals/Eigen/src/Core/arch/CUDA/Complex.h \
-  ../include/piccante/externals/Eigen/src/Core/IO.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseCoeffsBase.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/BlockMethods.h \
-  ../include/piccante/externals/Eigen/src/Core/MatrixBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/Core/EigenBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Product.h \
-  ../include/piccante/externals/Eigen/src/Core/CoreEvaluators.h \
-  ../include/piccante/externals/Eigen/src/Core/AssignEvaluator.h \
-  ../include/piccante/externals/Eigen/src/Core/Assign.h \
-  ../include/piccante/externals/Eigen/src/Core/ArrayBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/Core/util/BlasUtil.h \
-  ../include/piccante/externals/Eigen/src/Core/DenseStorage.h \
-  ../include/piccante/externals/Eigen/src/Core/NestByValue.h \
-  ../include/piccante/externals/Eigen/src/Core/ReturnByValue.h \
-  ../include/piccante/externals/Eigen/src/Core/NoAlias.h \
-  ../include/piccante/externals/Eigen/src/Core/PlainObjectBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Matrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Array.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseTernaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseUnaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseNullaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/CwiseUnaryView.h \
-  ../include/piccante/externals/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/Core/Dot.h \
-  ../include/piccante/externals/Eigen/src/Core/StableNorm.h \
-  ../include/piccante/externals/Eigen/src/Core/Stride.h \
-  ../include/piccante/externals/Eigen/src/Core/MapBase.h \
-  ../include/piccante/externals/Eigen/src/Core/Map.h \
-  ../include/piccante/externals/Eigen/src/Core/Ref.h \
-  ../include/piccante/externals/Eigen/src/Core/Block.h \
-  ../include/piccante/externals/Eigen/src/Core/VectorBlock.h \
-  ../include/piccante/externals/Eigen/src/Core/Transpose.h \
-  ../include/piccante/externals/Eigen/src/Core/DiagonalMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Diagonal.h \
-  ../include/piccante/externals/Eigen/src/Core/DiagonalProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/Redux.h \
-  ../include/piccante/externals/Eigen/src/Core/Visitor.h \
-  ../include/piccante/externals/Eigen/src/Core/Fuzzy.h \
-  ../include/piccante/externals/Eigen/src/Core/Swap.h \
-  ../include/piccante/externals/Eigen/src/Core/CommaInitializer.h \
-  ../include/piccante/externals/Eigen/src/Core/GeneralProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/Solve.h \
-  ../include/piccante/externals/Eigen/src/Core/Inverse.h \
-  ../include/piccante/externals/Eigen/src/Core/SolverBase.h \
-  ../include/piccante/externals/Eigen/src/Core/PermutationMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/Transpositions.h \
-  ../include/piccante/externals/Eigen/src/Core/TriangularMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/SelfAdjointView.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  ../include/piccante/externals/Eigen/src/Core/products/Parallelizer.h \
-  ../include/piccante/externals/Eigen/src/Core/ProductEvaluators.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/SolveTriangular.h \
-  ../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointProduct.h \
-  ../include/piccante/externals/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixVector.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/products/TriangularSolverVector.h \
-  ../include/piccante/externals/Eigen/src/Core/BandMatrix.h \
-  ../include/piccante/externals/Eigen/src/Core/CoreIterators.h \
-  ../include/piccante/externals/Eigen/src/Core/ConditionEstimator.h \
-  ../include/piccante/externals/Eigen/src/Core/BooleanRedux.h \
-  ../include/piccante/externals/Eigen/src/Core/Select.h \
-  ../include/piccante/externals/Eigen/src/Core/VectorwiseOp.h \
-  ../include/piccante/externals/Eigen/src/Core/Random.h \
-  ../include/piccante/externals/Eigen/src/Core/Replicate.h \
-  ../include/piccante/externals/Eigen/src/Core/Reverse.h \
-  ../include/piccante/externals/Eigen/src/Core/ArrayWrapper.h \
-  ../include/piccante/externals/Eigen/src/Core/GlobalFunctions.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/src/Cholesky/LLT.h \
-  ../include/piccante/externals/Eigen/src/Cholesky/LDLT.h \
-  ../include/piccante/externals/Eigen/Jacobi \
-  ../include/piccante/externals/Eigen/src/Jacobi/Jacobi.h \
-  ../include/piccante/externals/Eigen/Householder \
-  ../include/piccante/externals/Eigen/src/Householder/Householder.h \
-  ../include/piccante/externals/Eigen/src/Householder/HouseholderSequence.h \
-  ../include/piccante/externals/Eigen/src/Householder/BlockHouseholder.h \
-  ../include/piccante/externals/Eigen/src/QR/HouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/FullPivHouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/ColPivHouseholderQR.h \
-  ../include/piccante/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/src/misc/Kernel.h \
-  ../include/piccante/externals/Eigen/src/misc/Image.h \
-  ../include/piccante/externals/Eigen/src/LU/FullPivLU.h \
-  ../include/piccante/externals/Eigen/src/LU/PartialPivLU.h \
-  ../include/piccante/externals/Eigen/src/LU/Determinant.h \
-  ../include/piccante/externals/Eigen/src/LU/InverseImpl.h \
-  ../include/piccante/externals/Eigen/src/LU/arch/Inverse_SSE.h \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/src/misc/RealSvd2x2.h \
-  ../include/piccante/externals/Eigen/src/SVD/UpperBidiagonalization.h \
-  ../include/piccante/externals/Eigen/src/SVD/SVDBase.h \
-  ../include/piccante/externals/Eigen/src/SVD/JacobiSVD.h \
-  ../include/piccante/externals/Eigen/src/SVD/BDCSVD.h \
-  ../include/piccante/externals/Eigen/src/Geometry/OrthoMethods.h \
-  ../include/piccante/externals/Eigen/src/Geometry/EulerAngles.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Homogeneous.h \
-  ../include/piccante/externals/Eigen/src/Geometry/RotationBase.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Rotation2D.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Quaternion.h \
-  ../include/piccante/externals/Eigen/src/Geometry/AngleAxis.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Transform.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Translation.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Scaling.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Hyperplane.h \
-  ../include/piccante/externals/Eigen/src/Geometry/ParametrizedLine.h \
-  ../include/piccante/externals/Eigen/src/Geometry/AlignedBox.h \
-  ../include/piccante/externals/Eigen/src/Geometry/Umeyama.h \
-  ../include/piccante/externals/Eigen/src/Geometry/arch/Geometry_SSE.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/EigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealQZ.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/RealQZ.h \
-  ../include/piccante/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  ../include/piccante/algorithms/sub_sample_stack.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/algorithms/weight_function.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/algorithms/mitsunaga_nayar_crf.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/algorithms/hdr_merger.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/algorithms.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/features_matching/ward_alignment.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/image_sampler.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_sampler_1d.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_assemble_hdr.hpp \
-  ../include/piccante/algorithms/camera_response_function.hpp \
-  ../include/piccante/algorithms/connected_components.hpp \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Constants.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Meta.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ForwardDeclarations.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/StaticAssert.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/XprHelper.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/Memory.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NumTraits.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MathFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GenericPacketMath.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MathFunctionsImpl.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/PacketMath.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/MathFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/Complex.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/SSE/TypeCasting.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Half.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/Default/Settings.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/TernaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/BinaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/UnaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/NullaryFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/StlFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/functors/AssignmentFunctors.h \
+  ../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Complex.h \
+  ../include/piccante/include/externals/Eigen/src/Core/IO.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseCoeffsBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/BlockMethods.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MatrixBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/Core/EigenBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Product.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CoreEvaluators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/AssignEvaluator.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Assign.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ArrayBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/BlasUtil.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DenseStorage.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NestByValue.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ReturnByValue.h \
+  ../include/piccante/include/externals/Eigen/src/Core/NoAlias.h \
+  ../include/piccante/include/externals/Eigen/src/Core/PlainObjectBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Matrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Array.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseTernaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseNullaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryView.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Dot.h \
+  ../include/piccante/include/externals/Eigen/src/Core/StableNorm.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Stride.h \
+  ../include/piccante/include/externals/Eigen/src/Core/MapBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Map.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Ref.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Block.h \
+  ../include/piccante/include/externals/Eigen/src/Core/VectorBlock.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Transpose.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DiagonalMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Diagonal.h \
+  ../include/piccante/include/externals/Eigen/src/Core/DiagonalProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Redux.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Visitor.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Fuzzy.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Swap.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CommaInitializer.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GeneralProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Solve.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Inverse.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/PermutationMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Transpositions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/TriangularMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SelfAdjointView.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/Parallelizer.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ProductEvaluators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/SolveTriangular.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointProduct.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverVector.h \
+  ../include/piccante/include/externals/Eigen/src/Core/BandMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/Core/CoreIterators.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ConditionEstimator.h \
+  ../include/piccante/include/externals/Eigen/src/Core/BooleanRedux.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Select.h \
+  ../include/piccante/include/externals/Eigen/src/Core/VectorwiseOp.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Random.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Replicate.h \
+  ../include/piccante/include/externals/Eigen/src/Core/Reverse.h \
+  ../include/piccante/include/externals/Eigen/src/Core/ArrayWrapper.h \
+  ../include/piccante/include/externals/Eigen/src/Core/GlobalFunctions.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/src/Cholesky/LLT.h \
+  ../include/piccante/include/externals/Eigen/src/Cholesky/LDLT.h \
+  ../include/piccante/include/externals/Eigen/Jacobi \
+  ../include/piccante/include/externals/Eigen/src/Jacobi/Jacobi.h \
+  ../include/piccante/include/externals/Eigen/Householder \
+  ../include/piccante/include/externals/Eigen/src/Householder/Householder.h \
+  ../include/piccante/include/externals/Eigen/src/Householder/HouseholderSequence.h \
+  ../include/piccante/include/externals/Eigen/src/Householder/BlockHouseholder.h \
+  ../include/piccante/include/externals/Eigen/src/QR/HouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/FullPivHouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/ColPivHouseholderQR.h \
+  ../include/piccante/include/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/src/misc/Kernel.h \
+  ../include/piccante/include/externals/Eigen/src/misc/Image.h \
+  ../include/piccante/include/externals/Eigen/src/LU/FullPivLU.h \
+  ../include/piccante/include/externals/Eigen/src/LU/PartialPivLU.h \
+  ../include/piccante/include/externals/Eigen/src/LU/Determinant.h \
+  ../include/piccante/include/externals/Eigen/src/LU/InverseImpl.h \
+  ../include/piccante/include/externals/Eigen/src/LU/arch/Inverse_SSE.h \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/src/misc/RealSvd2x2.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/UpperBidiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/SVDBase.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/JacobiSVD.h \
+  ../include/piccante/include/externals/Eigen/src/SVD/BDCSVD.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/OrthoMethods.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/EulerAngles.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Homogeneous.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/RotationBase.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Rotation2D.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Quaternion.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/AngleAxis.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Transform.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Translation.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Scaling.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Hyperplane.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/ParametrizedLine.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/AlignedBox.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/Umeyama.h \
+  ../include/piccante/include/externals/Eigen/src/Geometry/arch/Geometry_SSE.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/EigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexSchur.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealQZ.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/RealQZ.h \
+  ../include/piccante/include/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  ../include/piccante/include/algorithms/sub_sample_stack.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/algorithms/weight_function.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/algorithms/mitsunaga_nayar_crf.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/algorithms/hdr_merger.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/algorithms.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/features_matching/ward_alignment.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/image_sampler.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_sampler_1d.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_assemble_hdr.hpp \
+  ../include/piccante/include/algorithms/camera_response_function.hpp \
+  ../include/piccante/include/algorithms/connected_components.hpp \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_map.h \
   /usr/include/c++/11/bits/stl_multimap.h \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/algorithms/discrete_cosine_transform.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/algorithms/poisson_filling.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/buffer.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/algorithms/poisson_solver.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/SparseCore \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseUtil.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrixBase.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  ../include/piccante/externals/Eigen/src/plugins/BlockMethods.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseAssign.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/CompressedStorage.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/AmbiVector.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCompressedBase.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMap.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/MappedSparseMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseVector.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseRef.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseTranspose.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseBlock.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDot.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseRedux.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseDenseProduct.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseTriangularView.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/TriangularSolver.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparsePermutation.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseFuzzy.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseSolverBase.h \
-  ../include/piccante/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  ../include/piccante/externals/Eigen/OrderingMethods \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Amd.h \
-  ../include/piccante/externals/Eigen/src/Core/util/NonMPL2.h \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Ordering.h \
-  ../include/piccante/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h \
-  ../include/piccante/externals/Eigen/SparseCholesky \
-  ../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h \
-  ../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
-  ../include/piccante/externals/Eigen/src/Core/util/NonMPL2.h \
-  ../include/piccante/externals/Eigen/SparseLU \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Structs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLUImpl.h \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseColEtree.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Memory.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pivotL.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pruneL.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Utils.h \
-  ../include/piccante/externals/Eigen/src/SparseLU/SparseLU.h \
-  ../include/piccante/externals/Eigen/SparseQR \
-  ../include/piccante/externals/Eigen/src/SparseQR/SparseQR.h \
-  ../include/piccante/externals/Eigen/IterativeLinearSolvers \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
-  ../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/algorithms/discrete_cosine_transform.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/algorithms/poisson_filling.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/buffer.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/algorithms/poisson_solver.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/SparseCore \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/src/Core/util/DisableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseUtil.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrixBase.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  ../include/piccante/include/externals/Eigen/src/plugins/BlockMethods.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseAssign.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/CompressedStorage.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/AmbiVector.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCompressedBase.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMap.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseVector.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseRef.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseTranspose.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseBlock.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDot.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseRedux.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseDenseProduct.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseTriangularView.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/TriangularSolver.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparsePermutation.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseFuzzy.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseSolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  ../include/piccante/include/externals/Eigen/OrderingMethods \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Amd.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/NonMPL2.h \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Ordering.h \
+  ../include/piccante/include/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  ../include/piccante/include/externals/Eigen/SparseCholesky \
+  ../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  ../include/piccante/include/externals/Eigen/src/Core/util/NonMPL2.h \
+  ../include/piccante/include/externals/Eigen/SparseLU \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Structs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLUImpl.h \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseColEtree.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Memory.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Utils.h \
+  ../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU.h \
+  ../include/piccante/include/externals/Eigen/SparseQR \
+  ../include/piccante/include/externals/Eigen/src/SparseQR/SparseQR.h \
+  ../include/piccante/include/externals/Eigen/IterativeLinearSolvers \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  ../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
   /usr/include/c++/11/list \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
   /usr/include/c++/11/bits/list.tcc \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/algorithms/poisson_image_editing.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/algorithms/pushpull.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_up_pp.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/filtering/filter_sampler_2dsub.hpp \
-  ../include/piccante/filtering/filter_sampler_2dadd.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/algorithms/multi_resolution_operator.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/algorithms/quadtree.hpp \
-  ../include/piccante/algorithms/region_border.hpp \
-  ../include/piccante/algorithms/superpixels_oracle.hpp \
-  ../include/piccante/algorithms/quadtree.hpp \
-  ../include/piccante/algorithms/superpixels_slic.hpp \
-  ../include/piccante/algorithms/color_to_gray.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/filtering/filter_exposure_fusion_weights.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/algorithms/histogram_matching.hpp \
-  ../include/piccante/algorithms/bilateral_separation.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/algorithms/grow_cut.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/filtering/filter_grow_cut.hpp \
-  ../include/piccante/algorithms/live_wire.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d_opt.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_1d.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/util/precomputed_diff_of_gaussians.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/algorithms/radial_basis_function.hpp \
-  ../include/piccante/algorithms/color_classification.hpp \
-  ../include/piccante/filtering/filter_radial_basis_function.hpp \
-  ../include/piccante/algorithms/radial_basis_function.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/algorithms/binarization.hpp \
-  ../include/piccante/filtering/filter_threshold.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/algorithms/segmentation_tmo_approx.hpp \
-  ../include/piccante/algorithms/superpixels_slic.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/colors.hpp \
-  ../include/piccante/colors/color.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/colors/color_3.hpp \
-  ../include/piccante/colors/color.hpp \
-  ../include/piccante/colors/matrix_from_primaries.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cieluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_logluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_xyY.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_lalphabeta.hpp \
-  ../include/piccante/colors/color_conv_ipt_to_ich.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_hdrlab.hpp \
-  ../include/piccante/colors/saturation.hpp \
-  ../include/piccante/colors/rgbe.hpp \
-  ../include/piccante/features_matching.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/features_matching/general_corner_detector.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/features_matching/harris_corner_detector.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gradient_harris_opt.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/features_matching/general_corner_detector.hpp \
-  ../include/piccante/features_matching/susan_corner_detector.hpp \
-  ../include/piccante/features_matching/fast_corner_detector.hpp \
-  ../include/piccante/features_matching/canny_edge_detector.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/features_matching/lucid_descriptor.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/features_matching/sift_descriptor.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/features_matching/transform_data.hpp \
-  ../include/piccante/features_matching/transform_data.hpp \
-  ../include/piccante/features_matching/ward_alignment.hpp \
-  ../include/piccante/features_matching/motion_estimation.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_brute_force_matcher.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_lsh_matcher.hpp \
-  ../include/piccante/features_matching/hash_table_lsh.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/filtering.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_up_pp.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/filtering/filter_integral_image.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_reconstruct.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_local_extrema.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/filtering/filter_absolute_difference.hpp \
-  ../include/piccante/filtering/filter_anisotropic_diffusion.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/filtering/filter_assemble_hdr.hpp \
-  ../include/piccante/filtering/filter_backward_difference.hpp \
-  ../include/piccante/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_bilateral_2das.hpp \
-  ../include/piccante/filtering/filter_sampling_map.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/filtering/filter_bilateral_2df.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dsp.hpp \
-  ../include/piccante/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_color_conv.hpp \
-  ../include/piccante/colors/color_conv.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_logluv.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/filtering/filter_color_distance.hpp \
-  ../include/piccante/filtering/filter_combine.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/filtering/filter_conv_2d.hpp \
-  ../include/piccante/filtering/filter_conv_2dsp.hpp \
-  ../include/piccante/filtering/filter_conv_1d.hpp \
-  ../include/piccante/filtering/filter_crop.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/filtering/filter_dct_1d.hpp \
-  ../include/piccante/filtering/filter_dct_2d.hpp \
-  ../include/piccante/filtering/filter_dct_1d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d_opt.hpp \
-  ../include/piccante/filtering/filter_log_2d.hpp \
-  ../include/piccante/filtering/filter_diff_gauss_2d.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_divergence.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_gradient_harris_opt.hpp \
-  ../include/piccante/filtering/filter_guided_a_b.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter_guided.hpp \
-  ../include/piccante/filtering/filter_guided_a_b.hpp \
-  ../include/piccante/filtering/filter_iterative.hpp \
-  ../include/piccante/filtering/filter_kuwahara.hpp \
-  ../include/piccante/filtering/filter_laplacian.hpp \
-  ../include/piccante/filtering/filter_linear_color_space.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_max.hpp \
-  ../include/piccante/filtering/filter_mean.hpp \
-  ../include/piccante/filtering/filter_med.hpp \
-  ../include/piccante/filtering/filter_med_vec.hpp \
-  ../include/piccante/filtering/filter_min.hpp \
-  ../include/piccante/filtering/filter_mosaic.hpp \
-  ../include/piccante/filtering/filter_demosaic.hpp \
-  ../include/piccante/filtering/filter_normal.hpp \
-  ../include/piccante/filtering/filter_npasses.hpp \
-  ../include/piccante/filtering/filter_nswe.hpp \
-  ../include/piccante/filtering/filter_zero_crossing.hpp \
-  ../include/piccante/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/filtering/filter_remove_inf_nan.hpp \
-  ../include/piccante/filtering/filter_sampler_1d.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/filtering/filter_sampler_2dadd.hpp \
-  ../include/piccante/filtering/filter_sampler_2dsub.hpp \
-  ../include/piccante/filtering/filter_sampler_3d.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/filtering/filter_sampling_map.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/filtering/filter_wls.hpp \
-  ../include/piccante/externals/Eigen/Sparse \
-  ../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h \
-  ../include/piccante/filtering/filter_grow_cut.hpp \
-  ../include/piccante/filtering/filter_deform_grid.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/filtering/filter_radial_basis_function.hpp \
-  ../include/piccante/filtering/filter_disparity.hpp \
-  ../include/piccante/features_matching/patch_comp.hpp \
-  ../include/piccante/filtering/filter_deconvolution.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_conv_2d.hpp \
-  ../include/piccante/filtering/filter_noise_estimation.hpp \
-  ../include/piccante/filtering/filter_tmqi.hpp \
-  ../include/piccante/filtering/filter_nearest_neighbors.hpp \
-  ../include/piccante/filtering/filter_luminance_adaptation.hpp \
-  ../include/piccante/algorithms/connected_components.hpp \
-  ../include/piccante/filtering/filter_clahe.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/colors/color_conv_ipt_to_ich.hpp \
-  ../include/piccante/filtering/filter_rotation.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/program.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/gl/program.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/formats.hpp \
-  ../include/piccante/gl.hpp \
-  ../include/piccante/util/gl/timings.hpp \
-  ../include/piccante/util/gl/buffer_ops.hpp \
-  ../include/piccante/util/gl/buffer_op.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/buffer_allocation.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/mask.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/redux_ops.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_blend.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/gl/algorithms/pushpull.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/gl/filtering/filter_down_pp.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/gl/filtering/filter_up_pp.hpp \
-  ../include/piccante/gl/algorithms/color_to_gray.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_channel.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/gl/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/gl/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_exposure_fusion_weights.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/algorithms/richardson_lucy_deconvolution.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_conv_2d.hpp \
-  ../include/piccante/gl/algorithms/grow_cut.hpp \
-  ../include/piccante/gl/filtering/filter_max.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_grow_cut.hpp \
-  ../include/piccante/util/gl/buffer_op.hpp \
-  ../include/piccante/util/gl/buffer_ops.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_channel.hpp \
-  ../include/piccante/gl/colors/color_conv.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/gl/colors/color_conv_linear.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/gl/colors/color_conv.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_xyz.hpp \
-  ../include/piccante/gl/colors/color_conv_linear.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_hsl.hpp \
-  ../include/piccante/gl/colors/color_conv_xyz_to_cielab.hpp \
-  ../include/piccante/gl/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/colors/color_conv_xyz_to_lms.hpp \
-  ../include/piccante/gl/filtering/filter_color_conv.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_warp_2d.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/gl/filtering/filter_anisotropic_diffusion.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2das.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/gl/filtering/filter_sampling_map.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_gradient.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2df.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/gl/filtering/filter_slicer.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/gl/filtering/filter_scatter.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds_e.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2dsp.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_1d.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_3ds.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_3dsp.hpp \
-  ../include/piccante/gl/filtering/filter_disp.hpp \
-  ../include/piccante/gl/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_1d.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_conv_2d.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_mean.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_conv_1d.hpp \
-  ../include/piccante/gl/filtering/filter_min.hpp \
-  ../include/piccante/gl/filtering/filter_non_linear_1d.hpp \
-  ../include/piccante/gl/filtering/filter_max.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_1d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/gl/filtering/filter_gaussian_3d.hpp \
-  ../include/piccante/gl/filtering/filter_gradient.hpp \
-  ../include/piccante/gl/filtering/filter_laplacian.hpp \
-  ../include/piccante/gl/filtering/filter_hsl_replace.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_hsl.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/gl/filtering/filter_npasses.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/filtering/filter_remapping.hpp \
-  ../include/piccante/gl/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/gl/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/gl/filtering/filter_sampling_map.hpp \
-  ../include/piccante/gl/filtering/filter_scatter.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_slicer.hpp \
-  ../include/piccante/gl/filtering/filter_durand_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_deform_grid.hpp \
-  ../include/piccante/util/gl/bicubic.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/filtering/filter_deform_grid.hpp \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/gl/image_vec.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/tone_mapping/segmentation_tmo_approx.hpp \
-  ../include/piccante/gl/filtering/filter_luminance.hpp \
-  ../include/piccante/gl/filtering/filter_remove_nuked.hpp \
-  ../include/piccante/gl/filtering/filter_iterative.hpp \
-  ../include/piccante/gl/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/gl/filtering/filter_op.hpp \
-  ../include/piccante/gl/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/gl/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/gl/filtering/filter_reinhard_single_pass.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/gl/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/gl/tone_mapping/durand_tmo.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/gl/filtering/filter_durand_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/hybrid_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/segmentation_tmo_approx.hpp \
-  ../include/piccante/gl/algorithms/pyramid.hpp \
-  ../include/piccante/gl/filtering/filter_remapping.hpp \
-  ../include/piccante/gl/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/gl/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/gl/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/gl/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/colors/color_conv_rgb_to_lms.hpp \
-  ../include/piccante/colors/color_conv_lms_to_ipt.hpp \
-  ../include/piccante/filtering/filter_color_correction_pouli.hpp \
-  ../include/piccante/util/gl/display.hpp \
-  ../include/piccante/util/gl/technique.hpp \
-  ../include/piccante/gl/colors/color_conv_rgb_to_srgb.hpp \
-  ../include/piccante/gl/filtering/filter_color_conv.hpp \
-  ../include/piccante/image_samplers.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_bilinear.hpp \
-  ../include/piccante/image_samplers/image_sampler_bsplines.hpp \
-  ../include/piccante/image_samplers/image_sampler_bicubic.hpp \
-  ../include/piccante/image_samplers/image_sampler_catmull_rom.hpp \
-  ../include/piccante/image_samplers/image_sampler.hpp \
-  ../include/piccante/image_samplers/image_sampler_gaussian.hpp \
-  ../include/piccante/image_samplers/image_sampler_lanczos.hpp \
-  ../include/piccante/image_samplers/image_sampler_nearest.hpp \
-  ../include/piccante/io.hpp \
-  ../include/piccante/metrics.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/metrics/pu_encode.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/metrics/pu_encode_data.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/metrics/log_rmse.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/metrics/m_psnr.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/metrics/mse.hpp \
-  ../include/piccante/metrics/base.hpp \
-  ../include/piccante/metrics/mae.hpp \
-  ../include/piccante/metrics/maximum_error.hpp \
-  ../include/piccante/metrics/mse.hpp \
-  ../include/piccante/metrics/psnr.hpp \
-  ../include/piccante/metrics/relative_error.hpp \
-  ../include/piccante/metrics/ssim_index.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/filtering/filter_ssim.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/metrics/tmqi.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/filtering/filter_down_pp.hpp \
-  ../include/piccante/filtering/filter_tmqi.hpp \
-  ../include/piccante/point_samplers.hpp \
-  ../include/piccante/point_samplers/sampler_bridson.hpp \
-  ../include/piccante/point_samplers/sampler_dart_throwing.hpp \
-  ../include/piccante/point_samplers/sampler_monte_carlo.hpp \
-  ../include/piccante/point_samplers/sampler_random.hpp \
-  ../include/piccante/point_samplers/sampler_random_m.hpp \
-  ../include/piccante/tone_mapping.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/tone_mapping/exposure_fusion.hpp \
-  ../include/piccante/tone_mapping/find_best_exposure.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_simple_tmo.hpp \
-  ../include/piccante/histogram.hpp \
-  ../include/piccante/tone_mapping/hybrid_tmo.hpp \
-  ../include/piccante/algorithms/segmentation_tmo_approx.hpp \
-  ../include/piccante/algorithms/pyramid.hpp \
-  ../include/piccante/filtering/filter_drago_tmo.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/tone_mapping/lischinski_tmo.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/algorithms/lischinski_minimization.hpp \
-  ../include/piccante/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_sigmoid_tmo.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/tone_mapping/tone_mapping_operator.hpp \
-  ../include/piccante/tone_mapping/reinhard_tmo.hpp \
-  ../include/piccante/tone_mapping/drago_tmo.hpp \
-  ../include/piccante/filtering/filter.hpp \
-  ../include/piccante/tone_mapping/ward_histogram_tmo.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/util/array.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/tone_mapping/durand_tmo.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/algorithms/bilateral_separation.hpp \
-  ../include/piccante/tone_mapping/ferwerda_tmo.hpp \
-  ../include/piccante/tone_mapping/schlick_tmo.hpp \
-  ../include/piccante/util/indexed_array.hpp \
-  ../include/piccante/tone_mapping/raman_tmo.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/filtering/filter_bilateral_2dg.hpp \
-  ../include/piccante/tone_mapping/get_all_exposures.hpp \
-  ../include/piccante/tone_mapping/tumblin_tmo.hpp \
-  ../include/piccante/tone_mapping/ward_global_tmo.hpp \
-  ../include/piccante/util.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/util/cached_table.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/gl/ssbo.hpp \
-  ../include/piccante/util/gl/stroke.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/gl/image.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/fbo.hpp \
-  ../include/piccante/util/gl/formats.hpp \
-  ../include/piccante/util/gl/quad.hpp \
-  ../include/piccante/util/gl/timings.hpp \
-  ../include/piccante/util/gl/tone.hpp \
-  ../include/piccante/util/gl/buffer_allocation.hpp \
-  ../include/piccante/util/gl/redux.hpp \
-  ../include/piccante/util/gl/redux_ops.hpp \
-  ../include/piccante/util/gl/mask.hpp \
-  ../include/piccante/util/image_sampler.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/point_samplers.hpp \
-  ../include/piccante/util/precomputed_gaussian.hpp \
-  ../include/piccante/util/precomputed_diff_of_gaussians.hpp \
-  ../include/piccante/util/raw.hpp \
-  ../include/piccante/util/file_lister.hpp \
-  ../include/piccante/util/string.hpp \
-  ../include/piccante/util/tile.hpp \
-  ../include/piccante/util/tile_list.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/warp_samples.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/util/polyline.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/util/k_means.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/util/k_means_rand.hpp \
-  ../include/piccante/util/k_means.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/nelder_mead_opt_positive_polynomial.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/polynomial.hpp \
-  ../include/piccante/computer_vision.hpp \
-  ../include/piccante/computer_vision/homography_matrix.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/computer_vision/nelder_mead_opt_homography.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/externals/Eigen/Dense \
-  ../include/piccante/externals/Eigen/Core \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Cholesky \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/Eigenvalues \
-  ../include/piccante/computer_vision/fundamental_matrix.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gaussian_2d.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/features_matching/feature_matcher.hpp \
-  ../include/piccante/features_matching/binary_feature_lsh_matcher.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_fundamental.hpp \
-  ../include/piccante/util/eigen_util.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/externals/Eigen/LU \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/computer_vision/triangulation.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_triangulation.hpp \
-  ../include/piccante/computer_vision/essential_matrix.hpp \
-  ../include/piccante/computer_vision/triangulation.hpp \
-  ../include/piccante/computer_vision/camera_matrix.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/util/math.hpp \
-  ../include/piccante/externals/Eigen/SVD \
-  ../include/piccante/externals/Eigen/Geometry \
-  ../include/piccante/externals/Eigen/QR \
-  ../include/piccante/computer_vision/intrisics_matrix.hpp \
-  ../include/piccante/computer_vision/camera_matrix.hpp \
-  ../include/piccante/computer_vision/rectification.hpp \
-  ../include/piccante/image_vec.hpp \
-  ../include/piccante/filtering/filter_warp_2d.hpp \
-  ../include/piccante/filtering/filter_rotation.hpp \
-  ../include/piccante/computer_vision/stereo.hpp \
-  ../include/piccante/filtering/filter_disparity.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_homography.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_fundamental.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_triangulation.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_gordon_lowe.hpp \
-  ../include/piccante/util/matrix_3_x_3.hpp \
-  ../include/piccante/util/nelder_mead_opt_base.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_radial_distortion.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/features_matching/brief_descriptor.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/util/std_util.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/computer_vision/find_checker_board.hpp \
-  ../include/piccante/filtering/filter_bilateral_2ds.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/features_matching/harris_corner_detector.hpp \
-  ../include/piccante/util/rasterizer.hpp \
-  ../include/piccante/computer_vision/image_alignment.hpp \
-  ../include/piccante/features_matching/binary_feature_brute_force_matcher.hpp \
-  ../include/piccante/computer_vision/homography_matrix.hpp \
-  ../include/piccante/computer_vision/simple_ply.hpp \
-  ../include/piccante/JNI.hpp \
-  ../include/piccante/JNI/white_balance.hpp \
-  ../include/piccante/base.hpp \
-  ../include/piccante/filtering/filter_white_balance.hpp \
-  ../include/piccante/JNI/live_wire.hpp \
-  ../include/piccante/image.hpp \
-  ../include/piccante/filtering/filter_luminance.hpp \
-  ../include/piccante/filtering/filter_gradient.hpp \
-  ../include/piccante/filtering/filter_log_2d_opt.hpp \
-  ../include/piccante/filtering/filter_channel.hpp \
-  ../include/piccante/filtering/filter_sampler_2d.hpp \
-  ../include/piccante/util/vec.hpp \
-  ../include/piccante/util/polyline.hpp \
-  ../include/piccante/algorithms/live_wire.hpp \
-  ../include/piccante/JNI/find_checker_board.hpp \
-  ../include/piccante/filtering/filter_downsampler_2d.hpp \
-  ../include/piccante/computer_vision/iterative_closest_point_2D.hpp \
-  ../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp \
-  ../include/piccante/features_matching/orb_descriptor.hpp \
-  ../include/piccante/computer_vision/find_checker_board.hpp \
-  ../include/piccante/algorithms/binarization.hpp \
-  ../include/piccante/util/mask.hpp \
-  ../include/piccante/features_matching/canny_edge_detector.hpp \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/algorithms/poisson_image_editing.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/algorithms/pushpull.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dsub.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dadd.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/algorithms/multi_resolution_operator.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/algorithms/quadtree.hpp \
+  ../include/piccante/include/algorithms/region_border.hpp \
+  ../include/piccante/include/algorithms/superpixels_oracle.hpp \
+  ../include/piccante/include/algorithms/quadtree.hpp \
+  ../include/piccante/include/algorithms/superpixels_slic.hpp \
+  ../include/piccante/include/algorithms/color_to_gray.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/filtering/filter_exposure_fusion_weights.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/algorithms/histogram_matching.hpp \
+  ../include/piccante/include/algorithms/bilateral_separation.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/algorithms/grow_cut.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/algorithms/live_wire.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/util/precomputed_diff_of_gaussians.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/algorithms/radial_basis_function.hpp \
+  ../include/piccante/include/algorithms/color_classification.hpp \
+  ../include/piccante/include/filtering/filter_radial_basis_function.hpp \
+  ../include/piccante/include/algorithms/radial_basis_function.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/algorithms/binarization.hpp \
+  ../include/piccante/include/filtering/filter_threshold.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/algorithms/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/algorithms/superpixels_slic.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/colors.hpp \
+  ../include/piccante/include/colors/color.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/colors/color_3.hpp \
+  ../include/piccante/include/colors/color.hpp \
+  ../include/piccante/include/colors/matrix_from_primaries.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cieluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_logluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_xyY.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_lalphabeta.hpp \
+  ../include/piccante/include/colors/color_conv_ipt_to_ich.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_hdrlab.hpp \
+  ../include/piccante/include/colors/saturation.hpp \
+  ../include/piccante/include/colors/rgbe.hpp \
+  ../include/piccante/include/features_matching.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/features_matching/general_corner_detector.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/features_matching/harris_corner_detector.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gradient_harris_opt.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/features_matching/general_corner_detector.hpp \
+  ../include/piccante/include/features_matching/susan_corner_detector.hpp \
+  ../include/piccante/include/features_matching/fast_corner_detector.hpp \
+  ../include/piccante/include/features_matching/canny_edge_detector.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/features_matching/lucid_descriptor.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/features_matching/sift_descriptor.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/features_matching/transform_data.hpp \
+  ../include/piccante/include/features_matching/transform_data.hpp \
+  ../include/piccante/include/features_matching/ward_alignment.hpp \
+  ../include/piccante/include/features_matching/motion_estimation.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_brute_force_matcher.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_lsh_matcher.hpp \
+  ../include/piccante/include/features_matching/hash_table_lsh.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/filtering.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/filtering/filter_integral_image.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_reconstruct.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_local_extrema.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/filtering/filter_absolute_difference.hpp \
+  ../include/piccante/include/filtering/filter_anisotropic_diffusion.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/filtering/filter_assemble_hdr.hpp \
+  ../include/piccante/include/filtering/filter_backward_difference.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2das.hpp \
+  ../include/piccante/include/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2df.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dsp.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/colors/color_conv.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_logluv.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/filtering/filter_color_distance.hpp \
+  ../include/piccante/include/filtering/filter_combine.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/filtering/filter_conv_2dsp.hpp \
+  ../include/piccante/include/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/filtering/filter_crop.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/filtering/filter_dct_1d.hpp \
+  ../include/piccante/include/filtering/filter_dct_2d.hpp \
+  ../include/piccante/include/filtering/filter_dct_1d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_log_2d.hpp \
+  ../include/piccante/include/filtering/filter_diff_gauss_2d.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_divergence.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_gradient_harris_opt.hpp \
+  ../include/piccante/include/filtering/filter_guided_a_b.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter_guided.hpp \
+  ../include/piccante/include/filtering/filter_guided_a_b.hpp \
+  ../include/piccante/include/filtering/filter_iterative.hpp \
+  ../include/piccante/include/filtering/filter_kuwahara.hpp \
+  ../include/piccante/include/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/filtering/filter_linear_color_space.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_max.hpp \
+  ../include/piccante/include/filtering/filter_mean.hpp \
+  ../include/piccante/include/filtering/filter_med.hpp \
+  ../include/piccante/include/filtering/filter_med_vec.hpp \
+  ../include/piccante/include/filtering/filter_min.hpp \
+  ../include/piccante/include/filtering/filter_mosaic.hpp \
+  ../include/piccante/include/filtering/filter_demosaic.hpp \
+  ../include/piccante/include/filtering/filter_normal.hpp \
+  ../include/piccante/include/filtering/filter_npasses.hpp \
+  ../include/piccante/include/filtering/filter_nswe.hpp \
+  ../include/piccante/include/filtering/filter_zero_crossing.hpp \
+  ../include/piccante/include/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/filtering/filter_remove_inf_nan.hpp \
+  ../include/piccante/include/filtering/filter_sampler_1d.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dadd.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2dsub.hpp \
+  ../include/piccante/include/filtering/filter_sampler_3d.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/filtering/filter_wls.hpp \
+  ../include/piccante/include/externals/Eigen/Sparse \
+  ../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h \
+  ../include/piccante/include/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/filtering/filter_radial_basis_function.hpp \
+  ../include/piccante/include/filtering/filter_disparity.hpp \
+  ../include/piccante/include/features_matching/patch_comp.hpp \
+  ../include/piccante/include/filtering/filter_deconvolution.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/filtering/filter_noise_estimation.hpp \
+  ../include/piccante/include/filtering/filter_tmqi.hpp \
+  ../include/piccante/include/filtering/filter_nearest_neighbors.hpp \
+  ../include/piccante/include/filtering/filter_luminance_adaptation.hpp \
+  ../include/piccante/include/algorithms/connected_components.hpp \
+  ../include/piccante/include/filtering/filter_clahe.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/colors/color_conv_ipt_to_ich.hpp \
+  ../include/piccante/include/filtering/filter_rotation.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/program.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/gl/program.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/formats.hpp \
+  ../include/piccante/include/gl.hpp \
+  ../include/piccante/include/util/gl/timings.hpp \
+  ../include/piccante/include/util/gl/buffer_ops.hpp \
+  ../include/piccante/include/util/gl/buffer_op.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/buffer_allocation.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/mask.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/redux_ops.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_blend.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/gl/algorithms/pushpull.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/gl/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/gl/filtering/filter_up_pp.hpp \
+  ../include/piccante/include/gl/algorithms/color_to_gray.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_channel.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/gl/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/gl/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_exposure_fusion_weights.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/algorithms/richardson_lucy_deconvolution.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/gl/algorithms/grow_cut.hpp \
+  ../include/piccante/include/gl/filtering/filter_max.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_grow_cut.hpp \
+  ../include/piccante/include/util/gl/buffer_op.hpp \
+  ../include/piccante/include/util/gl/buffer_ops.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_channel.hpp \
+  ../include/piccante/include/gl/colors/color_conv.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/gl/colors/color_conv_linear.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/gl/colors/color_conv.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_xyz.hpp \
+  ../include/piccante/include/gl/colors/color_conv_linear.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_hsl.hpp \
+  ../include/piccante/include/gl/colors/color_conv_xyz_to_cielab.hpp \
+  ../include/piccante/include/gl/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_xyz_to_lms.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_anisotropic_diffusion.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2das.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_gradient.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2df.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/gl/filtering/filter_slicer.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/gl/filtering/filter_scatter.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds_e.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2dsp.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_3ds.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_3dsp.hpp \
+  ../include/piccante/include/gl/filtering/filter_disp.hpp \
+  ../include/piccante/include/gl/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_mean.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_conv_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_min.hpp \
+  ../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_max.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gaussian_3d.hpp \
+  ../include/piccante/include/gl/filtering/filter_gradient.hpp \
+  ../include/piccante/include/gl/filtering/filter_laplacian.hpp \
+  ../include/piccante/include/gl/filtering/filter_hsl_replace.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_hsl.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/gl/filtering/filter_npasses.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/filtering/filter_remapping.hpp \
+  ../include/piccante/include/gl/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/gl/filtering/filter_sampling_map.hpp \
+  ../include/piccante/include/gl/filtering/filter_scatter.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_slicer.hpp \
+  ../include/piccante/include/gl/filtering/filter_durand_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/util/gl/bicubic.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/filtering/filter_deform_grid.hpp \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/gl/image_vec.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/tone_mapping/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/gl/filtering/filter_luminance.hpp \
+  ../include/piccante/include/gl/filtering/filter_remove_nuked.hpp \
+  ../include/piccante/include/gl/filtering/filter_iterative.hpp \
+  ../include/piccante/include/gl/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/gl/filtering/filter_op.hpp \
+  ../include/piccante/include/gl/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/gl/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/gl/filtering/filter_reinhard_single_pass.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/gl/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/gl/tone_mapping/durand_tmo.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/gl/filtering/filter_durand_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/hybrid_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/gl/algorithms/pyramid.hpp \
+  ../include/piccante/include/gl/filtering/filter_remapping.hpp \
+  ../include/piccante/include/gl/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/gl/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/gl/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/colors/color_conv_rgb_to_lms.hpp \
+  ../include/piccante/include/colors/color_conv_lms_to_ipt.hpp \
+  ../include/piccante/include/filtering/filter_color_correction_pouli.hpp \
+  ../include/piccante/include/util/gl/display.hpp \
+  ../include/piccante/include/util/gl/technique.hpp \
+  ../include/piccante/include/gl/colors/color_conv_rgb_to_srgb.hpp \
+  ../include/piccante/include/gl/filtering/filter_color_conv.hpp \
+  ../include/piccante/include/image_samplers.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bilinear.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bsplines.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_bicubic.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_catmull_rom.hpp \
+  ../include/piccante/include/image_samplers/image_sampler.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_gaussian.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_lanczos.hpp \
+  ../include/piccante/include/image_samplers/image_sampler_nearest.hpp \
+  ../include/piccante/include/io.hpp \
+  ../include/piccante/include/metrics.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/metrics/pu_encode.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/metrics/pu_encode_data.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/metrics/log_rmse.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/metrics/m_psnr.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/metrics/mse.hpp \
+  ../include/piccante/include/metrics/base.hpp \
+  ../include/piccante/include/metrics/mae.hpp \
+  ../include/piccante/include/metrics/maximum_error.hpp \
+  ../include/piccante/include/metrics/mse.hpp \
+  ../include/piccante/include/metrics/psnr.hpp \
+  ../include/piccante/include/metrics/relative_error.hpp \
+  ../include/piccante/include/metrics/ssim_index.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/filtering/filter_ssim.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/metrics/tmqi.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/filtering/filter_down_pp.hpp \
+  ../include/piccante/include/filtering/filter_tmqi.hpp \
+  ../include/piccante/include/point_samplers.hpp \
+  ../include/piccante/include/point_samplers/sampler_bridson.hpp \
+  ../include/piccante/include/point_samplers/sampler_dart_throwing.hpp \
+  ../include/piccante/include/point_samplers/sampler_monte_carlo.hpp \
+  ../include/piccante/include/point_samplers/sampler_random.hpp \
+  ../include/piccante/include/point_samplers/sampler_random_m.hpp \
+  ../include/piccante/include/tone_mapping.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/tone_mapping/exposure_fusion.hpp \
+  ../include/piccante/include/tone_mapping/find_best_exposure.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_simple_tmo.hpp \
+  ../include/piccante/include/histogram.hpp \
+  ../include/piccante/include/tone_mapping/hybrid_tmo.hpp \
+  ../include/piccante/include/algorithms/segmentation_tmo_approx.hpp \
+  ../include/piccante/include/algorithms/pyramid.hpp \
+  ../include/piccante/include/filtering/filter_drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/tone_mapping/lischinski_tmo.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/algorithms/lischinski_minimization.hpp \
+  ../include/piccante/include/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_sigmoid_tmo.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/tone_mapping/tone_mapping_operator.hpp \
+  ../include/piccante/include/tone_mapping/reinhard_tmo.hpp \
+  ../include/piccante/include/tone_mapping/drago_tmo.hpp \
+  ../include/piccante/include/filtering/filter.hpp \
+  ../include/piccante/include/tone_mapping/ward_histogram_tmo.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/util/array.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/tone_mapping/durand_tmo.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/algorithms/bilateral_separation.hpp \
+  ../include/piccante/include/tone_mapping/ferwerda_tmo.hpp \
+  ../include/piccante/include/tone_mapping/schlick_tmo.hpp \
+  ../include/piccante/include/util/indexed_array.hpp \
+  ../include/piccante/include/tone_mapping/raman_tmo.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2dg.hpp \
+  ../include/piccante/include/tone_mapping/get_all_exposures.hpp \
+  ../include/piccante/include/tone_mapping/tumblin_tmo.hpp \
+  ../include/piccante/include/tone_mapping/ward_global_tmo.hpp \
+  ../include/piccante/include/util.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/util/cached_table.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/gl/ssbo.hpp \
+  ../include/piccante/include/util/gl/stroke.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/gl/image.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/fbo.hpp \
+  ../include/piccante/include/util/gl/formats.hpp \
+  ../include/piccante/include/util/gl/quad.hpp \
+  ../include/piccante/include/util/gl/timings.hpp \
+  ../include/piccante/include/util/gl/tone.hpp \
+  ../include/piccante/include/util/gl/buffer_allocation.hpp \
+  ../include/piccante/include/util/gl/redux.hpp \
+  ../include/piccante/include/util/gl/redux_ops.hpp \
+  ../include/piccante/include/util/gl/mask.hpp \
+  ../include/piccante/include/util/image_sampler.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/point_samplers.hpp \
+  ../include/piccante/include/util/precomputed_gaussian.hpp \
+  ../include/piccante/include/util/precomputed_diff_of_gaussians.hpp \
+  ../include/piccante/include/util/raw.hpp \
+  ../include/piccante/include/util/file_lister.hpp \
+  ../include/piccante/include/util/string.hpp \
+  ../include/piccante/include/util/tile.hpp \
+  ../include/piccante/include/util/tile_list.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/warp_samples.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/util/polyline.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/util/k_means.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/util/k_means_rand.hpp \
+  ../include/piccante/include/util/k_means.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_positive_polynomial.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/polynomial.hpp \
+  ../include/piccante/include/computer_vision.hpp \
+  ../include/piccante/include/computer_vision/homography_matrix.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_homography.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/externals/Eigen/Dense \
+  ../include/piccante/include/externals/Eigen/Core \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Cholesky \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/Eigenvalues \
+  ../include/piccante/include/computer_vision/fundamental_matrix.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gaussian_2d.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/features_matching/feature_matcher.hpp \
+  ../include/piccante/include/features_matching/binary_feature_lsh_matcher.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_fundamental.hpp \
+  ../include/piccante/include/util/eigen_util.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/externals/Eigen/LU \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/computer_vision/triangulation.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_triangulation.hpp \
+  ../include/piccante/include/computer_vision/essential_matrix.hpp \
+  ../include/piccante/include/computer_vision/triangulation.hpp \
+  ../include/piccante/include/computer_vision/camera_matrix.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/util/math.hpp \
+  ../include/piccante/include/externals/Eigen/SVD \
+  ../include/piccante/include/externals/Eigen/Geometry \
+  ../include/piccante/include/externals/Eigen/QR \
+  ../include/piccante/include/computer_vision/intrisics_matrix.hpp \
+  ../include/piccante/include/computer_vision/camera_matrix.hpp \
+  ../include/piccante/include/computer_vision/rectification.hpp \
+  ../include/piccante/include/image_vec.hpp \
+  ../include/piccante/include/filtering/filter_warp_2d.hpp \
+  ../include/piccante/include/filtering/filter_rotation.hpp \
+  ../include/piccante/include/computer_vision/stereo.hpp \
+  ../include/piccante/include/filtering/filter_disparity.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_homography.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_fundamental.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_triangulation.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_gordon_lowe.hpp \
+  ../include/piccante/include/util/matrix_3_x_3.hpp \
+  ../include/piccante/include/util/nelder_mead_opt_base.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_radial_distortion.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/features_matching/brief_descriptor.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/util/std_util.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/computer_vision/find_checker_board.hpp \
+  ../include/piccante/include/filtering/filter_bilateral_2ds.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/features_matching/harris_corner_detector.hpp \
+  ../include/piccante/include/util/rasterizer.hpp \
+  ../include/piccante/include/computer_vision/image_alignment.hpp \
+  ../include/piccante/include/features_matching/binary_feature_brute_force_matcher.hpp \
+  ../include/piccante/include/computer_vision/homography_matrix.hpp \
+  ../include/piccante/include/computer_vision/simple_ply.hpp \
+  ../include/piccante/include/JNI.hpp \
+  ../include/piccante/include/JNI/white_balance.hpp \
+  ../include/piccante/include/base.hpp \
+  ../include/piccante/include/filtering/filter_white_balance.hpp \
+  ../include/piccante/include/JNI/live_wire.hpp \
+  ../include/piccante/include/image.hpp \
+  ../include/piccante/include/filtering/filter_luminance.hpp \
+  ../include/piccante/include/filtering/filter_gradient.hpp \
+  ../include/piccante/include/filtering/filter_log_2d_opt.hpp \
+  ../include/piccante/include/filtering/filter_channel.hpp \
+  ../include/piccante/include/filtering/filter_sampler_2d.hpp \
+  ../include/piccante/include/util/vec.hpp \
+  ../include/piccante/include/util/polyline.hpp \
+  ../include/piccante/include/algorithms/live_wire.hpp \
+  ../include/piccante/include/JNI/find_checker_board.hpp \
+  ../include/piccante/include/filtering/filter_downsampler_2d.hpp \
+  ../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp \
+  ../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp \
+  ../include/piccante/include/features_matching/orb_descriptor.hpp \
+  ../include/piccante/include/computer_vision/find_checker_board.hpp \
+  ../include/piccante/include/algorithms/binarization.hpp \
+  ../include/piccante/include/util/mask.hpp \
+  ../include/piccante/include/features_matching/canny_edge_detector.hpp \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/attr.h \
@@ -3383,19 +3383,19 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   ../src/bindings/py_histogram.h
 
 
-../src/bindings/py_dynamics_range.h:
-
 ../src/main.cpp:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/functional.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h:
 
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h:
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/operators.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/buffer_info.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/type_caster_base.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/cast.h:
 
@@ -3405,7 +3405,9 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/hashtable.h:
 
-/usr/include/c++/11/typeindex:
+/usr/include/c++/11/unordered_map:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
@@ -3417,35 +3419,31 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bit:
 
-/usr/include/c++/11/bits/forward_list.h:
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
-/usr/include/python3.10/cpython/pyfpe.h:
+/usr/include/c++/11/forward_list:
 
-/usr/include/python3.10/pystrcmp.h:
+/usr/include/python3.10/frameobject.h:
+
+/usr/include/python3.10/tracemalloc.h:
+
+/usr/include/python3.10/cpython/fileutils.h:
 
 /usr/include/python3.10/cpython/pyctype.h:
 
-/usr/include/python3.10/bltinmodule.h:
+/usr/include/python3.10/eval.h:
 
-/usr/include/python3.10/cpython/import.h:
+/usr/include/python3.10/cpython/pylifecycle.h:
 
-/usr/include/python3.10/import.h:
-
-/usr/include/python3.10/intrcheck.h:
-
-/usr/include/python3.10/sysmodule.h:
-
-/usr/include/python3.10/pylifecycle.h:
+/usr/include/python3.10/cpython/pythonrun.h:
 
 /usr/include/python3.10/cpython/compile.h:
 
-/usr/include/python3.10/compile.h:
-
-/usr/include/python3.10/pythread.h:
+/usr/include/python3.10/context.h:
 
 /usr/include/python3.10/cpython/pyerrors.h:
 
-/usr/include/python3.10/pyerrors.h:
+/usr/include/python3.10/cpython/picklebufobject.h:
 
 ../src/bindings/py_bbox.h:
 
@@ -3457,637 +3455,671 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/python3.10/cpython/pystate.h:
 
-/usr/include/python3.10/cpython/initconfig.h:
+/usr/include/python3.10/pystate.h:
 
-/usr/include/python3.10/iterobject.h:
+/usr/include/python3.10/cpython/initconfig.h:
 
 /usr/include/python3.10/pyframe.h:
 
-/usr/include/python3.10/cpython/code.h:
-
 /usr/include/python3.10/code.h:
 
-/usr/include/c++/11/bits/align.h:
-
-/usr/include/python3.10/descrobject.h:
-
-/usr/include/python3.10/moduleobject.h:
-
-/usr/include/python3.10/cpython/methodobject.h:
-
-/usr/include/python3.10/cpython/odictobject.h:
-
-/usr/include/python3.10/dictobject.h:
-
-/usr/include/python3.10/listobject.h:
-
-/usr/include/python3.10/cpython/tupleobject.h:
-
-/usr/include/python3.10/complexobject.h:
-
-/usr/include/python3.10/floatobject.h:
-
-/usr/include/python3.10/boolobject.h:
-
-/usr/include/python3.10/longintrepr.h:
-
-/usr/include/python3.10/classobject.h:
-
-/usr/include/python3.10/bytesobject.h:
-
-/usr/include/python3.10/cpython/bytearrayobject.h:
-
-/usr/include/python3.10/bytearrayobject.h:
-
-/usr/include/python3.10/pyhash.h:
-
-/usr/include/python3.10/cpython/objimpl.h:
-
-/usr/include/python3.10/cpython/object.h:
-
-/usr/include/python3.10/pymath.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/options.h:
-
-/usr/include/python3.10/pymacro.h:
-
-/usr/include/x86_64-linux-gnu/sys/time.h:
-
-/usr/include/python3.10/pymacconfig.h:
-
-/usr/include/python3.10/funcobject.h:
-
-/usr/include/x86_64-linux-gnu/python3.10/pyconfig.h:
-
-/usr/include/python3.10/patchlevel.h:
-
-/usr/include/python3.10/Python.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/common.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/attr.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:
-
-../include/piccante/JNI/live_wire.hpp:
-
-../include/piccante/JNI.hpp:
-
-../include/piccante/computer_vision/find_checker_board.hpp:
-
-../include/piccante/computer_vision/nelder_mead_opt_ICP_2D.hpp:
-
-../include/piccante/computer_vision/nelder_mead_opt_radial_distortion.hpp:
-
-../include/piccante/computer_vision/essential_matrix.hpp:
-
-../include/piccante/computer_vision/nelder_mead_opt_triangulation.hpp:
-
-../include/piccante/computer_vision/nelder_mead_opt_fundamental.hpp:
-
-../include/piccante/computer_vision/fundamental_matrix.hpp:
-
-../include/piccante/util/warp_samples.hpp:
-
-/usr/include/c++/11/cxxabi.h:
-
-../include/piccante/util/gl/tone.hpp:
-
-../include/piccante/util/rasterizer.hpp:
-
-../include/piccante/tone_mapping/ferwerda_tmo.hpp:
-
-../include/piccante/tone_mapping/ward_histogram_tmo.hpp:
-
-../include/piccante/tone_mapping/lischinski_tmo.hpp:
-
-../include/piccante/tone_mapping.hpp:
-
-../include/piccante/metrics/psnr.hpp:
-
-../include/piccante/metrics/maximum_error.hpp:
-
-../include/piccante/metrics/mse.hpp:
-
-../include/piccante/metrics/pu_encode_data.hpp:
-
-../include/piccante/metrics/pu_encode.hpp:
-
-/usr/include/python3.10/memoryobject.h:
-
-../include/piccante/metrics/base.hpp:
-
-../include/piccante/image_samplers/image_sampler_lanczos.hpp:
-
-../include/piccante/image_samplers/image_sampler_catmull_rom.hpp:
-
-../include/piccante/image_samplers.hpp:
-
-../include/piccante/util/gl/display.hpp:
-
-../include/piccante/gl/tone_mapping/durand_tmo.hpp:
-
-/usr/include/python3.10/traceback.h:
-
-../include/piccante/gl/tone_mapping/drago_tmo.hpp:
-
-../include/piccante/util/gl/bicubic.hpp:
-
-../include/piccante/tone_mapping/hybrid_tmo.hpp:
-
-../include/piccante/gl/filtering/filter_deform_grid.hpp:
-
-../include/piccante/tone_mapping/find_best_exposure.hpp:
-
-../include/piccante/gl/filtering/filter_durand_tmo.hpp:
-
-../include/piccante/gl/filtering/filter_hsl_replace.hpp:
-
-../include/piccante/gl/filtering/filter_mean.hpp:
-
-../include/piccante/gl/filtering/filter_disp.hpp:
-
-../include/piccante/gl/filtering/filter_gaussian_3d.hpp:
-
-../include/piccante/gl/filtering/filter_slicer.hpp:
-
-../include/piccante/gl/filtering/filter_bilateral_2df.hpp:
-
-../include/piccante/gl/filtering/filter_sigmoid_tmo.hpp:
-
-../include/piccante/gl/filtering/filter_bilateral_2das.hpp:
-
-../include/piccante/gl/filtering/filter_bilateral_1d.hpp:
-
-../include/piccante/gl/filtering/filter_iterative.hpp:
-
-../include/piccante/metrics/tmqi.hpp:
-
-../include/piccante/gl/filtering/filter_warp_2d.hpp:
-
-../include/piccante/gl/colors/color_conv_xyz_to_cielab.hpp:
-
-../include/piccante/gl/colors/color_conv_rgb_to_hsl.hpp:
-
-/usr/include/python3.10/enumobject.h:
-
-/usr/include/python3.10/object.h:
-
-../include/piccante/gl/colors/color_conv_rgb_to_srgb.hpp:
-
-../include/piccante/gl/colors/color_conv_rgb_to_xyz.hpp:
-
-../include/piccante/gl/colors/color_conv_linear.hpp:
-
-../include/piccante/gl/filtering/filter_grow_cut.hpp:
-
-../include/piccante/gl/algorithms/grow_cut.hpp:
-
-../include/piccante/gl/tone_mapping/segmentation_tmo_approx.hpp:
-
-../include/piccante/gl/filtering/filter_conv_2d.hpp:
-
-../include/piccante/gl/filtering/filter_exposure_fusion_weights.hpp:
-
-../include/piccante/gl/filtering/filter_simple_tmo.hpp:
-
-../include/piccante/gl/tone_mapping/get_all_exposures.hpp:
-
-../include/piccante/gl/tone_mapping/exposure_fusion.hpp:
-
-../include/piccante/gl/filtering/filter_bilateral_3dsp.hpp:
-
-../include/piccante/gl/algorithms/color_to_gray.hpp:
-
-../include/piccante/gl/algorithms/pushpull.hpp:
-
-../include/piccante/gl/filtering/filter_op.hpp:
-
-../include/piccante/gl/filtering/filter_1d.hpp:
-
-../include/piccante/computer_vision.hpp:
-
-../include/piccante/gl/filtering/filter_conv_1d.hpp:
-
-/usr/include/python3.10/pystate.h:
-
-../include/piccante/gl/filtering/filter_gaussian_1d.hpp:
-
-../include/piccante/gl/image_vec.hpp:
-
-../include/piccante/gl/filtering/filter_npasses.hpp:
-
-../include/piccante/gl/filtering/filter_gaussian_2d.hpp:
-
-../include/piccante/util/gl/quad.hpp:
-
-../include/piccante/gl/image.hpp:
-
-../include/piccante/computer_vision/triangulation.hpp:
-
-../include/piccante/util/gl/technique.hpp:
-
-../include/piccante/util/gl/program.hpp:
-
-../include/piccante/util/file_lister.hpp:
-
-../include/piccante/filtering/filter_rotation.hpp:
-
-../include/piccante/filtering/filter_color_correction_pouli.hpp:
-
-../include/piccante/filtering/filter_nearest_neighbors.hpp:
-
-../include/piccante/filtering/filter_tmqi.hpp:
-
-../include/piccante/filtering/filter_deconvolution.hpp:
-
-../include/piccante/filtering/filter_disparity.hpp:
+/usr/include/python3.10/cpython/fileobject.h:
 
 /usr/include/python3.10/fileobject.h:
 
-../include/piccante/image_samplers/image_sampler_bicubic.hpp:
+/usr/include/python3.10/methodobject.h:
 
-../include/piccante/gl/colors/color_conv.hpp:
+/usr/include/python3.10/cpython/odictobject.h:
 
-../include/piccante/filtering/filter_wls.hpp:
+/usr/include/python3.10/cpython/dictobject.h:
 
-../include/piccante/tone_mapping/durand_tmo.hpp:
+/usr/include/python3.10/dictobject.h:
 
-../include/piccante/filtering/filter_sampler_3d.hpp:
+/usr/include/python3.10/cpython/tupleobject.h:
 
-../include/piccante/filtering/filter_remove_inf_nan.hpp:
+/usr/include/python3.10/floatobject.h:
 
-/usr/include/c++/11/unordered_map:
-
-../include/piccante/filtering/filter_remove_nuked.hpp:
-
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-../include/piccante/filtering/filter_mosaic.hpp:
-
-../include/piccante/filtering/filter_kuwahara.hpp:
-
-../include/piccante/filtering/filter_guided.hpp:
-
-../include/piccante/filtering/filter_guided_a_b.hpp:
-
-../include/piccante/filtering/filter_drago_tmo.hpp:
-
-../include/piccante/filtering/filter_diff_gauss_2d.hpp:
-
-../include/piccante/filtering/filter_dct_2d.hpp:
-
-../include/piccante/gl/filtering/filter_bilateral_2dg.hpp:
-
-../include/piccante/filtering/filter_dct_1d.hpp:
-
-../include/piccante/filtering/filter_crop.hpp:
-
-../include/piccante/gl/filtering/filter_remove_nuked.hpp:
-
-../include/piccante/filtering/filter_conv_2dsp.hpp:
-
-../include/piccante/filtering/filter_conv_2d.hpp:
-
-../include/piccante/filtering/filter_divergence.hpp:
-
-../include/piccante/filtering/filter_combine.hpp:
-
-../include/piccante/filtering/filter_color_distance.hpp:
-
-../include/piccante/filtering/filter_bilateral_2dsp.hpp:
-
-/usr/include/python3.10/codecs.h:
-
-../include/piccante/filtering/filter_bilateral_2dg.hpp:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/typeid.h:
-
-../include/piccante/filtering/filter_bilateral_2df.hpp:
-
-../include/piccante/filtering/filter_bilateral_1d.hpp:
-
-../include/piccante/filtering/filter_anisotropic_diffusion.hpp:
-
-../include/piccante/filtering/filter_reconstruct.hpp:
-
-../include/piccante/filtering/filter_integral_image.hpp:
-
-../include/piccante/features_matching/hash_table_lsh.hpp:
-
-../include/piccante/features_matching/binary_feature_lsh_matcher.hpp:
-
-../include/piccante/features_matching/feature_matcher.hpp:
-
-../include/piccante/features_matching/patch_comp.hpp:
-
-/usr/include/python3.10/structseq.h:
-
-../include/piccante/gl/filtering/filter_non_linear_1d.hpp:
-
-../include/piccante/features_matching/sift_descriptor.hpp:
-
-../include/piccante/features_matching/lucid_descriptor.hpp:
-
-../include/piccante/filtering/filter_med.hpp:
-
-../include/piccante/features_matching/canny_edge_detector.hpp:
-
-../include/piccante/features_matching/susan_corner_detector.hpp:
-
-../include/piccante/filtering/filter_gradient_harris_opt.hpp:
-
-../include/piccante/features_matching/harris_corner_detector.hpp:
-
-../include/piccante/features_matching/general_corner_detector.hpp:
-
-../include/piccante/colors/color_conv_xyz_to_cielab.hpp:
-
-../include/piccante/colors/color_conv_ipt_to_ich.hpp:
-
-../include/piccante/JNI/find_checker_board.hpp:
-
-../include/piccante/colors/color_conv_xyz_to_logluv.hpp:
-
-../include/piccante/colors/color_conv_lms_to_ipt.hpp:
-
-../include/piccante/colors/color_conv_rgb_to_xyz.hpp:
-
-../include/piccante/util/matrix_3_x_3.hpp:
-
-../include/piccante/colors/color_conv_xyz_to_lms.hpp:
-
-../include/piccante/colors/color_conv.hpp:
-
-../include/piccante/externals/Eigen/Dense:
-
-../include/piccante/colors/color_3.hpp:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-../include/piccante/tone_mapping/tumblin_tmo.hpp:
-
-../include/piccante/filtering/filter_iterative.hpp:
-
-../include/piccante/algorithms/segmentation_tmo_approx.hpp:
-
-../include/piccante/filtering/filter_threshold.hpp:
-
-../include/piccante/algorithms/lischinski_minimization.hpp:
-
-../include/piccante/filtering/filter_white_balance.hpp:
-
-../include/piccante/util/precomputed_diff_of_gaussians.hpp:
-
-../include/piccante/filtering/filter_radial_basis_function.hpp:
-
-../include/piccante/filtering/filter_log_2d_opt.hpp:
-
-../include/piccante/filtering/filter_gradient.hpp:
-
-../include/piccante/filtering/filter_linear_color_space.hpp:
-
-../include/piccante/algorithms/live_wire.hpp:
-
-/usr/include/python3.10/fileutils.h:
-
-../include/piccante/filtering/filter_max.hpp:
-
-../include/piccante/util/k_means_rand.hpp:
-
-../include/piccante/algorithms/grow_cut.hpp:
-
-../include/piccante/point_samplers/sampler_random_m.hpp:
-
-../include/piccante/filtering/filter_bilateral_2ds.hpp:
-
-../include/piccante/metrics/mae.hpp:
-
-../include/piccante/tone_mapping/tone_mapping_operator.hpp:
-
-/usr/include/python3.10/cpython/pymem.h:
-
-../include/piccante/gl/filtering/filter_sampler_2d.hpp:
-
-../include/piccante/tone_mapping/get_all_exposures.hpp:
-
-/usr/include/python3.10/cpython/pythonrun.h:
-
-../include/piccante/filtering/filter_exposure_fusion_weights.hpp:
-
-../include/piccante/gl/filtering/filter_remapping.hpp:
-
-../include/piccante/filtering/filter_luminance_adaptation.hpp:
-
-../include/piccante/algorithms/color_to_gray.hpp:
-
-../include/piccante/gl/tone_mapping/hybrid_tmo.hpp:
-
-../include/piccante/algorithms/region_border.hpp:
-
-../include/piccante/algorithms/multi_resolution_operator.hpp:
-
-../include/piccante/filtering/filter_sampler_2dadd.hpp:
-
-../include/piccante/filtering/filter_gaussian_2d.hpp:
-
-../include/piccante/algorithms/pyramid.hpp:
-
-../include/piccante/filtering/filter_up_pp.hpp:
-
-/usr/include/c++/11/bits/stl_list.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
-
-/usr/include/python3.10/pyport.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
-
-../include/piccante/filtering/filter_local_extrema.hpp:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
-
-../include/piccante/gl/filtering/filter_blend.hpp:
-
-../include/piccante/externals/Eigen/src/SparseQR/SparseQR.h:
-
-../include/piccante/externals/Eigen/SparseQR:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pruneL.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseColEtree.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLUImpl.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
-
-/usr/include/python3.10/cpython/bytesobject.h:
-
-../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h:
-
-../include/piccante/externals/Eigen/src/OrderingMethods/Amd.h:
-
-../include/piccante/externals/Eigen/OrderingMethods:
-
-../include/piccante/io.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseTriangularView.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h:
-
-/usr/include/python3.10/objimpl.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseView.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseBlock.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseTranspose.h:
-
-../include/piccante/point_samplers.hpp:
-
-../include/piccante/filtering/filter_bilateral_2das.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseVector.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/MappedSparseMatrix.h:
+/usr/include/python3.10/longobject.h:
 
 /usr/include/c++/11/iterator:
 
 /usr/include/python3.10/cpython/unicodeobject.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseCompressedBase.h:
+/usr/include/python3.10/unicodeobject.h:
+
+/usr/include/python3.10/cpython/bytesobject.h:
+
+/usr/include/python3.10/cpython/bytearrayobject.h:
+
+/usr/include/python3.10/cpython/object.h:
+
+/usr/include/python3.10/enumobject.h:
+
+/usr/include/python3.10/object.h:
+
+/usr/include/python3.10/cpython/pymem.h:
+
+/usr/include/python3.10/pymath.h:
 
 /usr/include/python3.10/exports.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/CompressedStorage.h:
+/usr/include/x86_64-linux-gnu/sys/time.h:
 
-../include/piccante/externals/Eigen/src/Core/GeneralProduct.h:
+/usr/include/python3.10/pyport.h:
 
-/usr/include/stdint.h:
+/usr/include/python3.10/pymacconfig.h:
 
-/usr/include/c++/11/bits/stl_multiset.h:
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/common.h:
 
-../include/piccante/features_matching/ward_alignment.hpp:
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:
 
-/usr/include/c++/11/bits/stl_set.h:
+../include/piccante/include/JNI/find_checker_board.hpp:
 
-../include/piccante/algorithms.hpp:
+../include/piccante/include/JNI.hpp:
 
-../include/piccante/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h:
+/usr/include/inttypes.h:
 
-/usr/include/c++/11/stdlib.h:
+../include/piccante/include/computer_vision/simple_ply.hpp:
 
-../include/piccante/colors/rgbe.hpp:
+../include/piccante/include/computer_vision/image_alignment.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+../include/piccante/include/computer_vision/find_checker_board.hpp:
+
+../include/piccante/include/computer_vision/nelder_mead_opt_ICP_2D.hpp:
+
+../include/piccante/include/computer_vision/iterative_closest_point_2D.hpp:
+
+../include/piccante/include/computer_vision/nelder_mead_opt_radial_distortion.hpp:
+
+../include/piccante/include/computer_vision/essential_matrix.hpp:
+
+../include/piccante/include/computer_vision/nelder_mead_opt_triangulation.hpp:
+
+../include/piccante/include/computer_vision/nelder_mead_opt_fundamental.hpp:
+
+../include/piccante/include/computer_vision/homography_matrix.hpp:
+
+../include/piccante/include/computer_vision.hpp:
+
+../include/piccante/include/util/k_means_rand.hpp:
+
+/usr/include/python3.10/sysmodule.h:
+
+../include/piccante/include/util/polyline.hpp:
+
+/usr/include/python3.10/structseq.h:
+
+../include/piccante/include/util/gl/ssbo.hpp:
+
+../include/piccante/include/util/cached_table.hpp:
+
+../include/piccante/include/tone_mapping/schlick_tmo.hpp:
+
+../include/piccante/include/tone_mapping/ferwerda_tmo.hpp:
+
+../include/piccante/include/tone_mapping/ward_histogram_tmo.hpp:
+
+../include/piccante/include/tone_mapping/drago_tmo.hpp:
+
+../include/piccante/include/tone_mapping/lischinski_tmo.hpp:
+
+../include/piccante/include/tone_mapping/hybrid_tmo.hpp:
+
+../include/piccante/include/metrics/ssim_index.hpp:
+
+../include/piccante/include/metrics/mae.hpp:
+
+/usr/include/c++/11/bits/enable_special_members.h:
+
+../include/piccante/include/io.hpp:
+
+../include/piccante/include/image_samplers/image_sampler_lanczos.hpp:
+
+../include/piccante/include/image_samplers.hpp:
+
+../include/piccante/include/gl/tone_mapping/hybrid_tmo.hpp:
+
+../include/piccante/include/metrics/pu_encode_data.hpp:
+
+../include/piccante/include/gl/tone_mapping/durand_tmo.hpp:
+
+/usr/include/python3.10/bltinmodule.h:
+
+../include/piccante/include/gl/tone_mapping/reinhard_tmo.hpp:
+
+/usr/include/python3.10/iterobject.h:
+
+../include/piccante/include/gl/tone_mapping/segmentation_tmo_approx.hpp:
+
+../include/piccante/include/util/gl/bicubic.hpp:
+
+../include/piccante/include/gl/filtering/filter_hsl_replace.hpp:
+
+../include/piccante/include/gl/filtering/filter_laplacian.hpp:
+
+../include/piccante/include/util/gl/tone.hpp:
+
+../include/piccante/include/gl/filtering/filter_drago_tmo.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_3ds.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2dsp.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2ds_e.hpp:
+
+../include/piccante/include/gl/filtering/filter_scatter.hpp:
+
+../include/piccante/include/gl/filtering/filter_slicer.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2dg.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2df.hpp:
+
+../include/piccante/include/gl/filtering/filter_gradient.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2das.hpp:
+
+../include/piccante/include/point_samplers.hpp:
+
+../include/piccante/include/metrics/maximum_error.hpp:
+
+../include/piccante/include/gl/filtering/filter_bilateral_1d.hpp:
+
+../include/piccante/include/gl/filtering/filter_iterative.hpp:
+
+../include/piccante/include/gl/filtering/filter_anisotropic_diffusion.hpp:
+
+../include/piccante/include/gl/colors/color_conv_rgb_to_xyz.hpp:
+
+../include/piccante/include/gl/colors/color_conv_linear.hpp:
+
+../include/piccante/include/gl/colors/color_conv.hpp:
+
+../include/piccante/include/gl/filtering/filter_grow_cut.hpp:
+
+../include/piccante/include/gl/filtering/filter_non_linear_1d.hpp:
+
+/usr/include/python3.10/intrcheck.h:
+
+../include/piccante/include/gl/algorithms/grow_cut.hpp:
+
+../include/piccante/include/gl/filtering/filter_conv_2d.hpp:
+
+../src/bindings/py_histogram.h:
+
+../include/piccante/include/gl/filtering/filter_min.hpp:
+
+../include/piccante/include/gl/algorithms/richardson_lucy_deconvolution.hpp:
+
+../include/piccante/include/gl/filtering/filter_remapping.hpp:
+
+../include/piccante/include/gl/filtering/filter_luminance.hpp:
+
+../include/piccante/include/gl/filtering/filter_simple_tmo.hpp:
+
+../include/piccante/include/gl/filtering/filter_channel.hpp:
+
+../include/piccante/include/gl/filtering/filter_up_pp.hpp:
+
+../include/piccante/include/gl/filtering/filter_op.hpp:
+
+../include/piccante/include/gl/filtering/filter_blend.hpp:
+
+../include/piccante/include/gl/colors/color_conv_xyz_to_lms.hpp:
+
+../include/piccante/include/gl/filtering/filter_gaussian_1d.hpp:
+
+/usr/include/python3.10/patchlevel.h:
+
+../include/piccante/include/util/gl/redux_ops.hpp:
+
+../include/piccante/include/util/gl/redux.hpp:
+
+../include/piccante/include/util/gl/buffer_op.hpp:
+
+/usr/include/python3.10/cpython/pyfpe.h:
+
+../include/piccante/include/util/gl/fbo.hpp:
+
+../include/piccante/include/gl/image.hpp:
+
+/usr/include/python3.10/import.h:
+
+../include/piccante/include/gl.hpp:
+
+/usr/include/python3.10/pycapsule.h:
+
+../include/piccante/include/filtering/filter_clahe.hpp:
+
+../include/piccante/include/filtering/filter_nearest_neighbors.hpp:
+
+../include/piccante/include/filtering/filter_noise_estimation.hpp:
+
+../include/piccante/include/filtering/filter_deconvolution.hpp:
+
+../include/piccante/include/filtering/filter_disparity.hpp:
+
+../include/piccante/include/filtering/filter_deform_grid.hpp:
+
+../include/piccante/include/gl/filtering/filter_disp.hpp:
+
+../include/piccante/include/filtering/filter_sampler_3d.hpp:
+
+../include/piccante/include/filtering/filter_zero_crossing.hpp:
+
+../include/piccante/include/filtering/filter_nswe.hpp:
+
+../include/piccante/include/filtering/filter_demosaic.hpp:
+
+../include/piccante/include/filtering/filter_min.hpp:
+
+../include/piccante/include/filtering/filter_kuwahara.hpp:
+
+../include/piccante/include/filtering/filter_guided.hpp:
+
+../include/piccante/include/metrics/pu_encode.hpp:
+
+../include/piccante/include/filtering/filter_guided_a_b.hpp:
+
+../include/piccante/include/filtering/filter_log_2d.hpp:
+
+../include/piccante/include/filtering/filter_dct_1d.hpp:
+
+../include/piccante/include/filtering/filter_combine.hpp:
+
+../include/piccante/include/filtering/filter_luminance_adaptation.hpp:
+
+../include/piccante/include/filtering/filter_remove_inf_nan.hpp:
+
+../include/piccante/include/filtering/filter_color_distance.hpp:
+
+../include/piccante/include/util/nelder_mead_opt_positive_polynomial.hpp:
+
+../include/piccante/include/filtering/filter_color_conv.hpp:
+
+../include/piccante/include/filtering/filter_bilateral_2dsp.hpp:
+
+../include/piccante/include/filtering/filter_gaussian_3d.hpp:
+
+../include/piccante/include/filtering/filter_sampling_map.hpp:
+
+../include/piccante/include/filtering/filter_bilateral_2das.hpp:
+
+../include/piccante/include/computer_vision/stereo.hpp:
+
+../include/piccante/include/filtering/filter_bilateral_1d.hpp:
+
+/usr/include/python3.10/cpython/code.h:
+
+../include/piccante/include/filtering/filter_anisotropic_diffusion.hpp:
+
+../include/piccante/include/filtering/filter_absolute_difference.hpp:
+
+../include/piccante/include/gl/point_samplers/sampler_random_m.hpp:
+
+../include/piccante/include/filtering/filter_warp_2d.hpp:
+
+../include/piccante/include/filtering/filter_local_extrema.hpp:
+
+../include/piccante/include/filtering.hpp:
+
+../include/piccante/include/features_matching/hash_table_lsh.hpp:
+
+../include/piccante/include/features_matching/binary_feature_lsh_matcher.hpp:
+
+../include/piccante/include/features_matching/motion_estimation.hpp:
+
+../include/piccante/include/features_matching/orb_descriptor.hpp:
+
+../include/piccante/include/features_matching/brief_descriptor.hpp:
+
+../include/piccante/include/util/gl/mask.hpp:
+
+../include/piccante/include/features_matching/susan_corner_detector.hpp:
+
+../include/piccante/include/features_matching/general_corner_detector.hpp:
+
+../include/piccante/include/tone_mapping/raman_tmo.hpp:
+
+../include/piccante/include/util/eigen_util.hpp:
+
+../include/piccante/include/features_matching.hpp:
+
+../include/piccante/include/colors/color_conv_xyz_to_cielab.hpp:
+
+../include/piccante/include/colors/color_conv_ipt_to_ich.hpp:
+
+../include/piccante/include/colors/color_conv_lms_to_lalphabeta.hpp:
+
+../include/piccante/include/colors/color_conv_xyz_to_logluv.hpp:
+
+../include/piccante/include/colors/color_conv_xyz_to_cieluv.hpp:
+
+../include/piccante/include/filtering/filter_med_vec.hpp:
+
+../include/piccante/include/colors/color_conv_rgb_to_lms.hpp:
+
+../include/piccante/include/colors/color_conv_rgb_to_xyz.hpp:
+
+/usr/include/python3.10/compile.h:
+
+../include/piccante/include/colors/color_conv_rgb_to_srgb.hpp:
+
+../include/piccante/include/util/matrix_3_x_3.hpp:
+
+../include/piccante/include/colors/color_3.hpp:
+
+/usr/include/python3.10/tupleobject.h:
+
+../include/piccante/include/filtering/filter_iterative.hpp:
+
+../include/piccante/include/algorithms/segmentation_tmo_approx.hpp:
+
+../include/piccante/include/filtering/filter_threshold.hpp:
+
+../include/piccante/include/algorithms/binarization.hpp:
+
+../include/piccante/include/algorithms/lischinski_minimization.hpp:
+
+../include/piccante/include/algorithms/color_classification.hpp:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/internals.h:
+
+../include/piccante/include/algorithms/radial_basis_function.hpp:
+
+../include/piccante/include/util/precomputed_diff_of_gaussians.hpp:
+
+../include/piccante/include/filtering/filter_diff_gauss_1d.hpp:
+
+../include/piccante/include/filtering/filter_diff_gauss_2d_opt.hpp:
+
+../include/piccante/include/filtering/filter_log_2d_opt.hpp:
+
+../include/piccante/include/filtering/filter_gradient.hpp:
+
+../include/piccante/include/filtering/filter_max.hpp:
+
+../include/piccante/include/algorithms/grow_cut.hpp:
+
+../include/piccante/include/filtering/filter_bilateral_2ds.hpp:
+
+../include/piccante/include/metrics/m_psnr.hpp:
+
+../include/piccante/include/tone_mapping/tone_mapping_operator.hpp:
+
+../include/piccante/include/filtering/filter_simple_tmo.hpp:
+
+../include/piccante/include/tone_mapping/get_all_exposures.hpp:
+
+../include/piccante/include/metrics/relative_error.hpp:
+
+../include/piccante/include/filtering/filter_exposure_fusion_weights.hpp:
+
+../include/piccante/include/tone_mapping/exposure_fusion.hpp:
+
+../include/piccante/include/filtering/filter_channel.hpp:
+
+/usr/include/python3.10/bytearrayobject.h:
+
+../include/piccante/include/algorithms/color_to_gray.hpp:
+
+../include/piccante/include/algorithms/superpixels_slic.hpp:
+
+../include/piccante/include/algorithms/superpixels_oracle.hpp:
+
+../include/piccante/include/gl/filtering/filter_gaussian_3d.hpp:
+
+../include/piccante/include/algorithms/quadtree.hpp:
+
+../include/piccante/include/metrics/base.hpp:
+
+../include/piccante/include/filtering/filter_sampler_2d.hpp:
+
+../include/piccante/include/filtering/filter_gaussian_1d.hpp:
+
+../include/piccante/include/algorithms/pyramid.hpp:
+
+../include/piccante/include/util/raw.hpp:
+
+../include/piccante/include/filtering/filter_gradient_harris_opt.hpp:
+
+../include/piccante/include/filtering/filter_up_pp.hpp:
+
+../include/piccante/include/filtering/filter_sampler_2dsub.hpp:
+
+../include/piccante/include/filtering/filter_down_pp.hpp:
+
+/usr/include/c++/11/version:
+
+/usr/include/python3.10/modsupport.h:
+
+../include/piccante/include/util/gl/buffer_ops.hpp:
+
+../include/piccante/include/algorithms/pushpull.hpp:
+
+../include/piccante/include/algorithms/poisson_image_editing.hpp:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
+
+/usr/include/python3.10/cpython/methodobject.h:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
+
+../include/piccante/include/externals/Eigen/SparseQR:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/typeid.h:
+
+../include/piccante/include/filtering/filter_wls.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Utils.h:
+
+/usr/include/c++/11/bits/forward_list.tcc:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pruneL.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h:
+
+../include/piccante/include/gl/tone_mapping/get_all_exposures.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
+
+../include/piccante/include/image_samplers/image_sampler_bicubic.hpp:
+
+../include/piccante/include/externals/Eigen/IterativeLinearSolvers:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
+
+/usr/include/python3.10/pystrcmp.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Structs.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
+
+../include/piccante/include/externals/Eigen/SparseLU:
+
+/usr/include/python3.10/longintrepr.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCholesky/SimplicialCholesky.h:
+
+../include/piccante/include/externals/Eigen/SparseCholesky:
+
+../include/piccante/include/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h:
+
+../include/piccante/include/externals/Eigen/src/OrderingMethods/Amd.h:
+
+../include/piccante/include/externals/Eigen/OrderingMethods:
+
+../include/piccante/include/colors/color_conv_xyz_to_hdrlab.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseSolverBase.h:
+
+../include/piccante/include/filtering/filter_gaussian_2d.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseFuzzy.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseTriangularView.h:
+
+../include/piccante/include/algorithms/multi_resolution_operator.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseDenseProduct.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseProduct.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseView.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseDot.h:
+
+../include/piccante/include/externals/Eigen/src/OrderingMethods/Ordering.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseTranspose.h:
+
+/usr/include/c++/11/typeindex:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
+
+/usr/include/c++/11/bits/stl_list.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseRef.h:
+
+../include/piccante/include/filtering/filter_normal.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseVector.h:
+
+/usr/include/python3.10/cpython/objimpl.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+../include/piccante/include/gl/filtering/filter_sampling_map.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_Memory.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrix.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseCompressedBase.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/AmbiVector.h:
+
+/usr/include/c++/11/math.h:
+
+../include/piccante/include/image_samplers/image_sampler.hpp:
+
+/usr/include/python3.10/Python.h:
+
+../include/piccante/include/io/bmp.hpp:
+
+/usr/include/c++/11/array:
+
+../include/piccante/include/colors/color.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/Visitor.h:
+
+../include/piccante/include/util/std_util.hpp:
+
+/usr/include/c++/11/cstdint:
+
+../include/piccante/include/externals/Eigen/src/Core/functors/StlFunctors.h:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+../include/piccante/include/filtering/filter_divergence.hpp:
+
+/usr/include/c++/11/bits/ptr_traits.h:
+
+../include/piccante/include/algorithms/histogram_matching.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/BooleanRedux.h:
+
+../include/piccante/include/util/gl/formats.hpp:
+
+../include/piccante/include/util/buffer.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-../include/piccante/filtering/filter_diff_gauss_1d.hpp:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_dfs.h:
 
 /usr/include/time.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
-../include/piccante/util/string.hpp:
-
 /usr/include/asm-generic/posix_types.h:
+
+../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
+../include/piccante/include/metrics/mse.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseProduct.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
-../include/piccante/features_matching.hpp:
+../include/piccante/include/externals/Eigen/src/Core/ArrayBase.h:
 
-/usr/include/c++/11/bits/istream.tcc:
+/usr/include/c++/11/ostream:
+
+../include/piccante/include/tone_mapping/ward_global_tmo.hpp:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
-../include/piccante/util.hpp:
-
-../include/piccante/gl/filtering/filter.hpp:
+../include/piccante/include/util/gl/display.hpp:
 
 /usr/include/c++/11/bits/codecvt.h:
 
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h:
+../include/piccante/include/externals/Eigen/src/Core/ProductEvaluators.h:
 
-../include/piccante/externals/Eigen/SparseCholesky:
-
-/usr/include/c++/11/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-../include/piccante/algorithms/compute_divergence.hpp:
+../include/piccante/include/externals/Eigen/src/Core/SelfCwiseBinaryOp.h:
 
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
-/usr/include/c++/11/bits/streambuf_iterator.h:
-
-../include/piccante/features_matching/binary_feature_brute_force_matcher.hpp:
-
-../include/piccante/externals/Eigen/Core:
-
-../include/piccante/filtering/filter_sigmoid_tmo.hpp:
-
 /usr/include/c++/11/cwctype:
 
-../include/piccante/filtering/filter_med_vec.hpp:
-
-../include/piccante/filtering/filter_color_conv.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
 
-../include/piccante/gl/filtering/filter_reinhard_single_pass.hpp:
+/usr/include/string.h:
+
+../include/piccante/include/filtering/filter_sampler_2dadd.hpp:
 
 /usr/include/c++/11/stdexcept:
 
-../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixVector.h:
+../include/piccante/include/features_matching/lucid_descriptor.hpp:
+
+/usr/include/c++/11/utility:
+
+/usr/include/c++/11/ios:
+
+../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/usr/include/c++/11/cxxabi.h:
+
+../include/piccante/include/externals/Eigen/src/Core/DiagonalProduct.h:
+
+/usr/include/c++/11/bits/locale_classes.h:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
 
-../include/piccante/util/io.hpp:
+/usr/include/c++/11/typeinfo:
 
-/usr/include/c++/11/istream:
+/usr/include/c++/11/exception:
 
-../include/piccante/metrics/log_rmse.hpp:
-
-../include/piccante/externals/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+../include/piccante/include/tone_mapping/reinhard_tmo.hpp:
 
 /usr/include/c++/11/sstream:
-
-../include/piccante/algorithms/radial_basis_function.hpp:
-
-/usr/include/c++/11/cstring:
 
 /usr/include/c++/11/backward/auto_ptr.h:
 
@@ -4095,9 +4127,19 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-../include/piccante/externals/Eigen/src/Core/DenseCoeffsBase.h:
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h:
 
-../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+
+../include/piccante/include/externals/Eigen/src/Cholesky/LLT.h:
+
+/usr/include/c++/11/stdlib.h:
+
+../include/piccante/include/util/bbox.hpp:
+
+/usr/include/c++/11/bits/localefwd.h:
+
+../include/piccante/include/util/compability.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
@@ -4107,37 +4149,33 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
-../include/piccante/util/math.hpp:
-
 /usr/include/c++/11/limits:
+
+/usr/include/python3.10/weakrefobject.h:
+
+../include/piccante/include/tone_mapping/durand_tmo.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/PermutationMatrix.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseAssign.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/c++/11/bits/random.h:
 
-/usr/include/python3.10/cpython/dictobject.h:
+../include/piccante/include/externals/Eigen/src/QR/FullPivHouseholderQR.h:
 
-../include/piccante/point_samplers/sampler_monte_carlo.hpp:
+/usr/include/stdint.h:
 
-../include/piccante/io/exr.hpp:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Structs.h:
-
-../include/piccante/externals/Eigen/src/Core/products/SelfadjointProduct.h:
-
-../include/piccante/gl/filtering/filter_color_conv.hpp:
-
-../include/piccante/externals/Eigen/src/Core/products/TriangularSolverVector.h:
+../include/piccante/include/filtering/filter_sampler_1d.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-../include/piccante/gl/filtering/filter_bilateral_2ds.hpp:
+../include/piccante/include/externals/Eigen/src/QR/HouseholderQR.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-../include/piccante/filtering/filter_demosaic.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -4145,65 +4183,53 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-../include/piccante/externals/Eigen/SparseCore:
-
-../include/piccante/externals/Eigen/Geometry:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/linux/types.h:
 
-../include/piccante/gl/tone_mapping/reinhard_tmo.hpp:
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:
 
-../include/piccante/algorithms/pushpull.hpp:
+../include/piccante/include/filtering/filter_mean.hpp:
 
-../include/piccante/externals/Eigen/SparseLU:
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
 
 /usr/include/c++/11/random:
 
-../include/piccante/externals/Eigen/src/Core/DiagonalMatrix.h:
-
-/usr/include/python3.10/context.h:
-
-../include/piccante/externals/Eigen/src/Householder/BlockHouseholder.h:
+../include/piccante/include/gl/filtering/filter_color_correction_pouli.hpp:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
-../include/piccante/gl/filtering/filter_luminance.hpp:
-
-../include/piccante/util/bbox.hpp:
+../include/piccante/include/features_matching/transform_data.hpp:
 
 /usr/include/c++/11/bits/std_abs.h:
 
-../include/piccante/algorithms/poisson_solver.hpp:
-
 /usr/include/c++/11/cassert:
 
-/usr/include/c++/11/bits/stl_algo.h:
+../include/piccante/include/computer_vision/camera_matrix.hpp:
 
-/usr/include/asm-generic/int-ll64.h:
+../include/piccante/include/externals/Eigen/src/LU/InverseImpl.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/limits.h:
 
-/usr/include/c++/11/bits/vector.tcc:
+../include/piccante/include/externals/Eigen/src/misc/RealSvd2x2.h:
 
-../include/piccante/externals/Eigen/src/Core/util/ForwardDeclarations.h:
+/usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-../include/piccante/util/gl/mask.hpp:
+../include/piccante/include/filtering/filter_drago_tmo.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
-../include/piccante/externals/Eigen/Householder:
+../include/piccante/include/JNI/live_wire.hpp:
 
-../include/piccante/externals/Eigen/src/Geometry/Quaternion.h:
+../include/piccante/include/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
 
 /usr/include/c++/11/bits/unordered_set.h:
 
@@ -4211,73 +4237,27 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_vector.h:
 
-../include/piccante/colors/saturation.hpp:
-
 /usr/include/c++/11/cstddef:
 
-/usr/include/python3.10/cpython/frameobject.h:
-
-/usr/include/python3.10/ceval.h:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/c++/11/bits/functexcept.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-../include/piccante/filtering/filter_sampler_1d.hpp:
-
-../include/piccante/filtering/filter_clahe.hpp:
+../include/piccante/include/util/polynomial.hpp:
 
 /usr/include/c++/11/vector:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
-../include/piccante/externals/Eigen/src/Core/Transpositions.h:
+../include/piccante/include/algorithms/compute_divergence.hpp:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
-../include/piccante/gl/filtering/filter_down_pp.hpp:
+/usr/include/c++/11/bits/move.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseSelfAdjointView.h:
-
-/usr/include/c++/11/bits/functional_hash.h:
-
-../include/piccante/metrics.hpp:
-
-../include/piccante/externals/Eigen/src/Core/arch/SSE/Complex.h:
-
-../include/piccante/externals/Eigen/src/Core/TriangularMatrix.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-../include/piccante/externals/Eigen/src/Geometry/EulerAngles.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-../include/piccante/externals/Eigen/src/Core/functors/StlFunctors.h:
-
-../include/piccante/util/cached_table.hpp:
-
-../include/piccante/filtering/filter_laplacian.hpp:
+../include/piccante/include/externals/Eigen/src/Core/util/Macros.h:
 
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/include/python3.10/tracemalloc.h:
-
-../include/piccante/colors/matrix_from_primaries.hpp:
-
-../include/piccante/externals/tinyexr/tinyexr.h:
-
-/usr/include/features.h:
-
-/usr/include/python3.10/unicodeobject.h:
-
-../include/piccante/gl/filtering/filter_color_correction_pouli.hpp:
-
-../include/piccante/externals/Eigen/src/Core/ReturnByValue.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/wctype.h:
 
@@ -4285,115 +4265,117 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/sched.h:
 
-/usr/include/c++/11/forward_list:
-
-../include/piccante/externals/Eigen/src/Core/AssignEvaluator.h:
+../include/piccante/include/util/point_samplers.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-../include/piccante/externals/Eigen/src/Core/CwiseTernaryOp.h:
+../include/piccante/include/filtering/filter_color_correction_pouli.hpp:
 
-/usr/include/c++/11/typeinfo:
+../include/piccante/include/util/string.hpp:
 
-../include/piccante/externals/Eigen/src/Core/Select.h:
+../include/piccante/include/externals/Eigen/src/Core/CwiseNullaryOp.h:
 
-/usr/include/c++/11/utility:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/ios:
-
-../include/piccante/tone_mapping/raman_tmo.hpp:
+../include/piccante/include/util/warp_samples.hpp:
 
 /usr/include/c++/11/cerrno:
 
-../include/piccante/util/k_means.hpp:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Memory.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseRedux.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-../include/piccante/externals/Eigen/src/Core/NoAlias.h:
 
 /usr/include/stdio.h:
 
-../include/piccante/util/std_util.hpp:
+../include/piccante/include/externals/Eigen/src/Core/util/Meta.h:
 
-../include/piccante/gl/point_samplers/sampler_random_m.hpp:
+../include/piccante/include/util/gl/stroke.hpp:
 
 /usr/include/c++/11/cstdio:
 
-/usr/include/alloca.h:
+../include/piccante/include/externals/tinyexr/tinyexr.h:
+
+../include/piccante/include/externals/Eigen/src/Core/CwiseTernaryOp.h:
+
+../include/piccante/include/util/indexed_array.hpp:
+
+/usr/include/python3.10/pythonrun.h:
+
+/usr/include/c++/11/bits/concept_check.h:
+
+../include/piccante/include/features_matching/fast_corner_detector.hpp:
+
+/usr/include/asm-generic/types.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseRedux.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/Default/Settings.h:
+
+../include/piccante/include/externals/Eigen/src/plugins/BlockMethods.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
 
-../include/piccante/JNI/white_balance.hpp:
-
 /usr/include/c++/11/bits/random.tcc:
 
-../include/piccante/computer_vision/nelder_mead_opt_gordon_lowe.hpp:
+/usr/include/c++/11/iostream:
 
-../include/piccante/externals/Eigen/src/SparseCore/TriangularSolver.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseMap.h:
-
-../include/piccante/io/stb.hpp:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/EigenSolver.h:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
 
+../include/piccante/include/util.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
-../include/piccante/metrics/ssim_index.hpp:
-
-/usr/include/c++/11/bits/move.h:
-
-../include/piccante/externals/Eigen/src/Core/arch/SSE/PacketMath.h:
-
-../include/piccante/externals/Eigen/src/Core/Replicate.h:
-
-../include/piccante/externals/Eigen/src/OrderingMethods/Eigen_Colamd.h:
+../include/piccante/include/algorithms/poisson_filling.hpp:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-../include/piccante/util/indexed_array.hpp:
+../include/piccante/include/gl/filtering/filter_bilateral_3dsp.hpp:
 
-/usr/include/c++/11/bits/predefined_ops.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+../include/piccante/include/util/io.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/include/c++/11/bits/forward_list.tcc:
-
-../include/piccante/externals/Eigen/src/Geometry/Umeyama.h:
-
-../include/piccante/io/bmp.hpp:
-
-../include/piccante/algorithms/histogram_matching.hpp:
-
-../include/piccante/externals/Eigen/src/Core/Block.h:
-
-../include/piccante/algorithms/poisson_filling.hpp:
+../include/piccante/include/externals/Eigen/src/Core/util/Memory.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/c++/11/clocale:
 
-/usr/include/c++/11/new:
-
 /usr/include/c++/11/bits/sstream.tcc:
 
-../include/piccante/util/compability.hpp:
+../include/piccante/include/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
+
+../include/piccante/include/histogram.hpp:
+
+../include/piccante/include/filtering/filter_tmqi.hpp:
+
+../include/piccante/include/externals/Eigen/src/Householder/Householder.h:
+
+../include/piccante/include/filtering/filter_dct_2d.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-../include/piccante/metrics/relative_error.hpp:
+/usr/include/python3.10/classobject.h:
+
+/usr/include/python3.10/bytesobject.h:
+
+../include/piccante/include/algorithms/bilateral_separation.hpp:
+
+../include/piccante/include/util/math.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
@@ -4401,111 +4383,81 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/python3.10/cpython/traceback.h:
 
-../include/piccante/util/buffer.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
-../include/piccante/gl/filtering/filter_min.hpp:
-
-../include/piccante/filtering.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
 /usr/include/c++/11/streambuf:
 
-/usr/include/python3.10/pythonrun.h:
+../include/piccante/include/computer_vision/fundamental_matrix.hpp:
 
-../include/piccante/algorithms/color_classification.hpp:
-
-/usr/include/c++/11/bits/concept_check.h:
-
-/usr/include/asm-generic/types.h:
-
-../include/piccante/filtering/filter_ssim.hpp:
-
-../include/piccante/externals/Eigen/IterativeLinearSolvers:
-
-/usr/include/asm-generic/bitsperlong.h:
+../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryView.h:
 
 /usr/include/GL/glew.h:
 
-../include/piccante/util/array.hpp:
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-../include/piccante/externals/Eigen/src/QR/ColPivHouseholderQR.h:
+/usr/include/c++/11/bits/functexcept.h:
 
-../include/piccante/computer_vision/camera_matrix.hpp:
+/usr/include/c++/11/bits/list.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-../include/piccante/gl/filtering/filter_gradient.hpp:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/include/c++/11/bits/stl_iterator.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+../include/piccante/include/filtering/filter_diff_gauss_2d.hpp:
 
-../include/piccante/image.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/python3.10/eval.h:
-
-../include/piccante/externals/Eigen/src/Core/CwiseUnaryView.h:
+../include/piccante/include/externals/Eigen/src/Core/CommaInitializer.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
+../include/piccante/include/filtering/filter_crop.hpp:
+
+/usr/include/alloca.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Swap.h:
+
+../include/piccante/include/filtering/filter_mosaic.hpp:
+
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU.h:
+
 /usr/include/c++/11/debug/debug.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
-
-../include/piccante/io/exr_tiny.hpp:
-
-../include/piccante/gl/colors/color_conv_xyz_to_lms.hpp:
+../include/piccante/include/algorithms/hdr_merger.hpp:
 
 /usr/include/c++/11/initializer_list:
 
+../include/piccante/include/colors/color_conv_lms_to_ipt.hpp:
+
 /usr/include/c++/11/iosfwd:
 
-/usr/include/python3.10/cpython/picklebufobject.h:
+/usr/include/python3.10/cpython/frameobject.h:
 
-../include/piccante/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+/usr/include/python3.10/ceval.h:
 
-/usr/include/python3.10/pycapsule.h:
+/usr/include/c++/11/bits/stl_uninitialized.h:
 
-../include/piccante/base.hpp:
+../include/piccante/include/externals/Eigen/src/SVD/UpperBidiagonalization.h:
 
-../include/piccante/gl/filtering/filter_drago_tmo.hpp:
-
-/usr/include/c++/11/ext/type_traits.h:
-
-../include/piccante/colors/color_conv_xyz_to_hdrlab.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/c++/11/cstdint:
-
-../include/piccante/tone_mapping/reinhard_tmo.hpp:
-
-../include/piccante/util/gl/redux.hpp:
+../include/piccante/include/gl/filtering/filter_sigmoid_tmo.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-../include/piccante/externals/Eigen/src/OrderingMethods/Ordering.h:
+../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexSchur.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
-
-/usr/include/python3.10/sliceobject.h:
-
-../include/piccante/externals/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -4513,21 +4465,19 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/functional:
 
+../include/piccante/include/externals/Eigen/src/SparseQR/SparseQR.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+../include/piccante/include/util/gl/technique.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+
 /usr/include/c++/11/debug/assertions.h:
-
-../include/piccante/externals/Eigen/src/Core/DenseBase.h:
-
-../include/piccante/externals/Eigen/src/Core/util/NonMPL2.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-../include/piccante/util/gl/timings.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseMatrix.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
@@ -4537,55 +4487,67 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/linux/close_range.h:
 
+/usr/include/c++/11/bits/predefined_ops.h:
+
+../include/piccante/include/util/dynamic_range.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-../include/piccante/gl/filtering/filter_max.hpp:
-
-/usr/include/c++/11/chrono:
 
 /usr/include/python3.10/typeslots.h:
 
-../include/piccante/algorithms/quadtree.hpp:
-
 /usr/include/asm-generic/errno-base.h:
 
+../include/piccante/include/filtering/filter_assemble_hdr.hpp:
+
+/usr/include/features.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+../include/piccante/include/externals/Eigen/src/Core/ConditionEstimator.h:
+
 /usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+../include/piccante/include/util/gl/buffer_allocation.hpp:
 
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/GL/gl.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+../include/piccante/include/colors/color_conv.hpp:
 
-../include/piccante/features_matching/motion_estimation.hpp:
+../include/piccante/include/image_samplers/image_sampler_nearest.hpp:
+
+/usr/include/python3.10/cpython/pytime.h:
+
+../include/piccante/include/filtering/filter_bilateral_2dg.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
 
-../include/piccante/computer_vision/iterative_closest_point_2D.hpp:
+../include/piccante/include/point_samplers/sampler_random_m.hpp:
 
 /usr/include/c++/11/string:
 
-../include/piccante/computer_vision/rectification.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-../include/piccante/algorithms/connected_components.hpp:
+../include/piccante/include/util/array.hpp:
 
-../include/piccante/externals/Eigen/src/misc/Kernel.h:
-
-../include/piccante/externals/Eigen/src/misc/RealSvd2x2.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
+../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrix.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
-../include/piccante/features_matching/transform_data.hpp:
+../include/piccante/include/filtering/filter_integral_image.hpp:
 
 /usr/include/c++/11/type_traits:
 
-/usr/include/c++/11/bits/allocator.h:
-
 /usr/include/c++/11/cmath:
+
+../include/piccante/include/util/file_lister.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -4599,93 +4561,97 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/complex:
 
-../src/bindings/py_image.h:
-
 /usr/include/c++/11/bits/stl_function.h:
 
-/usr/include/c++/11/bits/memoryfwd.h:
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
 
-../include/piccante/colors.hpp:
-
-/usr/include/c++/11/bits/ptr_traits.h:
-
-../include/piccante/util/vec.hpp:
+/usr/include/stdc-predef.h:
 
 /usr/include/errno.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseFuzzy.h:
+../include/piccante/include/externals/Eigen/Cholesky:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_Utils.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
-../include/piccante/util/polyline.hpp:
-
 /usr/include/endian.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
-../include/piccante/filtering/filter_gaussian_1d.hpp:
+/usr/include/c++/11/bits/std_thread.h:
 
 /usr/include/ctype.h:
 
+/usr/include/c++/11/bits/streambuf_iterator.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/functional.h:
+
+../include/piccante/include/computer_vision/intrisics_matrix.hpp:
+
+../include/piccante/include/image.hpp:
+
+../include/piccante/include/features_matching/binary_feature_brute_force_matcher.hpp:
+
+/usr/include/c++/11/algorithm:
+
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-../include/piccante/gl.hpp:
+../include/piccante/include/gl/filtering/filter_deform_grid.hpp:
+
+../include/piccante/include/gl/filtering/filter_warp_2d.hpp:
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-../include/piccante/gl/filtering/filter_sampling_map.hpp:
+../include/piccante/include/io/exif.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/Inverse.h:
 
 /usr/include/c++/11/bits/stl_tree.h:
-
-../include/piccante/externals/Eigen/src/Core/Diagonal.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/c++/11/cwchar:
 
-/usr/include/c++/11/bits/stl_algobase.h:
+../include/piccante/include/externals/Eigen/src/Core/functors/AssignmentFunctors.h:
 
-../include/piccante/algorithms/superpixels_slic.hpp:
+../include/piccante/include/image_samplers/image_sampler_gaussian.hpp:
+
+../include/piccante/include/gl/filtering/filter_sampler_2d.hpp:
+
+/usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
 
+../include/piccante/include/externals/Eigen/src/Core/CwiseBinaryOp.h:
+
+../include/piccante/include/externals/Eigen/src/LU/Determinant.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
-../include/piccante/filtering/filter_min.hpp:
+../include/piccante/include/computer_vision/nelder_mead_opt_gordon_lowe.hpp:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-../include/piccante/externals/Eigen/src/Core/MapBase.h:
+../include/piccante/include/externals/Eigen/src/Eigenvalues/EigenSolver.h:
 
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
+../include/piccante/include/algorithms/region_border.hpp:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparsePermutation.h:
-
-../include/piccante/externals/Eigen/src/Core/SolveTriangular.h:
-
-../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixVector.h:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseColEtree.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
+../include/piccante/include/computer_vision/rectification.hpp:
+
 ../src/bindings/py_image.cpp:
 
-../include/piccante/externals/Eigen/src/Core/Reverse.h:
-
 /usr/include/x86_64-linux-gnu/bits/types.h:
-
-../include/piccante/externals/Eigen/src/Core/Solve.h:
 
 /usr/include/c++/11/bits/range_access.h:
 
@@ -4693,45 +4659,57 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/cctype:
 
-../include/piccante/piccante.hpp:
+../include/piccante/include/image_samplers/image_sampler_catmull_rom.hpp:
 
-../include/piccante/gl/filtering/filter_bilateral_3ds.hpp:
+../include/piccante/include/filtering/filter_conv_2dsp.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/operators.h:
+../include/piccante/include/externals/Eigen/src/Core/NoAlias.h:
 
-../include/piccante/util/mask.hpp:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-../include/piccante/util/gl/redux_ops.hpp:
+../include/piccante/include/externals/Eigen/src/Eigenvalues/Tridiagonalization.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
-../include/piccante/computer_vision/stereo.hpp:
+/usr/include/c++/11/cstring:
 
-../include/piccante/filtering/filter_luminance.hpp:
+../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixVector.h:
 
-../include/piccante/io/pfm.hpp:
+../include/piccante/include/algorithms/weight_function.hpp:
 
-../include/piccante/colors/color_conv_rgb_to_srgb.hpp:
+../include/piccante/include/algorithms/nelder_mead_opt_gray_match.hpp:
+
+/usr/include/python3.10/cpython/pydebug.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseDot.h:
-
 /usr/include/c++/11/bits/stringfwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+/usr/include/python3.10/cpython/listobject.h:
 
-../include/piccante/externals/Eigen/src/Geometry/OrthoMethods.h:
+/usr/include/c++/11/system_error:
+
+/usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+../include/piccante/include/util/gl/timings.hpp:
 
 /usr/include/GL/glu.h:
 
+../include/piccante/include/computer_vision/triangulation.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverVector.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/AngleAxis.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -4743,33 +4721,23 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
-/usr/include/c++/11/bits/localefwd.h:
-
-../include/piccante/gl/filtering/filter_bilateral_2ds_e.hpp:
-
-/usr/include/c++/11/math.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-../include/piccante/externals/Eigen/src/Geometry/Translation.h:
-
-../include/piccante/gl/filtering/filter_bilateral_2dsp.hpp:
-
-../include/piccante/filtering/filter_warp_2d.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseRef.h:
-
 /usr/include/locale.h:
 
-../include/piccante/computer_vision/homography_matrix.hpp:
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
 
-../include/piccante/externals/Eigen/src/LU/Determinant.h:
+../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixVector.h:
 
-/usr/include/c++/11/algorithm:
+../include/piccante/include/gl/filtering/filter_durand_tmo.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+../include/piccante/include/filtering/filter_med.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
@@ -4777,9 +4745,23 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/backward/binders.h:
 
-../include/piccante/computer_vision/nelder_mead_opt_homography.hpp:
+../include/piccante/include/tone_mapping/find_best_exposure.hpp:
+
+../include/piccante/include/colors.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/c++/11/chrono:
+
+../include/piccante/include/externals/Eigen/src/LU/arch/Inverse_SSE.h:
+
+/usr/include/c++/11/istream:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseMatrixBase.h:
+
+/usr/include/c++/11/set:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/python3.10/cpython/sysmodule.h:
 
@@ -4789,15 +4771,31 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+../include/piccante/include/piccante.hpp:
+
 /usr/include/c++/11/bits/basic_string.h:
+
+../include/piccante/include/gl/tone_mapping/drago_tmo.hpp:
 
 /usr/include/linux/limits.h:
 
-../include/piccante/filtering/filter_backward_difference.hpp:
+../include/piccante/include/gl/algorithms/pyramid.hpp:
 
-../include/piccante/externals/Eigen/src/Core/Matrix.h:
+../include/piccante/include/algorithms/live_wire.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Complex.h:
+
+../include/piccante/include/features_matching/patch_comp.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+../include/piccante/include/externals/Eigen/src/Core/functors/TernaryFunctors.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Stride.h:
+
+/usr/include/pthread.h:
+
+../include/piccante/include/metrics/tmqi.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -4805,17 +4803,15 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
-/usr/include/c++/11/bits/stl_pair.h:
+../include/piccante/include/filtering/filter_sigmoid_tmo.hpp:
 
-../include/piccante/util/tile_list.hpp:
-
-../include/piccante/tone_mapping/ward_global_tmo.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/AmbiVector.h:
+../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/Half.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
-../include/piccante/colors/color_conv_lms_to_lalphabeta.hpp:
+../include/piccante/include/gl/algorithms/pushpull.hpp:
+
+../include/piccante/include/filtering/filter_backward_difference.hpp:
 
 /usr/include/c++/11/bits/std_function.h:
 
@@ -4823,83 +4819,87 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/usr/include/c++/11/bits/erase_if.h:
-
-../include/piccante/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
-
-../include/piccante/gl/filtering/filter_scatter.hpp:
-
-../include/piccante/features_matching/orb_descriptor.hpp:
-
-/usr/include/c++/11/ext/new_allocator.h:
-
-/usr/include/c++/11/bits/std_thread.h:
-
-../include/piccante/algorithms/hdr_merger.hpp:
+../include/piccante/include/util/tile.hpp:
 
 /usr/include/c++/11/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
+../include/piccante/include/gl/colors/color_conv_rgb_to_srgb.hpp:
 
-../include/piccante/gl/filtering/filter_up_pp.hpp:
+../include/piccante/include/util/gl/program.hpp:
 
-../include/piccante/externals/Eigen/src/Core/Inverse.h:
+../include/piccante/include/image_samplers/image_sampler_bilinear.hpp:
 
 /usr/include/c++/11/cstdlib:
-
-../include/piccante/gl/algorithms/richardson_lucy_deconvolution.hpp:
 
 /usr/include/strings.h:
 
 /usr/include/python3.10/warnings.h:
 
-/usr/include/c++/11/numeric:
+../include/piccante/include/externals/Eigen/src/Core/MapBase.h:
 
-../include/piccante/util/gl/buffer_op.hpp:
+/usr/include/c++/11/numeric:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/python3.10/traceback.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/EulerAngles.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseMap.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/CompressedStorage.h:
+
+/usr/include/c++/11/fstream:
+
+../include/piccante/include/colors/rgbe.hpp:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
+../include/piccante/include/io/exr_tiny.hpp:
+
 /usr/include/python3.10/pyconfig.h:
+
+../include/piccante/include/metrics/log_rmse.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/c++/11/bits/stl_construct.h:
 
+../include/piccante/include/util/k_means.hpp:
+
 /usr/include/stdlib.h:
 
 /usr/include/c++/11/bits/allocated_ptr.h:
 
+../include/piccante/include/externals/Eigen/src/SparseCore/SparsePermutation.h:
+
 /usr/include/assert.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+../include/piccante/include/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/descr.h:
 
-../include/piccante/filtering/filter_sampler_2d.hpp:
-
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
-../include/piccante/gl/filtering/filter_anisotropic_diffusion.hpp:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+../include/piccante/include/externals/Eigen/src/Core/DenseBase.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+../include/piccante/include/base.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
-../include/piccante/point_samplers/sampler_random.hpp:
-
 /usr/include/linux/stat.h:
-
-/usr/include/x86_64-linux-gnu/asm/types.h:
-
-../include/piccante/computer_vision/intrisics_matrix.hpp:
 
 /usr/include/linux/posix_types.h:
 
@@ -4907,11 +4907,9 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/refwrap.h:
 
+../include/piccante/include/features_matching/feature_matcher.hpp:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
-
-../include/piccante/util/gl/buffer_ops.hpp:
-
-../include/piccante/externals/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -4919,129 +4917,119 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
 
-../include/piccante/util/tile.hpp:
+../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h:
 
-../include/piccante/externals/Eigen/src/Core/Array.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/usr/include/c++/11/bits/stl_multiset.h:
+
+../include/piccante/include/externals/Eigen/src/Core/DenseCoeffsBase.h:
+
+../include/piccante/include/filtering/filter_laplacian.hpp:
 
 /usr/include/utime.h:
 
-../include/piccante/io/ppm.hpp:
+../include/piccante/include/io/hdr.hpp:
 
-/usr/include/python3.10/cpython/fileutils.h:
+../include/piccante/include/filtering/filter_ssim.hpp:
 
-../include/piccante/io/pgm.hpp:
+/usr/include/c++/11/bits/stl_set.h:
 
-/usr/include/string.h:
+../include/piccante/include/externals/Eigen/src/Core/MatrixBase.h:
 
-../include/piccante/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h:
+../include/piccante/include/io/pfm.hpp:
 
-../include/piccante/io/tmp.hpp:
+../include/piccante/include/io/ppm.hpp:
 
-../include/piccante/io/vol.hpp:
+../include/piccante/include/io/pgm.hpp:
+
+../include/piccante/include/gl/filtering/filter_exposure_fusion_weights.hpp:
+
+../include/piccante/include/io/tmp.hpp:
+
+/usr/include/python3.10/sliceobject.h:
+
+../include/piccante/include/io/vol.hpp:
+
+../include/piccante/include/io/stb.hpp:
 
 ../include/stb/stb_image_write.h:
 
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_column_bmod.h:
+../include/piccante/include/gl/filtering/filter_npasses.hpp:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
+
+../include/piccante/include/externals/Eigen/src/Geometry/ParametrizedLine.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Reverse.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
-../include/piccante/externals/Eigen/src/Core/DiagonalProduct.h:
+../include/piccante/include/externals/Eigen/src/Geometry/RotationBase.h:
 
-../include/piccante/algorithms/poisson_image_editing.hpp:
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLUImpl.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-../include/piccante/colors/color.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+../include/piccante/include/gl/algorithms/color_to_gray.hpp:
 
-../include/piccante/util/gl/ssbo.hpp:
+../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/PacketMathHalf.h:
 
-/usr/include/c++/11/climits:
+../include/piccante/include/externals/Eigen/Jacobi:
 
-../include/piccante/externals/Eigen/SVD:
+../include/piccante/include/externals/Eigen/src/Core/util/NonMPL2.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
 
-../include/piccante/features_matching/brief_descriptor.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
+../include/piccante/include/metrics/psnr.hpp:
 
 /usr/include/c++/11/list:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
 
-../include/piccante/io/exif.hpp:
+../include/piccante/include/image_vec.hpp:
 
-../include/piccante/gl/filtering/filter_laplacian.hpp:
+../src/bindings/py_dynamics_range.h:
 
-../include/piccante/filtering/filter_log_2d.hpp:
+../include/piccante/include/algorithms.hpp:
 
-../include/piccante/externals/Eigen/src/Core/NestByValue.h:
+../include/piccante/include/filtering/filter_conv_1d.hpp:
 
-../include/piccante/image_vec.hpp:
-
-../include/piccante/externals/Eigen/src/Core/IO.h:
-
-/usr/include/pthread.h:
-
-../include/piccante/histogram.hpp:
-
-../include/piccante/filtering/filter_conv_1d.hpp:
-
-../include/piccante/metrics/m_psnr.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-../include/piccante/filtering/filter.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseDenseProduct.h:
-
-/usr/include/c++/11/thread:
+../include/piccante/include/filtering/filter.hpp:
 
 /usr/include/c++/11/ratio:
 
 /usr/include/c++/11/tuple:
 
-../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+../include/piccante/include/externals/Eigen/SVD:
 
-../include/piccante/computer_vision/simple_ply.hpp:
+../include/piccante/include/externals/Eigen/src/Core/functors/UnaryFunctors.h:
 
-../include/piccante/filtering/filter_deform_grid.hpp:
+/usr/include/c++/11/new:
 
-../include/piccante/algorithms/discrete_cosine_transform.hpp:
-
-/usr/include/c++/11/array:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/buffer_info.h:
-
-../include/piccante/gl/filtering/filter_channel.hpp:
-
-../include/piccante/externals/Eigen/src/plugins/BlockMethods.h:
+../include/piccante/include/externals/Eigen/src/Core/SolverBase.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
 /usr/include/c++/11/bits/unique_lock.h:
 
-../include/piccante/filtering/filter_grow_cut.hpp:
-
 /usr/include/c++/11/bits/invoke.h:
 
-../include/piccante/colors/color_conv_xyz_to_cieluv.hpp:
+/usr/include/c++/11/bits/align.h:
+
+/usr/include/python3.10/descrobject.h:
+
+/usr/include/python3.10/moduleobject.h:
+
+../include/piccante/include/externals/Eigen/src/Core/VectorBlock.h:
 
 /usr/include/c++/11/bits/unique_ptr.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseSolverBase.h:
-
-../include/piccante/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
 /usr/include/c++/11/ctime:
 
@@ -5049,446 +5037,458 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
+../include/piccante/include/util/tile_list.hpp:
+
 /usr/include/c++/11/mutex:
 
-../include/piccante/filtering/filter_absolute_difference.hpp:
+../include/piccante/include/externals/Eigen/src/Core/DenseStorage.h:
 
-../include/piccante/externals/Eigen/src/Core/util/Meta.h:
-
-/usr/include/stdc-predef.h:
-
-../include/piccante/util/precomputed_gaussian.hpp:
-
-../include/piccante/filtering/filter_nswe.hpp:
-
-../include/piccante/util/dynamic_range.hpp:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
-
-../include/piccante/externals/Eigen/src/SVD/UpperBidiagonalization.h:
-
-../include/piccante/util/nelder_mead_opt_base.hpp:
-
-/usr/include/c++/11/bits/list.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
-
-../include/piccante/algorithms/camera_response_function.hpp:
-
-../include/piccante/util/point_samplers.hpp:
-
-../include/piccante/point_samplers/sampler_dart_throwing.hpp:
-
-../include/piccante/point_samplers/sampler_bridson.hpp:
-
-../include/piccante/externals/Eigen/src/Core/arch/SSE/TypeCasting.h:
-
-../include/piccante/filtering/filter_mean.hpp:
-
-../include/piccante/externals/Eigen/src/Core/ConditionEstimator.h:
-
-../include/piccante/filtering/filter_npasses.hpp:
-
-../include/piccante/externals/Eigen/src/Geometry/Rotation2D.h:
-
-../include/piccante/util/polynomial.hpp:
-
-../include/piccante/externals/Eigen/QR:
-
-../include/piccante/externals/Eigen/src/Core/util/DisableStupidWarnings.h:
-
-../include/piccante/algorithms/superpixels_oracle.hpp:
-
-../include/piccante/externals/Eigen/src/Core/util/Macros.h:
-
-../include/piccante/tone_mapping/drago_tmo.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
-
-../include/piccante/externals/Eigen/src/Core/util/MKL_support.h:
-
-/usr/include/python3.10/methodobject.h:
-
-../include/piccante/tone_mapping/exposure_fusion.hpp:
-
-../include/piccante/externals/Eigen/src/Core/util/Constants.h:
-
-../include/piccante/externals/Eigen/src/Core/util/StaticAssert.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-../include/piccante/externals/Eigen/src/Core/util/XprHelper.h:
-
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
-
-../include/piccante/externals/Eigen/src/Core/util/Memory.h:
-
-../include/piccante/externals/Eigen/src/Core/NumTraits.h:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/RealSchur.h:
-
-/usr/include/c++/11/bits/unordered_map.h:
-
-../include/piccante/filtering/filter_zero_crossing.hpp:
-
-../include/piccante/externals/Eigen/src/Core/MathFunctions.h:
-
-../include/piccante/externals/Eigen/src/Core/VectorBlock.h:
-
-../include/piccante/externals/Eigen/src/Core/GenericPacketMath.h:
-
-../include/piccante/externals/Eigen/src/Core/functors/UnaryFunctors.h:
-
-../include/piccante/externals/Eigen/src/LU/InverseImpl.h:
-
-../include/piccante/util/gl/stroke.hpp:
-
-/usr/include/c++/11/iostream:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-../include/piccante/externals/Eigen/src/Core/arch/SSE/MathFunctions.h:
-
-../include/piccante/externals/Eigen/src/Core/arch/CUDA/Half.h:
-
-/usr/include/c++/11/memory:
-
-../include/piccante/util/gl/buffer_allocation.hpp:
-
-../include/piccante/externals/Eigen/src/Core/arch/Default/Settings.h:
-
-../include/piccante/externals/Eigen/src/Core/functors/TernaryFunctors.h:
-
-/usr/include/c++/11/ostream:
-
-../include/piccante/externals/Eigen/src/Core/functors/BinaryFunctors.h:
-
-../include/piccante/externals/Eigen/src/Core/MathFunctionsImpl.h:
-
-../include/piccante/externals/Eigen/src/Core/functors/AssignmentFunctors.h:
-
-../include/piccante/externals/Eigen/src/Core/arch/CUDA/Complex.h:
-
-/usr/include/c++/11/exception:
-
-../include/piccante/externals/Eigen/src/Core/MatrixBase.h:
-
-../include/piccante/externals/Eigen/src/Core/EigenBase.h:
-
-/usr/include/python3.10/cpython/pydebug.h:
-
-../include/piccante/util/gl/fbo.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-../include/piccante/externals/Eigen/src/Core/CoreEvaluators.h:
-
-../include/piccante/externals/Eigen/src/Geometry/arch/Geometry_SSE.h:
-
-../include/piccante/externals/Eigen/src/Core/Assign.h:
-
-../include/piccante/filtering/filter_noise_estimation.hpp:
-
-../include/piccante/externals/Eigen/src/Jacobi/Jacobi.h:
-
-../include/piccante/externals/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
-
-../include/piccante/externals/Eigen/src/Core/ArrayBase.h:
-
-../include/piccante/externals/Eigen/src/Core/Visitor.h:
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseUtil.h:
 
 /usr/include/c++/11/bits/std_mutex.h:
 
-../include/piccante/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+../include/piccante/include/util/nelder_mead_opt_base.hpp:
 
-../include/piccante/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+../include/piccante/include/algorithms/poisson_solver.hpp:
 
-../include/piccante/externals/Eigen/src/Core/util/BlasUtil.h:
+../include/piccante/include/algorithms/camera_response_function.hpp:
 
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:
+../include/piccante/include/util/rasterizer.hpp:
 
-../include/piccante/externals/Eigen/src/Core/DenseStorage.h:
+../include/piccante/include/point_samplers/sampler_random.hpp:
 
-../include/piccante/filtering/filter_simple_tmo.hpp:
+../include/piccante/include/metrics.hpp:
 
-../include/piccante/externals/Eigen/src/Core/PlainObjectBase.h:
+../include/piccante/include/point_samplers/sampler_monte_carlo.hpp:
 
-../include/piccante/image_samplers/image_sampler_nearest.hpp:
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_pivotL.h:
 
-../src/bindings/py_histogram.h:
+../include/piccante/include/point_samplers/sampler_dart_throwing.hpp:
 
-../include/piccante/externals/Eigen/src/Core/CwiseBinaryOp.h:
+../include/piccante/include/util/vec.hpp:
 
-../include/piccante/externals/Eigen/src/Core/CwiseUnaryOp.h:
+../include/piccante/include/externals/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
-../include/piccante/features_matching/fast_corner_detector.hpp:
+../include/piccante/include/features_matching/canny_edge_detector.hpp:
 
-../include/piccante/externals/Eigen/src/Core/BooleanRedux.h:
+../include/piccante/include/point_samplers/sampler_bridson.hpp:
 
-../include/piccante/externals/Eigen/src/Core/util/ReenableStupidWarnings.h:
+../include/piccante/include/gl/filtering/filter_gaussian_2d.hpp:
 
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
+../include/piccante/include/filtering/filter_npasses.hpp:
 
-../include/piccante/externals/Eigen/src/Core/CwiseNullaryOp.h:
+../include/piccante/include/externals/Eigen/src/SparseCore/TriangularSolver.h:
 
-../include/piccante/util/eigen_util.hpp:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+../include/piccante/include/externals/Eigen/QR:
 
-../include/piccante/externals/Eigen/src/Core/SelfCwiseBinaryOp.h:
+/usr/include/c++/11/bits/memoryfwd.h:
 
-../include/piccante/externals/Eigen/src/misc/Image.h:
+../include/piccante/include/externals/Eigen/src/Core/PlainObjectBase.h:
 
-../include/piccante/algorithms/bilateral_separation.hpp:
+../include/piccante/include/externals/Eigen/Core:
 
-../include/piccante/externals/Eigen/src/Core/Dot.h:
+/usr/include/python3.10/pylifecycle.h:
 
-/usr/include/c++/11/bits/stream_iterator.h:
+../include/piccante/include/externals/Eigen/src/Core/util/DisableStupidWarnings.h:
 
-../include/piccante/algorithms/sub_sample_stack.hpp:
-
-../include/piccante/externals/Eigen/src/Core/Stride.h:
-
-../include/piccante/externals/Eigen/src/Core/Map.h:
-
-../include/piccante/externals/Eigen/src/Core/Ref.h:
-
-../include/piccante/externals/Eigen/src/Core/Transpose.h:
-
-../include/piccante/externals/Eigen/src/Core/Redux.h:
-
-../include/piccante/externals/Eigen/src/Core/Fuzzy.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-../include/piccante/externals/Eigen/src/Core/Swap.h:
-
-../include/piccante/externals/Eigen/src/Core/CommaInitializer.h:
-
-../include/piccante/externals/Eigen/src/Core/SolverBase.h:
-
-/usr/include/inttypes.h:
-
-../include/piccante/filtering/filter_normal.hpp:
-
-../include/piccante/colors/color_conv_rgb_to_lms.hpp:
-
-../include/piccante/externals/Eigen/src/Core/PermutationMatrix.h:
-
-../include/piccante/externals/Eigen/src/Core/products/Parallelizer.h:
-
-../include/piccante/algorithms/binarization.hpp:
-
-../include/piccante/externals/Eigen/src/Core/ProductEvaluators.h:
-
-../include/piccante/externals/Eigen/src/Core/products/SelfadjointMatrixVector.h:
-
-/usr/include/python3.10/cpython/listobject.h:
-
-/usr/include/c++/11/system_error:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-../include/piccante/externals/Eigen/src/Core/products/SelfadjointRank2Update.h:
-
-/usr/include/python3.10/frameobject.h:
-
-../include/piccante/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h:
-
-../include/piccante/externals/Eigen/src/Core/products/TriangularSolverMatrix.h:
-
-/usr/include/python3.10/cpython/pylifecycle.h:
-
-../include/piccante/io/tga.hpp:
-
-../include/piccante/externals/Eigen/src/Core/BandMatrix.h:
-
-../include/piccante/externals/Eigen/src/Core/CoreIterators.h:
-
-../include/piccante/colors/color_conv_xyz_xyY.hpp:
-
-../include/piccante/externals/Eigen/src/Core/VectorwiseOp.h:
-
-../include/piccante/filtering/filter_diff_gauss_2d_opt.hpp:
-
-../include/piccante/externals/Eigen/src/Core/Random.h:
-
-../include/piccante/externals/Eigen/src/Core/ArrayWrapper.h:
-
-/usr/include/c++/11/fstream:
-
-../include/piccante/externals/Eigen/src/Core/GlobalFunctions.h:
-
-/usr/include/python3.10/weakrefobject.h:
-
-../include/piccante/externals/Eigen/Cholesky:
-
-../include/piccante/externals/Eigen/src/Cholesky/LLT.h:
-
-../include/piccante/externals/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
-
-../include/piccante/externals/Eigen/Jacobi:
-
-../include/piccante/externals/Eigen/src/Householder/Householder.h:
-
-/usr/include/python3.10/cellobject.h:
-
-../include/piccante/externals/Eigen/src/Householder/HouseholderSequence.h:
-
-/usr/include/python3.10/tupleobject.h:
-
-../include/piccante/externals/Eigen/src/QR/HouseholderQR.h:
-
-../include/piccante/externals/Eigen/src/QR/FullPivHouseholderQR.h:
-
-/usr/include/c++/11/version:
-
-/usr/include/python3.10/modsupport.h:
-
-../include/piccante/util/raw.hpp:
-
-../include/piccante/tone_mapping/schlick_tmo.hpp:
-
-../include/piccante/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
-
-../include/piccante/filtering/filter_gaussian_3d.hpp:
-
-../include/piccante/externals/Eigen/Eigenvalues:
+../include/piccante/include/externals/Eigen/src/Core/util/Constants.h:
 
 /usr/include/c++/11/bits/stl_map.h:
 
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/internals.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
-../include/piccante/io/hdr.hpp:
+../include/piccante/include/externals/Eigen/src/Core/util/StaticAssert.h:
 
-../include/piccante/externals/Eigen/LU:
+../include/piccante/include/gl/image_vec.hpp:
 
-../include/piccante/externals/Eigen/src/LU/FullPivLU.h:
+../include/piccante/include/externals/Eigen/src/Core/NumTraits.h:
 
-../include/piccante/gl/algorithms/pyramid.hpp:
+../include/piccante/include/externals/Eigen/src/Core/MathFunctions.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+/usr/include/c++/11/ext/new_allocator.h:
 
-../include/piccante/externals/Eigen/src/Core/functors/NullaryFunctors.h:
+../include/piccante/include/externals/Eigen/src/Core/GenericPacketMath.h:
 
-../include/piccante/externals/Eigen/src/LU/PartialPivLU.h:
+../include/piccante/include/util/image_sampler.hpp:
 
-../include/piccante/externals/Eigen/src/LU/arch/Inverse_SSE.h:
+../include/piccante/include/io/exr.hpp:
 
-/usr/include/c++/11/bits/locale_classes.h:
+../include/piccante/include/externals/Eigen/src/Core/MathFunctionsImpl.h:
 
-../include/piccante/externals/Eigen/src/SVD/SVDBase.h:
+../include/piccante/include/filtering/filter_radial_basis_function.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/util/XprHelper.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/TriangularMatrixMatrix.h:
+
+../include/piccante/include/util/gl/quad.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/SSE/PacketMath.h:
+
+/usr/include/c++/11/bits/unordered_map.h:
+
+../include/piccante/include/gl/colors/color_conv_rgb_to_hsl.hpp:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
+
+../include/piccante/include/filtering/filter_rotation.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/SSE/MathFunctions.h:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/SSE/Complex.h:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/SSE/TypeCasting.h:
+
+../include/piccante/include/externals/Eigen/src/Core/arch/CUDA/TypeCasting.h:
+
+/usr/include/python3.10/pyerrors.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Quaternion.h:
+
+../include/piccante/include/filtering/filter_remove_nuked.hpp:
+
+../src/bindings/py_image.h:
+
+../include/piccante/include/externals/Eigen/src/Core/functors/BinaryFunctors.h:
+
+../include/piccante/include/gl/colors/color_conv_xyz_to_cielab.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/functors/NullaryFunctors.h:
+
+../include/piccante/include/externals/Eigen/src/Core/IO.h:
+
+/usr/include/python3.10/complexobject.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Transpose.h:
+
+/usr/include/python3.10/pythread.h:
+
+../include/piccante/include/gl/filtering/filter_reinhard_single_pass.hpp:
+
+../include/piccante/include/filtering/filter_bilateral_2df.hpp:
+
+../include/piccante/include/externals/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+../include/piccante/include/externals/Eigen/src/Core/EigenBase.h:
+
+/usr/include/python3.10/cpython/import.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Product.h:
+
+../include/piccante/include/externals/Eigen/src/Core/CoreEvaluators.h:
+
+/usr/include/c++/11/bits/forward_list.h:
+
+../include/piccante/include/filtering/filter_reconstruct.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/AssignEvaluator.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Assign.h:
+
+../include/piccante/include/computer_vision/nelder_mead_opt_homography.hpp:
+
+../include/piccante/include/features_matching/harris_corner_detector.hpp:
+
+../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+
+/usr/include/c++/11/bits/functional_hash.h:
+
+../include/piccante/include/externals/Eigen/src/Core/util/BlasUtil.h:
+
+../include/piccante/include/filtering/filter_conv_2d.hpp:
+
+../include/piccante/include/externals/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
+../include/piccante/include/externals/Eigen/src/SparseCore/SparseBlock.h:
+
+../include/piccante/include/externals/Eigen/src/Core/ReturnByValue.h:
+
+../include/piccante/include/gl/filtering/filter_bilateral_2ds.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/Matrix.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Array.h:
+
+../include/piccante/include/tone_mapping/tumblin_tmo.hpp:
+
+../include/piccante/include/externals/Eigen/src/Geometry/AlignedBox.h:
+
+../include/piccante/include/externals/Eigen/src/Core/CwiseUnaryOp.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Dot.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h:
+
+../include/piccante/include/externals/Eigen/src/Core/StableNorm.h:
+
+/usr/include/python3.10/pyhash.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Map.h:
+
+/usr/include/c++/11/bits/stream_iterator.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Ref.h:
+
+/usr/include/c++/11/thread:
+
+../include/piccante/include/externals/Eigen/Householder:
+
+../include/piccante/include/gl/filtering/filter.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Block.h:
+
+../include/piccante/include/externals/Eigen/src/Core/DiagonalMatrix.h:
+
+/usr/include/c++/11/bits/allocator.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Diagonal.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Redux.h:
+
+../include/piccante/include/externals/Eigen/src/Core/TriangularMatrix.h:
+
+../include/piccante/include/externals/Eigen/src/Core/GeneralProduct.h:
+
+../include/piccante/include/util/mask.hpp:
+
+/usr/include/c++/11/memory:
+
+../include/piccante/include/filtering/filter_white_balance.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/Solve.h:
+
+../include/piccante/include/io/tga.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/Transpositions.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+../include/piccante/include/externals/Eigen/src/Core/SelfAdjointView.h:
+
+../include/piccante/include/gl/filtering/filter_color_conv.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/products/Parallelizer.h:
+
+../include/piccante/include/gl/filtering/filter_remove_nuked.hpp:
+
+../include/piccante/include/gl/filtering/filter_1d.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+../include/piccante/include/externals/Eigen/src/Core/SolveTriangular.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+/usr/include/c++/11/bits/stl_pair.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
+/usr/include/python3.10/objimpl.h:
+
+../include/piccante/include/gl/filtering/filter_down_pp.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/SelfadjointProduct.h:
+
+../include/piccante/include/externals/Eigen/src/Core/products/TriangularSolverMatrix.h:
+
+../include/piccante/include/algorithms/connected_components.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+../include/piccante/include/externals/Eigen/src/Core/BandMatrix.h:
+
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+../include/piccante/include/externals/Eigen/Sparse:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Fuzzy.h:
+
+../include/piccante/include/externals/Eigen/src/Core/CoreIterators.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Select.h:
+
+../include/piccante/include/image_samplers/image_sampler_bsplines.hpp:
+
+../include/piccante/include/filtering/filter_luminance.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/VectorwiseOp.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/options.h:
+
+/usr/include/python3.10/pymacro.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Random.h:
+
+../include/piccante/include/externals/Eigen/src/Core/Replicate.h:
+
+../include/piccante/include/externals/Eigen/Dense:
+
+../include/piccante/include/externals/Eigen/src/Core/ArrayWrapper.h:
+
+/usr/include/python3.10/codecs.h:
+
+../include/piccante/include/externals/Eigen/src/Core/GlobalFunctions.h:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
+../include/piccante/include/gl/tone_mapping/exposure_fusion.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_relax_snode.h:
+
+../include/piccante/include/externals/Eigen/src/Cholesky/LDLT.h:
+
+../include/piccante/include/externals/Eigen/src/Jacobi/Jacobi.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Umeyama.h:
+
+../include/piccante/include/gl/filtering/filter_max.hpp:
+
+../include/piccante/include/externals/Eigen/src/Core/NestByValue.h:
+
+../include/piccante/include/externals/Eigen/src/Householder/HouseholderSequence.h:
+
+/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/attr.h:
+
+../include/piccante/include/JNI/white_balance.hpp:
+
+../include/piccante/include/externals/Eigen/src/Householder/BlockHouseholder.h:
+
+../include/piccante/include/externals/Eigen/src/QR/ColPivHouseholderQR.h:
+
+../include/piccante/include/gl/filtering/filter_conv_1d.hpp:
+
+../include/piccante/include/externals/Eigen/src/SVD/JacobiSVD.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+../include/piccante/include/externals/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
+../include/piccante/include/filtering/filter_grow_cut.hpp:
+
+../include/piccante/include/externals/Eigen/Eigenvalues:
+
+../include/piccante/include/externals/Eigen/LU:
+
+../include/piccante/include/features_matching/sift_descriptor.hpp:
+
+../include/piccante/include/externals/Eigen/src/misc/Kernel.h:
+
+../include/piccante/include/externals/Eigen/src/Core/util/MKL_support.h:
+
+../include/piccante/include/externals/Eigen/src/misc/Image.h:
+
+../include/piccante/include/gl/filtering/filter_mean.hpp:
+
+../include/piccante/include/colors/color_conv_xyz_xyY.hpp:
+
+../include/piccante/include/externals/Eigen/src/LU/FullPivLU.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+../include/piccante/include/externals/Eigen/src/LU/PartialPivLU.h:
+
+/usr/include/python3.10/boolobject.h:
+
+../include/piccante/include/externals/Eigen/Geometry:
+
+../include/piccante/include/externals/Eigen/src/Core/util/ForwardDeclarations.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/OrthoMethods.h:
+
+../include/piccante/include/externals/Eigen/src/SVD/SVDBase.h:
+
+../include/piccante/include/externals/Eigen/src/SVD/BDCSVD.h:
+
+../include/piccante/include/filtering/filter_linear_color_space.hpp:
+
+../include/piccante/include/externals/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Homogeneous.h:
+
+../include/piccante/include/colors/matrix_from_primaries.hpp:
+
+../include/piccante/include/util/precomputed_gaussian.hpp:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Rotation2D.h:
+
+/usr/include/python3.10/memoryobject.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Transform.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Translation.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Scaling.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/Hyperplane.h:
+
+/usr/include/python3.10/fileutils.h:
+
+../include/piccante/include/externals/Eigen/src/Geometry/arch/Geometry_SSE.h:
+
+../include/piccante/include/tone_mapping.hpp:
+
+/usr/include/c++/11/bits/istream.tcc:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/RealSchur.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/RealQZ.h:
+
+../include/piccante/include/colors/color_conv_xyz_to_lms.hpp:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+
+/usr/include/python3.10/listobject.h:
+
+../include/piccante/include/externals/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
+
+/usr/include/python3.10/funcobject.h:
+
+/usr/include/x86_64-linux-gnu/python3.10/pyconfig.h:
+
+../include/piccante/include/colors/saturation.hpp:
+
+../include/piccante/include/algorithms/sub_sample_stack.hpp:
+
+../include/piccante/include/algorithms/mitsunaga_nayar_crf.hpp:
+
+/usr/include/python3.10/cellobject.h:
+
+../include/piccante/include/features_matching/ward_alignment.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+../include/piccante/include/filtering/filter_downsampler_2d.hpp:
 
 /usr/include/c++/11/map:
 
-../include/piccante/externals/Eigen/src/SVD/JacobiSVD.h:
-
-../include/piccante/externals/Eigen/src/SVD/BDCSVD.h:
-
-../include/piccante/externals/Eigen/src/Geometry/Homogeneous.h:
-
-../include/piccante/externals/Eigen/src/Geometry/RotationBase.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-../include/piccante/externals/Eigen/src/Geometry/AngleAxis.h:
-
-/usr/include/python3.10/longobject.h:
-
-../include/piccante/externals/Eigen/src/Core/SelfAdjointView.h:
-
-../include/piccante/externals/Eigen/src/Geometry/ParametrizedLine.h:
-
-../include/piccante/algorithms/nelder_mead_opt_gray_match.hpp:
-
-../include/piccante/externals/Eigen/src/Geometry/Transform.h:
-
-/usr/include/python3.10/cpython/pytime.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-../include/piccante/externals/Eigen/src/Geometry/Scaling.h:
-
-../include/piccante/filtering/filter_down_pp.hpp:
-
-../include/piccante/externals/Eigen/src/Geometry/Hyperplane.h:
-
-/home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/type_caster_base.h:
-
-../include/piccante/filtering/filter_sampling_map.hpp:
-
-../include/piccante/externals/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
-
-../include/piccante/externals/Eigen/src/Geometry/AlignedBox.h:
-
-../include/piccante/filtering/filter_channel.hpp:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/Tridiagonalization.h:
-
-../include/piccante/computer_vision/image_alignment.hpp:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
-
-/usr/include/python3.10/cpython/fileobject.h:
-
-../include/piccante/filtering/filter_sampler_2dsub.hpp:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/ComplexSchur.h:
-
-../include/piccante/externals/Eigen/src/Core/Product.h:
-
-../include/piccante/externals/Eigen/src/Eigenvalues/RealQZ.h:
-
-../include/piccante/algorithms/weight_function.hpp:
-
-../include/piccante/util/nelder_mead_opt_positive_polynomial.hpp:
-
-../include/piccante/algorithms/mitsunaga_nayar_crf.hpp:
-
-../include/piccante/image_samplers/image_sampler_bilinear.hpp:
-
-../include/piccante/util/gl/formats.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
-
-../include/piccante/image_samplers/image_sampler.hpp:
-
-../include/piccante/externals/Eigen/src/SparseLU/SparseLU_pivotL.h:
-
-../include/piccante/util/image_sampler.hpp:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseUtil.h:
-
-../include/piccante/filtering/filter_downsampler_2d.hpp:
-
-../include/piccante/image_samplers/image_sampler_bsplines.hpp:
-
-/usr/include/c++/11/set:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-../include/piccante/image_samplers/image_sampler_gaussian.hpp:
-
-../include/piccante/filtering/filter_assemble_hdr.hpp:
+../include/piccante/include/externals/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
-../include/piccante/externals/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+../include/piccante/include/algorithms/discrete_cosine_transform.hpp:
 
-../include/piccante/externals/Eigen/Sparse:
+/usr/include/c++/11/climits:
 
-../include/piccante/externals/Eigen/src/SparseCore/SparseMatrixBase.h:
-
-../include/piccante/externals/Eigen/src/Core/StableNorm.h:
-
-../include/piccante/externals/Eigen/src/SparseCore/SparseAssign.h:
+../include/piccante/include/externals/Eigen/SparseCore:

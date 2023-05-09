@@ -1,7 +1,0 @@
-FUNCTIONS TO CHECK:
-
-- Image.release
-
-- Image.applyFunctionParam
-
-- getMedVal, la specifica è sbagliata

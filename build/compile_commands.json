@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/main.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/main.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/main.cpp"
+},
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/bindings/support.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/support.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/bindings/support.cpp"
+},
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/bindings/py_dynamics_range.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_dynamics_range.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/bindings/py_dynamics_range.cpp"
+},
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/bindings/py_image.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/bindings/py_image.cpp"
+},
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/bindings/py_histogram.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_histogram.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/bindings/py_histogram.cpp"
+},
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante/include -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/bindings/py_bbox.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/bindings/py_bbox.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/bindings/py_bbox.cpp"
+}
+]
