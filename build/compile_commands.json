@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/deck/Documents/Tesi/pyccante/build/src",
+  "command": "/usr/bin/g++ -Dpyccante_EXPORTS -I/home/deck/Documents/Tesi/pyccante/src/../include/piccante -I/home/deck/Documents/Tesi/pyccante/src/../include/stb -isystem /usr/include/python3.10 -isystem /home/deck/.local/lib/python3.10/site-packages/pybind11/include -g -fPIC -fvisibility=hidden -std=gnu++11 -o CMakeFiles/pyccante.dir/main.cpp.o -c /home/deck/Documents/Tesi/pyccante/src/main.cpp",
+  "file": "/home/deck/Documents/Tesi/pyccante/src/main.cpp"
+}
+]

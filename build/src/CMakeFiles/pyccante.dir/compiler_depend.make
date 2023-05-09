@@ -3,7 +3,7 @@
 
 src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
-  ../src/bindings/py_bbox.h \
+  ../src/bindings/py_dynamics_range.h \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1685,18 +1685,19 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/options.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/detail/init.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h \
-  ../src/bindings/py_image.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/operators.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h \
   /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h \
+  ../src/bindings/py_bbox.h \
+  ../src/bindings/py_image.h \
   ../src/bindings/py_histogram.h
 
+
+../src/bindings/py_image.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/complex.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/numpy.h:
-
-../src/bindings/py_image.h:
 
 /home/deck/.local/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:
 
@@ -1751,6 +1752,10 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/python3.10/cpython/pyerrors.h:
 
 /usr/include/python3.10/pyerrors.h:
+
+../src/bindings/py_bbox.h:
+
+/usr/include/python3.10/namespaceobject.h:
 
 /usr/include/python3.10/genericaliasobject.h:
 
@@ -2874,6 +2879,8 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 
 ../include/piccante/algorithms/connected_components.hpp:
 
+../src/bindings/py_dynamics_range.h:
+
 ../include/piccante/externals/Eigen/src/misc/Kernel.h:
 
 ../include/piccante/externals/Eigen/src/misc/RealSvd2x2.h:
@@ -2989,10 +2996,6 @@ src/CMakeFiles/pyccante.dir/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/11/cctype:
-
-/usr/include/python3.10/namespaceobject.h:
-
-../src/bindings/py_bbox.h:
 
 ../include/piccante/piccante.hpp:
 

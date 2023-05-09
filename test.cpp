@@ -4,6 +4,10 @@
 int main(){
 
     pic::Image hello_kitty("test.png", pic::LDR_type::LT_LDR);
-    pic::Histogram histogram(&hello_kitty,pic::VALUE_SPACE::VS_LDR,3,3);
-    histogram.write("histogram.png", true);
+    pic::BBox bbox = hello_kitty.getFullBox();
+    float a[3];
+    float* test = hello_kitty.getMaxVal(&bbox, a);
+    for(int i = 0; i < 10; ++i)
+        std::cout<<test[i]<<"\n";
+
 }

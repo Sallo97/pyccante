@@ -7,56 +7,54 @@
 #include <pybind11/pytypes.h>
 #include <pybind11/operators.h>
 #include <pybind11/numpy.h>
+#include <pybind11/functional.h>
 
 namespace py = pybind11;
 using namespace py::literals;
 
 void init_Image(pybind11::module_& m)
 {
-
-// region LDR_type
-// ⚠⚠⚠ Remember to move this binding in py_dynamic_range.cpp ⚠⚠⚠
-
-    py::enum_<pic::LDR_type>(m, "LDR_type")
-        .value("LT_NOR", pic::LDR_type::LT_NOR)
-        .value("LT_NOR_GAMMA", pic::LDR_type::LT_NOR_GAMMA)
-        .value("LT_LDR", pic::LDR_type::LT_LDR)
-        .value("LT_NONE", pic::LDR_type::LT_NONE);
-
-// endregion
-
-// region Image
-
     // region Constructors
 
     py::class_<pic::Image>(m, "Image")
         .def(py::init<> ())
 
-        .def(py::init( [](pic::Image *imgIn, bool deepCopy){
-            return new pic::Image(imgIn, deepCopy);
-        }), py::arg("imgIn"), py::arg("channels")) 
-        
-        .def(py::init<std::string &, pic::LDR_type>())
 
-        .def(py::init<int /*width*/, int/*height*/, int/*channels*/>()) 
+        .def(py::init( [](pic::Image *imgIn, bool deepCopy)
+        {
+            return new pic::Image(imgIn, deepCopy);
+        }
+        ), py::arg("imgIn"), py::arg("channels")) 
+        
+        .def(py::init<pic::Image*, bool>(),
+            py::arg("imgIn"), py::arg("deepCopy"))
+
+        .def(py::init<std::string &, pic::LDR_type>(),
+            py::arg("nameFile"), py::arg("typeLoad"))
+
+        .def(py::init<int, int, int>(),
+            py::arg("width"), py::arg("height"),
+            py::arg("channels")) 
 
         .def(py::init( [](py::buffer color_buffer, int channels) {
             // Get the buffer information
             py::buffer_info info = color_buffer.request();
 
+            // Check if the buffer is type float
             if (info.format != py::format_descriptor<float>::format())
                 throw std::runtime_error("Incompatible buffer format, must be of float values.");
             
             // Get the raw pointer to the data
             float* color = static_cast<float*>(info.ptr);
 
-            //⚠⚠⚠ Chiedere se va bene come condizione ⚠⚠⚠
+            // Check if the array have the same number of elements as channels
             if(! info.ndim == channels )
                 throw std::runtime_error("the number of channels must be the same as the dimension of color.");
             
             // Return a new instance of Image
             return new pic::Image(color, channels);
-            }), py::arg("color"), py::arg("channels"))
+            }),
+            py::arg("color"), py::arg("channels"))
 
         .def(py::init( []( int frames, int width, int height,
             int channels, py::buffer data_buffer) {
@@ -69,14 +67,15 @@ void init_Image(pybind11::module_& m)
             // Get the raw pointer to the data
             float* data = static_cast<float*>(info.ptr);
 
-            //⚠⚠⚠ Chiedere se va bene come condizione ⚠⚠⚠
+            // Check if the size is correct
             if(! info.size == (frames * width * height * channels))            
                 throw std::runtime_error("the buffer is not the correct size");
             
             //Return a new instance of Image
             return new pic::Image(frames, width, height, channels, data);
-            }), py::arg("frames"), py::arg("width"), py::arg("height"),
-                py::arg("channels"), py::arg("data"))
+            }),
+            py::arg("frames"), py::arg("width"), py::arg("height"),
+            py::arg("channels"), py::arg("data"))
 
     // endregion
     
@@ -88,52 +87,390 @@ void init_Image(pybind11::module_& m)
 
     //region Functions
 
-        .def("allocate", &pic::Image::allocate)
-        .def("allocateAux", &pic::Image::allocateAux)
-        .def("release", &pic::Image::release)
-        .def("copySubImage", &pic::Image::copySubImage)
-        .def("scaleCosine", &pic::Image::scaleCosine)
-        .def("flipH", &pic::Image::flipH)
-        .def("flipV", &pic::Image::flipV)
-        .def("flipHV", &pic::Image::flipHV)
-        .def("rotate90CCW", &pic::Image::rotate90CCW)
-        .def("rotate90CW", &pic::Image::rotate90CW)
-        .def("getDiagonalSize", &pic::Image::getDiagonalSize)
-        .def("setZero", &pic::Image::setZero)
-        .def("setRand", &pic::Image::setRand)
-        .def("isValid", &pic::Image::isValid)
-        .def("isSimilarType", &pic::Image::isSimilarType)
-        .def("assign", &pic::Image::assign)
-        .def("blend", &pic::Image::blend)
-        .def("minimum", &pic::Image::minimum)
-        .def("maximum", &pic::Image::maximum)
-        .def("applyFunction", &pic::Image::applyFunction)
-        .def("applyFunctionParam", &pic::Image::applyFunctionParam)
-        .def("getFullBox", &pic::Image::getFullBox)
-        .def("getMaxVal", &pic::Image::getMaxVal)
-        .def("getMinVal", &pic::Image::getMinVal)
-        .def("getLogMeanVal", &pic::Image::getLogMeanVal)
-        .def("getSumVal", &pic::Image::getSumVal)
-        .def("getMeanVal", &pic::Image::getMeanVal)
-        .def("getMomentsVal", &pic::Image::getMomentsVal)
-        .def("getVarianceVal", &pic::Image::getVarianceVal)
-        .def("getCovMtxVal", &pic::Image::getCovMtxVal)
-        .def("getPercentileVal", &pic::Image::getPercentileVal)
-        .def("getMedVal", &pic::Image::getMedVal)
+        .def("allocate", &pic::Image::allocate,
+            "allocate allocates memory for the pixel buffer.",
+            py::arg("width"), py::arg("height"), 
+            py::arg("channels"), py::arg("frames"))
+        
+        .def("allocateAux", &pic::Image::allocateAux,
+            "allocateAux computes extra information after allocation;"
+            " e.g. strides.")
+        
+        .def("release", &pic::Image::release,
+            "release frees allocated buffers.")
+        
+        .def("copySubImage", &pic::Image::copySubImage,
+            "copySubImage copies imgIn in the current image."
+            " The current image is written from (startX, startY).",
+            py::arg("imgIn"), py::arg("startX"), py::arg("startY"))
+        
+        .def("scaleCosine", &pic::Image::scaleCosine,
+            "scaleCosine multiplies the current image by the"
+            " vertical cosine assuming a longitude-latitude image.")
+        
+        .def("flipH", &pic::Image::flipH,
+            "FlipH flips horizontally the current image.")
+        
+        .def("flipV", &pic::Image::flipV,
+            "FlipV flips vertically the current image.")
+        
+        .def("flipHV", &pic::Image::flipHV,
+            "flipHV flips horizontally and vertically the current image.")
+        
+        .def("rotate90CCW", &pic::Image::rotate90CCW,
+            "rotate90CCW rotates 90 degrees counter-clockwise the" 
+            " current image.")
+        
+        .def("rotate90CW", &pic::Image::rotate90CW,
+            "rotate90CW rotates 90 degrees clockwise the current image.")
+        
+        .def("getDiagonalSize", &pic::Image::getDiagonalSize,
+            "getDiagonalSize")
+        
+        .def("setZero", &pic::Image::setZero,
+            "setZero sets data to 0.0f.")
+        
+        .def("setRand", &pic::Image::setRand,
+            "setRand",
+            py::arg("seed"))
+        
+        .def("isValid", &pic::Image::isValid,
+            "isValid checks if the current image is valid, which means" 
+            " if they have an allocated buffer or not.")
+        
+        .def("isSimilarType", &pic::Image::isSimilarType,
+            "isSimilarType checks if the current image is similar to img;"
+            " i.e. if they have the same width, height, frames, and channels.",
+            py::arg("img"))
+        
+        .def("assign", &pic::Image::assign,
+            "assign",
+            py::arg("imgIn"))
+        
+        .def("blend", &pic::Image::blend,
+            "blend",
+            py::arg("img"), py::arg("weight"))
+        
+        .def("minimum", &pic::Image::minimum,
+            "minimum is the minimum operator for Image.",
+            py::arg("img"))
+        
+        .def("maximum", &pic::Image::maximum,
+            "maximum is the maximum operator for Image.",
+            py::arg("img"))
+        
+        .def("applyFunction", &pic::Image::applyFunction,
+            "applyFunction is an operator that applies"
+            " an input function to all values in data."
+            )
+        
+        /* .def("applyFunctionParam", &pic::Image::applyFunctionParam,
+            "applyFunction is an operator that applies"
+            " an input function to all values in data.",
+            py::arg("func")) */
+        
+        .def("getFullBox", &pic::Image::getFullBox,
+            "getFullBox computes a full BBox for this image.")
+
+        .def("getMaxVal",( [](pic::Image* this_img, pic::BBox* box, py::buffer ret_buffer) {
+            
+            // Get the buffer information
+            py::buffer_info info = ret_buffer.request();
+
+            // Check if the buffer is type float
+            if ( info.format != py::format_descriptor<float>::format() )
+                throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+            // Get the raw pointer to the data
+            float* ret = static_cast<float*>(info.ptr);
+
+            // Call the function
+            float* max_val = this_img->getMaxVal(box, ret);
+
+            // Create a NumPy array that owns the data of the float* array
+            py::array_t<float, py::array::c_style> np_arr({3}, max_val);
+
+            // Return the NumPy array to Python
+            return np_arr; 
+            }),
+            "getMaxVal computes the maximum value for the current Image.",
+            py::arg("box"), py::arg("ret"))
+
+        .def("getMinVal",( [](pic::Image* this_img, pic::BBox* box, py::buffer ret_buffer) {
+            
+            // Get the buffer information
+            py::buffer_info info = ret_buffer.request();
+
+            // Check if the buffer is type float
+            if ( info.format != py::format_descriptor<float>::format() )
+                throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+            // Get the raw pointer to the data
+            float* ret = static_cast<float*>(info.ptr);
+
+            // Call the function
+            float* max_val = this_img->getMinVal(box, ret);
+
+            // Create a NumPy array that owns the data of the float* array
+            py::array_t<float, py::array::c_style> np_arr ({sizeof(max_val) / sizeof(float)}, max_val);
+
+            // Return the NumPy array to Python
+            return np_arr; 
+            }),
+            "getMinVal computes the minimum value for the current Image.",
+            py::arg("box"), py::arg("ret"))
+        
+        .def("getLogMeanVal",( [](pic::Image* this_img, pic::BBox* box, py::buffer ret_buffer) {
+            
+            // Get the buffer information
+            py::buffer_info info = ret_buffer.request();
+
+            // Check if the buffer is type float
+            if ( info.format != py::format_descriptor<float>::format() )
+                throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+            // Get the raw pointer to the data
+            float* ret = static_cast<float*>(info.ptr);
+
+            // Call the function
+            float* log_mean_val = this_img->getLogMeanVal(box, ret);
+
+            // Create a NumPy array that owns the data of the float* array
+            py::array_t<float, py::array::c_style> np_arr ({sizeof(log_mean_val) / sizeof(float)}, log_mean_val);
+
+            // Return the NumPy array to Python
+            return np_arr; 
+            }),
+            "getLogMeanVal computes the log mean for the current Image.",
+            py::arg("box"), py::arg("ret"))
+        
+        .def("getSumVal",( [](pic::Image* this_img, pic::BBox* box, py::buffer ret_buffer) {
+            
+            // Get the buffer information
+            py::buffer_info info = ret_buffer.request();
+
+            // Check if the buffer is type float
+            if ( info.format != py::format_descriptor<float>::format() )
+                throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+            // Get the raw pointer to the data
+            float* ret = static_cast<float*>(info.ptr);
+
+            // Call the function
+            float* sum_val = this_img->getSumVal(box, ret);
+
+            // Create a NumPy array that owns the data of the float* array
+            py::array_t<float, py::array::c_style> np_arr ({sizeof(sum_val) / sizeof(float)}, sum_val);
+
+            // Return the NumPy array to Python
+            return np_arr; 
+            }),
+            "getSumVal sums values for the current Image.",
+            py::arg("box"), py::arg("ret"))
+        
+        .def("getMeanVal",( [](pic::Image* this_img, pic::BBox* box, py::buffer ret_buffer) {
+            
+            // Get the buffer information
+            py::buffer_info info = ret_buffer.request();
+
+            // Check if the buffer is type float
+            if ( info.format != py::format_descriptor<float>::format() )
+                throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+            // Get the raw pointer to the data
+            float* ret = static_cast<float*>(info.ptr);
+
+            // Call the function
+            float* mean_val = this_img->getMeanVal(box, ret);
+
+            // Create a NumPy array that owns the data of the float* array
+            py::array_t<float, py::array::c_style> np_arr ({sizeof(mean_val) / sizeof(float)}, mean_val);
+
+            // Return the NumPy array to Python
+            return np_arr; 
+            }),
+            "getMeanVal computes the mean for the current Image.",
+            py::arg("box"), py::arg("ret"))
+        
+        .def("getMomentsVal", ( [](pic::Image* this_img, int x0, int y0,
+                                  int radius, py::buffer ret_buffer)
+            {
+                // Get the buffer information
+                py::buffer_info info = ret_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* ret = static_cast<float*>(info.ptr);
+
+                // Call the function
+                float* moments_val = this_img->getMomentsVal(x0, y0, radius, ret);
+
+                // Create a NumPy array that owns the data of the float* array
+                py::array_t<float, py::array::c_style> np_arr ({sizeof(moments_val) / sizeof(float)}, moments_val);
+
+                // Return the NumPy array to Python
+                return np_arr; 
+            }),
+            "getMomentsVal computes the moments at pixel (x0, y0).",
+            py::arg("x0"), py::arg("y0"), py::arg("radius"),
+            py::arg("ret"))
+        
+        .def("getVarianceVal", ([](pic::Image* this_img, py::buffer mean_val_buffer,
+                                   pic::BBox *box, py::buffer ret_buffer)
+            {
+                // Get the buffer information
+                py::buffer_info info = ret_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* ret = static_cast<float*>(info.ptr);
+
+                // Get the buffer information
+                py::buffer_info info_2 = mean_val_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info_2.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* mean_val = static_cast<float*>(info.ptr);
+
+                // Call the function
+                float* variance_val = this_img->getVarianceVal(mean_val, box, ret);
+
+                // Create a NumPy array that owns the data of the float* array
+                py::array_t<float, py::array::c_style> np_arr ({sizeof(variance_val) / sizeof(float)}, variance_val);
+
+                // Return the NumPy array to Python
+                return np_arr; 
+            }),
+            "getVarianceVal computes the variance for the current Image.",
+            py::arg("meanVal"), py::arg("box"), py::arg("ret"))
+            
+        .def("getCovMtxVal", ([](pic::Image* this_img, py::buffer mean_val_buffer,
+                                pic::BBox *box, py::buffer ret_buffer)
+            {
+                // Get the buffer information
+                py::buffer_info info = ret_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* ret = static_cast<float*>(info.ptr);
+
+                // Get the buffer information
+                py::buffer_info info_2 = mean_val_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info_2.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* mean_val = static_cast<float*>(info.ptr);
+
+                // Call the function
+                float* cov_mtx_val = this_img->getCovMtxVal(mean_val, box, ret);
+
+                // Create a NumPy array that owns the data of the float* array
+                py::array_t<float, py::array::c_style> np_arr ({sizeof(cov_mtx_val) / sizeof(float)}, cov_mtx_val);
+
+                // Return the NumPy array to Python
+                return np_arr; 
+            }),
+            "getVarianceVal computes the variance for the current Image.",
+            py::arg("meanVal"), py::arg("box"), py::arg("ret"))
+                
+        .def("getPercentileVal", ([](pic::Image* this_img, float percentile,
+                                  pic::BBox *box, py::buffer ret_buffer)
+            {
+                // Get the buffer information
+                py::buffer_info info = ret_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* ret = static_cast<float*>(info.ptr);
+
+                // return the function
+                return this_img->getPercentileVal(percentile, box, ret); 
+            }),
+            "getPercentileVal computes the median value value given a percentile.",
+            py::arg("percentile"), py::arg("box"), py::arg("ret"))
+        
+        .def("getMedVal", ([](pic::Image* this_img, pic::BBox *box,
+                           py::buffer ret_buffer)
+            {
+                // Get the buffer information
+                py::buffer_info info = ret_buffer.request();
+
+                // Check if the buffer is type float
+                if ( info.format != py::format_descriptor<float>::format() )
+                    throw std::runtime_error("Incompatible buffer format," 
+                                         "must be of float values.");
+            
+                // Get the raw pointer to the data
+                float* ret = static_cast<float*>(info.ptr);
+
+                // Call the function
+                float* med_val = this_img->getMedVal(box, ret);
+
+                // Create a NumPy array that owns the data of the float* array
+                py::array_t<float, py::array::c_style> np_arr ({sizeof(med_val) / sizeof(float)}, med_val);
+
+                // Return the NumPy array to Python
+                return np_arr;             }),
+            "getMedVal",
+            py::arg("box"), py::arg("ret"))
+        
         .def("getDynamicRange", &pic::Image::getDynamicRange)
+        
         .def("getdataUC", &pic::Image::getdataUC)
+        
         .def("getColorSamples", &pic::Image::getColorSamples)
+        
         .def("size", &pic::Image::size)
+        
         .def("sizeFrame", &pic::Image::sizeFrame)
+        
         .def("nPixels", &pic::Image::nPixels)
+        
         .def("checkCoordinates", &pic::Image::checkCoordinates)
+        
         .def("convertFromMask", &pic::Image::convertFromMask)
+        
         .def("convertToMask", &pic::Image::convertToMask)
+        
         .def("getFlippedEXR", &pic::Image::getFlippedEXR)
+        
         .def("removeSpecials", &pic::Image::removeSpecials)
+        
         .def("clamp", &pic::Image::clamp)
+        
         .def("calculateStrides", &pic::Image::calculateStrides)
+        
         .def("getLL", &pic::Image::getLL)
+        
         .def("getNormalizedCoords", &pic::Image::getNormalizedCoords)
 
 //⚠⚠⚠ check the two getAddress for static_cast ⚠⚠⚠ 
@@ -203,9 +540,6 @@ void init_Image(pybind11::module_& m)
         .def_readonly("nameFile", &pic::Image::nameFile);
 
     // endregion
-
-// endregion
-
 }
 
 
