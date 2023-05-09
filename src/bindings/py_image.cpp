@@ -12,11 +12,13 @@ void init_Image(pybind11::module_& m)
         .def(py::init<> ())
 
         .def(py::init<std::string &, pic::LDR_type>(),
+            py::return_value_policy::reference,
             "Image loads an Image from a file on the disk.",
             py::arg("nameFile"), py::arg("typeLoad"))
         
         .def(py::init<int, int, int>(),
             "Image creates an Image with a given size.",
+            py::return_value_policy::reference,
             py::arg("width"), py::arg("height"),
             py::arg("channels"))
 
@@ -29,6 +31,7 @@ void init_Image(pybind11::module_& m)
             // Return the Image
             return new pic::Image(color, channels);
             }),
+            py::return_value_policy::reference,
             "Image is a constructor which initializes an image defined by"
             " the input properties.",
             py::arg("color"), py::arg("channels")) 
@@ -40,19 +43,15 @@ void init_Image(pybind11::module_& m)
             float* data = return_float_ptr(data_buffer);
             
             //Return a new instance of Image
-            return new pic::Image(frames, width, height, channels, data);
+            return pic::Image(frames, width, height, channels, data);
             }),
+            py::return_value_policy::reference,
             py::arg("frames"), py::arg("width"), py::arg("height"),
             py::arg("channels"), py::arg("data"))
 
     // endregion
 
     //region Functions
-        
-        .def("copySubImage", &pic::Image::copySubImage,
-            "copySubImage copies imgIn in the current image."
-            " The current image is written from (startX, startY).",
-            py::arg("imgIn"), py::arg("startX"), py::arg("startY"))
         
         .def("scaleCosine", &pic::Image::scaleCosine,
             "scaleCosine multiplies the current image by the"
