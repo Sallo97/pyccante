@@ -12,7 +12,7 @@ set(HEADERS
     bindings/py_image.h
     bindings/py_histogram.h
     bindings/py_bbox.h
-    # add here the binding headers
+    # add here the binding header files
     )
 
 set(SOURCES
@@ -22,7 +22,7 @@ set(SOURCES
     bindings/py_image.cpp
     bindings/py_histogram.cpp
     bindings/py_bbox.cpp
-    # add here the binding .cpp
+    # add here the binding source files
     )
 
 # Detect the installed pybind package and import it into CMake
