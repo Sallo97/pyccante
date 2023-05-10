@@ -1,6 +1,8 @@
 #ifndef PYCCANTE_PY_IMAGE_H
 #define PYCCANTE_PY_IMAGE_H
 
+#include <stdlib.h>
+#include <string>
 #include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>

@@ -385,7 +385,24 @@ void init_Image(pybind11::module_& m)
             }),
             "convertFromMask converts a boolean mask into an Image." 
             "true is mapped to 1.0f, and false is mapped to 0.0f.",
-            py::arg("mask"), py::arg("width"), py::arg("height"))        
+            py::arg("mask"), py::arg("width"), py::arg("height"))
+
+        .def("convertToMask", ([]( pic::Image* this_img, py::buffer color_buffer, 
+                                     float threshold = 0.25f, bool cmp = true,
+                                     py::buffer mask_buffer)
+            {
+                // Get the raw pointer for color
+                float* color = return_float_ptr(color_buffer);
+
+                // Get the raw pointer for mask
+                bool* mask = return_bool_ptr(color_buffer);
+
+                // Call the function
+                this_img->convertToMask( color, threshold, cmp, mask); 
+            }),
+            "convertToMask converts an Image into a boolean mask.",
+            py::arg("color") = NULL, py::arg("threshold") = 0.25f,
+            py::arg("cmp") = true, py::arg("mask") = NULL)           
 
         .def("Read", &pic::Image::Read,
             "Read opens an Image from a file on the disk.",
@@ -394,9 +411,16 @@ void init_Image(pybind11::module_& m)
         .def("Write", &pic::Image::Write,
                 py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
                 py::arg("writeCounter")=0)
-
-
         
+        .def("__repr__", ( [] ( pic::Image* this_img)
+        {
+            if ( ! this_img->isValid() )
+                return "This is an empty image.";
+            else
+                return this_img->nameFile.c_str();
+                
+        })
+        )
 
     //endregion
 
