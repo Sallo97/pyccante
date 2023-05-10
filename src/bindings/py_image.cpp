@@ -412,6 +412,14 @@ void init_Image(pybind11::module_& m)
                 py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
                 py::arg("writeCounter")=0)
         
+        /*.def("blend", &pic::Image::blend,
+            "")*/
+
+
+    // endregion
+
+    // region base_func
+
         .def("__repr__", ( [] ( pic::Image* this_img)
         {
             if ( ! this_img->isValid() )
@@ -421,9 +429,6 @@ void init_Image(pybind11::module_& m)
                 
         })
         )
-
-    //endregion
-
         .def(py::self += float())
         .def(py::self += py::self)
         .def(py::self + py::self)
