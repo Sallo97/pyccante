@@ -20,6 +20,21 @@ float* return_float_ptr (py::buffer data_buffer)
 
 }
 
+bool* return_bool_ptr(py::buffer data_buffer)
+{
+    
+    // Get the buffer information
+    py::buffer_info info = data_buffer.request();
+
+    // Check if the buffer is type float
+    if ( info.format != py::format_descriptor<bool>::format() )
+        throw std::runtime_error("Incompatible buffer format," 
+                                 "must be of bool values.");
+            
+    // Return the raw pointer to the data
+    return static_cast<bool*>(info.ptr);
+}
+
 py::buffer return_numpy_array (float* float_array)
 {
     // Create a NumPy array that owns the data of the float* array
@@ -29,3 +44,16 @@ py::buffer return_numpy_array (float* float_array)
     // Return the NumPy array to Python
     return np_arr; 
 }
+
+
+py::buffer return_bool_array (bool* bool_array)
+{
+    // Create a NumPy array that owns the data of the float* array
+    py::array_t<bool, py::array::c_style> np_arr ({sizeof(bool_array) / sizeof(bool)},
+                                                  bool_array);
+
+    // Return the NumPy array to Python
+    return np_arr; 
+}
+
+

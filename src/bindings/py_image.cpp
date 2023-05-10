@@ -374,7 +374,15 @@ void init_Image(pybind11::module_& m)
             "if they are valid or not.",
             py::arg("x"), py::arg("y"), py::arg("z")=0)
         
-        .def("convertFromMask", &pic::Image::convertFromMask,
+        .def("convertFromMask", ([]( pic::Image* this_img, py::buffer mask_buffer, 
+                                     int width, int height = true )
+            {
+                // Get the raw pointer for mask
+                bool* mask = return_bool_ptr(mask_buffer);
+
+                // Call the function
+                this_img->convertFromMask( mask, width, height); 
+            }),
             "convertFromMask converts a boolean mask into an Image." 
             "true is mapped to 1.0f, and false is mapped to 0.0f.",
             py::arg("mask"), py::arg("width"), py::arg("height"))        
@@ -387,8 +395,7 @@ void init_Image(pybind11::module_& m)
                 py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
                 py::arg("writeCounter")=0)
 
-        .def("getDiagonalSize", &pic::Image::getDiagonalSize,
-        "getDiagonaSize")
+
         
 
     //endregion

@@ -13,8 +13,13 @@
 
 namespace py = pybind11;
 
-float* return_float_ptr(py::buffer data_buffer);
+bool* return_bool_ptr (py::buffer data_buffer);
+
+
+float* return_float_ptr (py::buffer data_buffer);
 
 py::buffer return_numpy_array (float* float_array);
+
+py::buffer return_bool_array (bool* bool_buffer);
 
 #endif /* support.h*/
