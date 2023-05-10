@@ -29,3 +29,12 @@ py::buffer return_numpy_array (float* float_array)
     // Return the NumPy array to Python
     return np_arr; 
 }
+
+bool check_image_empy(pic::Image* img)
+{
+    if ( img->height != -1 && img->width != -1
+         && img->channels != -1 )
+        return true;
+    else
+        return false;
+}

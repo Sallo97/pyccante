@@ -17,4 +17,6 @@ float* return_float_ptr(py::buffer data_buffer);
 
 py::buffer return_numpy_array (float* float_array);
 
+bool check_image_empty(pic::Image* img);
+
 #endif /* support.h*/

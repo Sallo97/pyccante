@@ -54,29 +54,66 @@ void init_Image(pybind11::module_& m)
     //region Functions
         
         .def("scaleCosine", ([](pic::Image* this_img)
-        {
+            {
             // Check if the image is empty
-            if ( this_img->height != -1 && this_img->width != -1
-                && this_img->channels != -1 )
+            if ( check_image_empty(this_img) )
                 return this_img->scaleCosine();
             
             else
                 throw std::runtime_error("Can't perfom scaleCosine," 
                                         " the image is empy");
-            
-        }),
-        "scaleCosine multiplies the current image by the"
-        " vertical cosine assuming a longitude-latitude image.")
+            }),
+            "scaleCosine multiplies the current image by the"
+            " vertical cosine assuming a longitude-latitude image.")
         
-        .def("flipH", &pic::Image::flipH,
+        .def("flipH", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( check_image_empty(this_img) )
+                return this_img->flipH();
+            
+            else
+                throw std::runtime_error("Can't perfom flipH," 
+                                        " the image is empy");
+            }),
             "FlipH flips horizontally the current image.")
         
-        .def("flipV", &pic::Image::flipV,
+        .def("flipV", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( check_image_empty(this_img) )
+                return this_img->flipV();
+            
+            else
+                throw std::runtime_error("Can't perfom flipV," 
+                                        " the image is empy");
+            }),
             "FlipV flips vertically the current image.")
         
-        .def("flipHV", &pic::Image::flipHV,
+        .def("flipHV", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( check_image_empty(this_img) )
+                return this_img->flipHV();
+            
+            else
+                throw std::runtime_error("Can't perfom flipHV," 
+                                        " the image is empy");
+            }),
             "flipHV flips horizontally and vertically the current image.")
         
+        .def("flipVH", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( check_image_empty(this_img) )
+                return this_img->flipVH();
+            
+            else
+                throw std::runtime_error("Can't perfom flipVH," 
+                                        " the image is empy");
+            }),
+            "flipVH flips vertically and horizontally the current image.")
+
         .def("rotate90CCW", &pic::Image::rotate90CCW,
             "rotate90CCW rotates 90 degrees counter-clockwise the" 
             " current image.")
