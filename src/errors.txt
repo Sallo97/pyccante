@@ -1,0 +1,31 @@
+- I added a lambda function to the bindigs of
+  scaleCosine, all the flips to check if the image
+  passed is empty or not.
+
+- In rotate90CCW and rotate90CW there is a check in the 
+  respective buffer::rotate if the buffer data is empty 
+  before executing the functions. Still after calling
+  the respective buffer::rotate functions, even if the images
+  are empty,it is called the allocateAux function, which
+  doesn't check the empty condition. 
+  allocateAux will calculate erroneus values.
+  For that I decided to put a lamba functions in the bindings
+  that returns an error message if the input image is empty,
+  otherwise calls the C++ functions.
+  An implementation of the error can be found in tests/rotates_test.cpp
+
+- In getDiagonalSize it isn't check if the image is empty,
+  the function tries to calculate the result even if all
+  the parameters are negative and does sqrt((-1*-1) + (-1*-1)),
+  so it returns sqrt(2) = 1.4.
+  For that I decided to put in the binding a lambda function that
+  checks if the image is empty befor calling getDiagonalSize.
+  An implementation of the error can be found in tests/getDiagonalSize_test.cpp
+
+- In isSimilarType checks if the input image is NULL, but not if
+  the twos are valid. What can happen is that if I have a empty image and
+  a image that reads a existing file, if I copy the values width, height
+  frames and channels from full to empty and do isSimilarType, it returns 
+  true. For that I decided to put in the bindings a check before calling
+  the functions. 
+  An implementation of the error can be found in tests/isSimilar_test.cpp

@@ -56,12 +56,12 @@ void init_Image(pybind11::module_& m)
         .def("scaleCosine", ([](pic::Image* this_img)
             {
             // Check if the image is empty
-            if ( check_image_empty(this_img) )
+            if ( this_img->isValid() )
                 return this_img->scaleCosine();
             
             else
                 throw std::runtime_error("Can't perfom scaleCosine," 
-                                        " the image is empy");
+                                        " the image is empty");
             }),
             "scaleCosine multiplies the current image by the"
             " vertical cosine assuming a longitude-latitude image.")
@@ -69,59 +69,86 @@ void init_Image(pybind11::module_& m)
         .def("flipH", ([](pic::Image* this_img)
             {
             // Check if the image is empty
-            if ( check_image_empty(this_img) )
+            if ( this_img->isValid() )
                 return this_img->flipH();
             
             else
                 throw std::runtime_error("Can't perfom flipH," 
-                                        " the image is empy");
+                                        " the image is empty");
             }),
             "FlipH flips horizontally the current image.")
         
         .def("flipV", ([](pic::Image* this_img)
             {
             // Check if the image is empty
-            if ( check_image_empty(this_img) )
+            if ( this_img->isValid() )
                 return this_img->flipV();
             
             else
                 throw std::runtime_error("Can't perfom flipV," 
-                                        " the image is empy");
+                                        " the image is empty");
             }),
             "FlipV flips vertically the current image.")
         
         .def("flipHV", ([](pic::Image* this_img)
             {
             // Check if the image is empty
-            if ( check_image_empty(this_img) )
+            if ( this_img->isValid() )
                 return this_img->flipHV();
             
             else
                 throw std::runtime_error("Can't perfom flipHV," 
-                                        " the image is empy");
+                                        " the image is empty");
             }),
             "flipHV flips horizontally and vertically the current image.")
         
         .def("flipVH", ([](pic::Image* this_img)
             {
             // Check if the image is empty
-            if ( check_image_empty(this_img) )
+            if ( this_img->isValid() )
                 return this_img->flipVH();
             
             else
                 throw std::runtime_error("Can't perfom flipVH," 
-                                        " the image is empy");
+                                        " the image is empty");
             }),
             "flipVH flips vertically and horizontally the current image.")
 
-        .def("rotate90CCW", &pic::Image::rotate90CCW,
+        .def("rotate90CCW", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( this_img->isValid() )
+                return this_img->rotate90CCW();
+            
+            else
+                throw std::runtime_error("Can't perfom rotate90CCW," 
+                                        " the image is empty");
+            }),
             "rotate90CCW rotates 90 degrees counter-clockwise the" 
             " current image.")
         
-        .def("rotate90CW", &pic::Image::rotate90CW,
+        .def("rotate90CW", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( this_img->isValid() )
+                return this_img->rotate90CW();
+            
+            else
+                throw std::runtime_error("Can't perfom rotate90CW," 
+                                        " the image is empty");
+            }),
             "rotate90CW rotates 90 degrees clockwise the current image.")
         
-        .def("getDiagonalSize", &pic::Image::getDiagonalSize,
+        .def("getDiagonalSize", ([](pic::Image* this_img)
+            {
+            // Check if the image is empty
+            if ( this_img->isValid() )
+                return this_img->getDiagonalSize();
+            
+            else
+                throw std::runtime_error("Can't perfom getDiagonalSize," 
+                                        " the image is empty");
+            }),
             "getDiagonalSize")
         
         .def("setZero", &pic::Image::setZero,
@@ -135,7 +162,15 @@ void init_Image(pybind11::module_& m)
             "isValid checks if the current image is valid, which means" 
             " if they have an allocated buffer or not.")
         
-        .def("isSimilarType", &pic::Image::isSimilarType,
+        .def("isSimilarType", ([](pic::Image* this_img, pic::Image* other_img)
+            {
+            // Check one of the images is empty
+            if ( this_img->isValid() && other_img->isValid() )
+                return this_img->isSimilarType(other_img);
+            else
+                throw std::runtime_error("Can't perfom isSimilarType," 
+                                        " one of the images is empty");  
+            }),
             "isSimilarType checks if the current image is similar to img;"
             " i.e. if they have the same width, height, frames, and channels.",
             py::arg("img"))
