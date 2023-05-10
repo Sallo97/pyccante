@@ -3,8 +3,7 @@
 
 
 int main(){
-    pic::Image hello_kitty("../test.png", 
-                          pic::LDR_type::LT_NOR);
+    pic::Image hello_kitty = new pic::Image();
     
     hello_kitty.scaleCosine();
     hello_kitty.Write("../scaleCosine.png");

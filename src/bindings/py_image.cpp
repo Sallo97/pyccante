@@ -29,7 +29,7 @@ void init_Image(pybind11::module_& m)
             float* color = return_float_ptr(color_buffer);
 
             // Return the Image
-            return new pic::Image(color, channels);
+            return pic::Image(color, channels);
             }),
             py::return_value_policy::reference,
             "Image is a constructor which initializes an image defined by"
@@ -53,9 +53,20 @@ void init_Image(pybind11::module_& m)
 
     //region Functions
         
-        .def("scaleCosine", &pic::Image::scaleCosine,
-            "scaleCosine multiplies the current image by the"
-            " vertical cosine assuming a longitude-latitude image.")
+        .def("scaleCosine", ([](pic::Image* this_img)
+        {
+            // Check if the image is empty
+            if ( this_img->height != -1 && this_img->width != -1
+                && this_img->channels != -1 )
+                return this_img->scaleCosine();
+            
+            else
+                throw std::runtime_error("Can't perfom scaleCosine," 
+                                        " the image is empy");
+            
+        }),
+        "scaleCosine multiplies the current image by the"
+        " vertical cosine assuming a longitude-latitude image.")
         
         .def("flipH", &pic::Image::flipH,
             "FlipH flips horizontally the current image.")
