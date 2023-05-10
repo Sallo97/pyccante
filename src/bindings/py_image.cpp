@@ -22,6 +22,7 @@ void init_Image(pybind11::module_& m)
             py::arg("width"), py::arg("height"),
             py::arg("channels"))
 
+        .def(py::init<pic::Image*, bool>())
         
         .def(py::init( [](py::buffer color_buffer, int channels) {
               
@@ -164,7 +165,7 @@ void init_Image(pybind11::module_& m)
         
         .def("isSimilarType", ([](pic::Image* this_img, pic::Image* other_img)
             {
-            // Check one of the images is empty
+            // Check if one of the images is empty
             if ( this_img->isValid() && other_img->isValid() )
                 return this_img->isSimilarType(other_img);
             else
