@@ -8,6 +8,9 @@
 #include <pybind11/operators.h>
 #include <pybind11/numpy.h>
 #include <pybind11/complex.h>
+#include <pybind11/stl.h>
+//#include <pybind11/complex.h>
+
 
 void init_Histogram(pybind11::module_& m);
 

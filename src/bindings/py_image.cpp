@@ -24,14 +24,15 @@ void init_Image(pybind11::module_& m)
 
         .def(py::init<pic::Image*, bool>())
         
-        .def(py::init( [](py::buffer color_buffer, int channels) {
+        .def(py::init( [](py::buffer color_buffer, int channels) 
+        {
               
             // Get the raw pointer to the data
             float* color = return_float_ptr(color_buffer);
 
             // Return the Image
             return pic::Image(color, channels);
-            }),
+        }),
             py::return_value_policy::reference,
             "Image is a constructor which initializes an image defined by"
             " the input properties.",
@@ -360,7 +361,11 @@ void init_Image(pybind11::module_& m)
             }),
             "getColorSamples",
             py::arg("samples"), py::arg("nSamples"), py::arg("percentage"))
-        
+
+        .def("blend", &pic::Image::blend,
+            "blend",
+            py::arg("img"), py::arg("weight"))
+
         .def("size", &pic::Image::size,
             "size computes the number of values.")
         
@@ -413,9 +418,7 @@ void init_Image(pybind11::module_& m)
             py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
             py::arg("writeCounter")=0)
         
-        .def("blend", &pic::Image::blend,
-            "blend",
-            py::arg("img"), py::arg("weight"))
+
 
 
     // endregion

@@ -1,10 +1,5 @@
 #include "py_histogram.h"
-#include <piccante.hpp>
-#include <pybind11/pybind11.h>
-#include <pybind11/pytypes.h>
-#include <pybind11/operators.h>
-#include <pybind11/numpy.h>
-#include <pybind11/functional.h>
+#include "support.h"
 
 namespace py = pybind11;
 using namespace py::literals;
@@ -27,7 +22,17 @@ void init_Histogram(pybind11::module_& m)
     // region Constructors
 
     py::class_<pic::Histogram>(m, "Histogram")
-        .def(py::init<>())
+        .def(py::init<>(),
+            "Histogram is the basic constructor setting variables to defaults.")
+
+        .def(py::init< pic::Image*, pic::VALUE_SPACE, int, int >(),
+            py::return_value_policy::reference,
+            "Histogram is an extension of the basic constructor, where calculate"
+            "is called in order to populate the Histogram.",
+            py::arg("imgIn"), py::arg("type"),
+            py::arg("nBin")=256, py::arg("channel")=0
+            )
+    
         
     // endregion
 
@@ -43,6 +48,7 @@ void init_Histogram(pybind11::module_& m)
             py::arg("nBin")=256, py::arg("box")=NULL, py::arg("channel")=0)
 
         .def("uniform", &pic::Histogram::uniform,
+            "uniform",
             py::arg("fMin"), py::arg("fMax"), py::arg("value"),
             py::arg("type"), py::arg("nBin"))
                 
@@ -63,11 +69,23 @@ void init_Histogram(pybind11::module_& m)
             "clip clips the histogram to value.",
             py::arg("value"))
         
-        .def("cumulativef", &pic::Histogram::cumulativef,
+        .def("cumulativef",([](pic::Histogram* this_h, bool bNormalized)
+            {
+                float* ret = this_h->cumulativef(bNormalized);
+
+                // Return the NumPy array to Python
+                return return_numpy_array(ret);
+            }),
             "cumulativef computes the cumulative Histogram.",
             py::arg("bNormalized"))
 
-        .def("getCumulativef", &pic::Histogram::getCumulativef,
+        .def("getCumulativef", ([](pic::Histogram* this_h)
+            {
+                float* ret = this_h->getCumulativef();
+
+                // Return the NumPy array to Python
+                return return_numpy_array(ret);
+            }),
             "getCumulativef this function returns the cumulative Histogram."
             "Histogram. Note that cumulativef needs to be computed before otherwise"
             "the function will return a NULL pointer.")
@@ -76,17 +94,28 @@ void init_Histogram(pybind11::module_& m)
 
         .def("getfMax", &pic::Histogram::getfMax)
 
-        .def("getNormalized", &pic::Histogram::getNormalized,
+        .def("getNormalized",([](pic::Histogram* this_h, bool bNor = true)
+            {
+                float* ret = this_h->getNormalized(bNor);
+
+                // Return the NumPy array to Python
+                return return_numpy_array(ret);
+            }),
             "getNormalized normalizes the Histogram.",
-            py::arg("bNor")=true)
+            py::arg("bNor")=true
+            )
         
-        .def("getOtsu", &pic::Histogram::getOtsu)
+        .def("getOtsu", &pic::Histogram::getOtsu,
+            "getOtsu")
 
         .def("write", &pic::Histogram::write,
             "write saves the Histogram as an Image into a file.",
             py::arg("name"), py::arg("bNor"))
         
         .def("exposureCovering", &pic::Histogram::exposureCovering,
+            "exposureCovering computes the exposure values for fully covering"
+            " the dynamic range of the image. This function works only if the histogram"
+            " was compute usign VS_LOG_2.",
             py::arg("nBits")=8, py::arg("overlap")=1.0f)
     // endregion
 
