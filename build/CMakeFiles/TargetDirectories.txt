@@ -1,5 +1,0 @@
-/home/deck/Documents/Tesi/pyccante/build/CMakeFiles/edit_cache.dir
-/home/deck/Documents/Tesi/pyccante/build/CMakeFiles/rebuild_cache.dir
-/home/deck/Documents/Tesi/pyccante/build/src/CMakeFiles/pyccante.dir
-/home/deck/Documents/Tesi/pyccante/build/src/CMakeFiles/edit_cache.dir
-/home/deck/Documents/Tesi/pyccante/build/src/CMakeFiles/rebuild_cache.dir

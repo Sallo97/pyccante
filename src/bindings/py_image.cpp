@@ -210,10 +210,10 @@ void init_Image(pybind11::module_& m)
             float* ret = return_float_ptr(ret_buffer);
 
             // Call the function
-            float* max_val = this_img->getMinVal(box, ret);
+            float* min_val = this_img->getMinVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(max_val);            
+            return return_numpy_array(min_val);            
             }),
             "getMinVal computes the minimum value for the current Image.",
             py::arg("box"), py::arg("ret"))
@@ -409,11 +409,12 @@ void init_Image(pybind11::module_& m)
             py::arg("nameFile"), py::arg("typeLoad"))
 
         .def("Write", &pic::Image::Write,
-                py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
-                py::arg("writeCounter")=0)
+            py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
+            py::arg("writeCounter")=0)
         
-        /*.def("blend", &pic::Image::blend,
-            "")*/
+        .def("blend", &pic::Image::blend,
+            "blend",
+            py::arg("img"), py::arg("weight"))
 
 
     // endregion
