@@ -1,0 +1,9 @@
+# Don't add the following files
+# to the repository, since they cane be built by CMake
+
+build/
+*.out
+
+# Ignore images
+*.png
+*.jpg
