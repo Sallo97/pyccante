@@ -4,6 +4,8 @@
 #include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>
+#include <pybind11/pytypes.h>
+#include <pybind11/functional.h>
 
 
 namespace py = pybind11;

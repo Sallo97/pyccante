@@ -418,6 +418,8 @@ void init_Image(pybind11::module_& m)
             py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,
             py::arg("writeCounter")=0)
         
+        .def("clone", &pic::Image::clone,
+            "Clone creates a deep copy of the calling instance.")
 
 
 

@@ -29,3 +29,5 @@
   true. For that I decided to put in the bindings a check before calling
   the functions. 
   An implementation of the error can be found in tests/isSimilar_test.cpp
+
+- Filter::allocateOutputMemory i didn't understand what it does.

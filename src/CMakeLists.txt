@@ -23,7 +23,7 @@ set(SOURCES
     bindings/py_image.cpp
     bindings/py_histogram.cpp
     bindings/py_bbox.cpp
-    bindings/py_filter.h
+    bindings/py_filter.cpp
     # add here the binding source files
     )
 
