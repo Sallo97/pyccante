@@ -5,7 +5,7 @@
 #include "bindings/py_bbox.h"
 #include "bindings/py_image.h"
 #include "bindings/py_histogram.h"
-
+#include "bindings/py_filter.h"
 
 namespace py = pybind11;
 
@@ -14,6 +14,7 @@ PYBIND11_MODULE(pyccante, m)
 {
     init_LDR_type(m);     // LDR_type Enum
     init_BBox(m);         // BBox Class
+    init_Filter(m);       // Filter Class
     init_Image(m);        // Image Class 
     init_Histogram(m);    // Histogram Class
 }

@@ -32,7 +32,6 @@ void init_Histogram(pybind11::module_& m)
             py::arg("imgIn"), py::arg("type"),
             py::arg("nBin")=256, py::arg("channel")=0
             )
-    
         
     // endregion
 
