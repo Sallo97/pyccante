@@ -1,6 +1,7 @@
 #include "py_filter.h"
 
 
+
 template <class FilterBase = pic::Filter> class PyFilter : public FilterBase 
 {
     public:

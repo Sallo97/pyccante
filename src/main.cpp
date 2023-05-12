@@ -6,17 +6,19 @@
 #include "bindings/py_image.h"
 #include "bindings/py_histogram.h"
 #include "bindings/py_filter.h"
+#include "bindings/py_filter_luminance.h"
 
 namespace py = pybind11;
 
 // Creating the pyccante module
 PYBIND11_MODULE(pyccante, m)
 {
-    init_LDR_type(m);     // LDR_type Enum
-    init_BBox(m);         // BBox Class
-    init_Image(m);        // Image Class 
-    init_Histogram(m);    // Histogram Class
-    init_Filter(m);       // Filter Class
+    init_LDR_type(m);           // LDR_type Enum
+    init_BBox(m);               // BBox Class
+    init_Image(m);              // Image Class 
+    init_Histogram(m);          // Histogram Class
+    init_Filter(m);             // Filter Class
+    init_FilterLuminance(m);    // FilterLuminance sub-Class
 
 }
 

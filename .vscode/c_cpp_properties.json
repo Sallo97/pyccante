@@ -3,9 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
+                "${workspaceFolder}/**",
                 "/home/deck/.local/lib/python3.10/site-packages/**",
-                "${workspaceFolder}/include/piccante",
-                "${workspaceFolder}/include/stb",
                 "/usr/include/python3.10",
                 "/home/deck/.local/lib/python3.10/site-packages/pybind11/include",
                 "${workspaceFolder}/include/piccante/include"
@@ -14,7 +13,8 @@
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++11",
-            "intelliSenseMode": "linux-clang-x64"
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

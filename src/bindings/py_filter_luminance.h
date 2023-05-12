@@ -2,6 +2,7 @@
 #define PYCCANTE_PY_FILTERLUMINANCE_H
 
 #include "py_filter.h"
+#include "support.h"
 #include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>

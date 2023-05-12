@@ -13,6 +13,7 @@ set(HEADERS
     bindings/py_histogram.h
     bindings/py_bbox.h
     bindings/py_filter.h
+    bindings/py_filter_luminance.h
     # add here the binding header files
     )
 
@@ -24,6 +25,7 @@ set(SOURCES
     bindings/py_histogram.cpp
     bindings/py_bbox.cpp
     bindings/py_filter.cpp
+    bindings/py_filter_luminance.cpp
     # add here the binding source files
     )
 

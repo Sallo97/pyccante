@@ -197,11 +197,8 @@ void init_Image(pybind11::module_& m)
             // Call the function
             float* max_val = this_img->getMaxVal(box, ret);
 
-            // Create a NumPy array that owns the data of the float* array
-            py::array_t<float, py::array::c_style> np_arr({3}, max_val);
-
             // Return the NumPy array to Python
-            return np_arr; 
+            return return_numpy_array(max_val); 
             }),
             "getMaxVal computes the maximum value for the current Image.",
             py::arg("box"), py::arg("ret"))

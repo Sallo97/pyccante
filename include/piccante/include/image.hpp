@@ -1864,6 +1864,7 @@ PIC_INLINE bool Image::Read(std::string nameFile,
         case IO_JPG: {
             bExt = true;
 
+            // per sistemare che caricando immagini .jpg si impalla, commenta queste funzioni
             EXIFInfo info;
             readEXIF(nameFile, info);
             exposure = estimateAverageLuminance(info.exposureTime, info.aperture, info.iso);
