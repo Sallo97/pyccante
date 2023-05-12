@@ -15,6 +15,8 @@ set(HEADERS
     bindings/py_filter.h
     bindings/py_filter_luminance.h
     bindings/py_filter_bilateral_2df.h
+    bindings/py_filter_gaussian_2d.h
+    bindings/py_filter_rotation.h
     # add here the binding header files
     )
 
@@ -28,6 +30,8 @@ set(SOURCES
     bindings/py_filter.cpp
     bindings/py_filter_luminance.cpp
     bindings/py_filter_bilateral_2df.cpp
+    bindings/py_filter_gaussian_2d.cpp
+    bindings/py_filter_rotation.cpp
     # add here the binding source files
     )
 
