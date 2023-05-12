@@ -11,5 +11,4 @@ int main(){
 
     // Save the .jpg image
     img.Write("copy.jpg");
-
 }

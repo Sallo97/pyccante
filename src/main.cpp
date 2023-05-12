@@ -7,6 +7,7 @@
 #include "bindings/py_histogram.h"
 #include "bindings/py_filter.h"
 #include "bindings/py_filter_luminance.h"
+#include "bindings/py_filter_bilateral_2df.h"
 
 namespace py = pybind11;
 
@@ -19,6 +20,8 @@ PYBIND11_MODULE(pyccante, m)
     init_Histogram(m);          // Histogram Class
     init_Filter(m);             // Filter Class
     init_FilterLuminance(m);    // FilterLuminance sub-Class
+    init_FilterBilateral2DF(m); // FilterBilateral2DF sub-Class
+    init_FilterGaussian2D(m);  // FilterGaussian2D sub_Class
 
 }
 

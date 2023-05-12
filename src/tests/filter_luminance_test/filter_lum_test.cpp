@@ -1,4 +1,4 @@
-// compile with: // compile with: g++ -std=c++11 -I/usr/include/GL -Iusr/include/GLFW -Iusr/include/GLEW -I../../../include/stb -I../../../include/piccante/include filter_lum_test.cpp -lGL -lGLEW -lGLU -lglut -lz
+// compile with: g++ -std=c++11 -I/usr/include/GL -Iusr/include/GLFW -Iusr/include/GLEW -I../../../include/stb -I../../../include/piccante/include filter_lum_test.cpp -lGL -lGLEW -lGLU -lglut -lz
 
 
 #include <GL/glew.h>
