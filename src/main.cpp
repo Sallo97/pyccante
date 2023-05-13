@@ -25,6 +25,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterBilateral2DF(m); // FilterBilateral2DF sub-Class
     init_FilterGaussian2D(m);   // FilterGaussian2D sub_Class
     init_FilterRotation(m);     // FilterRotation sub_Class
+    init_FilterMosaic(m);       // FilterMosaic sub_class
 
 }
 
