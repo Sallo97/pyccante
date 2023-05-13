@@ -2,6 +2,7 @@
 find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 set(PYCCANTE_MODULE_NAME = "pyccante")
 
@@ -48,6 +49,7 @@ include_directories(
     ../include/stb
     ${GLEW_INCLUDE_DIRS} 
     ${OPENGL_INCLUDE_DIRS}
+    /usr/include/eigen3/Eigen/src/Core/
 )
 
 # Adding the binding modules

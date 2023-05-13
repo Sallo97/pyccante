@@ -34,3 +34,5 @@
 
 - Image::Read doesn't work with .jpg/.JPG/.JPEG images. Seeing the code I noted that
   if you comment three functions in IO_JPG it works(?)
+
+.def("set", static_cast<void (Pet::*)(int)>(&Pet::set), "Set the pet's age")

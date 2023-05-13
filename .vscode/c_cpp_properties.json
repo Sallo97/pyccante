@@ -4,16 +4,17 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
-                "${workspaceFolder}/include/piccante/include",
-                "${workspaceFolder}/include/stb",
-                "${workspaceFolder}/**",
+                "/usr/include/**",
+                "/usr/include/eigen3/",
+                "${workspaceFolder}/include/piccante/**",
+                "${workspaceFolder}/include/stb/**",
                 "/home/deck/.local/lib/python3.10/site-packages/pybind11/include",
                 "/usr/include/python3.10"
             ],
             "defines": [],
-            "cStandard": "c17",
+            "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "linux-clang-x64"
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4
