@@ -10,6 +10,7 @@
 #include "bindings/py_filter_bilateral_2df.h"
 #include "bindings/py_filter_gaussian_2d.h"
 #include "bindings/py_filter_rotation.h"
+#include "bindings/py_filter_mosaic.h"
 
 namespace py = pybind11;
 
