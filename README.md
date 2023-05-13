@@ -19,20 +19,20 @@ https://github.com/pybind/pybind11
 
 # core
 
-histogram [DONE}
+histogram [DONE]
 
-image [DONE}
+image [DONE]
 
 
 # filtri
 
-filter_luminance.hpp  [DONE}
+filter_luminance.hpp  [DONE]
 
-filter_bilateral_2df.hpp  [DONE}
+filter_bilateral_2df.hpp  [DONE]
 
 filter_bilateral_2ds.hpp
 
-filter_gaussian_2d.hpp  [DONE}
+filter_gaussian_2d.hpp  [DONE]
 
 filter_conv_2d.hpp
 
@@ -44,7 +44,7 @@ filter_med.hpp
 
 filter_med_vec.hpp
 
-filter_mosaic.hpp [DONE}
+filter_mosaic.hpp [DONE]
 
 filter_assemble_hdr.hpp
 
