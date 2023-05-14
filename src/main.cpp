@@ -11,6 +11,7 @@
 #include "bindings/py_filter_gaussian_2d.h"
 #include "bindings/py_filter_rotation.h"
 #include "bindings/py_filter_mosaic.h"
+#include "bindings/py_filter_conv_2d.h"
 
 namespace py = pybind11;
 
@@ -27,6 +28,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterGaussian2D(m);   // FilterGaussian2D sub_Class
     init_FilterRotation(m);     // FilterRotation sub_Class
     init_FilterMosaic(m);       // FilterMosaic sub_class
+    init_FilterConv2D(m);       // FilterConv2D sub_class
 
 }
 

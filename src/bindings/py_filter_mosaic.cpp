@@ -14,7 +14,9 @@ void init_FilterMosaic(pybind11::module_& m)
     // endregion
 
     // region Functions
-    .def_static("execute", &pic::FilterMosaic::execute);
+    .def_static("execute", &pic::FilterMosaic::execute,
+                "execute",
+                py::arg("imgIn"), py::arg("imgOut"));
 
     // endregion
 
