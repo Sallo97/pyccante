@@ -50,7 +50,7 @@ filter_assemble_hdr.hpp
 
 filter_warp_2d.hpp
 
-filter_rotation.hpp [DONE}
+filter_rotation.hpp [DONE]
 
 # algorithms
 
