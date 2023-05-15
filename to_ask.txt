@@ -1,3 +1,15 @@
+- Image:: The program stays idle, apparently doing nothing, 
+  when trying to read a .jpg/.JPG/.JPEG images. Seeing the
+  implementation of Read, I noted that if you comment function
+  "readEXIF" it works(?).
+
+- For every filter, I binded every public function that there is.
+  While doing so I started thinking if it's better to just bind the
+  "execute" function, since I think it's the only function a user 
+  would use.
+
+- 
+
 - I added a lambda function to the bindigs of
   scaleCosine, all the flips to check if the image
   passed is empty or not.
@@ -30,9 +42,5 @@
   the functions. 
   An implementation of the error can be found in tests/isSimilar_test.cpp
 
-- Filter::allocateOutputMemory i didn't understand what it does.
-
-- Image::Read doesn't work with .jpg/.JPG/.JPEG images. Seeing the code I noted that
-  if you comment three functions in IO_JPG it works(?)
 
 .def("set", static_cast<void (Pet::*)(int)>(&Pet::set), "Set the pet's age")
