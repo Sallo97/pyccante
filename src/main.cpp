@@ -5,6 +5,7 @@
 #include "bindings/py_bbox.h"
 #include "bindings/py_image.h"
 #include "bindings/py_histogram.h"
+#include "bindings/py_matrix_3_x_3.h"
 #include "bindings/py_filter.h"
 #include "bindings/py_filter_luminance.h"
 #include "bindings/py_filter_bilateral_2df.h"

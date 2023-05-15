@@ -6,9 +6,10 @@ using namespace py::literals;
 
 void init_Image(pybind11::module_& m)
 {
+    py::class_<pic::Image>(m, "Image")
+
     // region Constructors
 
-    py::class_<pic::Image>(m, "Image")
         .def(py::init<> ())
 
         .def(py::init<std::string &, pic::LDR_type>(),

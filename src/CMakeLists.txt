@@ -20,6 +20,7 @@ set(HEADERS
     bindings/py_filter_rotation.h
     bindings/py_filter_mosaic.h
     bindings/py_filter_conv_2d.h
+    bindings/py_matrix_3_x_3.h
     # add here the binding header files
     )
 
@@ -37,6 +38,7 @@ set(SOURCES
     bindings/py_filter_rotation.cpp
     bindings/py_filter_mosaic.cpp
     bindings/py_filter_conv_2d.cpp
+    bindings/py_matrix_3_x_3.cpp
     # add here the binding source files
     )
 

@@ -1,14 +1,27 @@
-- Image:: The program stays idle, apparently doing nothing, 
+- The program stays idle, apparently doing nothing, 
   when trying to read a .jpg/.JPG/.JPEG images. Seeing the
   implementation of Read, I noted that if you comment function
   "readEXIF" it works(?).
+  An implementation of the error can be found in tests/jpg_test
 
 - For every filter, I binded every public function that there is.
   While doing so I started thinking if it's better to just bind the
   "execute" function, since I think it's the only function a user 
   would use.
 
-- 
+- In ImageVec I noticed some typos 
+
+- Some functions of some filter use as a variable ImageVec, is
+  it necessary to bind it?
+
+- For testing I'm doing the function in a C++ program, see what it
+  does and then doing the same in python and see if it does the same.
+
+- In getMaxVal and getMinVal I noticed that if the passed box is NULL,the
+  code defines a new BBow with the width, height and frames of the image.
+  But when declared, the Image would create a protected BBox called "fullbox"
+  with the same dimension. It's not better to pass that, instead of creating
+  a totally new one?
 
 - I added a lambda function to the bindigs of
   scaleCosine, all the flips to check if the image
@@ -42,5 +55,3 @@
   the functions. 
   An implementation of the error can be found in tests/isSimilar_test.cpp
 
-
-.def("set", static_cast<void (Pet::*)(int)>(&Pet::set), "Set the pet's age")
