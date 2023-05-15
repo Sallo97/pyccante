@@ -34,7 +34,7 @@ filter_bilateral_2ds.hpp
 
 filter_gaussian_2d.hpp  [DONE]
 
-filter_conv_2d.hpp
+filter_conv_2d.hpp  [DONE]
 
 filter_max.hpp
 
