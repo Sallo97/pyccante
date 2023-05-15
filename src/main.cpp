@@ -23,6 +23,7 @@ PYBIND11_MODULE(pyccante, m)
     init_BBox(m);               // BBox Class
     init_Image(m);              // Image Class 
     init_Histogram(m);          // Histogram Class
+    init_Matrix_3_x_3(m);
     init_Filter(m);             // Filter Class
     init_FilterLuminance(m);    // FilterLuminance sub-Class
     init_FilterBilateral2DF(m); // FilterBilateral2DF sub-Class

@@ -1,8 +1,5 @@
-- The program stays idle, apparently doing nothing, 
-  when trying to read a .jpg/.JPG/.JPEG images. Seeing the
-  implementation of Read, I noted that if you comment function
-  "readEXIF" it works(?).
-  An implementation of the error can be found in tests/jpg_test
+- I binded Matrix3x3 because it is need in some filter function.
+  Is it necessary to bind float data[9]? I think not.
 
 - For every filter, I binded every public function that there is.
   While doing so I started thinking if it's better to just bind the
