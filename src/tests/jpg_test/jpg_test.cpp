@@ -7,7 +7,7 @@
 
 int main(){
     // Load the .jpg image
-    pic::Image img("cat.jpg");
+    pic::Image img("cat.jpg", pic::LDR_type::LT_NOR);
 
     // Save the .jpg image
     img.Write("copy.jpg");
