@@ -16,6 +16,7 @@
 #include "bindings/py_filter_conv_2d.h"
 #include "bindings/py_filter_warp_2d.h"
 #include "bindings/py_filter_bilateral_2ds.h"
+#include "bindings/py_filter_max.h"
 
 namespace py = pybind11;
 
@@ -37,6 +38,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterConv2D(m);       // FilterConv2D sub_class
     init_FilterWarp2D(m);       // FilterWarp2 sub_class
     init_FilterBilateral2DS(m); // FilterBilateral2DS sub_class
+    init_FilterMax(m);          // FilterMax sub_class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */
