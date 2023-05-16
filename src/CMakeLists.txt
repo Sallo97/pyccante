@@ -28,6 +28,7 @@ set(HEADERS
     bindings/py_filter_max.h
     bindings/py_filter_med.h
     bindings/py_filter_mean.h
+    bindings/py_filter_med_vec.h
     # add here the binding header files
     )
 
@@ -53,6 +54,7 @@ set(SOURCES
     bindings/py_filter_max.cpp
     bindings/py_filter_med.cpp
     bindings/py_filter_mean.cpp
+    bindings/py_filter_med_vec.cpp
     # add here the binding source files
     )
 
