@@ -18,6 +18,7 @@
 #include "bindings/py_filter_bilateral_2ds.h"
 #include "bindings/py_filter_max.h"
 #include "bindings/py_filter_med.h"
+#include "bindings/py_filter_mean.h"
 
 namespace py = pybind11;
 
@@ -41,6 +42,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterBilateral2DS(m); // FilterBilateral2DS sub_class
     init_FilterMax(m);          // FilterMax sub_class
     init_FilterMed(m);          // FilterMed sub_class
+    init_FilterMean(m);         // FilterMean sub_class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */

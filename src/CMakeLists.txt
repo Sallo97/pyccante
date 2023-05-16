@@ -27,6 +27,7 @@ set(HEADERS
     bindings/py_filter_bilateral_2ds.h
     bindings/py_filter_max.h
     bindings/py_filter_med.h
+    bindings/py_filter_mean.h
     # add here the binding header files
     )
 
@@ -51,6 +52,7 @@ set(SOURCES
     bindings/py_filter_bilateral_2ds.cpp
     bindings/py_filter_max.cpp
     bindings/py_filter_med.cpp
+    bindings/py_filter_mean.cpp
     # add here the binding source files
     )
 

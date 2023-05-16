@@ -1,21 +1,21 @@
-#include "py_filter_med.h"
+#include "py_filter_mean.h"
 
-void init_FilterMed(pybind11::module_& m)
+void init_FilterMean(pybind11::module_& m)
 {
-    py::class_<pic::FilterMed, pic::Filter>(m, "FilterMed")
+    py::class_<pic::FilterMean, pic::Filter>(m, "FilterMean")
 
     // region Constructors
 
     .def(py::init<int>(),
-        "FilterMed constructor",
+        "FilterMean constructor",
         py::arg("size"))
 
     // endregion
 
     // region Functions
 
-    .def_static("execute", &pic::FilterMed::execute,
-        "execute FilterMed",
+    .def_static("execute", &pic::FilterMean::execute,
+        "execute FilterMean",
         py::arg("imgIn"), py::arg("imgOut"),
         py::arg("size"))
     
@@ -24,12 +24,11 @@ void init_FilterMed(pybind11::module_& m)
         "execute",
         ([] (pic::Image* imgIn, int size)
         {
-            return pic::FilterMed::execute(imgIn, NULL, size);
+            return pic::FilterMean::execute(imgIn, NULL, size);
         }), 
-        "execute FilterMed",
+        "execute FilterMean",
         py::arg("imgIn"), py::arg("imgOut")
     );
 
     // endregion
-
 }
