@@ -38,7 +38,7 @@ filter_conv_2d.hpp  [DONE]
 
 filter_max.hpp  [DONE]
 
-filter_mean.hpp 
+filter_mean.hpp [DONE]
 
 filter_med.hpp  [DONE]
 
