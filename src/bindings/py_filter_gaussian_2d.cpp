@@ -17,10 +17,6 @@ void init_FilterGaussian2D(pybind11::module_& m)
 
     // region Functions
 
-    .def("update", &pic::FilterGaussian2D::update,
-        "update",
-        py::arg("sigma"))
-
     .def_static("execute", &pic::FilterGaussian2D::execute,
         "execute",
         py::arg("imgIn"), py::arg("imgOut"), py::arg("sigma"));

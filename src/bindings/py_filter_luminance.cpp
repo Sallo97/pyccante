@@ -25,33 +25,6 @@ void init_FilterLuminance(pybind11::module_& m)
 
     // region Functions
 
-    .def("computeWeights", ([](pic::FilterLuminance this_filter, pic::LUMINANCE_TYPE type, 
-                            int channels, py::buffer weights_buffer)
-    {
-        // Get the raw pointer to the data
-        float* weights = return_float_ptr(weights_buffer);
-
-        // Call the function
-        float* ret_val = this_filter.computeWeights(type, channels, weights);
-
-        // Return the Numpy array to Python
-        return return_numpy_array(ret_val);
-        
-    }),
-    "computeWeights",
-    py::arg("type"), py::arg("channels"), py::arg("weights")
-    )
-
-    .def("update", &pic::FilterLuminance::update,
-        "update",
-        py::arg("update")=pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
-
-    .def("OutputSize", &pic::FilterLuminance::OutputSize,
-        "OutputSize",
-        py::arg("imgIn"), py::arg("width"),
-        py::arg("height"), py::arg("channels"),
-        py::arg("frames"))
-
     .def_static("execute", &pic::FilterLuminance::execute,
         "execute",
         py::arg("imgIn"), py::arg("imgOut"), 

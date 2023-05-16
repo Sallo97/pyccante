@@ -19,10 +19,7 @@ void init_FilterBilateral2DF(pybind11::module_& m)
     // endregion
 
     // region Functions
-
-    .def("signature", &pic::FilterBilateral2DF::signature,
-        "signature")
-
+    
     .def_static("execute", &pic::FilterBilateral2DF::execute,
         "execute");
 

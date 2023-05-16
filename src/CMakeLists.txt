@@ -21,6 +21,7 @@ set(HEADERS
     bindings/py_filter_rotation.h
     bindings/py_filter_mosaic.h
     bindings/py_filter_conv_2d.h
+    bindings/py_filter_warp_2d.h
     # add here the binding header files
     )
 
@@ -39,6 +40,7 @@ set(SOURCES
     bindings/py_filter_rotation.cpp
     bindings/py_filter_mosaic.cpp
     bindings/py_filter_conv_2d.cpp
+    bindings/py_filter_warp_2d.cpp
     # add here the binding source files
     )
 
