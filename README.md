@@ -17,7 +17,7 @@ https://github.com/wjakob/nanobind
 
 https://github.com/pybind/pybind11
 
-# core
+# core [DONE]
 
 histogram [DONE]
 
