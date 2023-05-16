@@ -40,7 +40,7 @@ filter_max.hpp  [DONE]
 
 filter_mean.hpp 
 
-filter_med.hpp
+filter_med.hpp  [DONE]
 
 filter_med_vec.hpp
 
