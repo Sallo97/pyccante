@@ -22,7 +22,18 @@ void init_FilterWarp2D(pybind11::module_& m)
         "execute the FilterWarp2D filter",
         py::arg("img"), py::arg("imgOut"),
         py::arg("h"), py::arg("bSameSize") = false,
-        py::arg("bCentroid") = false);
+        py::arg("bCentroid") = false)
+    
+    .def_static("execute", ([] (pic::Image* img, pic::Matrix3x3 h, 
+                                bool bSameSize, bool bCentroid)
+        {
+            return pic::FilterWarp2D::execute(img, NULL, h,
+                                 bSameSize = false, bCentroid = false);
+        }),
+        "execute the FilterWarp2D filter",
+        py::arg("img"), py::arg("h"),
+        py::arg("bSameSize"), py::arg("bCentroid")
+        );
 
     // endregion
 

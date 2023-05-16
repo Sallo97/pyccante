@@ -19,7 +19,14 @@ void init_FilterGaussian2D(pybind11::module_& m)
 
     .def_static("execute", &pic::FilterGaussian2D::execute,
         "execute",
-        py::arg("imgIn"), py::arg("imgOut"), py::arg("sigma"));
+        py::arg("imgIn"), py::arg("imgOut"), py::arg("sigma"))
+    
+    .def_static("execute", ([] (pic::Image* imgIn, float sigma)
+        {
+            return pic::FilterGaussian2D::execute(imgIn, NULL, sigma);
+        }),
+        "execute FilterGaussian2D",
+        py::arg("imgIn"), py::arg("sigma"));
 
     // endregion
 

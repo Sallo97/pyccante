@@ -9,16 +9,24 @@ void init_FilterConv2D(pybind11::module_& m)
     // region Constructors
 
     .def(py::init<> (),
-        "FilterConv2D")
+        "FilterConv2D constructor")
 
     // endregion
 
     // region Functions
 
     .def_static("execute", &pic::FilterConv2D::execute,
-                "execute",
+                "execute FilterConv2D",
                 py::arg("img"), py::arg("conv"), 
-                py::arg("imgOut"));
+                py::arg("imgOut"))
+    
+    .def_static("execute", ([](pic::Image* img, pic::Image* conv)
+        {
+            return pic::FilterConv2D::execute(img, conv, NULL);
+        }),
+        "execute FilterConv2D",
+        py::arg("img"), py::arg("conv")
+    );
 
     // endregion
 

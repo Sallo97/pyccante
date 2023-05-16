@@ -10,10 +10,12 @@ set(PYCCANTE_MODULE_NAME = "pyccante")
 set(HEADERS
     bindings/support.h
     bindings/py_dynamics_range.h
+    bindings/py_point_samplers.h
     bindings/py_image.h
     bindings/py_histogram.h
     bindings/py_bbox.h
     bindings/py_matrix_3_x_3.h
+    bindings/py_point_samplers.h
     bindings/py_filter.h
     bindings/py_filter_luminance.h
     bindings/py_filter_bilateral_2df.h
@@ -22,6 +24,7 @@ set(HEADERS
     bindings/py_filter_mosaic.h
     bindings/py_filter_conv_2d.h
     bindings/py_filter_warp_2d.h
+    bindings/py_filter_bilateral_2ds.h
     # add here the binding header files
     )
 
@@ -29,9 +32,11 @@ set(SOURCES
     main.cpp
     bindings/support.cpp
     bindings/py_dynamics_range.cpp
+    bindings/py_point_samplers.cpp
     bindings/py_image.cpp
     bindings/py_histogram.cpp
     bindings/py_matrix_3_x_3.cpp
+    bindings/py_point_samplers.cpp
     bindings/py_bbox.cpp
     bindings/py_filter.cpp
     bindings/py_filter_luminance.cpp
@@ -41,6 +46,7 @@ set(SOURCES
     bindings/py_filter_mosaic.cpp
     bindings/py_filter_conv_2d.cpp
     bindings/py_filter_warp_2d.cpp
+    bindings/py_filter_bilateral_2ds.cpp
     # add here the binding source files
     )
 

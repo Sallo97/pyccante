@@ -26,9 +26,19 @@ void init_FilterLuminance(pybind11::module_& m)
     // region Functions
 
     .def_static("execute", &pic::FilterLuminance::execute,
-        "execute",
+        "execute FilterLuminance",
         py::arg("imgIn"), py::arg("imgOut"), 
-        py::arg("type")= pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE);
+        py::arg("type")= pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
+    
+    .def_static("execute", ([](pic::Image* imgIn, 
+                              pic::LUMINANCE_TYPE type = pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
+        {
+            return pic::FilterLuminance::execute(imgIn, NULL, type);
+        }),
+        "execute FilterLuminance",
+        py::arg("imgIn"), 
+        py::arg("type") = pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE
+        );
     
     // endregion
 
