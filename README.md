@@ -30,7 +30,7 @@ filter_luminance.hpp  [DONE]
 
 filter_bilateral_2df.hpp  [DONE]
 
-filter_bilateral_2ds.hpp
+filter_bilateral_2ds.hpp  [DONE]
 
 filter_gaussian_2d.hpp  [DONE]
 
