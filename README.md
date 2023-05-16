@@ -42,7 +42,7 @@ filter_mean.hpp [DONE]
 
 filter_med.hpp  [DONE]
 
-filter_med_vec.hpp
+filter_med_vec.hpp [DONE]
 
 filter_mosaic.hpp [DONE]
 
