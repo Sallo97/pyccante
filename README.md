@@ -17,14 +17,14 @@ https://github.com/wjakob/nanobind
 
 https://github.com/pybind/pybind11
 
-# core
+# core [DONE]
 
 histogram [DONE]
 
 image [DONE]
 
 
-# filtri
+# filtri [DONE]
 
 filter_luminance.hpp  [DONE]
 
@@ -42,11 +42,9 @@ filter_mean.hpp [DONE]
 
 filter_med.hpp  [DONE]
 
-filter_med_vec.hpp
+filter_med_vec.hpp [DONE]
 
 filter_mosaic.hpp [DONE]
-
-filter_assemble_hdr.hpp
 
 filter_warp_2d.hpp  [DONE]
 
