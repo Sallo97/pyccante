@@ -52,7 +52,7 @@ filter_rotation.hpp [DONE]
 
 # algorithms
 
-hdr_merger.hpp 
+hdr_merger.hpp [DONE]
 
 grow_cut.hpp
 
