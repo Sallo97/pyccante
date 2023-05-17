@@ -21,6 +21,8 @@
 #include "bindings/py_filter_mean.h"
 #include "bindings/py_filter_med_vec.h"
 #include "bindings/py_algo_hdr_merger.h"
+#include "bindings/py_algo_grow_cut.h"
+#include "bindings/py_algo_poisson_solver.h"
 
 namespace py = pybind11;
 
@@ -34,19 +36,21 @@ PYBIND11_MODULE(pyccante, m)
     init_Histogram(m);          // Histogram Class
     init_Matrix_3_x_3(m);       // Matrix3x3 Class
     init_Filter(m);             // Filter Class
-    init_FilterLuminance(m);    // FilterLuminance sub-Class
-    init_FilterBilateral2DF(m); // FilterBilateral2DF sub-Class
-    init_FilterGaussian2D(m);   // FilterGaussian2D sub_Class
-    init_FilterRotation(m);     // FilterRotation sub_Class
-    init_FilterMosaic(m);       // FilterMosaic sub_class
-    init_FilterConv2D(m);       // FilterConv2D sub_class
-    init_FilterWarp2D(m);       // FilterWarp2 sub_class
-    init_FilterBilateral2DS(m); // FilterBilateral2DS sub_class
-    init_FilterMax(m);          // FilterMax sub_class
-    init_FilterMed(m);          // FilterMed sub_class
-    init_FilterMean(m);         // FilterMean sub_class
-    init_FilterMedVec(m);       // FilterMedVec sub_class
-    init_HDRMerger(m);          // HDRMerger class
+    init_FilterLuminance(m);    // FilterLuminance filter-Class
+    init_FilterBilateral2DF(m); // FilterBilateral2DF filter-Class
+    init_FilterGaussian2D(m);   // FilterGaussian2D filter_Class
+    init_FilterRotation(m);     // FilterRotation filter_Class
+    init_FilterMosaic(m);       // FilterMosaic filter_class
+    init_FilterConv2D(m);       // FilterConv2D filter_class
+    init_FilterWarp2D(m);       // FilterWarp2 filter_class
+    init_FilterBilateral2DS(m); // FilterBilateral2DS filter_class
+    init_FilterMax(m);          // FilterMax filter_class
+    init_FilterMed(m);          // FilterMed filter_class
+    init_FilterMean(m);         // FilterMean filter_class
+    init_FilterMedVec(m);       // FilterMedVec filter_class
+    init_HDRMerger(m);          // HDRMerger algorithm_class
+    init_GrowCut(m);            // GrowCut algorithm_class
+    init_PoissonSolver(m);      // PoissonSolver algorithm_class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */

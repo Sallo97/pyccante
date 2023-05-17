@@ -30,6 +30,8 @@ set(HEADERS
     bindings/py_filter_mean.h
     bindings/py_filter_med_vec.h
     bindings/py_algo_hdr_merger.h
+    bindings/py_algo_grow_cut.h
+    bindings/py_algo_poisson_solver.h
     # add here the binding header files
     )
 
@@ -57,6 +59,8 @@ set(SOURCES
     bindings/py_filter_mean.cpp
     bindings/py_filter_med_vec.cpp
     bindings/py_algo_hdr_merger.cpp
+    bindings/py_algo_grow_cut.cpp
+    bindings/py_algo_poisson_solver.cpp
     # add here the binding source files
     )
 

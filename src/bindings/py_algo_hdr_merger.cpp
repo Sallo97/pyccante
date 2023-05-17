@@ -16,15 +16,20 @@ void init_HDRMerger(pybind11::module_& m)
     .def("addFile", &pic::HDRMerger::addFile,
         "adds an Image to the algorithms.",
         py::arg("file_name"), py::arg("exposure_time") = -1.0f)
+
+    .def("execute", &pic::HDRMerger::execute,
+         "execute the algorithm HDRMerger",
+         py::arg("imgOut"))
     
-    .def(
+    .def
+    (
         "execute", 
         ([] (pic::HDRMerger* this_algo)
         {
             return this_algo->pic::HDRMerger::execute(NULL);
         }),
         "execute the algorithm HDRMerger"
-        );
+    );
 
     // endregion
 }
