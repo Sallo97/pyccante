@@ -13,6 +13,36 @@ void init_GrowCut(pybind11::module_& m)
 
     // region Functions
 
+    .def_static("fromStrokeImageToSeeds", &pic::GrowCut::fromStrokeImageToSeeds,
+        "fromStrokeImageToSeeds",
+        py::arg("strokes"), py::arg("out"))
+
+    .def_static
+    (
+        "fromStrokeImageToSeeds",
+        ([] (pic::Image* strokes)
+        {
+            return pic::GrowCut::fromStrokeImageToSeeds(strokes, NULL);
+        }),
+        "formStrokeImageToSeeds",
+        py::arg("strokes")
+    )
+
+    .def_static("getMaskAsImage", &pic::GrowCut::getMaskAsImage,
+        "getMaskAsImage",
+        py::arg("state"), py::arg("out"))
+
+    .def_static
+    (
+        "getMaskAsImage",
+        ([] (pic::Image* state)
+        {
+            return pic::GrowCut::getMaskAsImage(state, NULL);
+        }),
+        "getMaskAsImage",
+        py::arg("state")
+    )
+
     .def_static("execute", &pic::GrowCut::execute,
         "execute the algorithm GrowCut",
         py::arg("img"), py::arg("seeds"), py::arg("imgOut"))

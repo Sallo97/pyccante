@@ -23,6 +23,7 @@
 #include "bindings/py_algo_hdr_merger.h"
 #include "bindings/py_algo_grow_cut.h"
 #include "bindings/py_algo_poisson_solver.h"
+#include "bindings/py_algo_connected_components.h"
 
 namespace py = pybind11;
 
@@ -51,6 +52,7 @@ PYBIND11_MODULE(pyccante, m)
     init_HDRMerger(m);          // HDRMerger algorithm_class
     init_GrowCut(m);            // GrowCut algorithm_class
     init_PoissonSolver(m);      // PoissonSolver algorithm_class
+    init_ConnectedComponents(m);// ConnectedComponents algorithm_class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */

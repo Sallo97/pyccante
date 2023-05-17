@@ -406,7 +406,7 @@ void init_Image(pybind11::module_& m)
 
         .def("Read", &pic::Image::Read,
             "Read opens an Image from a file on the disk.",
-            py::arg("nameFile"), py::arg("typeLoad"))
+            py::arg("nameFile"), py::arg("typeLoad") = pic::LDR_type::LT_NOR_GAMMA)
 
         .def("Write", &pic::Image::Write,
             py::arg("nameFile"), py::arg("typeWrite")=pic::LT_NOR_GAMMA,

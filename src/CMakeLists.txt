@@ -32,6 +32,7 @@ set(HEADERS
     bindings/py_algo_hdr_merger.h
     bindings/py_algo_grow_cut.h
     bindings/py_algo_poisson_solver.h
+    bindings/py_algo_connected_components.h
     # add here the binding header files
     )
 
@@ -61,6 +62,7 @@ set(SOURCES
     bindings/py_algo_hdr_merger.cpp
     bindings/py_algo_grow_cut.cpp
     bindings/py_algo_poisson_solver.cpp
+    bindings/py_algo_connected_components.cpp
     # add here the binding source files
     )
 

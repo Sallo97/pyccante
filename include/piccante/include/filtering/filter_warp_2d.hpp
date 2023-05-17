@@ -260,7 +260,7 @@ public:
      * @param bCentroid
      * @return
      */
-    static Image *execute(pic::Image *img, pic::Image *imgOut, pic::Matrix3x3 h, bool bSameSize = false, bool bCentroid = false)
+    static Image *execute(Image *img, Image *imgOut, Matrix3x3 h, bool bSameSize = false, bool bCentroid = false)
     {
         FilterWarp2D flt(h, bSameSize, bCentroid);
         imgOut = flt.Process(Single(img), imgOut);

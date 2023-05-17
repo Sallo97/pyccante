@@ -3,14 +3,22 @@
 
 #include <GL/glew.h>
 #include <piccante.hpp>
+#include <vector>
+
 
 int main()
 {
     // Load Image
-    pic::Image img("result.hdr", pic::LDR_type::LT_NONE);
-
+    pic::Image img;
+    img.Read("target.png");
+    pic::Image laplacian;
+    img.Read("mask.png");
+    std::vector<int> coords;
+    coords.push_back(100);
+    coords.push_back(100);
+        
     // Execute the algorithm
-    pic::Image ret = pic::computePoissonSolver(&img, NULL);
-    ret.Write("return.hdr");
+    pic::Image ret = pic::computePoissonSolverIterative(&img, &laplacian, coords);
+    ret.Write("return.jpg");
 
 }
