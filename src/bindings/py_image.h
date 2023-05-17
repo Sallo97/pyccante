@@ -10,7 +10,11 @@
 #include <pybind11/operators.h>
 #include <pybind11/numpy.h>
 #include <pybind11/functional.h>
+#include "support.h"
+
+namespace py = pybind11;
+using namespace py::literals;
 
 void init_Image(pybind11::module_& m);
 
-#endif
+#endif /* PYCCANTE_PY_IMAGE_H */

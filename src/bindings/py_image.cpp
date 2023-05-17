@@ -1,8 +1,4 @@
 #include "py_image.h"
-#include "support.h"
-
-namespace py = pybind11;
-using namespace py::literals;
 
 void init_Image(pybind11::module_& m)
 {
