@@ -19,9 +19,9 @@ void init_HDRMerger(pybind11::module_& m)
     
     .def(
         "execute", 
-        ([] ()
+        ([] (pic::HDRMerger* this_algo)
         {
-            return pic::HDRMerger::execute(NULL);
+            return this_algo->pic::HDRMerger::execute(NULL);
         }),
         "execute the algorithm HDRMerger"
         );
