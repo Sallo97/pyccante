@@ -1,7 +1,7 @@
 #ifndef PYCCANTE_PY_FILTER_MED_H
 #define PYCCANTE_PY_FILTER_MED_H
 
-#include "py_filter.h"
+#include "../py_filter.h"
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>
 

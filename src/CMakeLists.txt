@@ -17,22 +17,22 @@ set(HEADERS
     bindings/py_matrix_3_x_3.h
     bindings/py_point_samplers.h
     bindings/py_filter.h
-    bindings/py_filter_luminance.h
-    bindings/py_filter_bilateral_2df.h
-    bindings/py_filter_gaussian_2d.h
-    bindings/py_filter_rotation.h
-    bindings/py_filter_mosaic.h
-    bindings/py_filter_conv_2d.h
-    bindings/py_filter_warp_2d.h
-    bindings/py_filter_bilateral_2ds.h
-    bindings/py_filter_max.h
-    bindings/py_filter_med.h
-    bindings/py_filter_mean.h
-    bindings/py_filter_med_vec.h
-    bindings/py_algo_hdr_merger.h
-    bindings/py_algo_grow_cut.h
-    bindings/py_algo_poisson_solver.h
-    bindings/py_algo_connected_components.h
+    bindings/py_filtering/py_filter_luminance.h
+    bindings/py_filtering/py_filter_bilateral_2df.h
+    bindings/py_filtering/py_filter_gaussian_2d.h
+    bindings/py_filtering/py_filter_rotation.h
+    bindings/py_filtering/py_filter_mosaic.h
+    bindings/py_filtering/py_filter_conv_2d.h
+    bindings/py_filtering/py_filter_warp_2d.h
+    bindings/py_filtering/py_filter_bilateral_2ds.h
+    bindings/py_filtering/py_filter_max.h
+    bindings/py_filtering/py_filter_med.h
+    bindings/py_filtering/py_filter_mean.h
+    bindings/py_filtering/py_filter_med_vec.h
+    bindings/py_algorithms/py_algo_hdr_merger.h
+    bindings/py_algorithms/py_algo_grow_cut.h
+    bindings/py_algorithms/py_algo_poisson_solver.h
+    bindings/py_algorithms/py_algo_connected_components.h
     # add here the binding header files
     )
 
@@ -47,22 +47,22 @@ set(SOURCES
     bindings/py_point_samplers.cpp
     bindings/py_bbox.cpp
     bindings/py_filter.cpp
-    bindings/py_filter_luminance.cpp
-    bindings/py_filter_bilateral_2df.cpp
-    bindings/py_filter_gaussian_2d.cpp
-    bindings/py_filter_rotation.cpp
-    bindings/py_filter_mosaic.cpp
-    bindings/py_filter_conv_2d.cpp
-    bindings/py_filter_warp_2d.cpp
-    bindings/py_filter_bilateral_2ds.cpp
-    bindings/py_filter_max.cpp
-    bindings/py_filter_med.cpp
-    bindings/py_filter_mean.cpp
-    bindings/py_filter_med_vec.cpp
-    bindings/py_algo_hdr_merger.cpp
-    bindings/py_algo_grow_cut.cpp
-    bindings/py_algo_poisson_solver.cpp
-    bindings/py_algo_connected_components.cpp
+    bindings/py_filtering/py_filter_luminance.cpp
+    bindings/py_filtering/py_filter_bilateral_2df.cpp
+    bindings/py_filtering/py_filter_gaussian_2d.cpp
+    bindings/py_filtering/py_filter_rotation.cpp
+    bindings/py_filtering/py_filter_mosaic.cpp
+    bindings/py_filtering/py_filter_conv_2d.cpp
+    bindings/py_filtering/py_filter_warp_2d.cpp
+    bindings/py_filtering/py_filter_bilateral_2ds.cpp
+    bindings/py_filtering/py_filter_max.cpp
+    bindings/py_filtering/py_filter_med.cpp
+    bindings/py_filtering/py_filter_mean.cpp
+    bindings/py_filtering/py_filter_med_vec.cpp
+    bindings/py_algorithms/py_algo_hdr_merger.cpp
+    bindings/py_algorithms/py_algo_grow_cut.cpp
+    bindings/py_algorithms/py_algo_poisson_solver.cpp
+    bindings/py_algorithms/py_algo_connected_components.cpp
     # add here the binding source files
     )
 

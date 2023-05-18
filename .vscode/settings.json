@@ -13,6 +13,20 @@
         "vector": "cpp",
         "string_view": "cpp",
         "initializer_list": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "orderingmethods": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "numeric": "cpp",
+        "cmath": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "complex": "cpp"
     }
 }
