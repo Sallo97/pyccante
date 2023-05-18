@@ -66,7 +66,7 @@ camera_response_function.hpp
 
 ward_histogram_tmo.hpp [DONE]
 
-reinhard_tmo.hpp 
+reinhard_tmo.hpp [DONE]
 
 exposure_fusion.hpp 
 
