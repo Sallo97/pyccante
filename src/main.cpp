@@ -27,6 +27,7 @@
 #include "bindings/py_tone_mapping/py_tone_mapping_operator.h"
 #include "bindings/py_tone_mapping/py_ward_histogram_tmo.h"
 #include "bindings/py_tone_mapping/py_reinhard_tmo.h"
+#include "bindings/py_tone_mapping/py_exposure_fusion_tmo.h"
 
 
 namespace py = pybind11;
@@ -60,6 +61,7 @@ PYBIND11_MODULE(pyccante, m)
     init_ToneMappingOperator(m);// ToneMappingOperator tone_mapping_class
     init_WardHistogramTMO(m);   // WardHistogramTMO tone_mapping_class
     init_ReinhardTMO(m);        // ReinhardTMO tone_mapping_class
+    init_ExposureFusion(m);     // ExposureFusion tone_mapping class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */
