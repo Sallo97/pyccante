@@ -68,7 +68,7 @@ ward_histogram_tmo.hpp [DONE]
 
 reinhard_tmo.hpp [DONE]
 
-exposure_fusion.hpp 
+exposure_fusion.hpp [DONE]
 
 durand_tmo.hpp 
 
