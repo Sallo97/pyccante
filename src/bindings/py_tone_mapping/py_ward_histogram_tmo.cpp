@@ -25,7 +25,6 @@ void init_WardHistogramTMO(pybind11::module_& m)
         "execute the WardHistogramTMO tone-mapping",
         py::arg("imgIn")
     );
-
-
+    
     // endregion
 }

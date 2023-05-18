@@ -1,5 +1,5 @@
-#ifndef PYCCANTE_PY_WARD_HISTOGRAM_TMO_H
-#define PYCCANTE_PY_WARD_HISTOGRAM_TMO_H
+#ifndef PYCCANTE_PY_REINHARD_TMO_H
+#define PYCCANTE_PY_REINHARD_TMO_H
 
 #include "../py_filter.h"
 #include "../support.h"
@@ -10,6 +10,6 @@
 namespace py = pybind11;
 using namespace py::literals;
 
-void init_WardHistogramTMO(pybind11::module_& m);
+void init_ReinhardTMO(pybind11::module_& m);
 
-#endif /* PYCCANTE_PY_WARD_HISTOGRAM_TMO_H */
+#endif /* PYCCANTE_PY_REINHARD_TMO_H */
