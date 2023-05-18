@@ -12,6 +12,7 @@ set(HEADERS
     bindings/py_dynamics_range.h
     bindings/py_point_samplers.h
     bindings/py_image.h
+    bindings/py_image_vec.h
     bindings/py_histogram.h
     bindings/py_bbox.h
     bindings/py_matrix_3_x_3.h
@@ -46,6 +47,7 @@ set(SOURCES
     bindings/py_dynamics_range.cpp
     bindings/py_point_samplers.cpp
     bindings/py_image.cpp
+    bindings/py_image_vec.cpp
     bindings/py_histogram.cpp
     bindings/py_matrix_3_x_3.cpp
     bindings/py_point_samplers.cpp

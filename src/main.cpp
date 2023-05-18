@@ -5,6 +5,7 @@
 #include "bindings/py_point_samplers.h"
 #include "bindings/py_bbox.h"
 #include "bindings/py_image.h"
+#include "bindings/py_image_vec.h"
 #include "bindings/py_histogram.h"
 #include "bindings/py_matrix_3_x_3.h"
 #include "bindings/py_filter.h"
@@ -39,6 +40,7 @@ PYBIND11_MODULE(pyccante, m)
     init_SAMPLER_TYPE(m);       // SAMPLER_TYPE Enum
     init_BBox(m);               // BBox Class
     init_Image(m);              // Image Class 
+    init_ImageVec(m);           // ImageVec Class
     init_Histogram(m);          // Histogram Class
     init_Matrix_3_x_3(m);       // Matrix3x3 Class
     init_Filter(m);             // Filter Class

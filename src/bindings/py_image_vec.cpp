@@ -1,19 +1,22 @@
-#ifndef PYCCANTE_PY_IMAGE_VEC_H
-#define PYCCANTE_PY_IMAGE_VEC_H
+#include "py_image_vec.h"
 
-#include <stdlib.h>
-#include <string>
-#include <GL/glew.h>
-#include <piccante.hpp>
-#include <pybind11/pybind11.h>
-#include <pybind11/pytypes.h>
-#include <pybind11/operators.h>
-#include <pybind11/numpy.h>
-#include <pybind11/functional.h>
+void init_ImageVec(pybind11::module_& m)
+{
+    m.def("Single", &pic::Single,
+        "Single creates an std::vector which contains img; this is for filters input.",
+        py::arg("img"));
 
-namespace py = pybind11;
-using namespace py::literals;
+    m.def("Double", &pic::Double,
+        "Double creates an std::vector which contains img1 and img2; this is for filters input.",
+        py::arg("img1"), py::arg("img2"));
 
-void init_ImageVec(pybind11::module_& m);
-
-#endif /* PYCCANTE_PY_IMAGE_VEC_H */
+    m.def("Triple", &pic::Triple,
+        "Triple creates an std::vector which contains img1, img2, and img3; this is for filters input.",
+        py::arg("img1"), py::arg("img2"),
+        py::arg("img3"));
+        
+    m.def("Quad", &pic::Quad,
+        "Quad creates an std::vector which contains img1, img2, img3, and img4; this is for filters input.",
+        py::arg("img1"), py::arg("img2"),
+        py::arg("img3"), py::arg("img4"));
+}
