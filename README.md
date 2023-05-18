@@ -62,7 +62,7 @@ connected_components.hpp [???]
 
 camera_response_function.hpp 
 
-# tone_mapping
+# tone_mapping  [DONE]
 
 ward_histogram_tmo.hpp [DONE]
 
@@ -72,4 +72,4 @@ exposure_fusion.hpp [DONE]
 
 durand_tmo.hpp [DONE]
 
-drago_tmo.hpp 
+drago_tmo.hpp [DONE]
