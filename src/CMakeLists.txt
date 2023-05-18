@@ -33,6 +33,8 @@ set(HEADERS
     bindings/py_algorithms/py_algo_grow_cut.h
     bindings/py_algorithms/py_algo_poisson_solver.h
     bindings/py_algorithms/py_algo_connected_components.h
+    bindings/py_tone_mapping/py_tone_mapping_operator.h
+    bindings/py_tone_mapping/py_ward_histogram_tmo.h
     # add here the binding header files
     )
 
@@ -63,6 +65,8 @@ set(SOURCES
     bindings/py_algorithms/py_algo_grow_cut.cpp
     bindings/py_algorithms/py_algo_poisson_solver.cpp
     bindings/py_algorithms/py_algo_connected_components.cpp
+    bindings/py_tone_mapping/py_tone_mapping_operator.cpp
+    bindings/py_tone_mapping/py_ward_histogram_tmo.cpp
     # add here the binding source files
     )
 

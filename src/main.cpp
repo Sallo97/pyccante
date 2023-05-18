@@ -24,6 +24,8 @@
 #include "bindings/py_algorithms/py_algo_grow_cut.h"
 #include "bindings/py_algorithms/py_algo_poisson_solver.h"
 #include "bindings/py_algorithms/py_algo_connected_components.h"
+#include "bindings/py_tone_mapping/py_tone_mapping_operator.h"
+#include "bindings/py_tone_mapping/py_ward_histogram_tmo.h"
 
 namespace py = pybind11;
 
@@ -53,6 +55,8 @@ PYBIND11_MODULE(pyccante, m)
     init_GrowCut(m);            // GrowCut algorithm_class
     init_PoissonSolver(m);      // PoissonSolver algorithm_class
     init_ConnectedComponents(m);// ConnectedComponents algorithm_class
+    init_ToneMappingOperator(m);// ToneMappingOperator tone_mapping_class
+    init_WardHistogramTMO(m);   // WardHistogramTMO tone_mapping_class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */
