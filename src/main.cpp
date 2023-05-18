@@ -30,6 +30,7 @@
 #include "bindings/py_tone_mapping/py_reinhard_tmo.h"
 #include "bindings/py_tone_mapping/py_exposure_fusion_tmo.h"
 #include "bindings/py_tone_mapping/py_durand_tmo.h"
+#include "bindings/py_tone_mapping/py_drago_tmo.h"
 
 
 namespace py = pybind11;
@@ -66,6 +67,7 @@ PYBIND11_MODULE(pyccante, m)
     init_ReinhardTMO(m);        // ReinhardTMO tone_mapping_class
     init_ExposureFusion(m);     // ExposureFusion tone_mapping class
     init_DurandTMO(m);          // DurandTMO tone_mapping class
+    init_DragoTMO(m);           // DragonTMO tone_mapping class
 }
 
 #endif /* PYCCANTE_MAIN_CPP */
