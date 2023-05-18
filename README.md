@@ -70,6 +70,6 @@ reinhard_tmo.hpp [DONE]
 
 exposure_fusion.hpp [DONE]
 
-durand_tmo.hpp 
+durand_tmo.hpp [DONE]
 
 drago_tmo.hpp 
