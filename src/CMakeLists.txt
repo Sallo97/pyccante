@@ -38,6 +38,7 @@ set(HEADERS
     bindings/py_tone_mapping/py_ward_histogram_tmo.h
     bindings/py_tone_mapping/py_reinhard_tmo.h
     bindings/py_tone_mapping/py_exposure_fusion_tmo.h
+    bindings/py_tone_mapping/py_durand_tmo.h
     # add here the binding header files
     )
 
@@ -73,6 +74,7 @@ set(SOURCES
     bindings/py_tone_mapping/py_ward_histogram_tmo.cpp
     bindings/py_tone_mapping/py_reinhard_tmo.cpp
     bindings/py_tone_mapping/py_exposure_fusion_tmo.cpp
+    bindings/py_tone_mapping/py_durand_tmo.cpp
     # add here the binding source files
     )
 
