@@ -64,7 +64,7 @@ camera_response_function.hpp
 
 # tone_mapping
 
-ward_histogram_tmo.hpp 
+ward_histogram_tmo.hpp [DONE]
 
 reinhard_tmo.hpp 
 
