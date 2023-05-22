@@ -73,3 +73,26 @@ exposure_fusion.hpp [DONE]
 durand_tmo.hpp [DONE]
 
 drago_tmo.hpp [DONE]
+
+# examples
+
+filtering_linear_filters
+
+hdr_exposure_fusion
+
+hdr_generation
+
+hdr_generation_alignment
+
+hdr_tone_mappers
+
+image_processing_gray_scale
+
+image_processing_image_transform
+
+image_processing_io
+
+segmentation_connected_components
+
+segmentation_grow_cut
+

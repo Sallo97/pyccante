@@ -8,23 +8,18 @@ img.Read("connected_test.png", py.LDR_type.LT_NOR)
 cc = py.ConnectedComponents()
 
 color = np.array( [ 0.0, 0.0, 0.0], np.float32)
-mask = img.convertToMask( color, 0, True)
-
-
+mask = img.convertToMask( color, 0, True )
 
 img_cc = cc.execute(mask, img.width, img.height)
 
-print(img_cc.ret)
-print(img_cc.imgOut)
-
 areaMin = img.nPixels()
 
-#for i in range(ret.size()):
-#    areaTmp = ret[i].coords.size()
-#    if areaMin > areaTmp:
-#        areaMin = areaTmp
+for i in img_cc[1]:
+    areaTmp = len( i.coords )
+    if (areaMin > areaTmp):
+        areaMin = areaTmp
         
-#print(f"The size of the smallest cicle in :{areaMin} pixels.")
+print(f"The size of the smallest cicle is :{areaMin} pixels.")
 
-#comp = py.ConnectedComponents.convertFromIntegerToImage(img_cc.imgOut, img.width, img.height)
-#comp.Write("connected_components.pfm")
+comp = py.ConnectedComponents.convertFromIntegerToImage(img_cc[0], img.width, img.height)
+comp.Write("connected_components.pfm")
