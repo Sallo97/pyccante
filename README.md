@@ -50,7 +50,7 @@ filter_warp_2d.hpp  [DONE]
 
 filter_rotation.hpp [DONE]
 
-# algorithms
+# algorithms    [DONE]
 
 hdr_merger.hpp [DONE]
 
@@ -59,8 +59,6 @@ grow_cut.hpp  [DONE]
 poisson_solver.hpp  [DONE]
 
 connected_components.hpp [DONE]
-
-camera_response_function.hpp 
 
 # tone_mapping  [DONE]
 
@@ -95,5 +93,3 @@ image_processing_io
 segmentation_connected_components
 
 segmentation_grow_cut
-
-
