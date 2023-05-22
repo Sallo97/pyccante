@@ -1,29 +1,4 @@
-// compile with: clang++ -std=c++11 -I/usr/include/GL -Iusr/include/GLEW -I../../../include/stb -I../../../include/piccante/include algo_connected_components_test.cpp -lGL -lGLEW 
-
-/*
-
-PICCANTE Examples
-The hottest examples of Piccante:
-http://vcg.isti.cnr.it/piccante
-
-Copyright (C) 2014
-Visual Computing Laboratory - ISTI CNR
-http://vcg.isti.cnr.it
-First author: Francesco Banterle
-
-This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3.0 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    See the GNU Lesser General Public License
-    ( http://www.gnu.org/licenses/lgpl-3.0.html ) for more details.
-*/
+// compile with: clang++ -std=c++17 -I/usr/include/GL -Iusr/include/GLEW -I../../../include/stb -I../../../include/piccante/include algo_connected_components_test.cpp -lGL -lGLEW 
 
 //This means that we disable Eigen; some functionalities cannot be used.
 //For example, estimating the camera response function
@@ -35,18 +10,11 @@ This program is free software: you can redistribute it and/or modify
 
 int main(int argc, char *argv[])
 {
-    std::string img_name_str;
-
-    if(argc > 1) {
-        img_name_str = argv[1];
-    } else {
-        img_name_str = "../data/input/connected_test.png";
-    }
 
     printf("Reading an LDR file...");
 
     pic::Image img;
-    img.Read(img_name_str, pic::LT_NOR);
+    img.Read("connected_test.png", pic::LT_NOR);
 
     printf("Ok\n");
 
@@ -57,7 +25,7 @@ int main(int argc, char *argv[])
         printf("Computing connected components...");
 
         std::vector<pic::LabelOutput> ret;
-        pic::ConnectedComponents<pic::Image> cc;
+        pic::ConnectedComponents cc;
 
         float color[] = {0.0f, 0.0f, 0.0f};
         auto mask = img.convertToMask(color, 0.0f, true, NULL);
@@ -69,8 +37,10 @@ int main(int argc, char *argv[])
 
         printf("Ok!\n");
 
+
         unsigned int areaMin = img.nPixels();
         for(unsigned int i = 0; i < ret.size(); i++) {
+            std::cout<<ret[i].id<<"\n";
             unsigned int areaTmp = ret[i].coords.size();
             if(areaMin > areaTmp) {
                 areaMin = areaTmp;
@@ -83,7 +53,7 @@ int main(int argc, char *argv[])
         printf("Writing the connected component labeling results to a file on the disk...");
 
         pic::Image *comp = pic::ConnectedComponents::convertFromIntegerToImage(img_cc, NULL, img.width, img.height);
-        bool bWritten = comp->Write("../data/output/connected_components.pfm");
+        bool bWritten = comp->Write("connected_components.pfm");
 
         if(bWritten) {
             printf("Ok\n");
@@ -96,4 +66,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-

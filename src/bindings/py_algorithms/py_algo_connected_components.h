@@ -8,6 +8,7 @@
 #include <pybind11/pytypes.h>
 #include <pybind11/operators.h>
 #include <pybind11/numpy.h>
+#include <pybind11/stl.h>
 #include <pybind11/functional.h>
 
 namespace py = pybind11;

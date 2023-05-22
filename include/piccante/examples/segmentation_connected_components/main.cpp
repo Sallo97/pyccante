@@ -23,10 +23,10 @@ This program is free software: you can redistribute it and/or modify
     ( http://www.gnu.org/licenses/lgpl-3.0.html ) for more details.
 */
 
-// This means that we disable Eigen; some functionalities cannot be used.
-// For example, estimating the camera response function
+//This means that we disable Eigen; some functionalities cannot be used.
+//For example, estimating the camera response function
 #define PIC_DISABLE_EIGEN
-// This means that OpenGL acceleration layer is disabled
+//This means that OpenGL acceleration layer is disabled
 #define PIC_DISABLE_OPENGL
 
 #include "piccante.hpp"
@@ -35,12 +35,9 @@ int main(int argc, char *argv[])
 {
     std::string img_name_str;
 
-    if (argc > 1)
-    {
+    if(argc > 1) {
         img_name_str = argv[1];
-    }
-    else
-    {
+    } else {
         img_name_str = "../data/input/connected_test.png";
     }
 
@@ -52,8 +49,7 @@ int main(int argc, char *argv[])
     printf("Ok\n");
 
     printf("Is it valid? ");
-    if (img.isValid())
-    {
+    if(img.isValid()) {
         printf("Ok\n");
 
         printf("Computing connected components...");
@@ -67,16 +63,14 @@ int main(int argc, char *argv[])
         pic::Image tmp;
         tmp.convertFromMask(mask, img.width, img.height);
 
-        auto img_cc = cc.execute(mask, img.width, img.height, NULL, ret);
+        auto img_cc = cc.execute(mask, img.width, img.height, NULL, &ret);
 
         printf("Ok!\n");
 
         unsigned int areaMin = img.nPixels();
-        for (unsigned int i = 0; i < ret.size(); i++)
-        {
+        for(unsigned int i = 0; i < ret.size(); i++) {
             unsigned int areaTmp = ret[i].coords.size();
-            if (areaMin > areaTmp)
-            {
+            if(areaMin > areaTmp) {
                 areaMin = areaTmp;
             }
         }
@@ -87,19 +81,14 @@ int main(int argc, char *argv[])
         printf("Writing the connected component labeling results to a file on the disk...");
 
         pic::Image *comp = pic::ConnectedComponents::convertFromIntegerToImage(img_cc, NULL, img.width, img.height);
-        bool bWritten = comp->Write("../data/output/connected_components.pfm");
+        bool bWritten = comp->Write("../data/output/connected_components.hdr");
 
-        if (bWritten)
-        {
+        if(bWritten) {
             printf("Ok\n");
-        }
-        else
-        {
+        } else {
             printf("Writing had some issues!\n");
         }
-    }
-    else
-    {
+    } else {
         printf("No, the file is not valid!\n");
     }
 

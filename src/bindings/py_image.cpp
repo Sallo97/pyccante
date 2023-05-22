@@ -375,13 +375,13 @@ void init_Image(pybind11::module_& m)
             py::arg("x"), py::arg("y"), py::arg("z")=0)
         
         .def("convertFromMask", ([]( pic::Image* this_img, py::buffer mask_buffer, 
-                                     int width, int height = true )
+                                     int width, int height)
             {
                 // Get the raw pointer for mask
                 bool* mask = return_bool_ptr(mask_buffer);
 
                 // Call the function
-                this_img->convertFromMask( mask, width, height); 
+                return this_img->convertFromMask( mask, width, height); 
             }),
             "convertFromMask converts a boolean mask into an Image." 
             "true is mapped to 1.0f, and false is mapped to 0.0f.",
@@ -398,11 +398,32 @@ void init_Image(pybind11::module_& m)
                 bool* mask = return_bool_ptr(color_buffer);
 
                 // Call the function
-                this_img->convertToMask( color, threshold, cmp, mask); 
+                mask = this_img->convertToMask( color, threshold, cmp, mask);
+
+                // Return the NumPy array to Python
+                return return_bool_array(mask); 
+ 
             }),
             "convertToMask converts an Image into a boolean mask.",
             py::arg("color") = NULL, py::arg("threshold") = 0.25f,
-            py::arg("cmp") = true, py::arg("mask") = NULL)           
+            py::arg("cmp") = true, py::arg("mask"))           
+
+
+        .def("convertToMask", ([]( pic::Image* this_img, py::buffer color_buffer, 
+                                     float threshold = 0.25f, bool cmp = true)
+            {
+                // Get the raw pointer for color
+                float* color = return_float_ptr(color_buffer);
+
+                // Call the function
+                bool* mask = this_img->convertToMask( color, threshold, cmp, NULL);
+                
+                // Return the NumPy array to Python
+                return return_bool_array(mask); 
+            }),
+            "convertToMask converts an Image into a boolean mask.",
+            py::arg("color") = NULL, py::arg("threshold") = 0.25f,
+            py::arg("cmp") = true) 
 
         .def("Read", &pic::Image::Read,
             "Read opens an Image from a file on the disk.",
