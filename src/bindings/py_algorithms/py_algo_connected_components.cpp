@@ -16,17 +16,6 @@ static unsigned int find_areaMin(std::vector<pic::LabelOutput> ret, int areaMin)
 
 void init_ConnectedComponents(pybind11::module_& m)
 {
-
-    // region img_x_ret
-
-    py::class_<Img_x_ret>(m, "Image_x_ret")
-        .def(py::init<>(),
-            "Img_x_ret constructor")
-        .def_readonly("imgOut", &Img_x_ret::imgOut)
-        .def_readonly("ret", &Img_x_ret::ret);
-
-    // endregion
-
     // region LabelInfo
 
     py::class_<pic::LabelInfo>(m, "LabelInfo");
@@ -70,26 +59,30 @@ void init_ConnectedComponents(pybind11::module_& m)
             // Get the raw pointer for imgIn
             bool* imgIn = return_bool_ptr(imgIn_buffer);
 
-            uint* imgOut;
+            // Creating the returning objs
             std::vector<pic::LabelOutput> ret;
 
-            imgOut = this_cc->execute(imgIn, width, height, NULL, &ret);
-        
-            return img;
+            // Calling the function
+            uint* imgOut = this_cc->execute(imgIn, width, height, NULL, ret);
+
+            // Creating the buffer
+            py::buffer imgOut_buffer = return_uint_array(imgOut);
+
+            // Creating and returning the tuple
+            py::tuple tup = py::make_tuple(imgOut_buffer, ret);
+
+            return tup;
+
         })
     )
-
-
-    .def_static("convertFromIntegerToImage", pic::ConnectedComponents::convertFromIntegerToImage,
-        "convertfromIntegerToImage",
-        py::arg("imgLaber"), py::arg("imgOut"), 
-        py::arg("width"), py::arg("height"))
 
     .def_static
     (
         "convertFromIntegerToImage",
-        ([] (uint* imgLabel, int width, int height)
+        ([] (py::buffer imgLabel_buffer, int width, int height)
         {
+            // Get the raw pointer for imgLabel
+            uint* imgLabel = return_uint_ptr(imgLabel_buffer);
             return pic::ConnectedComponents::convertFromIntegerToImage(imgLabel, NULL, width, height);
         }),
         "convertFromIntegerToImage",

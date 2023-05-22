@@ -346,11 +346,12 @@ void init_Image(pybind11::module_& m)
                 float* samples = return_float_ptr(samples_buffer);
 
                 // Call the function
-                float* color_samples = this_img->getColorSamples(samples,
-                                                                nSamples, percentage);
+                samples = this_img->getColorSamples(samples,
+                                                            nSamples, percentage);
                 
                 // Return the NumPy array to Python
-                return return_numpy_array(color_samples); 
+                int size = nSamples * this_img->channels;
+                return py::array_t<float>(size, samples);
 
             }),
             "getColorSamples",
@@ -387,43 +388,27 @@ void init_Image(pybind11::module_& m)
             "true is mapped to 1.0f, and false is mapped to 0.0f.",
             py::arg("mask"), py::arg("width"), py::arg("height"))
 
-        .def("convertToMask", ([]( pic::Image* this_img, py::buffer color_buffer, 
-                                     float threshold = 0.25f, bool cmp = true,
-                                     py::buffer mask_buffer)
+        .def
+        (
+            "convertToMask",
+            ([]( pic::Image* this_img, py::buffer color_buffer, 
+            float threshold = 0.25f, bool cmp = true)
             {
                 // Get the raw pointer for color
                 float* color = return_float_ptr(color_buffer);
 
-                // Get the raw pointer for mask
-                bool* mask = return_bool_ptr(color_buffer);
-
                 // Call the function
-                mask = this_img->convertToMask( color, threshold, cmp, mask);
+                bool* mask = this_img->convertToMask( color, threshold, cmp, NULL );
+                int size = this_img->width * this_img->height;
 
                 // Return the NumPy array to Python
-                return return_bool_array(mask); 
+                return py::array_t<bool,  py::array::c_style>(size, mask);
  
             }),
             "convertToMask converts an Image into a boolean mask.",
             py::arg("color") = NULL, py::arg("threshold") = 0.25f,
-            py::arg("cmp") = true, py::arg("mask"))           
-
-
-        .def("convertToMask", ([]( pic::Image* this_img, py::buffer color_buffer, 
-                                     float threshold = 0.25f, bool cmp = true)
-            {
-                // Get the raw pointer for color
-                float* color = return_float_ptr(color_buffer);
-
-                // Call the function
-                bool* mask = this_img->convertToMask( color, threshold, cmp, NULL);
-                
-                // Return the NumPy array to Python
-                return return_bool_array(mask); 
-            }),
-            "convertToMask converts an Image into a boolean mask.",
-            py::arg("color") = NULL, py::arg("threshold") = 0.25f,
-            py::arg("cmp") = true) 
+            py::arg("cmp") = true
+        )         
 
         .def("Read", &pic::Image::Read,
             "Read opens an Image from a file on the disk.",
