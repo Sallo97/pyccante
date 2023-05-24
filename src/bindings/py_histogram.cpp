@@ -68,52 +68,41 @@ void init_Histogram(pybind11::module_& m)
             "clip clips the histogram to value.",
             py::arg("value"))
         
-        .def
-        (
-            "cumulativef",
-            ([](pic::Histogram* this_h, bool bNormalized)
+        .def("cumulativef",([](pic::Histogram* this_h, bool bNormalized)
             {
                 float* ret = this_h->cumulativef(bNormalized);
 
                 // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
+                return return_numpy_array(ret);
             }),
             "cumulativef computes the cumulative Histogram.",
-            py::arg("bNormalized")
-        )
+            py::arg("bNormalized"))
 
-        .def
-        (
-            "getCumulativef", 
-            ([](pic::Histogram* this_h)
+        .def("getCumulativef", ([](pic::Histogram* this_h)
             {
                 float* ret = this_h->getCumulativef();
 
                 // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
+                return return_numpy_array(ret);
             }),
             "getCumulativef this function returns the cumulative Histogram."
             "Histogram. Note that cumulativef needs to be computed before otherwise"
-            "the function will return a NULL pointer."
-        )
+            "the function will return a NULL pointer.")
         
         .def("getfMin", &pic::Histogram::getfMin)
 
         .def("getfMax", &pic::Histogram::getfMax)
 
-        .def
-        (
-            "getNormalized",
-            ([](pic::Histogram* this_h, bool bNor = true)
+        .def("getNormalized",([](pic::Histogram* this_h, bool bNor = true)
             {
                 float* ret = this_h->getNormalized(bNor);
 
                 // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
+                return return_numpy_array(ret);
             }),
             "getNormalized normalizes the Histogram.",
             py::arg("bNor")=true
-        )
+            )
         
         .def("getOtsu", &pic::Histogram::getOtsu,
             "getOtsu")

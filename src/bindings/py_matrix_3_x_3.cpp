@@ -107,7 +107,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         ret = this_mtx->mul(vec, ret);
 
         // Return the NumPy array to Python
-        return py::array_t<float>( 9, ret);
+        return return_numpy_array(ret);
     }),
     "mul.",
     py::arg("vec"), py::arg("ret")
@@ -126,7 +126,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         ret = this_mtx->mulH(vec, ret);
 
         // Return the NumPy array to Python
-        return py::array_t<float>( 3, ret);
+        return return_numpy_array(ret);
     }),
     "mulH.",
     py::arg("vec"), py::arg("ret")
@@ -146,7 +146,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         ret = this_mtx->projection(vec, ret);
 
         // Return the NumPy array to Python
-        return py::array_t<float>( 9, ret);
+        return return_numpy_array(ret);
     }),
     "projection",
     py::arg("vec"), py::arg("ret")
