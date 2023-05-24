@@ -1,5 +1,5 @@
 #ifndef PYCCANTE_PY_GAUSSIAN_2D_H
-#define PYCCANTE_PY_GAUSSIAN_2D__H
+#define PYCCANTE_PY_GAUSSIAN_2D_H
 
 #include "../py_filter.h"
 #include "../support.h"
@@ -12,4 +12,4 @@ using namespace py::literals;
 
 void init_FilterGaussian2D(pybind11::module_& m);
 
-#endif /* PYCCANTE_PY_GAUSSIAN_2D_*/
+#endif /* PYCCANTE_PY_GAUSSIAN_2D_H */
