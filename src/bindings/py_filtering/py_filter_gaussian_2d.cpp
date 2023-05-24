@@ -8,18 +8,15 @@ void init_FilterGaussian2D(pybind11::module_& m)
     // region Constructors
     
     .def(py::init <> (),
-        "FilterGaussian2D")
+        "FilterGaussian2D constructor")
 
     .def(py::init <float> (),
-        "FilterGaussian2D")
+        "FilterGaussian2D constructor",
+        py::arg("sigma"))
 
     // endregion
 
     // region Functions
-
-    .def_static("execute", &pic::FilterGaussian2D::execute,
-        "execute",
-        py::arg("imgIn"), py::arg("imgOut"), py::arg("sigma"))
     
     .def_static("execute", ([] (pic::Image* imgIn, float sigma)
         {
