@@ -86,14 +86,9 @@ void init_Histogram(pybind11::module_& m)
             }),
             "getCumulativef this function returns the cumulative Histogram."
             "Histogram. Note that cumulativef needs to be computed before otherwise"
-<<<<<<< HEAD
-            "the function will return a NULL pointer.")
-       
-=======
             "the function will return a NULL pointer."
         )
         
->>>>>>> parent of f00ce83 (Revert "fixed return numpy array")
         .def("getfMin", &pic::Histogram::getfMin)
 
         .def("getfMax", &pic::Histogram::getfMax)
