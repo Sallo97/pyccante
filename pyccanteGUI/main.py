@@ -1,7 +1,9 @@
 import sys
 import pyccante as pyc
 from PySide6.QtWidgets import (QApplication, QDialog, QPushButton,
-                               QLineEdit, QVBoxLayout, QTableWidget, QTableWidgetItem)
+                               QLineEdit, QVBoxLayout, QTableWidget,
+                               QTableWidgetItem, QLabel)
+import PySide6.QtGui as QtGui
 
 
 class Form(QDialog):
@@ -15,6 +17,12 @@ class Form(QDialog):
 
         self.img = pyc.Image()
         self.setWindowTitle("Pyccante GUI")
+
+        # Define Image window
+        self.img_window = QLabel(self)
+        self.img_pixmap = QtGui.QPixmap("logo.png")
+        self.img_window.setPixmap(self.img_pixmap)
+        self.show()
 
         # Define tree
         self.table = QTableWidget()
@@ -35,13 +43,13 @@ class Form(QDialog):
         self.copy_button.clicked.connect(self.copy_img)
 
         layout = QVBoxLayout(self)
+        layout.addWidget(self.img_window)
         layout.addWidget(self.edit)
         layout.addWidget(self.read_button)
         layout.addWidget(self.copy_button)
         layout.addWidget(self.table)
 
     def construct_table(self):
-        i = 0
         for i, (key, values) in enumerate(self.categories.items()):
             for j, value in enumerate(values):
                 item_name = QTableWidgetItem(value)
@@ -52,6 +60,14 @@ class Form(QDialog):
         self.img = pyc.Image(self.edit.text(), pyc.LDR_type.LT_NONE)
         if self.img.isValid():
             print("The image has been read")
+            name_img = self.img.nameFile.split(".")
+            if name_img[1] == "hdr":
+                print("The image is an hdr image, using the default Tone Mapper")
+                pyc.ReinhardTMO.executeGlobal1(self.img).Write("temp.png", pyc.LDR_type.LT_NOR)
+                self.img_pixmap = QtGui.QPixmap("temp.png")
+            else:
+                self.img_pixmap = QtGui.QPixmap(f"{self.edit.text()}")
+            self.img_window.setPixmap(self.img_pixmap)
         else:
             print("The namefile doesn't exist!")
 

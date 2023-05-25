@@ -36,22 +36,14 @@ void init_Histogram(pybind11::module_& m)
     // endregion
 
     // region Functions
-
-        .def("release", &pic::Histogram::release)
-
-        .def("calculate", &pic::Histogram::calculate,
-            "calculate computes the histogram of an input image. In the case"
-            "of LDR images, they are assumed to be normalized; i.e. with values in [0, 1]."
-            "This function computes the histogram for a single color channel.",
-            py::arg("imgIn"), py::arg("type") = pic::VALUE_SPACE::VS_LIN,
-            py::arg("nBin")=256, py::arg("box")=NULL, py::arg("channel")=0)
-
+/*
         .def("uniform", &pic::Histogram::uniform,
             "uniform",
             py::arg("fMin"), py::arg("fMax"), py::arg("value"),
             py::arg("type"), py::arg("nBin"))
-                
-        .def("project", &pic::Histogram::project,
+*/ 
+
+/*      .def("project", &pic::Histogram::project,
             "project converts an input value in the histogram domain.",
             py::arg("x"))
         
@@ -88,7 +80,7 @@ void init_Histogram(pybind11::module_& m)
             "getCumulativef this function returns the cumulative Histogram."
             "Histogram. Note that cumulativef needs to be computed before otherwise"
             "the function will return a NULL pointer.")
-        
+       
         .def("getfMin", &pic::Histogram::getfMin)
 
         .def("getfMax", &pic::Histogram::getfMax)
@@ -106,7 +98,7 @@ void init_Histogram(pybind11::module_& m)
         
         .def("getOtsu", &pic::Histogram::getOtsu,
             "getOtsu")
-
+*/
         .def("write", &pic::Histogram::write,
             "write saves the Histogram as an Image into a file.",
             py::arg("name"), py::arg("bNor"))

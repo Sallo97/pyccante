@@ -25,10 +25,6 @@ void init_ReinhardTMO(pybind11::module_& m)
     // endregion
 
     // region Functions
-
-    .def_static("executeGlobal1", &pic::ReinhardTMO::executeGlobal1,
-        "execute the Reinhard executeGlobal1 tone mapping",
-        py::arg("imgIn"), py::arg("imgOut"))
     
     .def_static
     (
@@ -41,10 +37,6 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
-    .def_static("executeGlobal2", &pic::ReinhardTMO::executeGlobal2,
-        "execute the Reinhard executeGlobal2 tone mapping",
-        py::arg("imgIn"), py::arg("imgOut"))
-    
     .def_static
     (
         "executeGlobal2", 
@@ -56,10 +48,6 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
-    .def_static("executeLocal1", &pic::ReinhardTMO::executeLocal1,
-        "execute the Reinhard executeLocal1 tone mapping",
-        py::arg("imgIn"), py::arg("imgOut"))
-    
     .def_static
     (
         "executeLocal1", 
@@ -71,10 +59,6 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
-    .def_static("executeLocal2", &pic::ReinhardTMO::executeLocal2,
-        "execute the Reinhard executeLocal2 tone mapping",
-        py::arg("imgIn"), py::arg("imgOut"))
-    
     .def_static
     (
         "executeLocal2", 
