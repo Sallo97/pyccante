@@ -231,7 +231,7 @@ void init_Image(pybind11::module_ &m)
             float* max_val = this_img->getMaxVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(max_val); 
+            return py::array_t<float>(this_img->channels, max_val);
             }),
             py::return_value_policy::take_ownership,
             "getMaxVal computes the maximum value for the current Image.",
@@ -252,7 +252,7 @@ void init_Image(pybind11::module_ &m)
             float* min_val = this_img->getMinVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(min_val); 
+            return py::array_t<float>(this_img->channels, min_val);
             }),
             py::return_value_policy::take_ownership,
             "getMinVal computes the minimum value for the current Image.",
@@ -272,7 +272,7 @@ void init_Image(pybind11::module_ &m)
             float* log_mean_val = this_img->getLogMeanVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(log_mean_val); 
+            return py::array_t<float>( this_img->channels, log_mean_val); 
             }),
             py::return_value_policy::take_ownership,
             "getLogMeanVal computes the log mean for the current Image.",
@@ -292,9 +292,9 @@ void init_Image(pybind11::module_ &m)
             float* sum_val = this_img->getSumVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(sum_val); 
+            return py::array_t<float>( this_img->channels, sum_val);  
             }),
-            py::return_value_policy::reference,
+            py::return_value_policy::take_ownership,
             "getSumVal sums values for the current Image.",
             py::arg("box"), py::arg("ret"))
 
@@ -312,7 +312,7 @@ void init_Image(pybind11::module_ &m)
             float* mean_val = this_img->getMeanVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(mean_val); 
+            return py::array_t<float>( this_img->channels, mean_val); 
             }),
             py::return_value_policy::take_ownership,
             "getMeanVal computes the mean for the current Image.",
@@ -331,7 +331,7 @@ void init_Image(pybind11::module_ &m)
             float* moments_val = this_img->getMomentsVal(x0, y0, radius, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(moments_val); 
+            return py::array_t<float>( ( this_img->channels << 1 ), moments_val);  
             }),
             py::return_value_policy::take_ownership,
             "getMomentsVal computes the moments at pixel (x0, y0).",
@@ -355,7 +355,7 @@ void init_Image(pybind11::module_ &m)
             float* variance_val = this_img->getVarianceVal(mean_val, box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(variance_val); 
+            return py::array_t<float>( this_img->channels, variance_val); 
             }),
             py::return_value_policy::take_ownership,
             "getVarianceVal computes the variance for the current Image.",
@@ -378,7 +378,8 @@ void init_Image(pybind11::module_ &m)
             float* cov_mtx_val = this_img->getCovMtxVal(mean_val, box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(cov_mtx_val); 
+            return py::array_t<float>( (this_img->channels * this_img->channels), 
+                                     cov_mtx_val);  
             }),
             py::return_value_policy::take_ownership,
             "getVarianceVal computes the variance for the current Image.",
@@ -416,7 +417,8 @@ void init_Image(pybind11::module_ &m)
             float* med_val = this_img->getMedVal(box, ret);
 
             // Return the NumPy array to Python
-            return return_numpy_array(med_val); 
+            return py::array_t<float>( ( this_img->channels << 1 ), 
+                                     med_val); 
             }),
             py::return_value_policy::take_ownership,
             "getMedVal",

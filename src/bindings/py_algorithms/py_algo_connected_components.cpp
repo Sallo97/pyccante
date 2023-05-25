@@ -66,7 +66,7 @@ void init_ConnectedComponents(pybind11::module_& m)
             uint* imgOut = this_cc->execute(imgIn, width, height, NULL, ret);
 
             // Creating the buffer
-            py::buffer imgOut_buffer = return_uint_array(imgOut);
+            py::buffer imgOut_buffer = py::array_t<uint>( (width * height) , imgOut);
 
             // Creating and returning the tuple
             py::tuple tup = py::make_tuple(imgOut_buffer, ret);
