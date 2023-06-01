@@ -21,13 +21,13 @@ void init_FilterBilateral2DF(pybind11::module_& m)
     // region Functions
     
     .def_static("execute", &pic::FilterBilateral2DF::execute,
-        "execute FilterBilateral2DF",
-        py::arg("imgIn"), py::arg("imgOut"),
-        py::arg("sigma_s"), py::arg("sigma_r"))
+                "execute FilterBilateral2DF",
+                py::arg("imgIn"), py::arg("imgOut"), 
+                py::arg("sigma_s"), py::arg("sigma_r"))
     
     .def_static("execute", ([] (pic::Image* imgIn, float sigma_s, float sigma_r)
     {
-        return pic::FilterBilateral2DF::execute(imgIn, NULL, sigma_s, sigma_r);
+        return pic::FilterBilateral2DF::execute(imgIn, imgIn, sigma_s, sigma_r);
     }),
     "execute FilterBilateral2DF",
     py::arg("imgIn"), py::arg("sigma_s"),

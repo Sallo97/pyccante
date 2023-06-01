@@ -221,7 +221,8 @@ void init_Image(pybind11::module_ &m)
         .def
         (
             "getMaxVal", 
-            ([](pic::Image *this_img, pic::BBox *box, py::buffer ret_buffer)
+            ([](pic::Image *this_img, pic::BBox *box,
+                py::buffer ret_buffer)
             {
                         
             // Get the raw pointer to the data
@@ -235,7 +236,44 @@ void init_Image(pybind11::module_ &m)
             }),
             py::return_value_policy::take_ownership,
             "getMaxVal computes the maximum value for the current Image.",
-            py::arg("box"), py::arg("ret")
+            py::arg("box")=NULL, py::arg("ret")
+        )
+
+        .def
+        (
+            "getMaxVal", 
+            ([](pic::Image *this_img, py::buffer ret_buffer)
+            {
+
+            // Get the raw pointer to the data
+            float* ret = return_float_ptr(ret_buffer);       
+            
+            // Call the function
+            float* max_val = this_img->getMaxVal(NULL, ret);
+
+            // Return the NumPy array to Python
+            return py::array_t<float>(this_img->channels, max_val);
+            }),
+            py::return_value_policy::take_ownership,
+            "getMaxVal computes the maximum value for the current Image.",
+            py::arg("ret")
+        )
+
+
+        .def
+        (
+            "getMaxVal", 
+            ([](pic::Image *this_img)
+            {
+            
+            // Call the function
+            float* max_val = this_img->getMaxVal(NULL, NULL);
+
+            // Return the NumPy array to Python
+            return py::array_t<float>(this_img->channels, max_val);
+            }),
+            py::return_value_policy::take_ownership,
+            "getMaxVal computes the maximum value for the current Image."
         )
 
         .def
@@ -256,8 +294,43 @@ void init_Image(pybind11::module_ &m)
             }),
             py::return_value_policy::take_ownership,
             "getMinVal computes the minimum value for the current Image.",
-            py::arg("box"), py::arg("ret"))
+            py::arg("box"), py::arg("ret")
+        )
+        .def
+        (
+            "getMinVal", 
+            ([](pic::Image *this_img, py::buffer ret_buffer)
+            {
 
+            // Get the raw pointer to the data
+            float* ret = return_float_ptr(ret_buffer);
+
+            // Call the function
+            float* min_val = this_img->getMinVal(NULL, ret);
+
+            // Return the NumPy array to Python
+            return py::array_t<float>(this_img->channels, min_val);
+            }),
+            py::return_value_policy::take_ownership,
+            "getMinVal computes the minimum value for the current Image.",
+            py::arg("ret")
+        )
+        
+        .def
+        (
+            "getMinVal", 
+            ([](pic::Image *this_img)
+            {
+            
+            // Call the function
+            float* min_val = this_img->getMinVal(NULL, NULL);
+
+            // Return the NumPy array to Python
+            return py::array_t<float>(this_img->channels, min_val);
+            }),
+            py::return_value_policy::take_ownership,
+            "getMinVal computes the minimum value for the current Image."
+        )
         .def
         (
             "getLogMeanVal", 
@@ -453,7 +526,9 @@ void init_Image(pybind11::module_ &m)
             py::arg("percentage")
         )
 
-        .def("blend", &pic::Image::blend, "blend", py::arg("img"), py::arg("weight"))
+        .def("blend", &pic::Image::blend,
+             "blend", 
+             py::arg("img"), py::arg("weight"))
 
         .def("size", &pic::Image::size,
             py::return_value_policy::take_ownership,

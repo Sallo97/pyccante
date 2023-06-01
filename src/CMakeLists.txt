@@ -16,6 +16,7 @@ set(HEADERS
     bindings/py_histogram.h
     bindings/py_bbox.h
     bindings/py_matrix_3_x_3.h
+    bindings/py_io/py_exif.h
     bindings/py_point_samplers.h
     bindings/py_filter.h
     bindings/py_filtering/py_filter_luminance.h
@@ -52,6 +53,7 @@ set(SOURCES
     bindings/py_image_vec.cpp
     bindings/py_histogram.cpp
     bindings/py_matrix_3_x_3.cpp
+    bindings/py_io/py_exif.cpp
     bindings/py_point_samplers.cpp
     bindings/py_bbox.cpp
     bindings/py_filter.cpp

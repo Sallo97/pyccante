@@ -8,6 +8,7 @@
 #include "bindings/py_image_vec.h"
 #include "bindings/py_histogram.h"
 #include "bindings/py_matrix_3_x_3.h"
+#include "bindings/py_io/py_exif.h"
 #include "bindings/py_filter.h"
 #include "bindings/py_filtering/py_filter_luminance.h"
 #include "bindings/py_filtering/py_filter_bilateral_2df.h"
@@ -45,6 +46,7 @@ PYBIND11_MODULE(pyccante, m)
     init_ImageVec(m);           // ImageVec Class
     init_Histogram(m);          // Histogram Class
     init_Matrix_3_x_3(m);       // Matrix3x3 Class
+    init_exif(m);               // For reading exposure luminance of a img
     init_Filter(m);             // Filter Class
     init_FilterLuminance(m);    // FilterLuminance filter-Class
     init_FilterBilateral2DF(m); // FilterBilateral2DF filter-Class
