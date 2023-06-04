@@ -1,17 +1,12 @@
 import pyccante as pyc
-import imgwindow as iw
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QVBoxLayout, QDialog, QComboBox)
 
 
 class LumWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        self.modified = False
+    def __init__(self, img):
         super(LumWindow, self).__init__()
+        self.img = img
         self.setWindowTitle("Luminance...")
 
         # Define labels for parameters
@@ -33,7 +28,7 @@ class LumWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -50,10 +45,7 @@ class LumWindow(QDialog):
         new_img = pyc.FilterLuminance.execute(self.img, type_lum)
         if new_img is not None:
             self.img = new_img
-            self.img.Write(self.path, self.ldr_type)
-            # iw.update_pixmap(self.win, self.path)
-            self.modified = True
-        self.hide_window()
+        self.hide()
 
     def ret_luminance(self):
         # Returns the Luminance specified in the drowdown menu
@@ -65,12 +57,3 @@ class LumWindow(QDialog):
             return pyc.LUMINANCE_TYPE.LT_WARD_LUMINANCE
         elif self.type_menu.currentText() == "Mean":
             return pyc.LUMINANCE_TYPE.LT_MEAN
-
-    def hide_window(self):
-        self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type

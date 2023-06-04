@@ -1,17 +1,12 @@
 import pyccante as pyc
-import imgwindow as iw
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
 
 class RotationWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        self.modified = False
+    def __init__(self, img):
         super(RotationWindow, self).__init__()
+        self.img = img
         self.setWindowTitle("Bilateral2DF...")
 
         # Define labels for parameters
@@ -41,7 +36,7 @@ class RotationWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -61,18 +56,5 @@ class RotationWindow(QDialog):
         angle_z = float(self.angle_z_edit.text())
         new_img = pyc.FilterRotation.execute(self.img, angle_x,
                                              angle_y, angle_z)
-        if new_img is not None:
-            self.img = new_img
-            self.img.Write(self.path, self.ldr_type)
-            # iw.update_pixmap(self.win, self.path)
-            self.modified = True
-        self.hide_window()
-
-    def hide_window(self):
+        self.img = new_img
         self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type

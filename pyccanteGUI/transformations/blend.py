@@ -1,21 +1,16 @@
-import pyccante as pyc
-import imgwindow as iw
-import warningwin as ww
-from menubar import file as fl
+from layouts import warningwin as ww
+from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
                                QFileDialog, QDialog)
 
 
 class Blend(QDialog):
-    def __init__(self, img, path, win, ldr_type):
+    def __init__(self, img):
         super(Blend, self).__init__()
         self.img = img
         self.blend = None
         self.weight = None
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
 
         self.setWindowTitle("Blend...")
 
@@ -43,7 +38,7 @@ class Blend(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide())
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -64,12 +59,7 @@ class Blend(QDialog):
         if self.check_none() and self.check_sizes():
             self.img.blend(self.blend, self.weight)
             print("Blend executed!")
-
-            self.img.Write(self.path, self.ldr_type)
-            print(f"Image written in {self.path}")
-            iw.update_pixmap(self.win, self.path)
-            self.hide_window()
-
+            self.hide()
 
     def check_none(self):
         if self.blend is not None or self.weight is not None:
@@ -88,36 +78,23 @@ class Blend(QDialog):
                                        "\nThe filter was not applied.")
             war_win.exec()
             return False
-    def hide_window(self):
-        self.blend_button.setText("Open...")
-        self.weight_button.setText("Open...")
-        self.blend = None
-        self.weight = None
-        self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        print(f"updated with path = {self.path}")
 
     def open_blend(self):
-        path = QFileDialog.getOpenFileName(
+        new_path = QFileDialog.getOpenFileName(
             self,
             "Open blend image",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        self.blend = fl.read_img(path[0], None, None)
-        name_file = path[0].split("/")
+        self.blend = fl.read_img(new_path[0])
+        name_file = new_path[0].split("/")
         self.blend_button.setText(f"{name_file[-1]}")
 
     def open_weight(self):
-        path = QFileDialog.getOpenFileName(
+        new_path = QFileDialog.getOpenFileName(
             self,
             "Open weight image",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        self.weight = fl.read_img(path[0], None, None)
-        name_file = path[0].split("/")
+        self.weight = fl.read_img(new_path[0])
+        name_file = new_path[0].split("/")
         self.weight_button.setText(f"{name_file[-1]}")

@@ -1,21 +1,17 @@
 import pyccante as pyc
-import imgwindow as iw
-import warningwin as ww
-from menubar import file as fl
+from layouts import warningwin as ww
+from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
                                QFileDialog, QDialog)
 
 
 class Conv2DWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
+    def __init__(self, img, ldr_type):
         super(Conv2DWindow, self).__init__()
-        self.img = img
-        self.conv = None
-        self.path = path
-        self.win = win
-        self.modified = False
         self.ldr_type = ldr_type
+        self.img = self.set_img(img)
+        self.conv = None
         self.war_win = ww.WarningWindow("You didn't select an image for conv!"
                                         "\nThe filter was not applied.")
         self.setWindowTitle("Conv2D...")
@@ -50,28 +46,13 @@ class Conv2DWindow(QDialog):
 
     def execute(self):
 
-        new_img = pyc.Image(self.img.nameFile, self.ldr_type)
         if self.conv is not None:
-            new_img = pyc.FilterConv2D.execute(img=new_img, conv=self.conv)
+            new_img = pyc.FilterConv2D.execute(self.img, conv=self.conv)
             if new_img is not None:
                 self.img = new_img
-                self.img.Write(self.path, self.ldr_type)
-                # iw.update_pixmap(self.win, self.path)
-                self.modified = True
-            self.hide_window()
+                self.hide()
         else:
             self.war_win.exec()
-
-    def hide_window(self):
-        self.conv_button.setText("Open...")
-        self.conv = None
-        self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
 
     def open_conv(self):
         path = QFileDialog.getOpenFileName(
@@ -79,6 +60,24 @@ class Conv2DWindow(QDialog):
             "Open Conv",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        self.conv = fl.read_img(path[0], None, None)
+        self.conv = fl.read_img(path[0])
         name_file = path[0].split("/")
         self.conv_button.setText(f"{name_file[-1]}")
+
+    def set_img(self, img):
+        # This method set the image to be filtered.
+        # The image must be reloaded because we need
+        # to apply the most recent ldr_type.
+        # img = the image to be filtered
+
+        # Checking if the image has not been modified yet
+        if img.nameFile != ' ':
+            return pyc.Image(img.nameFile, self.ldr_type)
+        else:
+            # In case the image has been already modified, the path
+            # is empty, so we get the image from the tmp custom file
+            return pyc.Image(img.customPath, self.ldr_type)
+
+    def hide_window(self):
+        self.img = None
+        self.hide()

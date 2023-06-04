@@ -1,20 +1,15 @@
 import pyccante as pyc
-import imgwindow as iw
 import numpy as np
-import warningwin as ww
+from layouts import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QLineEdit, QVBoxLayout, QDialog,
                                QCheckBox, QGridLayout)
 
 
 class Warp2DWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        self.modified = False
+    def __init__(self, img):
         super(Warp2DWindow, self).__init__()
+        self.img = img
         self.setWindowTitle("Warp2D...")
         self.war_win = ww.WarningWindow("The determinant is negative!"
                                         "\nTry again with another matrix.")
@@ -34,8 +29,6 @@ class Warp2DWindow(QDialog):
         self.r3c1_edit = QLineEdit("0")
         self.r3c2_edit = QLineEdit("0")
         self.r3c3_edit = QLineEdit("0")
-
-
 
         # Put row and mtx edit together
         self.rc_layout = QGridLayout()
@@ -71,7 +64,7 @@ class Warp2DWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -98,28 +91,16 @@ class Warp2DWindow(QDialog):
             print(f"new_img = {new_img.nameFile}")
             if new_img is not None:
                 self.img = new_img
-                self.img.Write(self.path, self.ldr_type)
-                # iw.update_pixmap(self.win, self.path)
-                self.modified = True
-                self.hide_window()
+                self.hide()
         else:
             self.war_win.exec()
 
     def create_mtx(self):
-        mtx = np.array([ float(self.r1c1_edit.text()), float(self.r1c2_edit.text()), float(self.r1c3_edit.text()),
-                         float(self.r2c1_edit.text()), float(self.r2c2_edit.text()), float(self.r2c3_edit.text()),
-                         float(self.r3c1_edit.text()), float(self.r3c2_edit.text()), float(self.r3c3_edit.text())],
+        mtx = np.array([float(self.r1c1_edit.text()), float(self.r1c2_edit.text()), float(self.r1c3_edit.text()),
+                        float(self.r2c1_edit.text()), float(self.r2c2_edit.text()), float(self.r2c3_edit.text()),
+                        float(self.r3c1_edit.text()), float(self.r3c2_edit.text()), float(self.r3c3_edit.text())],
                        np.float32)
 
         mtx3x3 = pyc.Matrix3x3(mtx)
         print(mtx3x3)
         return mtx3x3
-
-    def hide_window(self):
-        self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type

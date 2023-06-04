@@ -1,17 +1,13 @@
 import pyccante as pyc
-import imgwindow as iw
+from layouts import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
 
 class Gauss2DWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        self.modified = False
+    def __init__(self, img):
         super(Gauss2DWindow, self).__init__()
+        self.img = img
         self.setWindowTitle("Conv2D...")
 
         # Define labels for parameters
@@ -29,7 +25,7 @@ class Gauss2DWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -45,18 +41,8 @@ class Gauss2DWindow(QDialog):
         sigma = float(self.sigma_edit.text())
         if sigma > 0:
             new_img = pyc.FilterGaussian2D.execute(self.img, sigma=sigma)
-            if new_img is not None:
-                self.img = new_img
-                self.img.Write(self.path, self.ldr_type)
-                # iw.update_pixmap(self.win, self.path)
-                self.modified = True
-        self.hide_window()
-
-    def hide_window(self):
-        self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
+            self.img = new_img
+            self.hide()
+        else:
+            warning_window = ww.WarningWindow("Sigma must be greater than 0!")
+            warning_window.exec_()

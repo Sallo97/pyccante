@@ -1,23 +1,18 @@
 import pyccante as pyc
-import imgwindow as iw
-import warningwin as ww
-from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
-                               QHBoxLayout, QVBoxLayout, QDialog,
+from layouts import warningwin as ww
+from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QDialog,
                                QListWidget, QFileDialog, QGridLayout)
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QWheelEvent
+from utils import path
 from itertools import islice
 
 
 class HDRMergeWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-        self.modified = False
-        self.img_dict = {}
+    def __init__(self):
         super(HDRMergeWindow, self).__init__()
+        self.img = None
+        self.path = path.get_hdr_path()
+        self.img_dict = {}
         self.setWindowTitle("HDR Merge...")
 
         # Define images list
@@ -79,7 +74,6 @@ class HDRMergeWindow(QDialog):
                     break
 
     def execute(self):
-        print(self.img_dict)
         if len(self.img_dict.keys()) > 0:
             if len(self.img_dict.keys()) <= 2:
                 war_win = ww.WarningWindow("Warning: although the algorithm works,\n"
@@ -90,11 +84,7 @@ class HDRMergeWindow(QDialog):
                 exec_obj.addFile(img, self.img_dict[img])
             new_img = exec_obj.execute()
             if new_img is not None:
-                self.modified = True
                 self.img = new_img
-                tmo_img = pyc.ReinhardTMO.executeGlobal1(self.img)
-                tmo_img.Write("./data/_hdr_temp.png", pyc.LDR_type.LT_NOR)
-                self.win.update_pixmap(new_img.width, new_img.height, self.path)
                 self.hide_window()
         else:
             war_win = ww.WarningWindow("You didn't select any image for HDR merge!\n"
@@ -104,23 +94,21 @@ class HDRMergeWindow(QDialog):
     def get_exposure(self, name_file):
         ext = name_file.split(".")[-1]
         if ext == "jpg":
-            print("sono dentro")
             exposure = pyc.getJPGExposure(name_file)
-            print(exposure)
             return exposure
         else:
             return -1.0
 
     def add_image(self):
-        path = QFileDialog.getOpenFileName(
+        new_path = QFileDialog.getOpenFileName(
             self,
             "Open Conv",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        if path[0] != "":
-            exposure = self.get_exposure(path[0])
-            self.img_dict[path[0]] = exposure
-            name_file = path[0].split("/")
+        if new_path[0] != "":
+            exposure = self.get_exposure(new_path[0])
+            self.img_dict[new_path[0]] = exposure
+            name_file = new_path[0].split("/")
             self.img_list.addItem(f"{name_file[-1]}")
             self.exp_list.addItem(f"{exposure}")
             idx = self.img_list.count()
@@ -130,11 +118,3 @@ class HDRMergeWindow(QDialog):
     def hide_window(self):
         self.img_list.clear()
         self.hide()
-
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
-
-

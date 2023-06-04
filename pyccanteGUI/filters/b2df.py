@@ -1,16 +1,12 @@
 import pyccante as pyc
-import imgwindow as iw
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
 
 class B2DFWindow(QDialog):
-    def __init__(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
+    def __init__(self, img, ldr_type):
         self.ldr_type = ldr_type
-        self.modified = False
+        self.img = self.set_img(img)
         super(B2DFWindow, self).__init__()
         self.setWindowTitle("Bilateral2DF...")
 
@@ -48,22 +44,29 @@ class B2DFWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
+        print(f"Inside bd2f with\nself.img= {self.img.nameFile}\nself.ldr_type = {self.ldr_type}")
+
         sigma_s = float(self.sigma_s_line_edit.text())
         sigma_r = float(self.sigma_r_line_edit.text())
         new_img = pyc.FilterBilateral2DF.execute(self.img, sigma_s=sigma_s,
                                                  sigma_r=sigma_r)
-        if new_img is not None:
-            self.img = new_img
-            self.img.Write(self.path, self.ldr_type)
-            # iw.update_pixmap(self.win, self.path)
-            self.modified = True
-        self.hide_window()
-
-    def hide_window(self):
+        self.img = new_img
         self.hide()
 
-    def update_infos(self, img, path, win, ldr_type):
-        self.img = img
-        self.path = path
-        self.win = win
-        self.ldr_type = ldr_type
+    def set_img(self, img):
+        # This method set the image to be filtered.
+        # The image must be reloaded because we need
+        # to apply the most recent ldr_type.
+        # img = the image to be filtered
+
+        # Checking if the image has not been modified yet
+        if img.nameFile != ' ':
+            return pyc.Image(img.nameFile, self.ldr_type)
+        else:
+            # In case the image has been already modified, the path
+            # is empty, so we get the image from the tmp custom file
+            return pyc.Image(img.customPath, self.ldr_type)
+
+    def hide_window(self):
+        self.img = None
+        self.hide()

@@ -1,9 +1,8 @@
 import pyccante as py
 
-imgIn = py.Image("rabbit.png", py.LDR_type.LT_NOR)
+imgIn = py.Image("image.png", py.LDR_type.LT_NONE)
 
-imgOut = py.Image()
 
-imgOut = py.FilterMosaic.execute(imgIn, imgOut)
+imgOut = py.FilterMosaic.execute(imgIn)
 
 imgOut.Write("filtered.png")

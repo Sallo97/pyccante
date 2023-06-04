@@ -31,6 +31,7 @@ set(HEADERS
     bindings/py_filtering/py_filter_med.h
     bindings/py_filtering/py_filter_mean.h
     bindings/py_filtering/py_filter_med_vec.h
+    bindings/py_filtering/py_filter_simple_tmo.h
     bindings/py_algorithms/py_algo_hdr_merger.h
     bindings/py_algorithms/py_algo_grow_cut.h
     bindings/py_algorithms/py_algo_poisson_solver.h
@@ -69,6 +70,7 @@ set(SOURCES
     bindings/py_filtering/py_filter_med.cpp
     bindings/py_filtering/py_filter_mean.cpp
     bindings/py_filtering/py_filter_med_vec.cpp
+    bindings/py_filtering/py_filter_simple_tmo.cpp
     bindings/py_algorithms/py_algo_hdr_merger.cpp
     bindings/py_algorithms/py_algo_grow_cut.cpp
     bindings/py_algorithms/py_algo_poisson_solver.cpp
