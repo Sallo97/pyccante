@@ -1,5 +1,5 @@
 import pyccante as pyc
-from layouts import warningwin as ww
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
@@ -32,7 +32,7 @@ class Gauss2DWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.sigma_layout)
         self.main_layout.addLayout(self.buttons_layout)

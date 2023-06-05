@@ -11,6 +11,6 @@
 namespace py = pybind11;
 using namespace py::literals;
 
-void init_SimpleTMO(pybind11::module_& m);
+void init_FilterSimpleTMO(pybind11::module_& m);
 
 #endif /* PYCCANTE_PY_SIMPLE_TMO_H */

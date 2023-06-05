@@ -1,6 +1,6 @@
 import pyccante as pyc
 import numpy as np
-from layouts import warningwin as ww
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QLineEdit, QVBoxLayout, QDialog,
                                QCheckBox, QGridLayout)
@@ -71,7 +71,7 @@ class Warp2DWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.mtx_layout)
         self.main_layout.addLayout(self.checks)

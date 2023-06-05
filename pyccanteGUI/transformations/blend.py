@@ -1,4 +1,4 @@
-from layouts import warningwin as ww
+from layouts.windows import warningwin as ww
 from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
@@ -45,7 +45,7 @@ class Blend(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.blend_layout)
         self.main_layout.addLayout(self.weight_layout)

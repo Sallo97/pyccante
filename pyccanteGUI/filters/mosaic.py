@@ -25,7 +25,7 @@ class MosaicWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addWidget(self.ask_label)
         self.main_layout.addLayout(self.buttons_layout)
@@ -56,7 +56,7 @@ class MosaicWindow(QDialog):
         # Since we need to load the image from the temp file
         # and not using the original image, in case we exit
         # doing nothing, it is necessary to set the image at None
-        # before hiding the window.
+        # before hiding the windows.
         # If it is not done, we will pass a full "empty" image to
         # the img_window will, causing a bug
         self.img = None

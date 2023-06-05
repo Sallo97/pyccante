@@ -35,7 +35,7 @@ class LumWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.type_layout)
         self.main_layout.addLayout(self.buttons_layout)

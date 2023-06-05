@@ -1,4 +1,4 @@
-from layouts.window import imgwindow as iw
+from layouts.windows import imgwindow as iw
 from PySide6 import QtGui
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QWheelEvent, QResizeEvent
@@ -48,7 +48,7 @@ class CustomImgWindow(iw.ImageWindow):
         self.mouse_flag = True
 
     def update_pixmap(self, mouse=""):
-        # update_pixmap updates the pixmap of the image window
+        # update_pixmap updates the pixmap of the image windows
         # mouse = checks if the mouse wheel has been moved and
         #         resize the image accordingly
 
@@ -62,13 +62,12 @@ class CustomImgWindow(iw.ImageWindow):
         elif self.max_size_cond() and self.min_size_cond():
             self.res_width = self.img.width
             self.res_height = self.img.height
-            # Resize the image to the window size
+            # Resize the image to the windows size
             while self.res_width > self.width or self.res_height > self.height:
                 self.res_width /= self.zoom
                 self.res_height /= self.zoom
 
         # Set a new pix_map
-        print(f"Dentro custom_win update pixmap con\nself.path= {self.path}")
         new_pix_map = QtGui.QPixmap(self.path)
         new_pix_map = new_pix_map.scaled(self.res_width, self.res_height,
                                          Qt.AspectRatioMode.KeepAspectRatioByExpanding)
@@ -76,19 +75,17 @@ class CustomImgWindow(iw.ImageWindow):
         self.setPixmap(self.pix_map)
         self.setAlignment(Qt.AlignCenter)
 
-    def set_img(self, new_img, hdr=False):
-        super().set_img(new_img, hdr)
-        self.path = self.check_img_ext(hdr)
+    def set_img(self, new_img):
+        super().set_img(new_img)
+        self.path = self.check_img_ext()
         self.update_pixmap()
         
-    def check_img_ext(self, hdr):
-        new_path = super().check_img_ext(hdr)
-        if hdr is False:
-            print(f"Sono qui con hdr = {hdr}")
+    def check_img_ext(self):
+        new_path = super().check_img_ext()
+        if self.hdr_flag is False:
             new_path = path.get_custom_path()
             self.img.Write(new_path, self.ldr_type)
         return new_path
 
     def get_ldr(self):
         return self.ldr_type
-

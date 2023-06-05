@@ -1,5 +1,5 @@
 import pyccante as pyc
-from layouts import warningwin as ww
+from layouts.windows import warningwin as ww
 from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
@@ -39,7 +39,7 @@ class Conv2DWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.conv_layout)
         self.main_layout.addLayout(self.buttons_layout)

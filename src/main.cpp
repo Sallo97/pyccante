@@ -22,6 +22,7 @@
 #include "bindings/py_filtering/py_filter_med.h"
 #include "bindings/py_filtering/py_filter_mean.h"
 #include "bindings/py_filtering/py_filter_med_vec.h"
+#include "bindings/py_filtering/py_filter_simple_tmo.h"
 #include "bindings/py_algorithms/py_algo_hdr_merger.h"
 #include "bindings/py_algorithms/py_algo_grow_cut.h"
 #include "bindings/py_algorithms/py_algo_poisson_solver.h"
@@ -60,6 +61,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterMed(m);          // FilterMed filter_class
     init_FilterMean(m);         // FilterMean filter_class
     init_FilterMedVec(m);       // FilterMedVec filter_class
+    init_FilterSimpleTMO(m);    // FilterSimpleTMO filter_class
     init_HDRMerger(m);          // HDRMerger algorithm_class
     init_GrowCut(m);            // GrowCut algorithm_class
     init_PoissonSolver(m);      // PoissonSolver algorithm_class

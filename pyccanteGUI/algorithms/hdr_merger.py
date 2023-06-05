@@ -1,5 +1,5 @@
 import pyccante as pyc
-from layouts import warningwin as ww
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QDialog,
                                QListWidget, QFileDialog, QGridLayout)
 from PySide6.QtCore import Qt
@@ -49,7 +49,7 @@ class HDRMergeWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(full_list)
         self.main_layout.addWidget(self.add_button)

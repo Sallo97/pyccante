@@ -11,7 +11,6 @@ from PySide6.QtWidgets import QMenuBar, QFileDialog
 class MenuBarWindow(QMenuBar):
     def __init__(self, main_win, custom_win):
         super(MenuBarWindow, self).__init__()
-        self.hdr = False
         self.main_win = main_win
         self.custom_win = custom_win
         self.ldr_type = pyc.LDR_type.LT_NONE
@@ -134,7 +133,7 @@ class MenuBarWindow(QMenuBar):
             new_img = self.do_transformation(action)
         # If the action was rescale, there's no need to re-write the image
         if action != "rescale" and new_img is not None:
-            self.custom_win.set_img(new_img, self.hdr)
+            self.custom_win.set_img(new_img)
 
     def do_file(self, action):
         new_img = None
@@ -155,7 +154,8 @@ class MenuBarWindow(QMenuBar):
         action_obj.exec()
         new_img = action_obj.img
         if new_img is not None:
-            self.hdr = True
+            self.custom_win.set_hdr_flag(True)
+            self.main_win.set_hdr_flag(True)
             self.custom_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_img(new_img, True)
@@ -203,10 +203,10 @@ class MenuBarWindow(QMenuBar):
 
         # Updating new_img
         new_img = self.main_win.get_img()
-        if self.hdr:
+        if self.custom_win.get_hdr_flag():
             self.custom_win.set_ldr(new_ldr)
             self.main_win.set_ldr(new_ldr)
-            self.main_win.set_img(None, True)
+            self.main_win.set_img(None)
             return new_img
         return None
 
@@ -235,10 +235,11 @@ class MenuBarWindow(QMenuBar):
             "Image Files (*.png *.jpg *.bmp *.hdr)")[0]
         new_img = fl.read_img(new_path)
         if new_img is not None:
-            self.hdr = self.is_hdr(new_img)
+            self.custom_win.set_hdr_flag(self.is_hdr(new_img))
+            self.main_win.set_hdr_flag(self.is_hdr(new_img))
             self.custom_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_ldr(pyc.LDR_type.LT_NONE)
-            self.main_win.set_img(new_img, self.hdr)
+            self.main_win.set_img(new_img)
         return new_img
 
     def is_hdr(self, img):

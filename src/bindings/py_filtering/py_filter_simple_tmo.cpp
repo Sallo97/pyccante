@@ -1,6 +1,6 @@
 #include "py_filter_simple_tmo.h"
 
-void init_SimpleTMO(pybind11::module_& m)
+void init_FilterSimpleTMO(pybind11::module_& m)
 {
    // region FilterSimpleTMO
    py::class_<pic::FilterSimpleTMO, pic::Filter>(m, "FilterSimpleTMO")

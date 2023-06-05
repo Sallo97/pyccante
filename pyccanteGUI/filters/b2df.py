@@ -37,7 +37,7 @@ class B2DFWindow(QDialog):
         self.buttons_layout.addWidget(self.OK_button)
         self.buttons_layout.addWidget(self.Cancel_button)
 
-        # Construct window
+        # Construct windows
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addLayout(self.sigma_s_layout)
         self.main_layout.addLayout(self.sigma_r_layout)

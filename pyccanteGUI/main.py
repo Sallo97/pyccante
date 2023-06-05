@@ -1,8 +1,8 @@
 import sys
 import os
 from bars import menu_bar
-from layouts import info, lines
-from layouts.window import mainwin as mw, customwin as cw
+from layouts import info, lines, sliders as sls
+from layouts.windows import mainwin as mw, customwin as cw
 from PySide6.QtWidgets import (QApplication, QVBoxLayout, QHBoxLayout,
                                QLabel, QFrame, QMainWindow, QSizePolicy)
 from PySide6.QtGui import QIcon
@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
         # Define info layout
         self.info_frame = info.InfoFrame()
 
-        # Define images window
+        # Define images windows
         self.main_win = mw.MainImgWindow(main_w, main_h, self.info_frame)
         self.custom_win = cw.CustomImgWindow(custom_w, custom_h, None)
 
@@ -53,6 +53,8 @@ class MainWindow(QMainWindow):
         # Define layout sx
         self.sx_layout = QVBoxLayout()
         self.sx_layout.addWidget(self.main_win)
+        self.sx_layout.addWidget(lines.get_h_line())
+        self.sx_layout.addWidget(sls.SlidersFrame(self.main_win, self.custom_win))
         self.sx_layout.addWidget(lines.get_h_line())
         self.sx_layout.addWidget(self.info_frame)
         self.sx_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -67,7 +69,7 @@ class MainWindow(QMainWindow):
         sx_frame.setLayout(sx_v)
         sx_frame.setFixedWidth(200)
 
-        # Construct main window
+        # Construct main windows
         self.main_layout = QHBoxLayout()
         self.main_layout.setMenuBar(menubar)
         self.main_layout.addWidget(sx_frame)
@@ -79,7 +81,7 @@ class MainWindow(QMainWindow):
         main_widget.setLayout(self.main_layout)
         main_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
-        # Set main window
+        # Set main windows
         self.setCentralWidget(main_widget)
 
 
