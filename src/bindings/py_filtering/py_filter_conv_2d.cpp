@@ -9,7 +9,8 @@ void init_FilterConv2D(pybind11::module_& m)
     // region Constructors
 
     .def(py::init<> (),
-        "FilterConv2D constructor")
+        "FilterConv2D constructor",
+        py::return_value_policy::take_ownership)
 
     // endregion
 
@@ -20,6 +21,7 @@ void init_FilterConv2D(pybind11::module_& m)
             return pic::FilterConv2D::execute(img, conv, NULL);
         }),
         "execute FilterConv2D",
+        py::return_value_policy::take_ownership,
         py::arg("img"), py::arg("conv")
     );
 

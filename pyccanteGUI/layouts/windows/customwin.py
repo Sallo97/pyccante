@@ -68,6 +68,7 @@ class CustomImgWindow(iw.ImageWindow):
                 self.res_height /= self.zoom
 
         # Set a new pix_map
+        print(f"Inside with path = {self.path}")
         new_pix_map = QtGui.QPixmap(self.path)
         new_pix_map = new_pix_map.scaled(self.res_width, self.res_height,
                                          Qt.AspectRatioMode.KeepAspectRatioByExpanding)

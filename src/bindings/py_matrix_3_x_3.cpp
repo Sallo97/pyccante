@@ -37,7 +37,8 @@ void init_Matrix_3_x_3(pybind11::module_& m)
     // region Constructors
 
     .def(py::init<> (),
-        "Matrix3x3")
+        "Matrix3x3 constructor",
+        py::return_value_policy::take_ownership)
 
     .def(py::init( [](py::buffer data_buffer)
     {
@@ -48,7 +49,8 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         // Return the matrix
         return pic::Matrix3x3(data);
     }),
-    "Matrix3x3",
+    "Matrix3x3 constructor",
+    py::return_value_policy::take_ownership,
     py::arg("data")
     )
 
@@ -57,7 +59,8 @@ void init_Matrix_3_x_3(pybind11::module_& m)
     // region Functions
 
     .def("clone", &pic::Matrix3x3::clone,
-        "clone clones the matrix.")
+        "clone clones the matrix.",
+        py::return_value_policy::take_ownership)
 
     .def("set", ( [] (pic::Matrix3x3* this_mtx,
                      py::buffer data_buffer)
@@ -91,6 +94,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         return this_mtx->mul(mtx);
     }),
     "mul.",
+    py::return_value_policy::take_ownership,
     py::arg("mtx")
     )
 
@@ -110,6 +114,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         return py::array_t<float>( 9, ret);
     }),
     "mul.",
+    py::return_value_policy::take_ownership,
     py::arg("vec"), py::arg("ret")
     )
 
@@ -129,6 +134,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         return py::array_t<float>( 3, ret);
     }),
     "mulH.",
+    py::return_value_policy::take_ownership,
     py::arg("vec"), py::arg("ret")
     )
 
@@ -149,6 +155,7 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         return py::array_t<float>( 9, ret);
     }),
     "projection",
+    py::return_value_policy::take_ownership,
     py::arg("vec"), py::arg("ret")
     )
 
@@ -170,14 +177,17 @@ void init_Matrix_3_x_3(pybind11::module_& m)
         py::arg("value"))
     
     .def("determinant", &pic::Matrix3x3::determinant,
-        "determinant computes the determinant of the matrix.")
+        "determinant computes the determinant of the matrix.",
+        py::return_value_policy::take_ownership)
     
     .def("inverse", &pic::Matrix3x3::inverse,
         "inverse computes the inverse of the matrix.",
+        py::return_value_policy::take_ownership,
         py::arg("ret"))
     
     .def("transpose", &pic::Matrix3x3::transpose,
         "transpose computes the transposed matrix.",
+        py::return_value_policy::take_ownership,
         py::arg("ret"))
 
     .def("setTranslationMatrix", &pic::Matrix3x3::setTranslationMatrix,

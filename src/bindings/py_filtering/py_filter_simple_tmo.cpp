@@ -9,6 +9,7 @@ void init_FilterSimpleTMO(pybind11::module_& m)
 
     .def(py::init <float, float>(),
         "FilterSimpleTMO constructor",
+        py::return_value_policy::take_ownership,
         py::arg("gamma"), py::arg("fstop"))
 
    // endregion
@@ -17,6 +18,7 @@ void init_FilterSimpleTMO(pybind11::module_& m)
 
     .def_static("execute", &pic::FilterSimpleTMO::execute,
                 "executing FilterSimpleTMO",
+                py::return_value_policy::take_ownership,
                 py::arg("imgIn"), py::arg("imgOut"),
                 py::arg("gamma"), py::arg("fstop"))
     
@@ -27,6 +29,7 @@ void init_FilterSimpleTMO(pybind11::module_& m)
 
                 }),
                 "executing FilterSimpleTMO",
+                py::return_value_policy::take_ownership,
                 py::arg("imgIn"), py::arg("gamma"),
                 py::arg("fstop"));
 

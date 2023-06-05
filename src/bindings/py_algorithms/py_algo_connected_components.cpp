@@ -26,7 +26,9 @@ void init_ConnectedComponents(pybind11::module_& m)
 
     py::class_<pic::LabelOutput>(m, "LabelOutput")
         .def(py::init<>(),
-            "LabelOutput constructor")
+            "LabelOutput constructor",
+            py::return_value_policy::take_ownership)
+
         .def_readonly("coords", &pic::LabelOutput::coords)
         .def_readonly("id", &pic::LabelOutput::id)
         .def_readonly("neighboars", &pic::LabelOutput::neighbors)
@@ -43,6 +45,7 @@ void init_ConnectedComponents(pybind11::module_& m)
 
     .def(py::init<float>(),
         "ConnectedComponents constructor",
+        py::return_value_policy::take_ownership,
         py::arg("thr") = 0.05f)
 
     // endregion
@@ -73,7 +76,9 @@ void init_ConnectedComponents(pybind11::module_& m)
 
             return tup;
 
-        })
+        }),
+        "executing the Connected Components algorithm",
+        py::return_value_policy::take_ownership
     )
 
     .def_static
@@ -86,6 +91,7 @@ void init_ConnectedComponents(pybind11::module_& m)
             return pic::ConnectedComponents::convertFromIntegerToImage(imgLabel, NULL, width, height);
         }),
         "convertFromIntegerToImage",
+        py::return_value_policy::take_ownership,
         py::arg("imgLabel"), py::arg("width"),
         py::arg("height")
     );

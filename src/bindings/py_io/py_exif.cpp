@@ -19,6 +19,7 @@ void init_exif(pybind11::module_& m)
             
         }),
         "Returns the exposureTime of the image",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
 

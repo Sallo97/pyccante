@@ -86,57 +86,21 @@ void init_Filter(pybind11::module_& m)
     py::class_<pic::Filter, PyFilter <> > (m, "Filter")
 
         // region Constructors
-        .def(py::init<>())
+        .def(py::init<>(),
+            "Filter constructor",
+            py::return_value_policy::take_ownership)
 
         // endregion Constructors
 
         // region Functions
 
-        .def("release", &pic::Filter::release,
-            "release")
-        
-        .def("changePass", &pic::Filter::changePass,
-            "changePass changes the pass direction.",
-                py::arg("pass"), py::arg("tPass"))
-        .def("signature", &pic::Filter::signature,
-            "signature returns the signature for the filter.")
-        
-        .def("checkHalfSize", &pic::Filter::checkHalfSize,
-            "checkHalfSize",
-            py::arg("size"))
-        
-        .def("getOutputName", &pic::Filter::getOutPutName,
-            "getOutPutName",
-            py::arg("nameIn"))
-        
-        .def("cachedProcess", &pic::Filter::cachedProcess,
-            "cachedProcess",
-            py::arg("imgIn"), py::arg("imgOut"),
-            py::arg("nameIn"))
-        
-        .def("OutputSize", &pic::Filter::OutputSize,
-            "OutputSize",
-            py::arg("imgIn"), py::arg("width"), py::arg("height"),
-            py::arg("channels"), py::arg("frames"))
-        
-        .def("allocateOutputMemory", &pic::Filter::allocateOutputMemory,
-            "allocateOutputMemory",
-            py::arg("imgIn"), py::arg("imgOut"), py::arg("bDelete"))
-        
-        .def("insertFilter", &pic::Filter::insertFilter,
-            "insertFilter",
-            py::arg("flt"), py::arg("asSingle")=false)
-        
-        .def("setFloatParameters", &pic::Filter::setFloatParameters,
-            "setFloatParameters sets float parameters.",
-            py::arg("param_f"))
-        
         .def("ProcessAux", &pic::Filter::ProcessAux,
             "ProcessAux",
             py::arg("imgIn"), py::arg("imgOut"), py::arg("tiles"))
 
         .def("Process", &pic::Filter::Process,
             "Process",
+            py::return_value_policy::take_ownership,
             py::arg("imgIn"), py::arg("imgOut"))
         
         // endregion

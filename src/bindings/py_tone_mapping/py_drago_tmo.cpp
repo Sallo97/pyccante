@@ -8,6 +8,7 @@ void init_DragoTMO(pybind11::module_& m)
 
     .def(py::init<float,float>(),
         "DragoTMO constructor",
+        py::return_value_policy::take_ownership,
         py::arg("Ld_Max") = 100.0f, py::arg("b") = 0.95f)
 
     // endregion
@@ -16,6 +17,7 @@ void init_DragoTMO(pybind11::module_& m)
 
     .def_static("execute", &pic::DragoTMO::execute,
         "execute the DragoTMO tone-mapper",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"))
 
     .def_static
@@ -26,6 +28,7 @@ void init_DragoTMO(pybind11::module_& m)
             return pic::DragoTMO::execute(imgIn, NULL);
         }),
         "execute the DragonTMO tone-mapper",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")    
     );
 

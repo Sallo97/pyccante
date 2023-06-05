@@ -19,6 +19,7 @@ void init_HDRMerger(pybind11::module_& m)
 
     .def("execute", &pic::HDRMerger::execute,
          "execute the algorithm HDRMerger",
+         py::return_value_policy::take_ownership,
          py::arg("imgOut"))
     
     .def
@@ -28,7 +29,8 @@ void init_HDRMerger(pybind11::module_& m)
         {
             return this_algo->pic::HDRMerger::execute(NULL);
         }),
-        "execute the algorithm HDRMerger"
+        "execute the algorithm HDRMerger",
+        py::return_value_policy::take_ownership
     );
 
     // endregion

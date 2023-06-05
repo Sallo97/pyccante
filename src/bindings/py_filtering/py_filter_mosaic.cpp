@@ -9,13 +9,15 @@ void init_FilterMosaic(pybind11::module_& m)
     // region Constructors
 
     .def(py::init<> (),
-        "FilterMosaic constructor")
+        "FilterMosaic constructor",
+        py::return_value_policy::take_ownership)
 
     // endregion
 
     // region Functions
     .def_static("execute", &pic::FilterMosaic::execute,
                 "execute FilterMosaic",
+                py::return_value_policy::take_ownership,
                 py::arg("imgIn"), py::arg("imgOut"))
     
     .def_static("execute", ([](pic::Image* imgIn)
@@ -23,6 +25,7 @@ void init_FilterMosaic(pybind11::module_& m)
             return pic::FilterMosaic::execute(imgIn, NULL);
         }),
         "execute FilterMosaic",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
         );
 

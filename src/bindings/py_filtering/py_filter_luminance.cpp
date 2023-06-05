@@ -19,6 +19,7 @@ void init_FilterLuminance(pybind11::module_& m)
 
     .def(py::init< pic::LUMINANCE_TYPE >(),
         "FilterLuminance",
+        py::return_value_policy::take_ownership,
         py::arg("type") = pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
 
     // endregion
@@ -27,6 +28,7 @@ void init_FilterLuminance(pybind11::module_& m)
 
     .def_static("execute", &pic::FilterLuminance::execute,
         "execute FilterLuminance",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"), 
         py::arg("type")= pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
     
@@ -36,6 +38,7 @@ void init_FilterLuminance(pybind11::module_& m)
             return pic::FilterLuminance::execute(imgIn, NULL, type);
         }),
         "execute FilterLuminance",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), 
         py::arg("type") = pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE
         );

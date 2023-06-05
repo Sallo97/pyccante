@@ -23,12 +23,14 @@ void init_Histogram(pybind11::module_& m)
 
     py::class_<pic::Histogram>(m, "Histogram")
         .def(py::init<>(),
-            "Histogram is the basic constructor setting variables to defaults.")
+        "Histogram is the basic constructor setting variables to defaults.",
+        py::return_value_policy::take_ownership)
 
         .def(py::init< pic::Image*, pic::VALUE_SPACE, int, int >(),
             py::return_value_policy::reference,
             "Histogram is an extension of the basic constructor, where calculate"
             "is called in order to populate the Histogram.",
+            py::return_value_policy::take_ownership,
             py::arg("imgIn"), py::arg("type"),
             py::arg("nBin")=256, py::arg("channel")=0
             )
@@ -36,89 +38,94 @@ void init_Histogram(pybind11::module_& m)
     // endregion
 
     // region Functions
-/*
-        .def("uniform", &pic::Histogram::uniform,
-            "uniform",
-            py::arg("fMin"), py::arg("fMax"), py::arg("value"),
-            py::arg("type"), py::arg("nBin"))
-*/ 
 
-/*      .def("project", &pic::Histogram::project,
-            "project converts an input value in the histogram domain.",
-            py::arg("x"))
+    .def("project", &pic::Histogram::project,
+        "project converts an input value in the histogram domain.",
+        py::return_value_policy::take_ownership,
+        py::arg("x"))
         
-        .def("unproject", &pic::Histogram::unproject,
-            "unproject converts a histogram value back to its original domain.",
-            py::arg("ind"))
+    .def("unproject", &pic::Histogram::unproject,
+        "unproject converts a histogram value back to its original domain.",
+        py::return_value_policy::take_ownership,
+        py::arg("ind"))
 
-        .def("ceiling", &pic::Histogram::ceiling,
-            "ceiling limits the maximum value of the histogram using Ward",
-            "algorithm.",
-            py::arg("k"))
+    .def("ceiling", &pic::Histogram::ceiling,
+        "ceiling limits the maximum value of the histogram using Ward",
+        "algorithm.",
+        py::arg("k"))
 
-        .def("clip", &pic::Histogram::clip,
-            "clip clips the histogram to value.",
-            py::arg("value"))
+    .def("clip", &pic::Histogram::clip,
+        "clip clips the histogram to value.",
+        py::arg("value"))
         
-        .def
+    .def
+    (
+        "cumulativef",
+        ([](pic::Histogram* this_h, bool bNormalized)
+        {
+            float* ret = this_h->cumulativef(bNormalized);
+
+            // Return the NumPy array to Python
+            return py::array_t<float>( 1024, ret);
+        }),
+        "cumulativef computes the cumulative Histogram.",
+        py::return_value_policy::take_ownership,
+        py::arg("bNormalized")
+    )
+
+    .def
+    (
+        "getCumulativef", 
+        ([](pic::Histogram* this_h)
+        {
+            float* ret = this_h->getCumulativef();
+
+            // Return the NumPy array to Python
+            return py::array_t<float>( 1024, ret);
+        }),
+        "getCumulativef this function returns the cumulative Histogram."
+        "Histogram. Note that cumulativef needs to be computed before otherwise"
+        "the function will return a NULL pointer.",
+        py::return_value_policy::take_ownership
+    )
+        
+    .def("getfMin", &pic::Histogram::getfMin,
+        "getfMin",
+        py::return_value_policy::take_ownership)
+
+    .def("getfMax", &pic::Histogram::getfMax,
+        "getfMax",
+        py::return_value_policy::take_ownership)
+
+    .def
         (
-            "cumulativef",
-            ([](pic::Histogram* this_h, bool bNormalized)
-            {
-                float* ret = this_h->cumulativef(bNormalized);
+        "getNormalized",
+        ([](pic::Histogram* this_h, bool bNor = true)
+        {
+            float* ret = this_h->getNormalized(bNor);
 
-                // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
-            }),
-            "cumulativef computes the cumulative Histogram.",
-            py::arg("bNormalized")
-        )
-
-        .def
-        (
-            "getCumulativef", 
-            ([](pic::Histogram* this_h)
-            {
-                float* ret = this_h->getCumulativef();
-
-                // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
-            }),
-            "getCumulativef this function returns the cumulative Histogram."
-            "Histogram. Note that cumulativef needs to be computed before otherwise"
-            "the function will return a NULL pointer."
+            // Return the NumPy array to Python
+            return py::array_t<float>( 1024, ret);
+        }),
+        "getNormalized normalizes the Histogram.",
+        py::return_value_policy::take_ownership,
+        py::arg("bNor")=true
         )
         
-        .def("getfMin", &pic::Histogram::getfMin)
+    .def("getOtsu", &pic::Histogram::getOtsu,
+        "getOtsu",
+        py::return_value_policy::take_ownership)
 
-        .def("getfMax", &pic::Histogram::getfMax)
-
-        .def
-        (
-            "getNormalized",
-            ([](pic::Histogram* this_h, bool bNor = true)
-            {
-                float* ret = this_h->getNormalized(bNor);
-
-                // Return the NumPy array to Python
-                return py::array_t<float>( 1024, ret);
-            }),
-            "getNormalized normalizes the Histogram.",
-            py::arg("bNor")=true
-        )
+    .def("write", &pic::Histogram::write,
+        "write saves the Histogram as an Image into a file.",
+        py::arg("name"), py::arg("bNor"))
         
-        .def("getOtsu", &pic::Histogram::getOtsu,
-            "getOtsu")
-*/
-        .def("write", &pic::Histogram::write,
-            "write saves the Histogram as an Image into a file.",
-            py::arg("name"), py::arg("bNor"))
-        
-        .def("exposureCovering", &pic::Histogram::exposureCovering,
-            "exposureCovering computes the exposure values for fully covering"
-            " the dynamic range of the image. This function works only if the histogram"
-            " was compute usign VS_LOG_2.",
-            py::arg("nBits")=8, py::arg("overlap")=1.0f)
+    .def("exposureCovering", &pic::Histogram::exposureCovering,
+        "exposureCovering computes the exposure values for fully covering"
+        " the dynamic range of the image. This function works only if the histogram"
+        " was compute usign VS_LOG_2.",
+        py::return_value_policy::take_ownership,
+        py::arg("nBits")=8, py::arg("overlap")=1.0f)
     // endregion
 
     // region Arguments

@@ -8,11 +8,13 @@ void init_WardHistogramTMO(pybind11::module_& m)
 
     .def(py::init<int, float, float, bool>(),
         "WardHistogramTMO constructor",
+        py::return_value_policy::take_ownership,
         py::arg("nBin")=256, py::arg("LdMin")=1.0f,
         py::arg("LdMax")=100.0f, py::arg("bCeiling")=true)
     
     .def_static("execute", &pic::WardHistogramTMO::execute,
         "execute the WardHistogramTMO tone-mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"))
     
     .def_static
@@ -23,6 +25,7 @@ void init_WardHistogramTMO(pybind11::module_& m)
             return pic::WardHistogramTMO::execute(imgIn, NULL);
         }),
         "execute the WardHistogramTMO tone-mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
     

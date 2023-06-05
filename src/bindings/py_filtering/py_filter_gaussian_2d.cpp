@@ -8,10 +8,13 @@ void init_FilterGaussian2D(pybind11::module_& m)
     // region Constructors
     
     .def(py::init <> (),
-        "FilterGaussian2D constructor")
+        "FilterGaussian2D constructor",
+        py::return_value_policy::take_ownership)
+        
 
     .def(py::init <float> (),
         "FilterGaussian2D constructor",
+        py::return_value_policy::take_ownership,
         py::arg("sigma"))
 
     // endregion
@@ -23,6 +26,7 @@ void init_FilterGaussian2D(pybind11::module_& m)
             return pic::FilterGaussian2D::execute(imgIn, NULL, sigma);
         }),
         "execute FilterGaussian2D",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("sigma"));
 
     // endregion

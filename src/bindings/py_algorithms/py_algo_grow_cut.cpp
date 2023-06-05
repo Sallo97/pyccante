@@ -15,6 +15,7 @@ void init_GrowCut(pybind11::module_& m)
 
     .def_static("fromStrokeImageToSeeds", &pic::GrowCut::fromStrokeImageToSeeds,
         "fromStrokeImageToSeeds",
+        py::return_value_policy::take_ownership,
         py::arg("strokes"), py::arg("out"))
 
     .def_static
@@ -25,11 +26,13 @@ void init_GrowCut(pybind11::module_& m)
             return pic::GrowCut::fromStrokeImageToSeeds(strokes, NULL);
         }),
         "formStrokeImageToSeeds",
+        py::return_value_policy::take_ownership,
         py::arg("strokes")
     )
 
     .def_static("getMaskAsImage", &pic::GrowCut::getMaskAsImage,
         "getMaskAsImage",
+        py::return_value_policy::take_ownership,
         py::arg("state"), py::arg("out"))
 
     .def_static
@@ -40,11 +43,13 @@ void init_GrowCut(pybind11::module_& m)
             return pic::GrowCut::getMaskAsImage(state, NULL);
         }),
         "getMaskAsImage",
+        py::return_value_policy::take_ownership,
         py::arg("state")
     )
 
     .def_static("execute", &pic::GrowCut::execute,
         "execute the algorithm GrowCut",
+        py::return_value_policy::take_ownership,
         py::arg("img"), py::arg("seeds"), py::arg("imgOut"))
 
     .def_static
@@ -55,6 +60,7 @@ void init_GrowCut(pybind11::module_& m)
             return pic::GrowCut::execute(img, seeds, NULL);
         }),
         "execute the algorithm GrowCut",
+        py::return_value_policy::take_ownership,
         py::arg("img"), py::arg("seeds") 
     );
 

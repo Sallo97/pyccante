@@ -8,6 +8,7 @@ void init_FilterMax(pybind11::module_& m)
 
     .def(py::init<int>(),
         "FilterMax constructor",
+        py::return_value_policy::take_ownership,
         py::arg("size"))
 
     // endregion
@@ -16,6 +17,7 @@ void init_FilterMax(pybind11::module_& m)
 
     .def_static("execute", &pic::FilterMax::execute,
         "execute FilterMax",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"),
         py::arg("size"))
     
@@ -27,6 +29,7 @@ void init_FilterMax(pybind11::module_& m)
             return pic::FilterMax::execute(imgIn, NULL, size);
         }), 
         "execute FilterMax",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut")
     );
 

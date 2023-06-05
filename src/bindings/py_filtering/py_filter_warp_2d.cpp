@@ -7,10 +7,12 @@ void init_FilterWarp2D(pybind11::module_& m)
     // region Constructor
 
     .def(py::init<>(),
-        "FilterWarp2D Constructor")
+        "FilterWarp2D Constructor",
+        py::return_value_policy::take_ownership)
 
     .def(py::init<pic::Matrix3x3, bool, bool>(),
         "FilterWarp2D Constructor",
+        py::return_value_policy::take_ownership,
         py::arg("h"), py::arg("bSameSize") = false,
         py::arg("bCentroid") = false)
 
@@ -20,6 +22,7 @@ void init_FilterWarp2D(pybind11::module_& m)
 
     .def_static("execute", &pic::FilterWarp2D::execute,
         "execute the FilterWarp2D filter",
+        py::return_value_policy::take_ownership,
         py::arg("img"), py::arg("imgOut"),
         py::arg("h"), py::arg("bSameSize") = false,
         py::arg("bCentroid") = false)
@@ -32,6 +35,7 @@ void init_FilterWarp2D(pybind11::module_& m)
             return imgOut;
         }),
         "execute the FilterWarp2D filter",
+        py::return_value_policy::take_ownership,
         py::arg("img"), py::arg("h"),
         py::arg("bSameSize"), py::arg("bCentroid")
         );

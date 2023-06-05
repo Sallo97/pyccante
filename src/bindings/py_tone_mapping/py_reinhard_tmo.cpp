@@ -19,6 +19,7 @@ void init_ReinhardTMO(pybind11::module_& m)
 
     .def(py::init<float, float, float, pic::SIGMOID_MODE>(),
         "ReinhardTMO constructor",
+        py::return_value_policy::take_ownership,
         py::arg("alpha") = 0.18f, py::arg("whitePoint") = -1.0f,
         py::arg("phi") = 8.0f, py::arg("sig_mode") = pic::SIGMOID_MODE::SIG_TMO)
 
@@ -34,6 +35,7 @@ void init_ReinhardTMO(pybind11::module_& m)
             return pic::ReinhardTMO::executeGlobal1(imgIn, NULL);    
         }),
         "execute the Reinhard executeGlobal2 tone mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     )
 
@@ -45,6 +47,7 @@ void init_ReinhardTMO(pybind11::module_& m)
             return pic::ReinhardTMO::executeGlobal2(imgIn, NULL);    
         }),
         "execute the Reinhard executeGlobal2 tone mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     )
 
@@ -56,6 +59,7 @@ void init_ReinhardTMO(pybind11::module_& m)
             return pic::ReinhardTMO::executeLocal1(imgIn, NULL);    
         }),
         "execute the Reinhard executeLocal1 tone mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     )
 
@@ -67,6 +71,7 @@ void init_ReinhardTMO(pybind11::module_& m)
             return pic::ReinhardTMO::executeLocal1(imgIn, NULL);    
         }),
         "execute the Reinhard executeLocal tone mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
     // endregion

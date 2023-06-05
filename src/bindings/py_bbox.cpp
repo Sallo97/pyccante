@@ -4,20 +4,30 @@ void init_BBox(pybind11::module_& m)
 {   
     py::class_<pic::BBox>(m, "BBox")
     // region Constructors
-        .def(py::init<>())
+        .def(py::init<>(),
+            "BBox constructor",
+            py::return_value_policy::take_ownership)
         
         .def(py::init<int, int>(),
+            "BBox constructor",
+            py::return_value_policy::take_ownership,
             py::arg("width"), py::arg("height"))
         
         .def(py::init<int, int, int>(), 
+            "BBox constructor",
+            py::return_value_policy::take_ownership,
             py::arg("width"), py::arg("height"),
             py::arg("frames"))
         
         .def(py::init<int, int, int, int>(),
+            "BBox constructor",
+            py::return_value_policy::take_ownership,
             py::arg("x0"), py::arg("x1"),
             py::arg("y0"), py::arg("y1"))
         
         .def(py::init<int, int, int ,int ,int>(),
+            "BBox constructor",
+            py::return_value_policy::take_ownership,
             py::arg("x0"), py::arg("y0"),
             py::arg("size"), py::arg("width"),
             py::arg("height"))
@@ -26,7 +36,8 @@ void init_BBox(pybind11::module_& m)
 
     // region Functions
         .def("Size", &pic::BBox::Size,
-            "Size computes the number of pixels in a bounding box.")
+            "Size computes the number of pixels in a bounding box.",
+            py::return_value_policy::take_ownership)
 
         .def("setBox", &pic::BBox::setBox,
             "setBox sets a BBox up.",
@@ -44,7 +55,7 @@ void init_BBox(pybind11::module_& m)
             py::arg("width"), py::arg("height"), py::arg("i"))
 
         .def("__repr__", &pic::BBox::toString,
-            "toString returns a string representation of BBox")
+            "returns a string representation of BBox")
 
     // endregion
 

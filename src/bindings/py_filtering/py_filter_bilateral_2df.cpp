@@ -10,10 +10,12 @@ void init_FilterBilateral2DF(pybind11::module_& m)
     // region Constructor
     
     .def(py::init <>(),
-        "FilterBilateral2DF constructor")
+        "FilterBilateral2DF constructor",
+        py::return_value_policy::take_ownership)
 
     .def(py::init < float, float > (),
         "FilterBilateral2DF",
+        py::return_value_policy::take_ownership,
         py::arg("sigma_s"), py::arg("sigma_r"))
 
     // endregion
@@ -22,6 +24,7 @@ void init_FilterBilateral2DF(pybind11::module_& m)
     
     .def_static("execute", &pic::FilterBilateral2DF::execute,
                 "execute FilterBilateral2DF",
+                py::return_value_policy::take_ownership,
                 py::arg("imgIn"), py::arg("imgOut"), 
                 py::arg("sigma_s"), py::arg("sigma_r"))
     
@@ -30,6 +33,7 @@ void init_FilterBilateral2DF(pybind11::module_& m)
         return pic::FilterBilateral2DF::execute(imgIn, NULL, sigma_s, sigma_r);
     }),
     "execute FilterBilateral2DF",
+    py::return_value_policy::take_ownership,
     py::arg("imgIn"), py::arg("sigma_s"),
     py::arg("sigma_r")
     );

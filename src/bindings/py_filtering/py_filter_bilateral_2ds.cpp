@@ -7,14 +7,17 @@ void init_FilterBilateral2DS(pybind11::module_& m)
     // region Constructor
 
     .def(py::init<>(),
-        "FilterBilateral2DS constructor")
+        "FilterBilateral2DS constructor",
+        py::return_value_policy::take_ownership)
     
     .def(py::init<std::string, float>(),
         "FilterBilateral2DS constructor",
+        py::return_value_policy::take_ownership,
         py::arg("nameFile"), py::arg("sigma_r"))
     
     .def(py::init<float, float, int, pic::SAMPLER_TYPE>(),
         "FilterBilateral2DS constructor",
+        py::return_value_policy::take_ownership,
         py::arg("sigma_s"), py::arg("sigma_r"),
         py::arg("mult"), py::arg("type"))
 
@@ -30,6 +33,7 @@ void init_FilterBilateral2DS(pybind11::module_& m)
             return pic::FilterBilateral2DS::execute(imgIn, sigma_s, sigma_r);
         }),
         "execute FilterBilateral2DS",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("sigma_s"),
         py::arg("sigma_r")
     )
@@ -43,6 +47,7 @@ void init_FilterBilateral2DS(pybind11::module_& m)
                                                      sigma_r);
         }),
         "execute FilterBilateral2DS",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgEdge"),
         py::arg("sigma_s"), py::arg("sigma_r")
     );

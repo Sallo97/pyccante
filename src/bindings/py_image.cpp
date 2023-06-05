@@ -94,6 +94,7 @@ void init_Image(pybind11::module_ &m)
                 throw std::runtime_error("Can't perfom flipH," 
                                         " the image is empty"); 
             }),
+            py::return_value_policy::take_ownership,
             "FlipH flips horizontally the current image."
         )
 
@@ -110,6 +111,7 @@ void init_Image(pybind11::module_ &m)
                 throw std::runtime_error("Can't perfom flipV," 
                                         " the image is empty"); 
             }),
+            py::return_value_policy::take_ownership,
             "FlipV flips vertically the current image."
         )
 
@@ -122,7 +124,7 @@ void init_Image(pybind11::module_ &m)
             else
                 throw std::runtime_error("Can't perfom flipHV," 
                                         " the image is empty"); }),
-             py::return_value_policy::reference,
+            py::return_value_policy::take_ownership,
              "flipHV flips horizontally and vertically the current image.")
 
         .def("flipVH", ([](pic::Image *this_img)
@@ -134,7 +136,7 @@ void init_Image(pybind11::module_ &m)
             else
                 throw std::runtime_error("Can't perfom flipVH," 
                                         " the image is empty"); }),
-             py::return_value_policy::reference,
+            py::return_value_policy::take_ownership,
              "flipVH flips vertically and horizontally the current image.")
 
         .def
@@ -605,6 +607,7 @@ void init_Image(pybind11::module_ &m)
         .def("clone", &pic::Image::clone,
             py::return_value_policy::take_ownership, 
             "Clone creates a deep copy of the calling instance.")
+
 
         // endregion
 

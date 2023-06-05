@@ -8,6 +8,7 @@ void init_ExposureFusion(pybind11::module_& m)
 
     .def(py::init<float, float, float>(),
         "ExposureFusion constructor",
+        py::return_value_policy::take_ownership,
         py::arg("wC") = 1.0f, py::arg("wE") = 1.0f,
         py::arg("wS") = 1.0f)
 
@@ -17,6 +18,7 @@ void init_ExposureFusion(pybind11::module_& m)
 
     .def_static("execute", &pic::ExposureFusion::execute,
         "execute ExposureFusion TMO",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"))
     
     .def_static
@@ -27,6 +29,7 @@ void init_ExposureFusion(pybind11::module_& m)
             return pic::ExposureFusion::execute(imgIn, NULL);
         }),
         "execute ExposureFusion TMO",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
 

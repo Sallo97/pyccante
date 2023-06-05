@@ -8,6 +8,7 @@ void init_DurandTMO(pybind11::module_& m)
 
     .def(py::init<float>(),
         "DurandTMO constructor",
+        py::return_value_policy::take_ownership,
         py::arg("target_constrast") = 5.0f)
 
     // endregion
@@ -16,6 +17,7 @@ void init_DurandTMO(pybind11::module_& m)
 
     .def_static("execute", &pic::DurandTMO::execute,
         "execute the DurandTMO tone-mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"))
 
     .def_static
@@ -26,6 +28,7 @@ void init_DurandTMO(pybind11::module_& m)
             return pic::DurandTMO::execute(imgIn, NULL);
         }),
         "execute the DurandTMO tone-mapping",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
 

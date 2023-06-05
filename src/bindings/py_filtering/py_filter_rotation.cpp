@@ -8,15 +8,18 @@ void init_FilterRotation(pybind11::module_& m)
     // region Constructor
 
     .def(py::init<>(),
-        "FilterRotation")
+        "FilterRotation",
+        py::return_value_policy::take_ownership)
 
     .def(py::init<float, float, float>(),
         "FilterRotation",
+        py::return_value_policy::take_ownership,
         py::arg("angleX"), py::arg("angleY"), 
         py::arg("angleZ"))
     
     .def(py::init<Eigen::Matrix3f>(),
-        "FilterRotation")
+        "FilterRotation",
+        py::return_value_policy::take_ownership)
 
     // endregion
 
@@ -31,6 +34,7 @@ void init_FilterRotation(pybind11::module_& m)
                                                 angleX, angleY, angleZ);
         }),
         "execute FilterRotation",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"),
         py::arg("angleX"), py::arg("angleY"),
         py::arg("angleZ")
@@ -46,6 +50,7 @@ void init_FilterRotation(pybind11::module_& m)
                                                 angleY, angleZ);
         }),
         "execute FilterRotation",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("angleX"),
         py::arg("angleY"), py::arg("angleZ")
     )
@@ -58,6 +63,7 @@ void init_FilterRotation(pybind11::module_& m)
             return pic::FilterRotation::execute(imgIn, imgOut, mtx);
         }),
         "execute FilterRotation",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("imgOut"), py::arg("mtx")
     )
 
@@ -69,6 +75,7 @@ void init_FilterRotation(pybind11::module_& m)
             return pic::FilterRotation::execute(imgIn, NULL, mtx);
         }),
         "execute FilterRotation",
+        py::return_value_policy::take_ownership,
         py::arg("imgIn"), py::arg("mtx")
     );
 
