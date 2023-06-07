@@ -1,8 +1,7 @@
 from layouts.windows import imgwindow as iw
 from PySide6 import QtGui
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QWheelEvent, QResizeEvent, QImage
-from layouts import windows
+from PySide6.QtGui import QWheelEvent, QResizeEvent
 
 
 class CustomImgWindow(iw.ImageWindow):
@@ -44,6 +43,16 @@ class CustomImgWindow(iw.ImageWindow):
             self.res_width = self.img.width
             self.res_height = self.img.height
             self.update_pixmap("")
+
+    def invert_w_h(self):
+        # When rotating 90CW or 90CCW, when an image is zoomed,
+        # we must update the res.width in res.height
+        # and viceversa.
+        # Not doing it will cause the image to
+        # "get bigger" when rotating vertically.
+        temp = self.res_width
+        self.res_width = self.res_height
+        self.res_height = temp
 
     def wheelEvent(self, event: QWheelEvent):
         if event.angleDelta().y() > 0:
@@ -111,6 +120,3 @@ class CustomImgWindow(iw.ImageWindow):
             # We have to pass the mouse '#' value
             # to not reset the zoom
             self.update_pixmap("#")
-
-
-

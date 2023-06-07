@@ -8,7 +8,7 @@ from PySide6.QtWidgets import QLabel
 from PySide6 import QtGui
 from PySide6.QtGui import QImage
 import pyccante as pyc
-from utils import path
+from utils import str_path as sp
 from PySide6.QtCore import Qt
 import numpy as np
 
@@ -19,7 +19,7 @@ class ImageWindow(QLabel):
         super(ImageWindow, self).__init__()
 
         # Set the passed parameters
-        self.path = path.get_plc_path()
+        self.path = sp.get_plc_path()
         self.width = win_width
         self.height = win_height
         self.info_frame = info_frame

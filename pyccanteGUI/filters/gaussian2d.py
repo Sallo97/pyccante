@@ -1,4 +1,5 @@
 import pyccante as pyc
+import utils.str_warning as sw
 from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
@@ -38,11 +39,16 @@ class Gauss2DWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-        sigma = float(self.sigma_edit.text())
-        if sigma > 0:
-            new_img = pyc.FilterGaussian2D.execute(self.img, sigma=sigma)
-            self.img = new_img
-            self.hide()
-        else:
-            warning_window = ww.WarningWindow("Sigma must be greater than 0!")
-            warning_window.exec_()
+        try:
+            sigma = float(self.sigma_edit.text())
+            if sigma > 0:
+                new_img = pyc.FilterGaussian2D.execute(self.img, sigma=sigma)
+                self.img = new_img
+                self.hide()
+            else:
+                warning_window = ww.WarningWindow("Sigma must be greater than 0!")
+                warning_window.exec_()
+        except ValueError:
+            # One of the typed value is not a number.
+            # Open a warningwin that warns the user.
+            ww.WarningWindow(sw.invalid_value_str()).exec()

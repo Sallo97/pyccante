@@ -4,7 +4,7 @@ from bars import file as fl
 from algorithms import hdr_merger
 from transformations import blend
 from filters import (b2df, b2ds, conv2d, gaussian2d,
-                     lum, mosaic, rotation, warp2d)
+                     lum, rotation, warp2d)
 from PySide6.QtWidgets import QMenuBar, QFileDialog
 
 
@@ -111,7 +111,7 @@ class MenuBarWindow(QMenuBar):
         # If the action was rescale, there's no need to re-write the image
         if action != "rescale" and new_img is not None:
             self.custom_win.set_img(new_img)
-        if cat =="Algorithm" or action == "open":
+        if cat == "Algorithm" or action == "open":
             self.custom_win.original_size()
 
     def do_file(self, action):
@@ -171,8 +171,10 @@ class MenuBarWindow(QMenuBar):
         new_img = self.custom_win.get_img()
         if action == "r90cw":
             new_img.rotate90CW()
+            self.custom_win.invert_w_h()
         elif action == "r90ccw":
             new_img.rotate90CCW()
+            self.custom_win.invert_w_h()
         elif action == "fliph":
             new_img.flipH()
         elif action == "flipv":

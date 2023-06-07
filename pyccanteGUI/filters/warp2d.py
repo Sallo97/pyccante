@@ -1,5 +1,6 @@
 import pyccante as pyc
 import numpy as np
+import utils.str_warning as sw
 from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QLineEdit, QVBoxLayout, QDialog,
@@ -11,8 +12,6 @@ class Warp2DWindow(QDialog):
         super(Warp2DWindow, self).__init__()
         self.img = img
         self.setWindowTitle("Warp2D...")
-        self.war_win = ww.WarningWindow("The determinant is negative!"
-                                        "\nTry again with another matrix.")
 
         # Define labels for parameters
         self.mtx_label = QLabel("Matrix: ")
@@ -78,29 +77,37 @@ class Warp2DWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-        same_size = self.size.isChecked()
-        centroid = self.cntr.isChecked()
-        print(f"centroid = {centroid}")
-        print(f"same_size = {same_size}")
-        print(f"img = {self.img.nameFile}")
-        mtx = self.create_mtx()
-        if mtx.determinant() > 0:
-            new_img = pyc.Image()
-            new_img = pyc.FilterWarp2D.execute(self.img, imgOut=new_img, h=mtx,
-                                               bSameSize=same_size, bCentroid=centroid)
-            print(f"new_img = {new_img.nameFile}")
-            if new_img is not None:
-                self.img = new_img
-                self.hide()
-        else:
-            self.war_win.exec()
+        try:
+            same_size = self.size.isChecked()
+            centroid = self.cntr.isChecked()
+            print(f"centroid = {centroid}")
+            print(f"same_size = {same_size}")
+            print(f"img = {self.img.nameFile}")
+            mtx = self.create_mtx()
+            if mtx.determinant() > 0:
+                new_img = pyc.Image()
+                new_img = pyc.FilterWarp2D.execute(self.img, imgOut=new_img, h=mtx,
+                                                   bSameSize=same_size, bCentroid=centroid)
+                print(f"new_img = {new_img.nameFile}")
+                if new_img is not None:
+                    self.img = new_img
+                    self.hide()
+            else:
+                # The mtx has a negative determinant,
+                # cannot execute the filter.
+                ww.WarningWindow(sw.invalid_mtx_str()).exec()
+        except ValueError:
+            # One of the typed value is not a number.
+            # Open a warningwin that warns the user.
+            ww.WarningWindow(sw.invalid_value_str()).exec()
 
     def create_mtx(self):
+        # Returns a Matrix3x3 with the inputted values
+        # by the user.
         mtx = np.array([float(self.r1c1_edit.text()), float(self.r1c2_edit.text()), float(self.r1c3_edit.text()),
                         float(self.r2c1_edit.text()), float(self.r2c2_edit.text()), float(self.r2c3_edit.text()),
                         float(self.r3c1_edit.text()), float(self.r3c2_edit.text()), float(self.r3c3_edit.text())],
                        np.float32)
 
         mtx3x3 = pyc.Matrix3x3(mtx)
-        print(mtx3x3)
         return mtx3x3

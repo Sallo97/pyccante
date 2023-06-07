@@ -1,4 +1,6 @@
 import pyccante as pyc
+import utils.str_warning as sw
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
@@ -51,10 +53,15 @@ class RotationWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-        angle_x = float(self.angle_x_edit.text())
-        angle_y = float(self.angle_y_edit.text())
-        angle_z = float(self.angle_z_edit.text())
-        new_img = pyc.FilterRotation.execute(self.img, angle_x,
-                                             angle_y, angle_z)
-        self.img = new_img
-        self.hide()
+        try:
+            angle_x = float(self.angle_x_edit.text())
+            angle_y = float(self.angle_y_edit.text())
+            angle_z = float(self.angle_z_edit.text())
+            new_img = pyc.FilterRotation.execute(self.img, angle_x,
+                                                 angle_y, angle_z)
+            self.img = new_img
+            self.hide()
+        except ValueError:
+            # One of the typed value is not a number.
+            # Open a warningwin that warns the user.
+            ww.WarningWindow(sw.invalid_value_str()).exec()

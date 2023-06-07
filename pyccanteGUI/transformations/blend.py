@@ -1,5 +1,7 @@
 from layouts.windows import warningwin as ww
 from bars import file as fl
+import utils.str_warning as sw
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
                                QFileDialog, QDialog)
@@ -38,7 +40,7 @@ class Blend(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide())
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -65,18 +67,14 @@ class Blend(QDialog):
         if self.blend is not None or self.weight is not None:
             return True
         else:
-            war_win = ww.WarningWindow("You didn't select a 'to blend' and 'weight' image!"
-                                       "\nThe filter was not applied.")
-            war_win.exec()
+            ww.WarningWindow(sw.missing_images_str()).exec()
             return False
 
     def check_sizes(self):
         if self.blend.size() == self.img.size() and self.weight.size() == self.img.size():
             return True
         else:
-            war_win = ww.WarningWindow("The 'to blend', 'weight' and 'image' must have the same size!"
-                                       "\nThe filter was not applied.")
-            war_win.exec()
+            ww.WarningWindow(sw.invalid_size_str()).exec()
             return False
 
     def open_blend(self):

@@ -1,5 +1,5 @@
 import pyccante as pyc
-from utils import path
+from utils import str_path
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QVBoxLayout, QDialog)
 

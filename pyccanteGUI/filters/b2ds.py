@@ -1,4 +1,6 @@
 import pyccante as pyc
+import layouts.windows.warningwin as ww
+import utils.str_warning as sw
 from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QFileDialog, QDialog)
@@ -57,16 +59,21 @@ class B2DSWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-        sigma_s = float(self.sigma_s_line_edit.text())
-        sigma_r = float(self.sigma_r_line_edit.text())
-        if self.imgedge is not None:
-            new_img = pyc.FilterBilateral2DS.execute(self.img, imgEdge=self.imgedge,
+        try:
+            sigma_s = float(self.sigma_s_line_edit.text())
+            sigma_r = float(self.sigma_r_line_edit.text())
+            if self.imgedge is not None:
+                new_img = pyc.FilterBilateral2DS.execute(self.img, imgEdge=self.imgedge,
                                                      sigma_s=sigma_s, sigma_r=sigma_r)
-        else:
-            new_img = pyc.FilterBilateral2DS.execute(self.img, sigma_s=sigma_s,
+            else:
+                new_img = pyc.FilterBilateral2DS.execute(self.img, sigma_s=sigma_s,
                                                      sigma_r=sigma_r)
-        self.img = new_img
-        self.hide()
+            self.img = new_img
+            self.hide()
+        except ValueError:
+            # One of the typed value is not a number.
+            # Open a warningwin that warns the user.
+            ww.WarningWindow(sw.invalid_value_str()).exec()
 
     def open_imgedge(self):
         path = QFileDialog.getOpenFileName(

@@ -3,7 +3,7 @@ from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QDialog,
                                QListWidget, QFileDialog, QGridLayout)
 from PySide6.QtCore import Qt
-from utils import path
+from utils import str_path as sp
 from itertools import islice
 
 
@@ -11,7 +11,7 @@ class HDRMergeWindow(QDialog):
     def __init__(self):
         super(HDRMergeWindow, self).__init__()
         self.img = None
-        self.path = path.get_hdr_path()
+        self.path = sp.get_hdr_path()
         self.img_dict = {}
         self.setWindowTitle("HDR Merge...")
 

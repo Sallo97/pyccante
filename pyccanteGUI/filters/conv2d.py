@@ -1,4 +1,5 @@
 import pyccante as pyc
+import utils.str_warning as sw
 from layouts.windows import warningwin as ww
 from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton,
@@ -45,14 +46,25 @@ class Conv2DWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-
-        if self.conv is not None:
+        if self.conv_condition():
             new_img = pyc.FilterConv2D.execute(self.img, conv=self.conv)
             if new_img is not None:
                 self.img = new_img
                 self.hide()
+
+    def conv_condition(self):
+        # Checks if the conv image as been inputted
+        # and if it's the same size as the read image.
+        # Returns true if both conditions are valid,
+        # false otherwise
+        if self.conv is not None:
+            if self.conv.size() == self.img.size():
+                return True
+            else:
+                ww.WarningWindow(sw.invalid_size_str()).exec()
         else:
-            self.war_win.exec()
+            ww.WarningWindow(sw.missing_images_str()).exec()
+        return False
 
     def open_conv(self):
         path = QFileDialog.getOpenFileName(
