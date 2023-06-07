@@ -12,9 +12,9 @@ class RotationWindow(QDialog):
         self.setWindowTitle("Bilateral2DF...")
 
         # Define labels for parameters
-        self.angle_x_label = QLabel("Angle X: ")
-        self.angle_y_label = QLabel("Angle Y: ")
-        self.angle_z_label = QLabel("Angle Z: ")
+        self.angle_x_label = QLabel("deg X: ")
+        self.angle_y_label = QLabel("deg Y: ")
+        self.angle_z_label = QLabel("deg Z: ")
 
         # Define line edits for parameters
         self.angle_x_edit = QLineEdit("0")
@@ -54,14 +54,25 @@ class RotationWindow(QDialog):
 
     def execute(self):
         try:
-            angle_x = float(self.angle_x_edit.text())
-            angle_y = float(self.angle_y_edit.text())
-            angle_z = float(self.angle_z_edit.text())
-            new_img = pyc.FilterRotation.execute(self.img, angle_x,
-                                                 angle_y, angle_z)
+            deg_x = float(self.angle_x_edit.text())
+            deg_y = float(self.angle_y_edit.text())
+            deg_z = float(self.angle_z_edit.text())
+            rads = self.convert_angles_rad(deg_x, deg_y, deg_z)
+            new_img = pyc.FilterRotation.execute(self.img, rads[0],
+                                                 rads[1], rads[2])
             self.img = new_img
             self.hide()
         except ValueError:
             # One of the typed value is not a number.
             # Open a warningwin that warns the user.
             ww.WarningWindow(sw.invalid_value_str()).exec()
+
+    def convert_angles_rad(self, x, y, z):
+        # FilterRotations interprets it's values as rad,
+        # but the inputted ones are in deg.
+        # So before giving them to the filter it is
+        # necessary to convert them
+        rad_x = x * 0.0175
+        rad_y = y * 0.0175
+        rad_z = z * 0.0175
+        return [rad_x, rad_y, rad_z]
