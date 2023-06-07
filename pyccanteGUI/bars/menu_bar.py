@@ -9,14 +9,14 @@ from PySide6.QtWidgets import QMenuBar, QFileDialog
 
 
 class MenuBarWindow(QMenuBar):
-    def __init__(self, main_win, custom_win):
+    def __init__(self, main_win, custom_win, main):
         super(MenuBarWindow, self).__init__()
+        self.main = main
         self.main_win = main_win
         self.custom_win = custom_win
         self.ldr_type = pyc.LDR_type.LT_NONE
         self.construct_file_menu()
         self.construct_transform_menu()
-        self.construct_ldr_menu()
         self.construct_filter_menu()
         self.construct_algo_menu()
 
@@ -63,24 +63,6 @@ class MenuBarWindow(QMenuBar):
                                  "Ctrl+B"
                                  )
 
-    def construct_ldr_menu(self):
-        ldr_menu = self.addMenu("&LDR type")
-        ldr_menu.addAction("&None",
-                           (lambda: self.do_action("LDR",
-                                                   "none")),
-                           "Ctrl+O"
-                           ),
-        ldr_menu.addAction("&Normal",
-                           (lambda: self.do_action("LDR",
-                                                   "normal")),
-                           "Ctrl+N"
-                           ),
-        ldr_menu.addAction("&Normal + Gamma",
-                           (lambda: self.do_action("LDR",
-                                                   "gamma")),
-                           "Ctrl+G"
-                           )
-
     def construct_filter_menu(self):
         filter_menu = self.addMenu("&Filters")
         filter_menu.addAction("&Bilateral2df",
@@ -98,9 +80,6 @@ class MenuBarWindow(QMenuBar):
         filter_menu.addAction("&Luminance",
                               lambda: self.do_action("Filter",
                                                      "lum"))
-        filter_menu.addAction("&Mosaic",
-                              lambda: self.do_action("Filter",
-                                                     "mosaic"))
         filter_menu.addAction("&Rotation",
                               lambda: self.do_action("Filter",
                                                      "rot"))
@@ -127,13 +106,13 @@ class MenuBarWindow(QMenuBar):
             new_img = self.do_filter(action)
         elif cat == "Algorithm":
             new_img = self.do_algo(action)
-        elif cat == "LDR":
-            new_img = self.do_ldr(action)
         elif cat == "Transformation":
             new_img = self.do_transformation(action)
         # If the action was rescale, there's no need to re-write the image
         if action != "rescale" and new_img is not None:
             self.custom_win.set_img(new_img)
+        if cat =="Algorithm" or action == "open":
+            self.custom_win.original_size()
 
     def do_file(self, action):
         new_img = None
@@ -150,15 +129,16 @@ class MenuBarWindow(QMenuBar):
         action_obj = None
         if action == "hdr_merger":
             action_obj = hdr_merger.HDRMergeWindow()
+            self.main.update_window_title("HDR Merger result")
 
         action_obj.exec()
         new_img = action_obj.img
         if new_img is not None:
-            self.custom_win.set_hdr_flag(True)
-            self.main_win.set_hdr_flag(True)
+            self.custom_win.set_ext("hdr")
+            self.main_win.set_ext("hdr")
             self.custom_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_ldr(pyc.LDR_type.LT_NONE)
-            self.main_win.set_img(new_img, True)
+            self.main_win.set_img(new_img)
         del action_obj
         return new_img
 
@@ -177,8 +157,6 @@ class MenuBarWindow(QMenuBar):
             action_obj = gaussian2d.Gauss2DWindow(new_img)
         elif action == "lum":
             action_obj = lum.LumWindow(new_img)
-        elif action == "mosaic":
-            action_obj = mosaic.MosaicWindow(new_img, ldr_type)
         elif action == "rot":
             action_obj = rotation.RotationWindow(new_img)
         elif action == "warp2d":
@@ -188,27 +166,6 @@ class MenuBarWindow(QMenuBar):
         new_img = action_obj.img
         del action_obj
         return new_img
-
-    def do_ldr(self, action):
-        new_ldr = None
-        if action == "none":
-            new_ldr = pyc.LDR_type.LT_NONE
-        elif action == "normal":
-            new_ldr = pyc.LDR_type.LT_NOR
-        elif action == "gamma":
-            new_ldr = pyc.LDR_type.LT_NOR_GAMMA
-
-        # Setting the new ldr_type
-        self.custom_win.set_ldr(new_ldr)
-
-        # Updating new_img
-        new_img = self.main_win.get_img()
-        if self.custom_win.get_hdr_flag():
-            self.custom_win.set_ldr(new_ldr)
-            self.main_win.set_ldr(new_ldr)
-            self.main_win.set_img(None)
-            return new_img
-        return None
 
     def do_transformation(self, action):
         new_img = self.custom_win.get_img()
@@ -235,22 +192,13 @@ class MenuBarWindow(QMenuBar):
             "Image Files (*.png *.jpg *.bmp *.hdr)")[0]
         new_img = fl.read_img(new_path)
         if new_img is not None:
-            self.custom_win.set_hdr_flag(self.is_hdr(new_img))
-            self.main_win.set_hdr_flag(self.is_hdr(new_img))
+            self.main.update_window_title(new_img.nameFile)
+            self.custom_win.set_ext(new_img.nameFile.split(".")[-1])
+            self.main_win.set_ext(new_img.nameFile.split(".")[-1])
             self.custom_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_ldr(pyc.LDR_type.LT_NONE)
             self.main_win.set_img(new_img)
         return new_img
-
-    def is_hdr(self, img):
-        # Checks if the image is hdr
-        # img = the image to check
-        # returns True if img is a hdr image
-        # False otherwise
-        if img is not None:
-            return img.nameFile.split(".")[-1] == "hdr"
-        else:
-            return False
 
     def save_dialog(self):
         path = QFileDialog.getSaveFileName(

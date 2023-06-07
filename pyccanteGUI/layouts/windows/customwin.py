@@ -1,8 +1,8 @@
 from layouts.windows import imgwindow as iw
 from PySide6 import QtGui
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QWheelEvent, QResizeEvent
-from utils import path
+from PySide6.QtGui import QWheelEvent, QResizeEvent, QImage
+from layouts import windows
 
 
 class CustomImgWindow(iw.ImageWindow):
@@ -34,11 +34,16 @@ class CustomImgWindow(iw.ImageWindow):
         return self.res_width >= self.min_width or \
             self.res_height >= self.min_height
 
-    def original_size(self):
+    def original_size(self, img=None):
         self.mouse_flag = False
-        self.res_width = self.img.width
-        self.res_height = self.img.height
-        self.update_pixmap("")
+        if img is not None:
+            self.res_width = img.width
+            self.res_height = img.height
+        else:
+            print("Sono dentro l'else di originale_size")
+            self.res_width = self.img.width
+            self.res_height = self.img.height
+            self.update_pixmap("")
 
     def wheelEvent(self, event: QWheelEvent):
         if event.angleDelta().y() > 0:
@@ -47,7 +52,7 @@ class CustomImgWindow(iw.ImageWindow):
             self.update_pixmap("-")
         self.mouse_flag = True
 
-    def update_pixmap(self, mouse=""):
+    def update_pixmap(self, mouse="#"):
         # update_pixmap updates the pixmap of the image windows
         # mouse = checks if the mouse wheel has been moved and
         #         resize the image accordingly
@@ -59,7 +64,7 @@ class CustomImgWindow(iw.ImageWindow):
         elif mouse == "-" and self.min_size_cond():
             self.res_width /= self.zoom
             self.res_height /= self.zoom
-        elif self.max_size_cond() and self.min_size_cond():
+        elif mouse != "#" and self.max_size_cond() and self.min_size_cond():
             self.res_width = self.img.width
             self.res_height = self.img.height
             # Resize the image to the windows size
@@ -67,26 +72,45 @@ class CustomImgWindow(iw.ImageWindow):
                 self.res_width /= self.zoom
                 self.res_height /= self.zoom
 
+        # Load the image from raw data
+        q_img = self.get_qimg()
+
         # Set a new pix_map
-        print(f"Inside with path = {self.path}")
-        new_pix_map = QtGui.QPixmap(self.path)
+        new_pix_map = QtGui.QPixmap(q_img)
         new_pix_map = new_pix_map.scaled(self.res_width, self.res_height,
                                          Qt.AspectRatioMode.KeepAspectRatioByExpanding)
-        self.pix_map = new_pix_map
-        self.setPixmap(self.pix_map)
+        self.setPixmap(new_pix_map)
         self.setAlignment(Qt.AlignCenter)
 
     def set_img(self, new_img):
+        # Set the new image as the current one
+        # new_img = the new image
+        # resize = if True, resize the image to the windows size
+        #          if False, keep the original size
+        # Resize is necessary because when the user read a new image
+        # or apply an algorithm, the new image must be displayed within
+        # is dimensions and not the previous one.
         super().set_img(new_img)
-        self.path = self.check_img_ext()
-        self.update_pixmap()
-        
-    def check_img_ext(self):
-        new_path = super().check_img_ext()
-        if self.hdr_flag is False:
-            new_path = path.get_custom_path()
-            self.img.Write(new_path, self.ldr_type)
-        return new_path
+        if new_img is not None:
+            self.update_pixmap()
 
     def get_ldr(self):
         return self.ldr_type
+
+    def update_sliders(self, gamma=None, exp=None):
+        # Update the exp and gamma values
+        # when the apposite sliders are moved.
+        # Set the new values and update the image
+        # gamma = the new gamma value
+        # exp = the new exp value.
+        # It returns nothing.
+
+        super().update_sliders(gamma, exp)
+
+        if self.ext == "hdr":
+            # We have to pass the mouse '#' value
+            # to not reset the zoom
+            self.update_pixmap("#")
+
+
+

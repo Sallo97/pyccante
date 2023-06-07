@@ -608,6 +608,10 @@ void init_Image(pybind11::module_ &m)
             py::return_value_policy::take_ownership, 
             "Clone creates a deep copy of the calling instance.")
 
+        .def("clamp", &pic::Image::clamp,
+            "clamp set data values in the range [a,b]",
+            py::arg("a"), py::arg("b"))
+
 
         // endregion
 
@@ -670,4 +674,38 @@ void init_Image(pybind11::module_ &m)
         .def_readonly("nameFile", &pic::Image::nameFile);
 
     // endregion
+
+    m.def(
+        "getData",
+        ([](pic::Image *this_img)
+        {   
+
+            // Return the NumPy array to Python
+            return py::array_t<float>((this_img->size()), this_img->data);
+        }),
+        "get the img buffer",
+        py::return_value_policy::take_ownership
+        );
+    
+    m.def(
+        "getDataUC",
+        ([](pic::Image *this_img)
+        {
+            // Return the NumPy array to Python
+            return this_img->dataUC;
+        }),
+        "get the img buffer",
+        py::return_value_policy::take_ownership
+        );
+
+    m.def(
+        "getDataRGBE",
+        ([](pic::Image *this_img)
+        {
+            // Return the NumPy array to Python
+            return this_img->dataRGBE;
+        }),
+        "get the img buffer",
+        py::return_value_policy::take_ownership
+        );
 }

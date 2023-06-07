@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         self.custom_win = cw.CustomImgWindow(custom_w, custom_h, None)
 
         # Construct menus
-        menubar = menu_bar.MenuBarWindow(self.main_win, self.custom_win)
+        menubar = menu_bar.MenuBarWindow(self.main_win, self.custom_win, self)
 
         # Define History
 
@@ -84,6 +84,8 @@ class MainWindow(QMainWindow):
         # Set main windows
         self.setCentralWidget(main_widget)
 
+    def update_window_title(self, text):
+        self.setWindowTitle(f"Pyccante GUI [{text}]")
 
 
 if __name__ == '__main__':

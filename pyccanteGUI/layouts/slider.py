@@ -11,4 +11,4 @@ class Slider(QSlider):
         self.setOrientation(Qt.Orientation.Horizontal)
         self.setRange(r_min, r_max)
         self.setFixedHeight(10)
-        self.setFixedWidth(100)
+        self.setFixedWidth(150)
