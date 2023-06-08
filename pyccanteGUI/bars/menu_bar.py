@@ -194,6 +194,7 @@ class MenuBarWindow(QMenuBar):
             "Image Files (*.png *.jpg *.bmp *.hdr)")[0]
         new_img = fl.read_img(new_path)
         if new_img is not None:
+            self.main_win.info_frame.update_text(new_img)
             self.main.update_window_title(new_img.nameFile)
             self.custom_win.set_ext(new_img.nameFile.split(".")[-1])
             self.main_win.set_ext(new_img.nameFile.split(".")[-1])

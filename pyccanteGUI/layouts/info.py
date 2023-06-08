@@ -1,10 +1,12 @@
-# Defines a class that displays information about the current image read.
+# This file contains the InfoFrame class
 from layouts import lines
 from PySide6.QtWidgets import QVBoxLayout, QLabel, QFrame
 from PySide6.QtCore import Qt
 
 
 class InfoFrame(QFrame):
+    # InfoFrames defines a QFrame that displays
+    # information about the current image read.
     def __init__(self):
         super(InfoFrame, self).__init__()
 
@@ -44,7 +46,6 @@ class InfoFrame(QFrame):
         max_layout.addWidget(self.maxg_label)
         max_layout.addWidget(lines.get_h_line())
 
-
         # Define minimum RGB values.
         # These parameters are contained in a sub-layout
         # called min_layout.
@@ -62,7 +63,6 @@ class InfoFrame(QFrame):
         min_layout.addWidget(self.minb_label)
         min_layout.addWidget(self.ming_label)
 
-
         # Put the sub-layout together.
         self.info_layout = QVBoxLayout()
         self.info_layout.addLayout(dim_layout)
@@ -74,7 +74,7 @@ class InfoFrame(QFrame):
 
     def update_text(self, img):
         # Update the text of the labels.
-        # img = the new image to get the new informations.
+        # img = the new image to get the new info.
         self.width_label.setText(f"W : {img.width} px")
         self.height_label.setText(f"H : {img.height} px")
         self.size_label.setText(f"S : {img.size()} px")

@@ -1,3 +1,6 @@
+# This files contains the derived class CustomImgWindow.
+
+
 from layouts.windows import imgwindow as iw
 from PySide6 import QtGui
 from PySide6.QtCore import Qt
@@ -5,9 +8,19 @@ from PySide6.QtGui import QWheelEvent, QResizeEvent
 
 
 class CustomImgWindow(iw.ImageWindow):
+    # CustomImgWindow is a child of ImageWindow.
+    # CustomImgWindow is the window to see the preview
+    # image when all the action by the user are applyed.
     def __init__(self, win_width, win_height, info_layout=None):
         super().__init__(win_width, win_height, info_layout)
+
+        # CustomImgWindow can change size depending on
+        # the Pyccante GUI Window size at the moment.
         self.setMinimumSize(win_width, win_height)
+
+        # mouse_flag is used to determine if the image
+        # has been zoomed, if so when updating the
+        # pixmap the size mustn't resize.
         self.mouse_flag = False
 
         # Set parameters to implement the zoom
@@ -22,24 +35,43 @@ class CustomImgWindow(iw.ImageWindow):
         self.update_pixmap("")
 
     def resizeEvent(self, event: QResizeEvent):
+        # When the Pyccante GUI has been resized,
+        # We need to resize the pixmap too
+
+        # Checks if the zoom has been applyed
+        # and only when not we need to resize
+        # the image
         if self.mouse_flag is False:
             self.update_pixmap("")
 
     def max_size_cond(self):
+        # Returns True if the zoomed size
+        # doesn't surpass the max limit,
+        # return False otherwise.
         return self.res_width <= self.max_width or \
             self.res_height <= self.max_height
 
     def min_size_cond(self):
+        # Returns True if the zoomed size
+        # gets below the max limit,
+        # return False otherwise.
         return self.res_width >= self.min_width or \
             self.res_height >= self.min_height
 
     def original_size(self, img=None):
+        # Set the pixmap to show the image
+        # at is original size.
+
         self.mouse_flag = False
         if img is not None:
+            # If we are passing a new image
+            # set the base zoom parameters to
+            # the new image size
             self.res_width = img.width
             self.res_height = img.height
         else:
-            print("Sono dentro l'else di originale_size")
+            # set the base zoom parameters to
+            # the current image size
             self.res_width = self.img.width
             self.res_height = self.img.height
             self.update_pixmap("")
@@ -55,6 +87,11 @@ class CustomImgWindow(iw.ImageWindow):
         self.res_height = temp
 
     def wheelEvent(self, event: QWheelEvent):
+        # When the mouse wheel is moved inside
+        # the CustomImageWindow, update the pixmap
+        # enlarging or shrinking the image
+        # and set mouse_flag to true
+        # to keep the zoomed image consistent.
         if event.angleDelta().y() > 0:
             self.update_pixmap("+")
         else:
@@ -104,6 +141,7 @@ class CustomImgWindow(iw.ImageWindow):
             self.update_pixmap()
 
     def get_ldr(self):
+        # Returns the current ldr_type
         return self.ldr_type
 
     def update_sliders(self, gamma=None, exp=None):

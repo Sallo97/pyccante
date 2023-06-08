@@ -1,3 +1,5 @@
+# This file contains the RotationWindow class
+
 import pyccante as pyc
 import numpy as np
 import utils.str_warning as sw
@@ -80,18 +82,12 @@ class Warp2DWindow(QDialog):
         try:
             same_size = self.size.isChecked()
             centroid = self.cntr.isChecked()
-            print(f"centroid = {centroid}")
-            print(f"same_size = {same_size}")
-            print(f"img = {self.img.nameFile}")
             mtx = self.create_mtx()
             if mtx.determinant() > 0:
                 new_img = pyc.Image()
                 new_img = pyc.FilterWarp2D.execute(self.img, imgOut=new_img, h=mtx,
                                                    bSameSize=same_size, bCentroid=centroid)
-                print(f"new_img = {new_img.nameFile}")
-                if new_img is not None:
-                    self.img = new_img
-                    self.hide()
+                self.set_img(new_img)
             else:
                 # The mtx has a negative determinant,
                 # cannot execute the filter.
@@ -111,3 +107,12 @@ class Warp2DWindow(QDialog):
 
         mtx3x3 = pyc.Matrix3x3(mtx)
         return mtx3x3
+
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
+        else:
+            ww.WarningWindow(sw.invalid_image_str()).exec()

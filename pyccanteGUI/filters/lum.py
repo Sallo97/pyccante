@@ -1,12 +1,22 @@
+# This file contains the LumWindow class
+
 import pyccante as pyc
+import utils.str_warning as sw
+from layouts.windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QVBoxLayout, QDialog, QComboBox)
 
 
 class LumWindow(QDialog):
     def __init__(self, img):
+        # LumWindow is QDialog that
+        # implements a window to apply
+        # the Luminance filter to an image.
+        # img = image to apply the filter to.
         super(LumWindow, self).__init__()
         self.img = img
+
+        # Set window parameters
         self.setWindowTitle("Luminance...")
 
         # Define labels for parameters
@@ -41,11 +51,11 @@ class LumWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
+        # Execute the Luminance filter
+        # Modify the self.img with the filtered one.
         type_lum = self.ret_luminance()
         new_img = pyc.FilterLuminance.execute(self.img, type_lum)
-        if new_img is not None:
-            self.img = new_img
-        self.hide()
+        self.set_img(new_img)
 
     def ret_luminance(self):
         # Returns the Luminance specified in the drowdown menu
@@ -57,3 +67,12 @@ class LumWindow(QDialog):
             return pyc.LUMINANCE_TYPE.LT_WARD_LUMINANCE
         elif self.type_menu.currentText() == "Mean":
             return pyc.LUMINANCE_TYPE.LT_MEAN
+
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
+        else:
+            ww.WarningWindow(sw.invalid_image_str()).exec()

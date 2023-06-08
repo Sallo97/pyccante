@@ -1,3 +1,5 @@
+# this file contains the class Slider
+
 from PySide6.QtWidgets import QSlider
 from PySide6.QtCore import Qt
 

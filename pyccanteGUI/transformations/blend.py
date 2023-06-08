@@ -1,4 +1,5 @@
-from layouts.windows import warningwin as ww
+# This file contains the Blend class
+
 from bars import file as fl
 import utils.str_warning as sw
 from layouts.windows import warningwin as ww
@@ -8,12 +9,19 @@ from PySide6.QtWidgets import (QLabel, QPushButton,
 
 
 class Blend(QDialog):
+    # Blend is a QDialog used to show
+    # the window to execute the Blend transformation.
     def __init__(self, img):
+        # img = the img to apply the blend
+
         super(Blend, self).__init__()
+
+        # Setting img values
         self.img = img
         self.blend = None
         self.weight = None
 
+        # Setting up the window
         self.setWindowTitle("Blend...")
 
         # Define labels for parameters
@@ -54,16 +62,18 @@ class Blend(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
-        print(f"Executing blend with:\n"
-              f"img = {self.img.nameFile}\n"
-              f"blend = {self.blend.nameFile}\n"
-              f"weight = {self.weight.nameFile}")
+        # Executing the Blend transformation
+
+        # Checks if the images are not None
+        # and if they have the same size as
+        # the main image
         if self.check_none() and self.check_sizes():
-            self.img.blend(self.blend, self.weight)
-            print("Blend executed!")
-            self.hide()
+            new_img = self.blend(self.blend, self.weight)
+            self.set_img(new_img)
 
     def check_none(self):
+        # Returns True if the images are not None
+        # False otherwise
         if self.blend is not None or self.weight is not None:
             return True
         else:
@@ -71,6 +81,9 @@ class Blend(QDialog):
             return False
 
     def check_sizes(self):
+        # Returns True if the images have the same size as
+        # the main image.
+        # False otherwise
         if self.blend.size() == self.img.size() and self.weight.size() == self.img.size():
             return True
         else:
@@ -78,6 +91,8 @@ class Blend(QDialog):
             return False
 
     def open_blend(self):
+        # Opens a file dialog to select the blend image
+        # save the image in self.blend
         new_path = QFileDialog.getOpenFileName(
             self,
             "Open blend image",
@@ -88,6 +103,8 @@ class Blend(QDialog):
         self.blend_button.setText(f"{name_file[-1]}")
 
     def open_weight(self):
+        # Opens a file dialog to select the weight image
+        # save the image in self.weight
         new_path = QFileDialog.getOpenFileName(
             self,
             "Open weight image",
@@ -96,3 +113,12 @@ class Blend(QDialog):
         self.weight = fl.read_img(new_path[0])
         name_file = new_path[0].split("/")
         self.weight_button.setText(f"{name_file[-1]}")
+
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
+        else:
+            ww.WarningWindow(sw.invalid_image_str()).exec()

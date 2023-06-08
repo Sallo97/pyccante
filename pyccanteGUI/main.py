@@ -1,6 +1,7 @@
+# This file contains the MainWindow class, which is the main window of the GUI.
+
 import sys
-import os
-from bars import menu_bar
+from bars import menu_bar, file
 from layouts import info, lines, sliders as sls
 from layouts.windows import mainwin as mw, customwin as cw
 from PySide6.QtWidgets import (QApplication, QVBoxLayout, QHBoxLayout,
@@ -8,35 +9,18 @@ from PySide6.QtWidgets import (QApplication, QVBoxLayout, QHBoxLayout,
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt
 
-
-def remove_temp_images():
-    if os.path.isfile("./data/_custom_temp.png"):
-        os.remove("./data/_custom_temp.png")
-    if os.path.isfile("./data/_hdr_temp.png"):
-        os.remove("./data/_hdr_temp.png")
-
-
-def construct_boxes(boxes, categories):
-    for i, (key, values) in enumerate(categories.items()):
-        boxes[i].addItem(f"Select the {key} you want to apply...")
-        for value in values:
-            boxes[i].addItem(value)
-
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
+        # The MainWindow class is the main window of the GUI.
+        # It contains the main layout and the menu bar.
 
-        # ImageWindows size values
+        # Set base paramateres for the image windows
         main_h = 170
         main_w = 170
 
         custom_h = 600
         custom_w = 600
-
-        # Configure Window bar parameters
-        self.setWindowTitle("Pyccante GUI [no image loaded]")
-        self.setWindowIcon(QIcon("./data/icon.png"))
 
         # Define info layout
         self.info_frame = info.InfoFrame()
@@ -47,8 +31,6 @@ class MainWindow(QMainWindow):
 
         # Construct menus
         menubar = menu_bar.MenuBarWindow(self.main_win, self.custom_win, self)
-
-        # Define History
 
         # Define layout sx
         self.sx_layout = QVBoxLayout()
@@ -81,6 +63,10 @@ class MainWindow(QMainWindow):
         main_widget.setLayout(self.main_layout)
         main_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
+        # Set Window parameters
+        self.setWindowTitle("Pyccante GUI [no image loaded]")
+        self.setWindowIcon(QIcon("./data/icon.png"))
+
         # Set main windows
         self.setCentralWidget(main_widget)
 
@@ -89,6 +75,9 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == '__main__':
+    # Main function of the program
+    # It creates the Qt Application and the main window
+
 
     # Create a Qt Application
     app = QApplication(sys.argv)
@@ -102,7 +91,7 @@ if __name__ == '__main__':
 
     # Deleting all the temp images
     print("Closing...")
-    remove_temp_images()
+    file.remove_temp_images()
 
     # Closing the program
     sys.exit()

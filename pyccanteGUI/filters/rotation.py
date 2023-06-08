@@ -1,3 +1,5 @@
+# This file contains the RotationWindow class
+
 import pyccante as pyc
 import utils.str_warning as sw
 from layouts.windows import warningwin as ww
@@ -8,7 +10,13 @@ from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
 class RotationWindow(QDialog):
     def __init__(self, img):
         super(RotationWindow, self).__init__()
+        # RotationWindow is a QDialog that
+        # implements a window to apply
+        # the Rotation filter to an image.
+        # img = image to apply the filter to.
         self.img = img
+
+        # Setting window parameters
         self.setWindowTitle("Bilateral2DF...")
 
         # Define labels for parameters
@@ -53,15 +61,20 @@ class RotationWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
+        # Execute the Rotation filter
+        # Modify the self.img with the filtered one.
         try:
+            # get data from the window
             deg_x = float(self.angle_x_edit.text())
             deg_y = float(self.angle_y_edit.text())
             deg_z = float(self.angle_z_edit.text())
             rads = self.convert_angles_rad(deg_x, deg_y, deg_z)
+
+            # apply the filter to a new_image
             new_img = pyc.FilterRotation.execute(self.img, rads[0],
                                                  rads[1], rads[2])
-            self.img = new_img
-            self.hide()
+            # set the filtered image as the main one
+            self.img.set_image(new_img)
         except ValueError:
             # One of the typed value is not a number.
             # Open a warningwin that warns the user.
@@ -76,3 +89,12 @@ class RotationWindow(QDialog):
         rad_y = y * 0.0175
         rad_z = z * 0.0175
         return [rad_x, rad_y, rad_z]
+
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
+        else:
+            ww.WarningWindow(sw.invalid_image_str()).exec()

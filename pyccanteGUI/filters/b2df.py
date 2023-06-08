@@ -1,3 +1,5 @@
+# This file contains the B2DFWindow class
+
 import pyccante as pyc
 import layouts.windows.warningwin as ww
 import utils.str_warning as sw
@@ -6,10 +8,19 @@ from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
 
 
 class B2DFWindow(QDialog):
+    # B2DFWindow is QDialog that
+    # implements a window to apply
+    # the Bilateral2DF filter to an image.
     def __init__(self, img, ldr_type):
+        # img = image to apply the filter to.
+        # ldr_type = ldr_type of the image.
+        super(B2DFWindow, self).__init__()
+
+        # Setting image values
         self.ldr_type = ldr_type
         self.img = img
-        super(B2DFWindow, self).__init__()
+
+        # Setting window values
         self.setWindowTitle("Bilateral2DF...")
 
         # Define labels for parameters
@@ -32,7 +43,7 @@ class B2DFWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -47,19 +58,23 @@ class B2DFWindow(QDialog):
 
     def execute(self):
         # Execute the B2DF filter to the self.img
-        # Modify the self.img with the filtered oneì.
+        # Modify the self.img with the filtered one.
         try:
             sigma_s = float(self.sigma_s_line_edit.text())
             sigma_r = float(self.sigma_r_line_edit.text())
             new_img = pyc.FilterBilateral2DF.execute(self.img, sigma_s=sigma_s,
                                                      sigma_r=sigma_r)
-            self.img = new_img
-            self.hide()
+            self.set_img(new_img)
         except ValueError:
             # One of the typed value is not a number.
             # Open a warningwin that warns the user.
             ww.WarningWindow(sw.invalid_value_str()).exec()
 
-    def hide_window(self):
-        self.img = None
-        self.hide()
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
+        else:
+            ww.WarningWindow(sw.invalid_image_str()).exec()

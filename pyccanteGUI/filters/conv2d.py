@@ -1,3 +1,5 @@
+# This file contains the Conv2DWindow class
+
 import pyccante as pyc
 import utils.str_warning as sw
 from layouts.windows import warningwin as ww
@@ -8,13 +10,20 @@ from PySide6.QtWidgets import (QLabel, QPushButton,
 
 
 class Conv2DWindow(QDialog):
+    # Conv2DWindow is QDialog that
+    # implements a window to apply
+    # the Conv2D filter to an image.
     def __init__(self, img, ldr_type):
+        # img = image to apply the filter to.
+        # ldr_type = ldr_type of the image.
         super(Conv2DWindow, self).__init__()
+
+        # Setting image values
         self.ldr_type = ldr_type
-        self.img = self.set_img(img)
+        self.img = img
         self.conv = None
-        self.war_win = ww.WarningWindow("You didn't select an image for conv!"
-                                        "\nThe filter was not applied.")
+
+        # Setting up window
         self.setWindowTitle("Conv2D...")
 
         # Define labels for parameters
@@ -33,7 +42,7 @@ class Conv2DWindow(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide_window)
+        self.Cancel_button.clicked.connect(self.hide)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -46,11 +55,14 @@ class Conv2DWindow(QDialog):
         self.main_layout.addLayout(self.buttons_layout)
 
     def execute(self):
+        # Execute the Conv2D filter to the self.img
+        # Modify the self.img with the filtered one.
+
         if self.conv_condition():
             new_img = pyc.FilterConv2D.execute(self.img, conv=self.conv)
-            if new_img is not None:
-                self.img = new_img
-                self.hide()
+
+            # Set the filtered image as the main image
+            self.set_img(new_img)
 
     def conv_condition(self):
         # Checks if the conv image as been inputted
@@ -67,6 +79,8 @@ class Conv2DWindow(QDialog):
         return False
 
     def open_conv(self):
+        # Opens a file dialog to select the img_edge image
+        # save the image in self.weight
         path = QFileDialog.getOpenFileName(
             self,
             "Open Conv",
@@ -76,20 +90,11 @@ class Conv2DWindow(QDialog):
         name_file = path[0].split("/")
         self.conv_button.setText(f"{name_file[-1]}")
 
-    def set_img(self, img):
-        # This method set the image to be filtered.
-        # The image must be reloaded because we need
-        # to apply the most recent ldr_type.
-        # img = the image to be filtered
-
-        # Checking if the image has not been modified yet
-        if img.nameFile != ' ':
-            return pyc.Image(img.nameFile, self.ldr_type)
+    def set_img(self, new_img):
+        # Set the new_img as the current one.
+        # new_img = new image to set.
+        if new_img is not None:
+            self.img = new_img
+            self.hide()
         else:
-            # In case the image has been already modified, the path
-            # is empty, so we get the image from the tmp custom file
-            return pyc.Image(img.customPath, self.ldr_type)
-
-    def hide_window(self):
-        self.img = None
-        self.hide()
+            ww.WarningWindow(sw.invalid_image_str()).exec()

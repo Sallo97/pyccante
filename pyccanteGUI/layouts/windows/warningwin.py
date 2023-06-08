@@ -1,13 +1,13 @@
 # This file contains the class WarningWindow.
-# WarningWindow offers a QDialog used to give a warning
-# to a user regarding the issue specified when the object
-# is constructed.
 
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QVBoxLayout, QDialog)
 
 
 class WarningWindow(QDialog):
+    # WarningWindow is a QDialog used to give a warning
+    # to a user regarding the issue specified when the object
+    # is constructed.
     def __init__(self, text):
         # text = The text shown when the warning is launched
         super(WarningWindow, self).__init__()
