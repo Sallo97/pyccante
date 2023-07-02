@@ -3,7 +3,6 @@
 #ifndef PYCCANTE_SUPPORT_H
 #define PYCCANTE_SUPPORT_H
 
-#include <GL/glew.h>
 #include <piccante.hpp>
 #include "support.h"
 #include <pybind11/pybind11.h>

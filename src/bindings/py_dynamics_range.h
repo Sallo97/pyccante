@@ -1,7 +1,6 @@
 #ifndef PYCCANTE_PY_DYNAMICS_RANGE_H
 #define PYCCANTE_PY_DYNAMICS_RANGE_H
 
-#include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>
 

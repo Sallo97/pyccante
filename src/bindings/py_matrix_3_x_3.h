@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 #include <string>
-#include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>
 #include <pybind11/pytypes.h>

@@ -2,7 +2,6 @@
 #define PYCCANTE_PY_EXIF_H
 
 #include<string>
-#include <GL/glew.h>
 #include <piccante.hpp>
 #include <pybind11/pybind11.h>
 
