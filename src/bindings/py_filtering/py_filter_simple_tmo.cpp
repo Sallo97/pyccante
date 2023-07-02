@@ -1,27 +1,29 @@
+// This file contains the binding of the Piccante's Image class.
+
+
 #include "py_filter_simple_tmo.h"
 
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the FilterSimpleTMO filter class to the passed module.
+ */
 void init_FilterSimpleTMO(pybind11::module_& m)
 {
-   // region FilterSimpleTMO
+   // Defines the FilterSimpleTMO filter class in the passed module.
    py::class_<pic::FilterSimpleTMO, pic::Filter>(m, "FilterSimpleTMO")
 
-   // region Constructors
-
-    .def(py::init <float, float>(),
-        "FilterSimpleTMO constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("gamma"), py::arg("fstop"))
-
-   // endregion
-
    // region Functions
-
-    .def_static("execute", &pic::FilterSimpleTMO::execute,
-                "executing FilterSimpleTMO",
-                py::return_value_policy::take_ownership,
-                py::arg("imgIn"), py::arg("imgOut"),
-                py::arg("gamma"), py::arg("fstop"))
     
+    /**
+     * @brief execute the FilterSimpleTMO filter.
+     * @param imgIn the source image.
+     * @param gamma the gamma value to apply to the image.
+     * @param fstop the exposure value to apply to the image.
+     * @return the filtered image.
+     */
     .def_static("execute",
                 ([] (pic::Image* imgIn, float gamma, float fstop)
                 {

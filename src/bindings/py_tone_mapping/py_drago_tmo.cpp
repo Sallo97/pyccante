@@ -1,25 +1,28 @@
+// This file contains the binding of the piccante's DragoTMO tone_mapper class
+
+
 #include "py_drago_tmo.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the DragoTMO class to the passed module.
+ */
 void init_DragoTMO(pybind11::module_& m)
 {
+    // Defines the Image class in the passed module.
     py::class_<pic::DragoTMO, pic::ToneMappingOperator>(m, "DragoTMO")
 
-    // region Constructor
+    // region Methods
 
-    .def(py::init<float,float>(),
-        "DragoTMO constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("Ld_Max") = 100.0f, py::arg("b") = 0.95f)
-
-    // endregion
-
-    // region Functions
-
-    .def_static("execute", &pic::DragoTMO::execute,
-        "execute the DragoTMO tone-mapper",
-        py::return_value_policy::take_ownership,
-        py::arg("imgIn"), py::arg("imgOut"))
-
+    /**
+     * @brief execute the Drago Tone Mapping
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
     .def_static
     (
         "execute",
@@ -32,5 +35,5 @@ void init_DragoTMO(pybind11::module_& m)
         py::arg("imgIn")    
     );
 
-    // endregion
+    // endregion Methods
 }

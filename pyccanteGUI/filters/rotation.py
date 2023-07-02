@@ -2,7 +2,7 @@
 
 import pyccante as pyc
 import utils.str_warning as sw
-from layouts.windows import warningwin as ww
+from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)
 
@@ -74,7 +74,7 @@ class RotationWindow(QDialog):
             new_img = pyc.FilterRotation.execute(self.img, rads[0],
                                                  rads[1], rads[2])
             # set the filtered image as the main one
-            self.img.set_image(new_img)
+            self.set_img(new_img)
         except ValueError:
             # One of the typed value is not a number.
             # Open a warningwin that warns the user.

@@ -1,8 +1,6 @@
 # Finding the required packages
 find_package(Python 3.8 COMPONENTS Interpreter Development.Module REQUIRED)
-find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(Eigen3 REQUIRED)
+
 
 set(PYCCANTE_MODULE_NAME = "pyccante")
 
@@ -12,11 +10,10 @@ set(HEADERS
     bindings/py_dynamics_range.h
     bindings/py_point_samplers.h
     bindings/py_image.h
-    bindings/py_image_vec.h
     bindings/py_histogram.h
     bindings/py_bbox.h
     bindings/py_matrix_3_x_3.h
-    bindings/py_io/py_exif.h
+    bindings/py_exif.h
     bindings/py_point_samplers.h
     bindings/py_filter.h
     bindings/py_filtering/py_filter_luminance.h
@@ -35,6 +32,7 @@ set(HEADERS
     bindings/py_algorithms/py_algo_hdr_merger.h
     bindings/py_algorithms/py_algo_grow_cut.h
     bindings/py_algorithms/py_algo_poisson_solver.h
+    bindings/py_algorithms/py_algo_poisson_image_editing.h
     bindings/py_algorithms/py_algo_connected_components.h
     bindings/py_tone_mapping/py_tone_mapping_operator.h
     bindings/py_tone_mapping/py_ward_histogram_tmo.h
@@ -51,10 +49,9 @@ set(SOURCES
     bindings/py_dynamics_range.cpp
     bindings/py_point_samplers.cpp
     bindings/py_image.cpp
-    bindings/py_image_vec.cpp
     bindings/py_histogram.cpp
     bindings/py_matrix_3_x_3.cpp
-    bindings/py_io/py_exif.cpp
+    bindings/py_exif.cpp
     bindings/py_point_samplers.cpp
     bindings/py_bbox.cpp
     bindings/py_filter.cpp
@@ -74,6 +71,7 @@ set(SOURCES
     bindings/py_algorithms/py_algo_hdr_merger.cpp
     bindings/py_algorithms/py_algo_grow_cut.cpp
     bindings/py_algorithms/py_algo_poisson_solver.cpp
+    bindings/py_algorithms/py_algo_poisson_image_editing.cpp
     bindings/py_algorithms/py_algo_connected_components.cpp
     bindings/py_tone_mapping/py_tone_mapping_operator.cpp
     bindings/py_tone_mapping/py_ward_histogram_tmo.cpp
@@ -95,16 +93,10 @@ find_package(pybind11 CONFIG REQUIRED)
 include_directories(
     ../include/piccante/include
     ../include/stb
-    ${GLEW_INCLUDE_DIRS} 
-    ${OPENGL_INCLUDE_DIRS}
-    /usr/include/eigen3/Eigen/src/Core/
 )
 
 # Adding the binding modules
 pybind11_add_module(pyccante ${HEADERS} ${SOURCES})
-
-# Linking the OpenGL library
-target_link_libraries(pyccante PRIVATE ${GLEW_LIBRARIES} ${OPENGL_LIBRARIES})
 
 
 

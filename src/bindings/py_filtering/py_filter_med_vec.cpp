@@ -1,26 +1,29 @@
+// This file contains the binding of the Piccante's Image class.
+
+
 #include "py_filter_med_vec.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the FilterMedVec filter class to the passed module.
+ */
 void init_FilterMedVec(pybind11::module_& m)
 {
+    // Defines the FilterMedVec class in the passed module.
     py::class_<pic::FilterMedVec, pic::Filter>(m, "FilterMedVec")
-
-    // region Constructors
-
-    .def(py::init<int>(),
-        "FilterMedVec constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("size"))
-
-    // endregion
 
     // region Functions
 
-    .def_static("execute", &pic::FilterMedVec::execute,
-        "execute FilterMedVec",
-        py::return_value_policy::take_ownership,
-        py::arg("imgIn"), py::arg("imgOut"),
-        py::arg("size"))
-    
+    /**
+     * @brief execute the FilterMedVec filter.
+     * @param imgIn the source image.
+     * @param size the size of the circular area where to apply the filter.
+     * @return the filtered image.
+     */
     .def_static
     (
         "execute",

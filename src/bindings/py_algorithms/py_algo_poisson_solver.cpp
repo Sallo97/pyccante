@@ -1,13 +1,24 @@
+// This file contains the binding of the Piccante's PoissonSolver algorithm class
+
 #include "py_algo_poisson_solver.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the PoissonSolver class{} to the passed module.
+ */
 void init_PoissonSolver(pybind11::module_& m)
 {
 
-    m.def("computePoissonSolver", &pic::computePoissonSolver,
-        "execute the computePoissonSolver algorithm",
-        py::return_value_policy::take_ownership,
-        py::arg("f"), py::arg("ret"));
-
+    /**
+     * @brief computePoissonSolver
+     * @param f
+     * @param ret
+     * @return
+     */
     m.def
     (
         "computePoissonSolver", 
@@ -20,6 +31,15 @@ void init_PoissonSolver(pybind11::module_& m)
         py::arg("f")
     );
 
+
+    /**
+     * @brief computePoissonSolverIterative
+     * @param img
+     * @param laplacian
+     * @param coords
+     * @param maxSteps
+     * @return
+     */
     m.def("computePoissonSolverIterative", &pic::computePoissonSolverIterative,
         "execute the computePoissonSolverIterative algorithm",
         py::return_value_policy::take_ownership,

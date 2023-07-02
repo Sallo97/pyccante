@@ -1,5 +1,5 @@
 # This file contains the InfoFrame class
-from layouts import lines
+from utils import lines
 from PySide6.QtWidgets import QVBoxLayout, QLabel, QFrame
 from PySide6.QtCore import Qt
 
@@ -13,8 +13,8 @@ class InfoFrame(QFrame):
         # Define size parameters.
         # These parameters are contained in a sub-layout
         # called dim_layout.
-        self.info_tile = QLabel("Image Info")
-        self.info_tile.setAlignment(Qt.AlignCenter)
+        self.info_title = QLabel("Image Info")
+        self.info_title.setAlignment(Qt.AlignCenter)
         self.height_label = QLabel()
         self.height_label.setFixedSize(200, 20)
         self.width_label = QLabel()
@@ -22,7 +22,7 @@ class InfoFrame(QFrame):
         self.size_label = QLabel()
         self.size_label.setFixedSize(100, 20)
         dim_layout = QVBoxLayout()
-        dim_layout.addWidget(self.info_tile)
+        dim_layout.addWidget(self.info_title)
         dim_layout.addWidget(self.width_label)
         dim_layout.addWidget(self.height_label)
         dim_layout.addWidget(self.size_label)

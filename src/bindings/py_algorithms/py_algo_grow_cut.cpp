@@ -1,23 +1,30 @@
+// This file contains the binding of the Piccante's GrowCut algorithm class. 
+
 #include "py_algo_grow_cut.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the GrowCut class to the passed module
+ */
 void init_GrowCut(pybind11::module_& m)
 {
+    /**
+     * @brief GrowCut algorithm
+     */
     py::class_<pic::GrowCut>(m, "GrowCut")
     
-    // region Constructors
-    
-    .def(py::init <>(),
-        "GrowCut constructor")
-
-    // endregion
-
     // region Functions
 
-    .def_static("fromStrokeImageToSeeds", &pic::GrowCut::fromStrokeImageToSeeds,
-        "fromStrokeImageToSeeds",
-        py::return_value_policy::take_ownership,
-        py::arg("strokes"), py::arg("out"))
-
+    /**
+     * @brief fromStrokeImageToSeeds
+     * @param strokes
+     * @param out
+     * @return
+     */
     .def_static
     (
         "fromStrokeImageToSeeds",
@@ -30,11 +37,11 @@ void init_GrowCut(pybind11::module_& m)
         py::arg("strokes")
     )
 
-    .def_static("getMaskAsImage", &pic::GrowCut::getMaskAsImage,
-        "getMaskAsImage",
-        py::return_value_policy::take_ownership,
-        py::arg("state"), py::arg("out"))
-
+    /**
+     * @brief getMaskAsImage
+     * @param state
+     * @return
+     */
     .def_static
     (
         "getMaskAsImage",
@@ -47,11 +54,12 @@ void init_GrowCut(pybind11::module_& m)
         py::arg("state")
     )
 
-    .def_static("execute", &pic::GrowCut::execute,
-        "execute the algorithm GrowCut",
-        py::return_value_policy::take_ownership,
-        py::arg("img"), py::arg("seeds"), py::arg("imgOut"))
-
+    /**
+     * @brief execute the GrowCut algorithm
+     * @param img
+     * @param seeds
+     * @return
+     */
     .def_static
     (
         "execute",

@@ -1,5 +1,15 @@
+// This file contains the binding of the piccante's ReinhardTMO tone_mapper class
+
+
 #include "py_reinhard_tmo.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+/**
+ * @brief binds the ReinhardTMO class to the passed module.
+ */
 void init_ReinhardTMO(pybind11::module_& m)
 {
     // region SIGMOID_MODE
@@ -15,18 +25,15 @@ void init_ReinhardTMO(pybind11::module_& m)
 
     py::class_<pic::ReinhardTMO, pic::ToneMappingOperator>(m, "ReinhardTMO")
 
-    // region Constructor
 
-    .def(py::init<float, float, float, pic::SIGMOID_MODE>(),
-        "ReinhardTMO constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("alpha") = 0.18f, py::arg("whitePoint") = -1.0f,
-        py::arg("phi") = 8.0f, py::arg("sig_mode") = pic::SIGMOID_MODE::SIG_TMO)
-
-    // endregion
-
-    // region Functions
+    // region Methods
     
+    /**
+     * @brief execute the Reinhard TMO taking into account 
+     *        the global environment.
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
     .def_static
     (
         "executeGlobal1", 
@@ -39,6 +46,13 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
+    /**
+     * @brief execute the Reinhard TMO taking into account 
+     *        the global environment.
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
+    
     .def_static
     (
         "executeGlobal2", 
@@ -51,6 +65,13 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
+    /**
+     * @brief execute the Reinhard TMO taking into account 
+     *        the local environment.
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
+    
     .def_static
     (
         "executeLocal1", 
@@ -63,18 +84,25 @@ void init_ReinhardTMO(pybind11::module_& m)
         py::arg("imgIn")
     )
 
+    /**
+     * @brief execute the Reinhard TMO taking into account 
+     *        the local environment.
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
+    
     .def_static
     (
         "executeLocal2", 
         ([] (pic::Image* imgIn)
         {
-            return pic::ReinhardTMO::executeLocal1(imgIn, NULL);    
+            return pic::ReinhardTMO::executeLocal2(imgIn, NULL);    
         }),
         "execute the Reinhard executeLocal tone mapping",
         py::return_value_policy::take_ownership,
         py::arg("imgIn")
     );
-    // endregion
+    // endregion Methods
 
-    // endregion
+    // endregion ReinhardTMO
 }

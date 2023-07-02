@@ -2,7 +2,7 @@
 
 from bars import file as fl
 import utils.str_warning as sw
-from layouts.windows import warningwin as ww
+from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton,
                                QHBoxLayout, QVBoxLayout,
                                QFileDialog, QDialog)
@@ -98,9 +98,10 @@ class Blend(QDialog):
             "Open blend image",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        self.blend = fl.read_img(new_path[0])
-        name_file = new_path[0].split("/")
-        self.blend_button.setText(f"{name_file[-1]}")
+        if new_path[0] != '':
+            self.blend = fl.read_img(new_path[0])
+            name_file = new_path[0].split("/")
+            self.blend_button.setText(f"{name_file[-1]}")
 
     def open_weight(self):
         # Opens a file dialog to select the weight image
@@ -110,9 +111,10 @@ class Blend(QDialog):
             "Open weight image",
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
-        self.weight = fl.read_img(new_path[0])
-        name_file = new_path[0].split("/")
-        self.weight_button.setText(f"{name_file[-1]}")
+        if new_path[0] != '':
+            self.weight = fl.read_img(new_path[0])
+            name_file = new_path[0].split("/")
+            self.weight_button.setText(f"{name_file[-1]}")
 
     def set_img(self, new_img):
         # Set the new_img as the current one.

@@ -1,5 +1,5 @@
 import pyccante as pyc
-from layouts.windows import warningwin as ww
+from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QDialog,
                                QListWidget, QFileDialog, QGridLayout)
 from PySide6.QtCore import Qt
@@ -7,9 +7,9 @@ from utils import str_path as sp
 from itertools import islice
 
 
-class HDRMergeWindow(QDialog):
+class HDRMergerWindow(QDialog):
     def __init__(self):
-        super(HDRMergeWindow, self).__init__()
+        super(HDRMergerWindow, self).__init__()
         self.img = None
         self.path = sp.get_hdr_path()
         self.img_dict = {}

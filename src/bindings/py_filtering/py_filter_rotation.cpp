@@ -1,44 +1,30 @@
+// This file contains the binding of the Piccante's FilterRotation filter class.
+
+
 #include "py_filter_rotation.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+/**
+ * @brief binds the FilterRotationfilter class to the passed module.
+ */
 void init_FilterRotation(pybind11::module_& m)
 {
-    // region FilterRotation
+    // Defines the FilterRotation filter class in the passed module.
     py::class_<pic::FilterRotation, pic::Filter>(m, "FilterRotation")
 
-    // region Constructor
+    // region Methods
 
-    .def(py::init<>(),
-        "FilterRotation",
-        py::return_value_policy::take_ownership)
-
-    .def(py::init<float, float, float>(),
-        "FilterRotation",
-        py::return_value_policy::take_ownership,
-        py::arg("angleX"), py::arg("angleY"), 
-        py::arg("angleZ"))
-    
-    .def(py::init<Eigen::Matrix3f>(),
-        "FilterRotation",
-        py::return_value_policy::take_ownership)
-
-    // endregion
-
-    // region Functions
-    .def_static
-    (
-        "execute",
-        ([] (pic::Image* imgIn, pic::Image* imgOut,
-            float angleX, float angleY, float angleZ)
-        {
-            return pic::FilterRotation::execute(imgIn, imgOut,
-                                                angleX, angleY, angleZ);
-        }),
-        "execute FilterRotation",
-        py::return_value_policy::take_ownership,
-        py::arg("imgIn"), py::arg("imgOut"),
-        py::arg("angleX"), py::arg("angleY"),
-        py::arg("angleZ")
-    )
+    /**
+     * @brief execute rotates the given image by the X,Y, and Z axis.
+     * @param imgIn is the source image.
+     * @param angleX is the radian value the X axis will be rotated.
+     * @param angleY is the radian value the Y axis will be rotated.
+     * @param angleZ is the radian value the Z axis will be rotated.
+     * @return imgIn rotated by the given values.
+     */
 
     .def_static
     (
@@ -55,18 +41,12 @@ void init_FilterRotation(pybind11::module_& m)
         py::arg("angleY"), py::arg("angleZ")
     )
 
-    .def_static
-    (
-        "execute", 
-        ([] (pic::Image* imgIn, pic::Image* imgOut, Eigen::Matrix3f& mtx)
-        {
-            return pic::FilterRotation::execute(imgIn, imgOut, mtx);
-        }),
-        "execute FilterRotation",
-        py::return_value_policy::take_ownership,
-        py::arg("imgIn"), py::arg("imgOut"), py::arg("mtx")
-    )
-
+    /**
+     * @brief execute rotates the given image by the X,Y, and Z axis.
+     * @param imgIn is the source image.
+     * @param mtx is a matrix 3by3.
+     * @return imgIn rotated by the given values.
+     */
     .def_static
     (
         "execute",
@@ -79,7 +59,5 @@ void init_FilterRotation(pybind11::module_& m)
         py::arg("imgIn"), py::arg("mtx")
     );
 
-    // endregion
-
-    // endregion
+    // endregion Methods
 }

@@ -1,4 +1,5 @@
-# Do action call the Filter/Algorithm/LDR/Transformation you want to apply and return the modified image
+# This file contains the MenuBarWindow class, which implements the menu bar of the GUI.
+
 import pyccante as pyc
 from bars import file as fl
 from algorithms import hdr_merger
@@ -21,6 +22,7 @@ class MenuBarWindow(QMenuBar):
         self.construct_algo_menu()
 
     def construct_file_menu(self):
+        # Construct the File sub-menu
         file_menu = self.addMenu("&File")
         file_menu.addAction("&Open...",
                             (lambda: self.do_action("File",
@@ -35,13 +37,14 @@ class MenuBarWindow(QMenuBar):
                                                    "rescale"))
 
     def construct_transform_menu(self):
+        # Construct the Transform sub-menu
         transform_menu = self.addMenu("&Transform")
         transform_menu.addAction("&Rotate 90° clockwise",
                                  (lambda: self.do_action("Transformation",
                                                          "r90cw")),
                                  "Ctrl+["
                                  )
-        transform_menu.addAction("&Rotate 90° counter clockwise",
+        transform_menu.addAction("&Rotate 90° counterclockwise",
                                  (lambda: self.do_action("Transformation",
                                                          "r90ccw")),
                                  "Ctrl+]"
@@ -64,6 +67,7 @@ class MenuBarWindow(QMenuBar):
                                  )
 
     def construct_filter_menu(self):
+        # Construct the Filters sub-menu
         filter_menu = self.addMenu("&Filters")
         filter_menu.addAction("&Bilateral2df",
                               (lambda: self.do_action("Filter",
@@ -77,9 +81,6 @@ class MenuBarWindow(QMenuBar):
         filter_menu.addAction("&Gaussian2D",
                               lambda: self.do_action("Filter",
                                                      "gauss2d"))
-        filter_menu.addAction("&Luminance",
-                              lambda: self.do_action("Filter",
-                                                     "lum"))
         filter_menu.addAction("&Rotation",
                               lambda: self.do_action("Filter",
                                                      "rot"))
@@ -89,6 +90,7 @@ class MenuBarWindow(QMenuBar):
         return filter_menu
 
     def construct_algo_menu(self):
+        # Construct the Algorithms sub-menu
         algo_menu = self.addMenu("&Algorithms")
         algo_menu.addAction("&HDR Merger",
                             (lambda: self.do_action("Algorithm",
@@ -115,6 +117,8 @@ class MenuBarWindow(QMenuBar):
             self.custom_win.original_size()
 
     def do_file(self, action):
+        # Calls the requested file function
+        # and returns the new image
         new_img = None
         if action == "open":
             new_img = self.open_dialog()
@@ -126,9 +130,11 @@ class MenuBarWindow(QMenuBar):
         return new_img
 
     def do_algo(self, action):
+        # Calls the requested algorithm function
+        # and returns the new image
         action_obj = None
         if action == "hdr_merger":
-            action_obj = hdr_merger.HDRMergeWindow()
+            action_obj = hdr_merger.HDRMergerWindow()
             self.main.update_window_title("HDR Merger result")
 
         action_obj.exec()
@@ -143,6 +149,8 @@ class MenuBarWindow(QMenuBar):
         return new_img
 
     def do_filter(self, action):
+        # Calls the requested filter function
+        # and returns the new image
         action_obj = None
         new_img = self.custom_win.get_img()
         ldr_type = self.custom_win.get_ldr()
@@ -168,6 +176,8 @@ class MenuBarWindow(QMenuBar):
         return new_img
 
     def do_transformation(self, action):
+        # Calls the requested transformation function
+        # and returns the new image
         new_img = self.custom_win.get_img()
         if action == "r90cw":
             new_img.rotate90CW()
@@ -188,6 +198,8 @@ class MenuBarWindow(QMenuBar):
         return new_img
 
     def open_dialog(self):
+        # Opens a window for the user to select
+        # an image to read
         new_path = QFileDialog.getOpenFileName(
             self,
             "Open the image", "",
@@ -204,10 +216,21 @@ class MenuBarWindow(QMenuBar):
         return new_img
 
     def save_dialog(self):
+        # Opens a window for the user to select
+        # where to save the modified image
         path = QFileDialog.getSaveFileName(
             self,
             "Save the image",
             "new_img",
             ".png;; .bmp;; .jpg;; .hdr",)
-        fl.save_img(self.custom_win.img, path, self.custom_win.ldr_type)
+
+        # If the image is HDR, it must be tone mapped according to the
+        # exposure values specified by the user in the sliders
+        if self.custom_win.ext == "hdr":
+            tmo_img = self.custom_win.apply_simple_tmo()
+            fl.save_img(tmo_img, path, self.custom_win.ldr_type)
+
+        # If the image is SDR, just save it
+        else:
+            fl.save_img(self.custom_win.img, path, self.custom_win.ldr_type)
         return None

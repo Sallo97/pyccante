@@ -1,30 +1,28 @@
+// This file contains the binding of the Piccante's FilterBilateral2DS classW
+
 #include "py_filter_bilateral_2ds.h"
+
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
 
 void init_FilterBilateral2DS(pybind11::module_& m)
 {
+    // Defining the FilterBilateral2DS class to the passed module
     py::class_<pic::FilterBilateral2DS, pic::Filter>(m, "FilterBilateral2DS")
 
     // region Constructor
 
-    .def(py::init<>(),
-        "FilterBilateral2DS constructor",
-        py::return_value_policy::take_ownership)
-    
-    .def(py::init<std::string, float>(),
-        "FilterBilateral2DS constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("nameFile"), py::arg("sigma_r"))
-    
-    .def(py::init<float, float, int, pic::SAMPLER_TYPE>(),
-        "FilterBilateral2DS constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("sigma_s"), py::arg("sigma_r"),
-        py::arg("mult"), py::arg("type"))
-
-    // endregion
-
     // region Functions
 
+    /**
+     * @brief execute the FilterBilateral2DS
+     * @param imgIn
+     * @param sigma_s
+     * @param sigma_r
+     * @return the filtered image
+     */
     .def_static(
         "execute",
         ([] (pic::Image* imgIn, float sigma_s,
@@ -38,6 +36,15 @@ void init_FilterBilateral2DS(pybind11::module_& m)
         py::arg("sigma_r")
     )
 
+
+    /**
+     * @brief execute the FilterBilateral2DS
+     * @param imgIn
+     * @param imgEdge
+     * @param sigma_s
+     * @param sigma_r
+     * @return the filtered image
+     */
     .def_static(
         "execute",
         ([] (pic::Image* imgIn, pic::Image* imgEdge,
@@ -52,5 +59,5 @@ void init_FilterBilateral2DS(pybind11::module_& m)
         py::arg("sigma_s"), py::arg("sigma_r")
     );
 
-    // endregion
+    // endregion Functions
 }

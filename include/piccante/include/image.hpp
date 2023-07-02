@@ -437,7 +437,7 @@ namespace pic
         float *getPercentileVal(float percentile, BBox *box, float *ret);
 
         /**
-         * @brief getPercentileVal computes the median value value given a percentile.
+         * @brief getMedVal computes the median value value given a percentile.
          * @param box is the bounding box where to compute the function. If it
          * is set to NULL the function will be computed on the entire image.
          * @param percentile is the percentile.

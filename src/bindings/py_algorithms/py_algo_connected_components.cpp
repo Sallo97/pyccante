@@ -1,9 +1,24 @@
+// This file contains the binding of the Piccante's Connected_Components algorithm class
+
 #include "py_algo_connected_components.h"
 
-static unsigned int find_areaMin(std::vector<pic::LabelOutput> ret, int areaMin)
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+// region Support Functions
+
+/**
+ * @brief find_areaMin finds the shape of minimal area inside an array of shapes.
+ * @param shapes is an array of LabelOutput containing the area of the shapes.
+ * @param areaMin is the threshold of the minimum.
+ * @return a int value containing the minimum area present in the array.
+ */
+static unsigned int find_areaMin(std::vector<pic::LabelOutput> shapes, int areaMin)
 {
-    for(unsigned int i = 0; i < ret.size(); i++) {
-        unsigned int areaTmp = ret[i].coords.size();
+    for(unsigned int i = 0; i < shapes.size(); i++) {
+        unsigned int areaTmp = shapes[i].coords.size();
         if(areaMin > areaTmp) {
             areaMin = areaTmp;
         }
@@ -13,18 +28,29 @@ static unsigned int find_areaMin(std::vector<pic::LabelOutput> ret, int areaMin)
     return areaMin;
 }
 
+// endregion Support Functions
 
 void init_ConnectedComponents(pybind11::module_& m)
 {
     // region LabelInfo
 
+    /**
+     * @brief LabelInfo
+     */
     py::class_<pic::LabelInfo>(m, "LabelInfo");
 
     // endregion
 
     // region LabelOutput
 
+    /**
+     * @brief LabelOutput
+     */
     py::class_<pic::LabelOutput>(m, "LabelOutput")
+        
+        /**
+         * @brief LabelOutput creates a LabelOutput with default values.
+         */
         .def(py::init<>(),
             "LabelOutput constructor",
             py::return_value_policy::take_ownership)
@@ -38,11 +64,18 @@ void init_ConnectedComponents(pybind11::module_& m)
 
 
     // region ConnectedComponents
-
+    
+    /**
+     * @brief ConnectedComponents implements the aforementioned algorithm.
+     */
     py::class_<pic::ConnectedComponents>(m, "ConnectedComponents")
     
     // region Constructors
 
+    /**
+     * @brief ConnectedComponents create a connected components with a threshold value.
+     * @param thr is the threshold value specified by the user.
+     */
     .def(py::init<float>(),
         "ConnectedComponents constructor",
         py::return_value_policy::take_ownership,
@@ -52,6 +85,13 @@ void init_ConnectedComponents(pybind11::module_& m)
 
     // region Functions
 
+    /**
+     * @brief execute execute the algorithm ConnectedComponents
+     * @param imgIn_buffer is the NumPy algorithms that represent the input image mask
+     * @param width is the width of the image
+     * @param height is the height of the image
+     * @return a tuple containing the uint buffer of the resulting image of the algorith and his ret buffer.
+     */ 
     .def
     (
         "execute",
@@ -81,6 +121,13 @@ void init_ConnectedComponents(pybind11::module_& m)
         py::return_value_policy::take_ownership
     )
 
+    /**
+     * @brief convertFromIntegerToImage convert the passed buffer to an Image object.
+     * @param imgLabel is the uint buffer.
+     * @param width defines the image width.
+     * @param height defines the image height.
+     * @return the image object based upon the passed imgLabel
+     */
     .def_static
     (
         "convertFromIntegerToImage",
@@ -96,10 +143,15 @@ void init_ConnectedComponents(pybind11::module_& m)
         py::arg("height")
     );
 
-    // endregion
+    // endregion Functions
 
-    // endregion
-
+    // region Custom Functions
+    /**
+     * @brief find_areaMin finds the shape of minimal area inside an array of shapes.
+     * @return a int value containing the minimum area present in the array.
+     */
     m.def("find_areaMin", find_areaMin);
+
+    // endregion Custom Functions
 
 }

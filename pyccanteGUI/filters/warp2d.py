@@ -3,7 +3,7 @@
 import pyccante as pyc
 import numpy as np
 import utils.str_warning as sw
-from layouts.windows import warningwin as ww
+from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QLineEdit, QVBoxLayout, QDialog,
                                QCheckBox, QGridLayout)
@@ -84,8 +84,7 @@ class Warp2DWindow(QDialog):
             centroid = self.cntr.isChecked()
             mtx = self.create_mtx()
             if mtx.determinant() > 0:
-                new_img = pyc.Image()
-                new_img = pyc.FilterWarp2D.execute(self.img, imgOut=new_img, h=mtx,
+                new_img = pyc.FilterWarp2D.execute(self.img, h=mtx,
                                                    bSameSize=same_size, bCentroid=centroid)
                 self.set_img(new_img)
             else:

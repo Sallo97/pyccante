@@ -4,7 +4,7 @@
 
 import pyccante as pyc
 import utils.str_warning as sw
-from layouts.windows import warningwin as ww
+from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QVBoxLayout, QDialog)
 

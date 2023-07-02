@@ -1,7 +1,7 @@
 # This file contains the B2DFWindow class
 
 import pyccante as pyc
-import layouts.windows.warningwin as ww
+import windows.warningwin as ww
 import utils.str_warning as sw
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QDialog)

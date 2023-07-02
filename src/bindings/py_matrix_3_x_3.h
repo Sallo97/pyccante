@@ -12,6 +12,11 @@
 #include <pybind11/functional.h>
 #include "support.h"
 
+
+namespace py = pybind11;
+using namespace py::literals;
+
+
 void init_Matrix_3_x_3(pybind11::module_& m);
 
 #endif

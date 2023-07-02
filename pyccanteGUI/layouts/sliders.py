@@ -1,7 +1,7 @@
 # This file contains the class SlidersFrame
 
 from PySide6.QtWidgets import QVBoxLayout, QFrame, QLabel
-from layouts import slider as sl, lines as ln
+from utils import slider as sl, lines as ln
 from PySide6.QtCore import Qt
 
 
@@ -27,6 +27,7 @@ class SlidersFrame(QFrame):
         gamma_label = QLabel("Gamma")
         gamma_label.setAlignment(Qt.AlignCenter)
         gamma_slider = sl.Slider(0, 4)
+        gamma_slider.setSliderPosition(1)
         gamma_slider.valueChanged.connect(
             lambda:
             self.update_values(main_win, custom_win,

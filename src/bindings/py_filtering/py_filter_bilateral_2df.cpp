@@ -1,33 +1,32 @@
+// This file contains the binding of the Piccante's FilterBilateral2D filter class
+
 #include"py_filter_bilateral_2df.h"
 
 
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the PoissonSolver class{} to the passed module.
+ */
 void init_FilterBilateral2DF(pybind11::module_& m)
 {
-    // region FilterBilateral2DF
-
+    /**
+     * @brief the basic construct of an Image
+     */
     py::class_<pic::FilterBilateral2DF, pic::Filter>(m, "FilterBilateral2DF")
-
-    // region Constructor
-    
-    .def(py::init <>(),
-        "FilterBilateral2DF constructor",
-        py::return_value_policy::take_ownership)
-
-    .def(py::init < float, float > (),
-        "FilterBilateral2DF",
-        py::return_value_policy::take_ownership,
-        py::arg("sigma_s"), py::arg("sigma_r"))
-
-    // endregion
 
     // region Functions
     
-    .def_static("execute", &pic::FilterBilateral2DF::execute,
-                "execute FilterBilateral2DF",
-                py::return_value_policy::take_ownership,
-                py::arg("imgIn"), py::arg("imgOut"), 
-                py::arg("sigma_s"), py::arg("sigma_r"))
-    
+    /**
+     * @brief execute
+     * @param imgIn
+     * @param imgOut
+     * @param sigma_s
+     * @param sigma_r
+     * @return
+     */
     .def_static("execute", ([] (pic::Image* imgIn, float sigma_s, float sigma_r)
     {
         return pic::FilterBilateral2DF::execute(imgIn, NULL, sigma_s, sigma_r);
@@ -38,9 +37,8 @@ void init_FilterBilateral2DF(pybind11::module_& m)
     py::arg("sigma_r")
     );
 
-    // endregions
+    // endregions Functions
 
-    // endregion
 
 
 }

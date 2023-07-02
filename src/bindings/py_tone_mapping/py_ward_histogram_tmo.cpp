@@ -1,22 +1,27 @@
+// This file contains the binding of the Piccante's WardHistogramTMO base class
+
+
 #include "py_ward_histogram_tmo.h"
 
+
+//This means that OpenGL acceleration layer is disabled
+#define PIC_DISABLE_OPENGL
+
+
+/**
+ * @brief binds the WardHistogramTMO class to the passed module.
+ */
 void init_WardHistogramTMO(pybind11::module_& m)
 {
     py::class_<pic::WardHistogramTMO, pic::ToneMappingOperator>(m, "WardHistogramTMO")
     
-    // region Constructor
-
-    .def(py::init<int, float, float, bool>(),
-        "WardHistogramTMO constructor",
-        py::return_value_policy::take_ownership,
-        py::arg("nBin")=256, py::arg("LdMin")=1.0f,
-        py::arg("LdMax")=100.0f, py::arg("bCeiling")=true)
+    // region Methods
     
-    .def_static("execute", &pic::WardHistogramTMO::execute,
-        "execute the WardHistogramTMO tone-mapping",
-        py::return_value_policy::take_ownership,
-        py::arg("imgIn"), py::arg("imgOut"))
-    
+    /**
+     * @brief execute the Ward Tone Mapping
+     * @param imgIn the HDR source image.
+     * @return a compressed SDR image.
+     */
     .def_static
     (
         "execute",
@@ -29,5 +34,5 @@ void init_WardHistogramTMO(pybind11::module_& m)
         py::arg("imgIn")
     );
     
-    // endregion
+    // endregion Methods
 }

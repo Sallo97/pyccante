@@ -11,6 +11,8 @@
 #include <pybind11/stl.h>
 //#include <pybind11/complex.h>
 
+namespace py = pybind11;
+using namespace py::literals;
 
 void init_Histogram(pybind11::module_& m);
 
