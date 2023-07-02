@@ -41,7 +41,7 @@ void init_Image(pybind11::module_ &m)
         .def(py::init<std::string &, pic::LDR_type>(),
             py::return_value_policy::take_ownership,
             "Image loads an Image from a file on the disk.",
-            py::arg("nameFile"), py::arg("typeLoad"))
+            py::arg("nameFile"), py::arg("typeLoad")=pic::LDR_type::LT_NOR_GAMMA)
 
         /**
          * @brief Image creates an Image with a given size.
