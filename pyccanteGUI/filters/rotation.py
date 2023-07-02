@@ -17,7 +17,7 @@ class RotationWindow(QDialog):
         self.img = img
 
         # Setting window parameters
-        self.setWindowTitle("Bilateral2DF...")
+        self.setWindowTitle("Rotation...")
 
         # Define labels for parameters
         self.angle_x_label = QLabel("deg X: ")

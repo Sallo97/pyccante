@@ -15,7 +15,7 @@ class Gauss2DWindow(QDialog):
         # img = image to apply the filter to.
         super(Gauss2DWindow, self).__init__()
         self.img = img
-        self.setWindowTitle("Conv2D...")
+        self.setWindowTitle("Gaussian...")
 
         # Define labels for parameters
         self.sigma_label = QLabel("Sigma: ")
