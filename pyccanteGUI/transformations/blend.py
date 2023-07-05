@@ -68,7 +68,7 @@ class Blend(QDialog):
         # and if they have the same size as
         # the main image
         if self.check_none() and self.check_sizes():
-            new_img = self.blend(self.blend, self.weight)
+            new_img = self.img.blend(self.blend, self.weight)
             self.set_img(new_img)
 
     def check_none(self):

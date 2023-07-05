@@ -18,6 +18,7 @@
 #include "bindings/py_filtering/py_filter_warp_2d.h"
 #include "bindings/py_filtering/py_filter_bilateral_2ds.h"
 #include "bindings/py_filtering/py_filter_max.h"
+#include "bindings/py_filtering/py_filter_min.h"
 #include "bindings/py_filtering/py_filter_med.h"
 #include "bindings/py_filtering/py_filter_mean.h"
 #include "bindings/py_filtering/py_filter_med_vec.h"
@@ -62,6 +63,7 @@ PYBIND11_MODULE(pyccante, m)
     init_FilterWarp2D(m);               // FilterWarp2 filter_class
     init_FilterBilateral2DS(m);         // FilterBilateral2DS filter_class
     init_FilterMax(m);                  // FilterMax filter_class
+    init_FilterMin(m);                  // FilterMin filter_class
     init_FilterMed(m);                  // FilterMed filter_class
     init_FilterMean(m);                 // FilterMean filter_class
     init_FilterMedVec(m);               // FilterMedVec filter_class

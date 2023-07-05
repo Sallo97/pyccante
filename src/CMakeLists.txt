@@ -25,6 +25,7 @@ set(HEADERS
     bindings/py_filtering/py_filter_warp_2d.h
     bindings/py_filtering/py_filter_bilateral_2ds.h
     bindings/py_filtering/py_filter_max.h
+    bindings/py_filtering/py_filter_min.h
     bindings/py_filtering/py_filter_med.h
     bindings/py_filtering/py_filter_mean.h
     bindings/py_filtering/py_filter_med_vec.h
@@ -64,6 +65,7 @@ set(SOURCES
     bindings/py_filtering/py_filter_warp_2d.cpp
     bindings/py_filtering/py_filter_bilateral_2ds.cpp
     bindings/py_filtering/py_filter_max.cpp
+    bindings/py_filtering/py_filter_min.cpp
     bindings/py_filtering/py_filter_med.cpp
     bindings/py_filtering/py_filter_mean.cpp
     bindings/py_filtering/py_filter_med_vec.cpp

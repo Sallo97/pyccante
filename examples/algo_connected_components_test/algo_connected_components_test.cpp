@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     printf("Reading an LDR file...");
 
     pic::Image img;
-    img.Read("connected_test.png", pic::LT_NOR);
+    img.Read("../_data/connected_test.png", pic::LT_NOR);
 
     printf("Ok\n");
 

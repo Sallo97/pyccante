@@ -3,7 +3,7 @@ import numpy as np
 
 img = py.Image()
 
-img.Read("connected_test.png", py.LDR_type.LT_NOR)
+img.Read("../_data/connected_test.png", py.LDR_type.LT_NOR)
 
 cc = py.ConnectedComponents()
 

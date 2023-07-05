@@ -7,6 +7,7 @@ from windows import warningwin as ww
 from PySide6.QtWidgets import (QLabel, QPushButton, QHBoxLayout,
                                QLineEdit, QVBoxLayout, QDialog,
                                QCheckBox, QGridLayout)
+from PySide6.QtCore import Qt
 
 
 class Warp2DWindow(QDialog):
@@ -60,6 +61,7 @@ class Warp2DWindow(QDialog):
         self.checks = QHBoxLayout()
         self.checks.addWidget(self.size)
         self.checks.addWidget(self.cntr)
+        self.checks.setAlignment(Qt.AlignmentFlag.AlignHCenter)
 
         # Define buttons
         self.OK_button = QPushButton("OK")
@@ -77,6 +79,10 @@ class Warp2DWindow(QDialog):
         self.main_layout.addLayout(self.mtx_layout)
         self.main_layout.addLayout(self.checks)
         self.main_layout.addLayout(self.buttons_layout)
+
+        # Set window size
+        self.setFixedWidth(220)
+        self.setFixedHeight(150)
 
     def execute(self):
         try:

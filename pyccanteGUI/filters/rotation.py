@@ -20,9 +20,9 @@ class RotationWindow(QDialog):
         self.setWindowTitle("Rotation...")
 
         # Define labels for parameters
-        self.angle_x_label = QLabel("deg X: ")
-        self.angle_y_label = QLabel("deg Y: ")
-        self.angle_z_label = QLabel("deg Z: ")
+        self.angle_x_label = QLabel("X(deg): ")
+        self.angle_y_label = QLabel("Y(deg): ")
+        self.angle_z_label = QLabel("Z(deg): ")
 
         # Define line edits for parameters
         self.angle_x_edit = QLineEdit("0")
@@ -59,6 +59,10 @@ class RotationWindow(QDialog):
         self.main_layout.addLayout(self.angle_y_layout)
         self.main_layout.addLayout(self.angle_z_layout)
         self.main_layout.addLayout(self.buttons_layout)
+
+        # Set window size
+        self.setFixedWidth(220)
+        self.setFixedHeight(130)
 
     def execute(self):
         # Execute the Rotation filter

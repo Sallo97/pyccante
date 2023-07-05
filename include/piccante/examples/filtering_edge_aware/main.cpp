@@ -23,7 +23,7 @@ This program is free software: you can redistribute it and/or modify
     ( http://www.gnu.org/licenses/lgpl-3.0.html ) for more details.
 */
 
-//This means that OpenGL acceleration layer is disabled
+// This means that OpenGL acceleration layer is disabled
 #define PIC_DISABLE_OPENGL
 
 #include "piccante.hpp"
@@ -32,9 +32,12 @@ int main(int argc, char *argv[])
 {
     std::string img_str;
 
-    if(argc == 2) {
+    if (argc == 2)
+    {
         img_str = argv[1];
-    } else {
+    }
+    else
+    {
         img_str = "../data/input/tommaseo_statue.png";
     }
 
@@ -44,139 +47,35 @@ int main(int argc, char *argv[])
     printf("Ok\n");
 
     printf("Is it valid? ");
-    if(img.isValid()) {
+    if (img.isValid())
+    {
         printf("Ok\n");
 
         printf("Estimated noise:\n");
         float *noise = pic::FilterNoiseEstimation::getNoiseEstimation(&img, NULL);
-        for(int i = 0; i < img.channels; i++) {
+        for (int i = 0; i < img.channels; i++)
+        {
             printf("Channel i-th: %f\n", noise[i]);
         }
 
-        pic::ImageVec input = pic::Single(&img);
-        pic::Image *output = NULL;
-
-        bool bWritten;
-
-        std::string name = pic::removeExtension(img_str);
-        name = pic::removeLocalPath(name);
-
-        //the bilateral filter
-        printf("Filtering the image with a Fast Bilateral filter;\n");
-        printf("this has sigma_s = 4.0 and sigma_r = 0.05 ... ");
-
-        pic::FilterBilateral2DS flt(8.0f, 0.05f);
-        output = flt.Process(input, output);
-
-        //output = pic::FilterBilateral2DAS::execute(&img, output, 8.0f, 0.05f);
-
-        printf("Ok!\n");
-
-        printf("Writing the file to disk...");
-
-        bWritten = output->Write("../data/output/" + name + "_filtered_bilateral.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //the median filter
+        // the median filter
         printf("Filtering the image with the Median filter (radius of 3);\n");
 
-        pic::FilterMed fltM(7);
-        output = fltM.Process(input, output);
-
+        pic::Image output = pic::FilterMax::execute(&img, NULL, 7);
+        output.Write("Med.png", pic::LDR_type::LT_NOR_GAMMA);
         printf("Ok!\n");
 
-        printf("Writing the file to disk...");
+        output = pic::FilterMin::execute(&img, NULL, 7);
+        output.Write("Min.png", pic::LDR_type::LT_NOR_GAMMA);
 
-        bWritten = output->Write("../data/output/" + name + "_filtered_median.png", pic::LT_NOR_GAMMA);
+        output = pic::FilterMean::execute(&img, NULL, 7);
+        output.Write("Mean.png", pic::LDR_type::LT_NOR_GAMMA);
 
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //the vector median filter
-        printf("Filtering the image with the Vector Median filter (radius of 3);\n");
-
-        pic::FilterMedVec fltMV(7);
-        output = fltMV.Process(input, output);
-
+        output = pic::FilterMed::execute(&img, NULL, 7);
+        output.Write("Med.png", pic::LDR_type::LT_NOR_GAMMA);
+        
         printf("Ok!\n");
 
-        printf("Writing the file to disk...");
-
-        bWritten = output->Write("../data/output/" + name + "filtered_median_vec.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //the Anisotropic Diffusion
-        printf("Filtering the image with the Anisotropic Diffusion;\n");
-        printf("this has sigma_s = 4.0 and sigma_r = 0.05 ... ");
-        output = pic::FilterAnsiotropicDiffusion::execute(input, output, 8.0f, 0.05f);
-        printf("Ok!\n");
-
-        printf("Writing the file to disk...");
-        bWritten = output->Write("../data/output/" + name + "_filtered_anisotropic_diffusion.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //the Guided Filter
-        printf("Filtering the image with the Guided filter...");
-        pic::FilterGuided fltG;
-        output = fltG.Process(input, output);//filtering the image
-
-        printf("Writing the file to disk...");
-        bWritten = output->Write("../data/output/" + name + "_filtered_guided.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //WLS
-        printf("Filtering the image with the WLS filter...");
-        pic::FilterWLS fltWLS;//creating the filter
-        output = fltWLS.Process(input, output);
-        printf("Ok!\n");
-
-        printf("Writing the file to disk...");
-        bWritten = output->Write("../data/output/" + name + "_filtered_wls.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-        //Kuwahara
-        printf("Filtering the image with the Kuwahara filter...");
-        pic::FilterKuwahara fltK(11);
-        output = fltK.Process(input, output);
-
-        printf("Writing the file to disk...");
-        bWritten = output->Write("../data/output/" + name + "filtered_kuwahara.png", pic::LT_NOR_GAMMA);
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-
-    } else {
-        printf("No it is not a valid file!\n");
     }
+
 }

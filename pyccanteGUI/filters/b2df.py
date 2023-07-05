@@ -4,7 +4,8 @@ import pyccante as pyc
 import windows.warningwin as ww
 import utils.str_warning as sw
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
-                               QHBoxLayout, QVBoxLayout, QDialog)
+                               QHBoxLayout, QVBoxLayout, QDialog,
+                               QFrame)
 
 
 class B2DFWindow(QDialog):
@@ -55,6 +56,10 @@ class B2DFWindow(QDialog):
         self.main_layout.addLayout(self.sigma_s_layout)
         self.main_layout.addLayout(self.sigma_r_layout)
         self.main_layout.addLayout(self.buttons_layout)
+
+        # Set window size
+        self.setFixedWidth(220)
+        self.setFixedHeight(100)
 
     def execute(self):
         # Execute the B2DF filter to the self.img

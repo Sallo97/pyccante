@@ -69,6 +69,10 @@ class B2DSWindow(QDialog):
         self.main_layout.addLayout(self.sigma_r_layout)
         self.main_layout.addLayout(self.buttons_layout)
 
+        # Set window size
+        self.setFixedWidth(220)
+        self.setFixedHeight(120)
+
     def execute(self):
         # Execute the B2DF filter to the self.img
         # Modify the self.img with the filtered one.

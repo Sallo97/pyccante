@@ -235,23 +235,25 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // sub dirs
 #include "algorithms.hpp"
-#include "colors.hpp"
-#include "features_matching.hpp"
+//#include "colors.hpp"
+//#include "features_matching.hpp"
 #include "filtering.hpp"
-#include "gl.hpp"
-#include "image_samplers.hpp"
+//#include "gl.hpp"
+//#include "image_samplers.hpp"
 #include "io.hpp"
-#include "metrics.hpp"
+//#include "metrics.hpp"
 #include "point_samplers.hpp"
 #include "tone_mapping.hpp"
-#include "util.hpp"
-#include "computer_vision.hpp"
+//#include "util.hpp"
+//#include "computer_vision.hpp"
 
 #include "JNI.hpp"
 
 #ifdef PIC_MAC_OS_X
 #pragma clang diagnostic pop
 #endif
+
+#define PIC_DISABLE_OPENGL
 
 #endif /* PIC_PICCANTE_HPP */
 

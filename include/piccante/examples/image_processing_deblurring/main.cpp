@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     if(argc == 3) {
         img_str = argv[1];
     } else {
-        img_str = "../data/input/bottles.hdr";
+        img_str = "../data/input/yellow_flowers.png";
         psf_str = "../data/input/kernel_psf.png";
     }
 
@@ -60,22 +60,6 @@ int main(int argc, char *argv[])
         conv->Write("../data/output/image_conv_kernel_psf.png");
 
         printf("Ok!\n");
-
-        printf("Deconvolving the image with the PSF read from file...");
-        pic::Image *deconv = pic::FilterDeconvolution::execute(conv, &psf, NULL, 1000);
-
-        printf("Ok!\n");
-
-        printf("Writing the file to disk...");
-        bool bWritten = deconv->Write("../data/output/image_deconv_kernel_psf.png");
-
-        if(bWritten) {
-            printf("Ok\n");
-        } else {
-            printf("Writing had some issues!\n");
-        }
-    } else {
-        printf("No, the file is not valid!\n");
     }
 
     return 0;

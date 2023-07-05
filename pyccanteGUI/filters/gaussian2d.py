@@ -44,6 +44,10 @@ class Gauss2DWindow(QDialog):
         self.main_layout.addLayout(self.sigma_layout)
         self.main_layout.addLayout(self.buttons_layout)
 
+        # Set window size
+        self.setFixedWidth(220)
+        self.setFixedHeight(100)
+
     def execute(self):
         # Execute the Conv2D filter to the self.img
         # Modify the self.img with the filtered one.
