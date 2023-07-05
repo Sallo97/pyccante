@@ -63,9 +63,9 @@ void init_GrowCut(pybind11::module_& m)
     .def_static
     (
         "execute",
-        ([] (pic::Image* img, pic::Image* seeds)
+        ([] (pic::Image* this_img, pic::Image* seeds)
         {
-            return pic::GrowCut::execute(img, seeds, NULL);
+            return pic::GrowCut::execute(this_img, seeds, NULL);
         }),
         "execute the algorithm GrowCut",
         py::return_value_policy::take_ownership,

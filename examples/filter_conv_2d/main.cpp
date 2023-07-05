@@ -10,12 +10,8 @@ int main(int argc, char *argv[])
 {
     std::string img_str, psf_str;
 
-    if(argc == 3) {
-        img_str = argv[1];
-    } else {
-        img_str = "../_data/input/yellow_flowers.png";
-        psf_str = "../_data/input/kernel_psf.png";
-    }
+    img_str = "../_data/input/yellow_flowers.png";
+    psf_str = "../_data/input/kernel_psf.png";
 
     printf("Reading images...");
 
@@ -36,7 +32,7 @@ int main(int argc, char *argv[])
 
         // Applying FilterConv2D 
         pic::Image *conv = pic::FilterConv2D::execute(&img, &psf, NULL);
-        conv->Write("../data/output/image_conv_kernel_psf.png");
+        conv->Write("../_data/output/filter_conv2d.png");
 
         printf("Ok!\n");
     }

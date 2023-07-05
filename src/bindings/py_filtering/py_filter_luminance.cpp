@@ -38,12 +38,10 @@ void init_FilterLuminance(pybind11::module_& m)
      * @param type the LUMINANCE_TYPE used for applying the filter.
      * @return the filtered image.
      */
-    .def_static("execute", ([](pic::Image* imgIn, 
+    .def_static("execute", ([](pic::Image* this_img, 
                               pic::LUMINANCE_TYPE type = pic::LUMINANCE_TYPE::LT_CIE_LUMINANCE)
         {
-            pic::Image* imgOut;
-            pic::Image imgIn_copy(imgIn->nameFile, pic::LDR_type::LT_NOR_GAMMA);
-            return pic::FilterLuminance::execute(&imgIn_copy, imgOut, type);
+            return pic::FilterLuminance::execute(this_img, NULL, type);
         }),
         "execute FilterLuminance",
         py::return_value_policy::take_ownership,
