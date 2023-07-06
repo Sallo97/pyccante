@@ -1,3 +1,6 @@
+# This program test the FilterMax, Filter Min, Filter Mean, and FilterMed of pyccante
+
+
 import pyccante as pyc
 
 img_str = "../_data/input/tommaseo_statue.png"

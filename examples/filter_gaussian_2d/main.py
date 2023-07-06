@@ -1,4 +1,4 @@
-# This program test the FilterGaussian2D of Piccante
+# This program test the FilterGaussian2D of pyccante
 
 
 import pyccante as pyc

@@ -1,4 +1,4 @@
-#This program test the FilterMosaic of Piccante
+#This program test the FilterMosaic of pyccante
 
 
 import pyccante as pyc
