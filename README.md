@@ -8,7 +8,7 @@ edit image for users of every skill-level
 ## Compilation
 Start by cloning the pyccante repository from GitHub using the following commands:
 ```
-$ git clone https :// github . com / Sallo97 / pyccante . git
+$ git clone https://github.com/Sallo97/pyccante.git
 $ cd pyccante
 ```
 ### Set the build directory
