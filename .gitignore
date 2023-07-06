@@ -7,4 +7,4 @@ build/
 # Don't add the following files
 # to the repository, since they can be produced
 examples/_data/output/
-*
+
