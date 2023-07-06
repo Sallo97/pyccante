@@ -91,11 +91,17 @@ OUTPUT_STRIP_TRAILING_WHITESPACE OUTPUT_VARIABLE PY11_DIR)
 list(APPEND CMAKE_PREFIX_PATH "${PY11_DIR}")
 find_package(pybind11 CONFIG REQUIRED)
 
+SET( EIGEN3_INCLUDE_DIR "../include/piccante/include/externals/Eigen" )
+IF( NOT EIGEN3_INCLUDE_DIR )
+    MESSAGE( FATAL_ERROR "Please point the environment variable EIGEN3_INCLUDE_DIR to the include directory of your Eigen3 installation.")
+ENDIF()
+INCLUDE_DIRECTORIES ( "${EIGEN3_INCLUDE_DIR}" )
+
+
 # Setting the required library
 include_directories(
     ../include/piccante/include
     ../include/stb
-    ..include/piccante/include/externals/Eigen
 )
 
 # Adding the binding modules
