@@ -46,25 +46,36 @@ should not be ignored.
 ## Using pyccante
 Once pyccante has been successfully compiled, it is possible to use its functionality
 within Python by following these steps:
-Set the library path
+
+### Set the library path
 To use pyccante it is important to ensure that the binary library file is accessible to
 Python. By default, Python searches for modules in the current directory and within a
 group of standard paths called PythonPATH. It’s possible to add the pyccante’s path to
 PythonPATH, allowing the import of the library from anywhere in the system.
-67
+
 On Linux use the following command in terminal:
-1 export PYTHONPATH = path / to / pyccante / library
-Import the module in Python
-Import the pyccante library in Python using the following command:
-1 import pyccante
+```
+export PYTHONPATH = path / to / pyccante / library
+```
+
+Then from Python the pyccante library can be imported using the following command:
+```
+import pyccante
+```
+
 From this point onward it is possible to call pyccante functions or create instances of
 its classes, for example:
-1 img = pyccante . Image ( " test . png " )
-2 img . rotate90CW ()
-3 img . save ( " path / to / the / image . png " )
-Code A.4: This example rotates animage by 90° clockwise and then saves the result.
-A.4 Run the pyccante GUI
-For running the pyccante GUI open a terminal or command prompt inside the “pyccan-
-teGUI” folder in the main directory and type the following action:
-1 python ./ main . py
-Code A.5: Note that some systems the command to execute python scripts is python
+```
+img = pyccante . Image ( " test . png " )
+img . rotate90CW ()
+img . save ( " path / to / the / image . png " )
+```
+
+## Run the pyccante GUI
+For running the pyccante GUI open a terminal or command prompt inside the [`pyccan-
+teGUI`] folder in the main directory and type the following action:
+```
+python ./main.py
+or
+python3 ./main.py
+```
