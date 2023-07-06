@@ -95,6 +95,7 @@ find_package(pybind11 CONFIG REQUIRED)
 include_directories(
     ../include/piccante/include
     ../include/stb
+    ..include/piccante/include/externals/Eigen
 )
 
 # Adding the binding modules
