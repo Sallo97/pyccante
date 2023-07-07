@@ -1,9 +1,9 @@
 # This file contains the B2DFWindow class
 
+import os
 import pyccante as pyc
 import windows.warningwin as ww
 import utils.str_warning as sw
-from bars import file as fl
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
                                QHBoxLayout, QVBoxLayout, QFileDialog, QDialog)
 
@@ -12,14 +12,14 @@ class B2DSWindow(QDialog):
     # B2DSWindow is QDialog that
     # implements a window to apply
     # the Bilateral2DS filter to an image.
-    def __init__(self, img, ldr_type):
+    def __init__(self, img):
         # img = image to apply the filter to.
         # ldr_type = ldr_type of the image.
         super(B2DSWindow, self).__init__()
 
         # Setting image values
-        self.ldr_type = ldr_type
         self.img = img
+
         self.img_edge = None
 
         # Setting up window
@@ -79,7 +79,8 @@ class B2DSWindow(QDialog):
         try:
             sigma_s = float(self.sigma_s_line_edit.text())
             sigma_r = float(self.sigma_r_line_edit.text())
-
+            self.img.Write("./data/tmp.png", pyc.LDR_type.LT_NONE)
+            self.img = pyc.Image("./data/tmp.png", pyc.LDR_type.LT_NOR_GAMMA)
             # Check in which case we are:
             # 1) The user has selected an image edge
             # 2) The user has not selected an image edge
@@ -93,6 +94,7 @@ class B2DSWindow(QDialog):
                                                          sigma_r=sigma_r)
 
             # Set the filtered image as the main image
+            pyc.denormalize_with_gamma(new_img)
             self.set_img(new_img)
 
         except ValueError:
@@ -107,10 +109,11 @@ class B2DSWindow(QDialog):
             self,
             "Open Image Edge",
             "./data",
-            "Image Files (*.png *.jpg *.hdr)")
-        self.img_edge = fl.read_img(path[0])
-        name_file = path[0].split("/")
-        self.imgEdge_button.setText(f"{name_file[-1]}")
+            "Image Files (*.ppm *.pgm *.tga *.png *.jpg *.bmp *.hdr *.exr)")
+        if path[0] == " ":
+            self.img_edge = pyc.Image(path[0], pyc.LDR_type.LT_NOR_GAMMA)
+            name_file = path[0].split("/")
+            self.imgEdge_button.setText(f"{name_file[-1]}")
 
     def set_img(self, new_img):
         # Set the new_img as the current one.
@@ -120,3 +123,5 @@ class B2DSWindow(QDialog):
             self.hide()
         else:
             ww.WarningWindow(sw.invalid_image_str()).exec()
+
+

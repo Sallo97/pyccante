@@ -1,24 +1,25 @@
 # This file contains the B2DFWindow class
 
+import os
 import pyccante as pyc
 import windows.warningwin as ww
 import utils.str_warning as sw
 from PySide6.QtWidgets import (QLabel, QPushButton, QLineEdit,
-                               QHBoxLayout, QVBoxLayout, QDialog,
-                               QFrame)
+                               QHBoxLayout, QVBoxLayout, QDialog)
 
 
 class B2DFWindow(QDialog):
     # B2DFWindow is QDialog that
     # implements a window to apply
     # the Bilateral2DF filter to an image.
-    def __init__(self, img, ldr_type):
+    def __init__(self, img):
         # img = image to apply the filter to.
-        # ldr_type = ldr_type of the image.
+        # ldr_flag = determines if the images
+        #            has been already normalized
+        #            or not.
         super(B2DFWindow, self).__init__()
 
         # Setting image values
-        self.ldr_type = ldr_type
         self.img = img
 
         # Setting window values
@@ -67,9 +68,14 @@ class B2DFWindow(QDialog):
         try:
             sigma_s = float(self.sigma_s_line_edit.text())
             sigma_r = float(self.sigma_r_line_edit.text())
+            self.img.Write("./data/tmp.png", pyc.LDR_type.LT_NONE)
+            self.img = pyc.Image("./data/tmp.png", pyc.LDR_type.LT_NOR_GAMMA)
             new_img = pyc.FilterBilateral2DF.execute(self.img, sigma_s=sigma_s,
                                                      sigma_r=sigma_r)
+            pyc.denormalize_with_gamma(new_img)
+
             self.set_img(new_img)
+
         except ValueError:
             # One of the typed value is not a number.
             # Open a warningwin that warns the user.
@@ -83,3 +89,4 @@ class B2DFWindow(QDialog):
             self.hide()
         else:
             ww.WarningWindow(sw.invalid_image_str()).exec()
+

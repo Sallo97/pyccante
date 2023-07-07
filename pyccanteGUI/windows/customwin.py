@@ -125,8 +125,9 @@ class CustomWindow(iw.ImageWindow):
         new_pix_map = QtGui.QPixmap(q_img)
         new_pix_map = new_pix_map.scaled(self.res_width, self.res_height,
                                          Qt.AspectRatioMode.KeepAspectRatioByExpanding)
-        self.setPixmap(new_pix_map)
-        self.setAlignment(Qt.AlignCenter)
+        if not new_pix_map.isNull():
+            self.setPixmap(new_pix_map)
+            self.setAlignment(Qt.AlignCenter)
 
     def set_img(self, new_img):
         # Set the new image as the current one

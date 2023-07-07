@@ -1,5 +1,6 @@
 # This file contains the Blend class
 
+import pyccante as pyc
 from bars import file as fl
 import utils.str_warning as sw
 from windows import warningwin as ww
@@ -17,7 +18,7 @@ class Blend(QDialog):
         super(Blend, self).__init__()
 
         # Setting img values
-        self.img = img
+        self.img = pyc.Image(img.nameFile, pyc.LDR_type.LT_NOR_GAMMA)
         self.blend = None
         self.weight = None
 
@@ -25,8 +26,8 @@ class Blend(QDialog):
         self.setWindowTitle("Blend...")
 
         # Define labels for parameters
-        self.blend_label = QLabel("to blend: ")
-        self.weight_label = QLabel("weight: ")
+        self.blend_label = QLabel("Second image: ")
+        self.weight_label = QLabel("Weight mask: ")
 
         # Define button for imgEdge
         self.blend_button = QPushButton("Open...")
@@ -48,7 +49,7 @@ class Blend(QDialog):
         self.OK_button = QPushButton("OK")
         self.Cancel_button = QPushButton("Cancel")
         self.OK_button.clicked.connect(self.execute)
-        self.Cancel_button.clicked.connect(self.hide)
+        self.Cancel_button.clicked.connect(self.close_win)
 
         # Put buttons into a layout
         self.buttons_layout = QHBoxLayout()
@@ -68,8 +69,12 @@ class Blend(QDialog):
         # and if they have the same size as
         # the main image
         if self.check_none() and self.check_sizes():
-            new_img = self.img.blend(self.blend, self.weight)
-            self.set_img(new_img)
+            self.img.blend(self.blend, self.weight)
+            pyc.convert_data_buffer(self.img)
+            self.set_img(self.img)
+            return self.img
+        else:
+            self.img = None
 
     def check_none(self):
         # Returns True if the images are not None
@@ -99,7 +104,7 @@ class Blend(QDialog):
             "./data",
             "Image Files (*.png *.jpg *.hdr)")
         if new_path[0] != '':
-            self.blend = fl.read_img(new_path[0])
+            self.blend = pyc.Image(new_path[0], pyc.LDR_type.LT_NOR_GAMMA)
             name_file = new_path[0].split("/")
             self.blend_button.setText(f"{name_file[-1]}")
 
@@ -110,9 +115,9 @@ class Blend(QDialog):
             self,
             "Open weight image",
             "./data",
-            "Image Files (*.png *.jpg *.hdr)")
+            "Image Files (*.ppm *.pgm *.tga *.png *.jpg *.bmp *.hdr *.exr)")
         if new_path[0] != '':
-            self.weight = fl.read_img(new_path[0])
+            self.weight = pyc.Image(new_path[0], pyc.LDR_type.LT_NOR_GAMMA)
             name_file = new_path[0].split("/")
             self.weight_button.setText(f"{name_file[-1]}")
 
@@ -124,3 +129,8 @@ class Blend(QDialog):
             self.hide()
         else:
             ww.WarningWindow(sw.invalid_image_str()).exec()
+
+    def close_win(self):
+        # Close the window
+        self.img = None
+        self.hide()

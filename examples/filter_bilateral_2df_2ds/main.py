@@ -8,7 +8,7 @@ img_str = "../_data/input/tommaseo_statue.png"
 print("Reading an image...")
 img = pyc.Image(img_str)
 
-print("Ok\n")
+print("Ok")
 
 if img.isValid():
     
@@ -16,8 +16,13 @@ if img.isValid():
     out_2 = pyc.FilterBilateral2DS.execute(img, 4.0, 0.05)
     out_1.Write("../_data/output/filter_bilateral_2df.png")
     out_2.Write("../_data/output/filter_bilateral_2ds.png")
+    
+    out_1 = pyc.FilterBilateral2DF.execute(img, 4.0, 0.05)
+    out_2 = pyc.FilterBilateral2DS.execute(img, 4.0, 0.05)
+    out_1.Write("../_data/output/filter_bilateral_2df_2.png")
+    out_2.Write("../_data/output/filter_bilateral_2ds_2.png")
 
-    print("Ok\n")
+    print("Ok")
 
 else:
     print("The image is not valid!")

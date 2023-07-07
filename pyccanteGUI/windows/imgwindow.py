@@ -110,7 +110,7 @@ class ImageWindow(QLabel):
             q_img = QImage(data, new_img.width, new_img.height,
                            new_img.width * new_img.channels, QtGui.QImage.Format.Format_RGB888)
 
-        elif self.ext in ["jpg", "bmp"]:
+        elif self.ext in ["*.ppm", "*.pgm", "*.tga", "*.png", "*.jpg ", ".bmp"]:
             # We get the raw data of the image
             # as uint_8 numpy array
             data = pyc.getData(self.img).astype(np.uint8)

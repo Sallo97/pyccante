@@ -713,8 +713,7 @@ void init_Image(pybind11::module_ &m)
             float *samples = return_float_ptr(samples_buffer);
 
             // Call the function
-            samples = this_img->getColorSamples(samples,
-                                                                         nSamples, percentage);
+            samples = this_img->getColorSamples(samples,nSamples, percentage);
 
             // Return the NumPy array to Python
             int size = nSamples * this_img->channels;
@@ -975,4 +974,28 @@ void init_Image(pybind11::module_ &m)
         "get the img buffer",
         py::return_value_policy::take_ownership
         );
+    
+
+    /**
+     * @brief Converts an image with LDR_type LT_NOR_GAMMA to a standard 8-bit image.
+              This is used by the pyccanteGUI when applying blend to be able to display
+              the resulting image.
+     * @param image is the current image.
+     */
+    m.def(
+        "denormalize_with_gamma",
+        ([](pic::Image *img)
+        {
+            float invGamma = 1.0f / 2.2f;
+
+            for(int i = 0; i < img->sizeFrame(); i++) {
+                float tmp = powf(img->data[i], invGamma);
+                img->data[i] = CLAMPi(int(pic::lround(tmp * 255.0f)), 0, 255);
+            }
+        }),
+        "Converts an image with LDR_type LT_NOR_GAMMA to a standard 8-bit image."
+        "This is used by the pyccanteGUI when applying blend to be able to display"
+        "the resulting image."
+    );
+
 }

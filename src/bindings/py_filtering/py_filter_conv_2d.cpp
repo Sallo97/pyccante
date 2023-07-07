@@ -25,7 +25,8 @@ void init_FilterConv2D(pybind11::module_& m)
      * @return
      */
     .def_static("execute", ([](pic::Image* img, pic::Image* conv)
-        {
+        {  
+
             return pic::FilterConv2D::execute(img, conv, NULL);
         }),
         "execute FilterConv2D",
@@ -34,5 +35,14 @@ void init_FilterConv2D(pybind11::module_& m)
     );
 
     // endregion Functions
+
+    m.def(
+        "conv_normalization",
+        ([](pic::Image *img)
+        {
+            *img /= img->getSumVal(NULL, NULL)[0];
+        }),
+        "normalize the passed valued. It is used to normalize the conv before executing FilterConv."
+    );
 
 }

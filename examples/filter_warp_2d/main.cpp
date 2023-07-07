@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     if(img0.isValid()) {
         printf("OK\n");
 
-        float mtx_data [9] = {1, 0, 1, 1, 1, 1, 0, 0, 1};
+        float mtx_data [9] = {1, 1, 1, 0, 1, 0, 0, 0, 1};
         pic::Matrix3x3 H (mtx_data);
         printf("matrix...:");
         H.print();

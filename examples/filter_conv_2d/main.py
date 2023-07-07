@@ -11,20 +11,21 @@ print("Reading images...")
 img = pyc.Image(img_str)
 psf = pyc.Image(psf_str)
 
-print("Ok\n")
+print("Ok")
 
 print("Is it valid? ")
 if img.isValid() and psf.isValid():
-    print("Ok\n")
+    print("Ok")
 
-    # Normalization of the PSF
-    psf /= psf.getSumVal()[0]
+    print("Normalization of conv")
+    pyc.conv_normalization(psf)
 
+    print("Applying FilterConv2D...")
     # Applying FilterConv2D 
-    conv = pyc.FilterConv2D.execute(psf)
+    conv = pyc.FilterConv2D.execute(img, psf)
     conv.Write("../_data/output/filter_conv2d.png")
         
-    print("Ok!\n")
+    print("Ok!")
 
 else:
     print("No, the image is not valid!")

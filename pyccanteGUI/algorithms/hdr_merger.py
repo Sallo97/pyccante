@@ -104,7 +104,7 @@ class HDRMergerWindow(QDialog):
             self,
             "Open Conv",
             "./data",
-            "Image Files (*.png *.jpg *.hdr)")
+            "Image Files (*.ppm *.pgm *.tga *.png *.jpg *.bmp *.hdr *.exr)")
         if new_path[0] != "":
             exposure = self.get_exposure(new_path[0])
             self.img_dict[new_path[0]] = exposure

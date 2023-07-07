@@ -152,15 +152,15 @@ class MenuBarWindow(QMenuBar):
         # Calls the requested filter function
         # and returns the new image
         action_obj = None
+
         new_img = self.custom_win.get_img()
-        ldr_type = self.custom_win.get_ldr()
-        print(f"Inside do filter with\nnew_img = {new_img}\nldr_type = {ldr_type}")
+
         if action == "b2df":
-            action_obj = b2df.B2DFWindow(new_img, ldr_type)
+            action_obj = b2df.B2DFWindow(new_img)
         elif action == "b2ds":
-            action_obj = b2ds.B2DSWindow(new_img, ldr_type)
+            action_obj = b2ds.B2DSWindow(new_img)
         elif action == "conv2d":
-            action_obj = conv2d.Conv2DWindow(new_img, ldr_type)
+            action_obj = conv2d.Conv2DWindow(new_img)
         elif action == "gauss2d":
             action_obj = gaussian2d.Gauss2DWindow(new_img)
         elif action == "lum":
@@ -171,7 +171,9 @@ class MenuBarWindow(QMenuBar):
             action_obj = warp2d.Warp2DWindow(new_img)
 
         action_obj.exec()
+
         new_img = action_obj.img
+
         del action_obj
         return new_img
 
@@ -203,7 +205,7 @@ class MenuBarWindow(QMenuBar):
         new_path = QFileDialog.getOpenFileName(
             self,
             "Open the image", "",
-            "Image Files (*.png *.jpg *.bmp *.hdr)")[0]
+            "Image Files (*.ppm *.pgm *.tga *.png *.jpg *.bmp *.hdr *.exr)")[0]
         new_img = fl.read_img(new_path)
         if new_img is not None:
             self.main_win.info_frame.update_text(new_img)
@@ -222,7 +224,7 @@ class MenuBarWindow(QMenuBar):
             self,
             "Save the image",
             "new_img",
-            ".png;; .bmp;; .jpg;; .hdr",)
+            ".ppm;; .pgm;; .tga;; .png;; .jpg;; .bmp;; .hdr;; .exr",)
 
         # If the image is HDR, it must be tone mapped according to the
         # exposure values specified by the user in the sliders
