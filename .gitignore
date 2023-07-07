@@ -5,9 +5,11 @@ build/
 *.out
 /home/deck/Documents/Tesi/pyccante_project/CMakeCache.txt
 /home/deck/Documents/Tesi/pyccante_project/oom
-/home/deck/Documents/Tesi/pyccante_project/.vscode/
-/home/deck/Documents/Tesi/pyccante_project/.idea/
+/home/deck/Documents/Tesi/pyccante_project/.vscode
+/home/deck/Documents/Tesi/pyccante_project/.vscode/*
 /home/deck/Documents/Tesi/pyccante_project/.git
+/home/deck/Documents/Tesi/pyccante_project/.idea
+/home/deck/Documents/Tesi/pyccante_project/.idea/*
 /home/deck/Documents/Tesi/pyccante_project/CMakeFiles
 /home/deck/Documents/Tesi/pyccante_project/CMakeCache.txt
 
