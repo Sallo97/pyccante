@@ -12,25 +12,22 @@ $ git clone https://github.com/Sallo97/pyccante.git
 $ cd pyccante
 ```
 ### Set the build directory
-Inside the pyccante directory, with CMake create the `build` folder, and inside it gen-
-erates the necessary build files based on your system configuration. To do so, run the
-following command:
+Inside the pyccante directory, with CMake create the `build` folder, and inside it generates the necessary build files based on your system configuration. To do so, run the following command:
 ```
 $ cmake -S . -B build
 ```
 ### Build the project
-CMake offers the possibility to build the project in parallel with the `--parallel` parame-
-ter, making the compilation time shorter. The following command shows how to build the
+CMake offers the possibility to build the project in parallel with the `--parallel` parameter,
+making the compilation time shorter. The following command shows how to build the
 project using four CPU cores:
 ```
 $ cmake --build build --parallel 4
 ```
 ### Compiled library
 If the compilation succeeds, the generated binary library can be found inside the `src`
-directory in the `build` folder. The name of the file is `pyccante.cPython-310-`, fol-
-lowed by a specification of the system where it was built and terminating with the `.so`
-extension (e.g., compiling on Ubuntu generates the file pyccante.cPython-310-x86 64-
-linux-gnu). 
+directory in the `build` folder. The name of the file is `pyccante.cPython-310-`, followed
+by a specification of the system where it was built and terminating with the `.so`
+extension (e.g., compiling on Ubuntu generates the file pyccante.cPython-310-x86-64-linux-gnu). 
 Note that the name of the file must not be changed, Python uses it to infer
 information about the library, and with a different name it will not import it.
 
@@ -72,8 +69,8 @@ img . save ( " path / to / the / image . png " )
 ```
 
 ## Run the pyccante GUI
-For running the pyccante GUI open a terminal or command prompt inside the [`pyccan-
-teGUI`] folder in the main directory and type the following action:
+For running the pyccante GUI open a terminal or command prompt inside the [`pyccanteGUI`] 
+folder in the main directory and type the following action:
 ```
 python ./main.py
 or
