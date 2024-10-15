@@ -1,4 +1,6 @@
 # pyccante
+![pyccante](project_banner.png)
+
 pyccante is a Python library that interfaces to [Piccante](https://github.com/cnr-isti-vclab/piccante), an image processing library aimed for both High Dynamic Range (HDR) and standard imaging. Python bindings are generated using pybind11.
 
 ## pyccante GUI
@@ -27,7 +29,7 @@ $ cmake --build build --parallel 4
 If the compilation succeeds, the generated binary library can be found inside the `src`
 directory in the `build` folder. The name of the file is `pyccante.cPython-310-`, followed
 by a specification of the system where it was built and terminating with the `.so`
-extension (e.g., compiling on Ubuntu generates the file pyccante.cPython-310-x86-64-linux-gnu). 
+extension (e.g., compiling on Ubuntu generates the file pyccante.cPython-310-x86-64-linux-gnu).
 Note that the name of the file must not be changed, Python uses it to infer
 information about the library, and with a different name it will not import it.
 
@@ -69,7 +71,7 @@ img . save ( " path / to / the / image . png " )
 ```
 
 ## Run the pyccante GUI
-For running the pyccante GUI open a terminal or command prompt inside the [`pyccanteGUI`] 
+For running the pyccante GUI open a terminal or command prompt inside the [`pyccanteGUI`]
 folder in the main directory and type the following action:
 ```
 python ./main.py
