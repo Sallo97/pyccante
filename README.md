@@ -1,5 +1,5 @@
 # pyccante
-![pyccante](project_banner.png)
+![pyccante](<img src="project_banner.png" alt="Alt text" style="width:300px;"/>)
 
 pyccante is a Python library that interfaces to [Piccante](https://github.com/cnr-isti-vclab/piccante), an image processing library aimed for both High Dynamic Range (HDR) and standard imaging. Python bindings are generated using pybind11.
 
